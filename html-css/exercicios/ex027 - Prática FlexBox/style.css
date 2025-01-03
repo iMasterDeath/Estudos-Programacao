@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+body {
+
+    background: rgb(70, 70, 70);
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.box {
+    display: flex;
+    width: 100%;
+    background: rgb(105, 105, 105);
+    justify-content: center;
+}
+
+.box .cursos {
+    margin-right: 30px;
+    width: 22vw;
+    height: 250px;
+    background-color: greenyellow;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cursos .escrita {
+    display: flex;
+    width: 15vw;
+    height: 60px;
+}
+
+.box .cursos .link {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18vw;
+    height: 45px;
+    border-radius: 10px;
+    background-color: brown;
+    text-decoration: none;
+}
+
+.box .trabalho {
+    margin-right: 30px;
+    width: 22vw;
+    height: 250px;
+    background-color: rgb(163, 163, 143);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.box .carreira {
+    width: 22vw;
+    height: 250px;
+    background-color: rgb(221, 151, 151);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

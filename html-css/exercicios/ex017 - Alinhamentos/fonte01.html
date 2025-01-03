@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em css</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            /*
+            Medidas Absolutas 
+            cm, mm, in, px, pt, pc   -   centímetro, milímetro, polegada, pixel, ponto, paica
+
+            Medidas Relativas
+            em, ex, rem, vw, vh, %
+
+            16px = 1em
+
+            Recomendação é utilizar ->    px / rem (relativo aos tamanhos)
+            */
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            text-decoration: underline;
+            /* lighter normal bold bolder / 100 - 900 */
+        }
+        h1 {
+            /*  shorthand font   ( ORDEM A SEGUIR )
+            - font-style -> font-weight -> font-size -> font-family
+            */
+
+            font: italic bolder 3em 'Arial', sans-serif;
+        }
+        h2 {
+            font: bold 2em 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque blanditiis nostrum, reiciendis ratione libero ipsam soluta amet tempore ipsum, illum aut unde at voluptas deleniti. Id suscipit nostrum asperiores pariatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quibusdam cumque fugit eius voluptatem, cum officia voluptas nihil quasi enim sed maiores expedita nobis atque dolores id aliquid. Praesentium, rerum?</p>
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tempora neque ab eligendi praesentium odio modi? Minima aut sequi non suscipit, blanditiis eveniet sunt commodi beatae, dignissimos libero culpa magnam.</p>
+
+</body>
+</html>

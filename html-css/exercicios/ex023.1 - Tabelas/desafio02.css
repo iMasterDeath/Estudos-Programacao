@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+}
+
+th, td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+}
+
+thead {
+    background-color: grey;
+    color: white;
+
+}
+
+tr.mediaexata {
+    text-align: left;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+}
+
+tr.mediahumana {
+    text-align: left;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+}

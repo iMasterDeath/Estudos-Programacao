@@ -1,0 +1,47 @@
+* {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+/*
+
+.flex-container {              
+    display: flex;    block  
+    flex-direction: row;                COMEÇO DA AULA
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: yellow;
+}
+
+.flex-item {
+    margin-bottom: 2%;
+    width: 32%;
+    height: 200px;
+    background: red;
+  
+}
+
+*/
+
+.flex-container {              
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background: yellow;
+    height: 800px;
+}
+
+.flex-item {
+/*  flex-grow: 1;
+    flex-basis: 320px;
+    flex-shrink: 1;
+*/
+    flex: 1 1 320px;
+    width: 100%;
+    background: red;
+}

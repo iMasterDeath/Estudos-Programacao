@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        article {
+            background-color: lightgray;
+            border-radius: 6px;
+        }
+
+        nav {
+            background-color: rgb(135, 178, 180);
+            border-radius: 4px;
+            box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.267);
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+            color: red;
+        }
+
+        article > aside {
+            background-color: rgb(169, 169, 169);
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            margin: 10px;
+            border-radius: 7px;
+        }
+        footer > p {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main> 
+        <section id="assuntos">
+
+        </section>
+        <section id=noticias>
+            <article>
+                <h2>Noticias do Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nostrum repellendus culpa consectetur animi enim necessitatibus ratione corrupti sit ab nobis officiis voluptate aliquam fuga vel, autem reprehenderit et natus!</p>
+                <aside>
+                    <p>Artigo escrito por Irineu</p>
+                </aside>
+            </article>          
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Italo Falasca</p>
+    </footer>
+</body>
+</html>

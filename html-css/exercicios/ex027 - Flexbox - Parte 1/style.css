@@ -1,0 +1,35 @@
+* {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+
+
+.flex-container {                /*  flex container possui o main axis que é o eixo principal e o cross axis que é o eixo perpendicular  */
+    display: flex;
+    flex-direction: row;          /*  Indica a direção do eixo principal do FLEX   */     /* Row = Linha  /  Column = Coluna   */
+    justify-content: flex-start;   /* Se o main axis é o eixo principal, se eu utilizar o justify-content vou alinhar com ele (Horizontal)  */ 
+    align-items: stretch;           /* Align-Itens ai é o eixo cross axis (Vertical)  */
+    background: yellow;
+    height: 500px;
+}
+
+.flex-item {
+    background: red;
+    width: 100%;
+    margin: 10px;
+
+}
+
+/*  
+
+row = Eixo Principal é horizontal  
+column = Eixo Principal é vertical
+
+justify-content = trabalha no eixo principal
+align-items = trabalha no eixo perpendicular (secundario)
+
+*/

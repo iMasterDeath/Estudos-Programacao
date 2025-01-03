@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+header {
+    background-color: black;
+
+}
+
+header > h1 {
+    font-family: 'Passion One', cursive;
+    font-size: 8vw;
+    text-align: center;
+    padding: 40px 0px 15px 0px;
+    color: white;
+    font-variant: small-caps;
+
+
+}
+
+header > p {
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+    padding-bottom: 50px;
+    background-color: rgb(0, 0, 0);
+}
+
+header a, footer a {
+    font-weight: bolder;
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover, footer a:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+section > p {
+    font-family: 'Sriracha', cursive;
+    font-size: 3vw;
+    line-height: 2em;
+    font-weight: 400;
+    margin: 8vw 0vw 8vw 1.5rem; 
+}
+
+section.normal {
+    background-color: rgb(255, 255, 255);
+}
+
+section.imagem1, section.imagem2 {
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-shadow: 1px 1px 0px black;
+    box-shadow: inset 6px 6px 10px 0px rgba(0, 0, 0, 0.261);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem1 {
+    background-image: url(imagens/background001.jpg);
+    background-position: center center;
+    
+}
+
+section.imagem2 {
+    background-image: url(imagens/background002.jpg);
+    background-position: center center;
+    
+}
+
+section > p#preto {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.42);
+    
+}
+
+footer > p {
+    font-size: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}

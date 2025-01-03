@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;800&family=Rubik:wght@300;400;500;600;700;800&family=Sriracha&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+.container {
+    background: rgb(0,99,255);
+    background: linear-gradient(127deg, rgba(0,99,255,1) 9%, rgba(57,135,255,1) 36%, rgba(103,162,255,1) 64%, rgba(132,179,255,1) 91%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.box-login-central {
+
+}
+
+.box-login {
+    background: rgb(255, 255, 255);
+    width: 30vw;
+    height: 50vh;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    border-radius: 15px;
+    padding-left: 23%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.598);
+    padding-top: 35px;
+}
+
+.login {
+    margin-left: 22%;
+    margin-bottom: 40px;
+}
+
+.form {
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 30px;
+}
+
+#usuario {
+    margin: 3px 0px;
+    margin-bottom: 15px;
+}
+
+#senha {
+    margin: 3px 0px;
+}
+
+.form > label {
+    
+}
+
+.form > input {
+    width: 70%;
+    height: 38px;
+    border-radius: 8px;
+    border-style: none;
+    outline: none;
+    margin-top: auto;
+    background-color: rgb(227, 227, 227);
+    
+}
+
+.btn-remember {
+    
+}
+
+.btn-remember > a {
+    margin-left: 6rem;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.btn-login {
+    cursor: pointer;
+    width: 70%;
+    height: 50px;
+    padding: 15px 0px;
+    text-align: center;
+    background-color: rgb(62, 116, 255);
+    color: white;
+    font-weight: 800;
+    letter-spacing: 0.3rem;
+    margin-top: 35px;
+    border-radius: 8px;
+}
+
+.btn-login:hover {
+    background-color: rgb(12, 81, 255);
+}
+
+
+@media only screen and (max-width: 1800px) {
+    .btn-remember > a {
+        margin-left: 60px;
+    } 
+}
+
+@media only screen and (max-width: 1600px) {
+    .btn-remember > a {
+        font-size: 0.99rem;
+        margin-left: 3px;
+    } 
+}
+
+@media only screen and (max-width: 1300px) {
+    .btn-remember {
+        margin-top: -15px;
+        
+    }
+
+    .btn-remember > a {
+        display: flex;
+        flex-direction: column;
+        margin-top: 4%;
+        margin-bottom: 5%;
+    }
+    .btn-login {
+        cursor: pointer;
+        width: 70%;
+        height: 50px;
+        padding: 15px 0px;
+        text-align: center;
+        background-color: rgb(62, 116, 255);
+        color: white;
+        font-weight: 800;
+        letter-spacing: 0.3rem;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .login {
+        margin-left: 10%;
+        margin-bottom: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .login {
+        margin-left: 1%;
+        margin-bottom: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .box-login {
+        background: rgb(255, 255, 255);
+        width: 80vw;
+        height: 65vh;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        flex-direction: column;
+        border-radius: 12px;
+        padding-left: 10%;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.598);
+        padding-top: 35px;
+    }
+    .login {
+        font-size: 1.1em;
+        margin-left: 100px;
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        font-size: 1.2em;
+    }
+    .form > input {
+        width: 90%;
+        height: 40px;
+        border-radius: 7px;
+        border-style: none;
+        outline: none;
+        background-color: rgb(227, 227, 227);
+        font-size: 0.7em;
+    }
+
+    .btn-remember {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .btn-remember > a {
+        padding-top: 5px;
+        font-size: 1em;
+        background-color: rgb(255, 255, 255);
+    
+    }
+    
+    .btn-login {
+        cursor: pointer;
+        width: 89%;
+        height: 65px;
+        padding: 20px 0px;
+        text-align: center;
+        background-color: rgb(62, 116, 255);
+        color: white;
+        font-weight: 800;
+        letter-spacing: 0.3rem;
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .login {
+        font-size: 1em;
+        margin-left: 70px;
+    }
+    .box-login {
+        background: rgb(255, 255, 255);
+        width: 80vw;
+        height: 65vh;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        flex-direction: column;
+        border-radius: 12px;
+        padding-left: 10%;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.598);
+        padding-top: 35px;
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        font-size: 1em;
+    }
+    .form > input {
+        width: 90%;
+        height: 40px;
+        border-radius: 7px;
+        border-style: none;
+        outline: none;
+        background-color: rgb(227, 227, 227);
+        font-size: 0.7em;
+    }
+
+    .btn-remember {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .btn-remember > a {
+        padding-top: 5px;
+        font-size: 1em;
+        background-color: rgb(255, 255, 255);
+    
+    }
+    
+    .btn-login {
+        cursor: pointer;
+        width: 89%;
+        height: 65px;
+        padding: 20px 0px;
+        text-align: center;
+        background-color: rgb(62, 116, 255);
+        color: white;
+        font-weight: 800;
+        letter-spacing: 0.3rem;
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+
+<body>
+   <h1>Imagem dinâmica</h1>
+   <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminue o tamanho do seu navegador</p>
+<picture>                               <!-- Sempre que adicionar um SOURCE ele tem que vim pra cima -->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"> <!-- Picture flexível (750 tamanho max) -->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"> <!-- Picture flexível (1050 tamanho max) -->
+        <img src="imagens/foto-g.png" alt="Imagem Flexível">       <!-- É colocado 50 pixels a mais pra não mostrar barra de rolagem -->
+</picture> 
+    <h1>Reproduzindo Áudio</h1>
+    <p>Aprendi a reproduzir áudio em HTML5</p>
+<audio preload="metadata" controls loop> <!-- MetaData carrega poucas informações / autoplay = o site só carrega quando tiver tudo baixo / none = não carrega nada-->
+        <source src="midia/losing.mp3" type="audio/mp3">
+        <source src="midia/losing.ogg" type="audio/ogg"> <!-- Formatos de Audios -->
+        <source src="midia/losing.wav" type="audio/wav">
+    <p>Infelizmente seu navegador não consegue reproduzir áudio.
+        <a href="midia/losing.mp3">Clique aqui para baixar o arquivo</a>
+</audio>
+
+</body>
+</html>
