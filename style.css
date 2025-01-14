@@ -596,6 +596,10 @@ body {
     border-radius: 8px;
 }
 
+.up-projetos a {
+    color: var(--neon);
+}
+
 .projetos-title {
     color: var(--neon);
 }
