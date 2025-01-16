@@ -496,7 +496,33 @@ body {
 }
 
 
+@media (width <= 1200px) {
+    .links-navbar a {
+        color: red;
+    }  
+    
+}
 
+@media (width <= 1150px) {
+    .links-navbar a {
+        color: green;
+    }  
+    
+}
+
+@media (width <= 1100px) {
+    .links-navbar a {
+        color: blue;
+    }  
+    
+}
+
+@media (width <= 1050px) {
+    .links-navbar a {
+        color: yellow;
+    }  
+    
+}
 
 
 
