@@ -496,33 +496,44 @@ body {
 }
 
 
-@media (width <= 1200px) {
-    .links-navbar a {
-        color: red;
-    }  
-    
-}
-
-@media (width <= 1150px) {
-    .links-navbar a {
-        color: green;
-    }  
-    
-}
-
-@media (width <= 1100px) {
-    .links-navbar a {
-        color: blue;
-    }  
-    
-}
 
 @media (width <= 1050px) {
     .links-navbar a {
         color: yellow;
-    }  
-    
+    }     
 }
+
+@media (width <= 1000px) {
+    .links-navbar a {
+        color: #ff78dd;
+    }     
+}
+
+@media (width <= 950px) {
+    .links-navbar a {
+        color: #0a66c2;
+    }     
+}
+
+@media (width <= 900px) {
+    .links-navbar a {
+        color: red;
+    }    
+}
+
+@media (width <= 850px) {
+    .links-navbar a {
+        color: green;
+    }    
+}
+
+@media (width <= 800px) {
+    .links-navbar a {
+        color: blue;
+    }   
+}
+
+
 
 
 
