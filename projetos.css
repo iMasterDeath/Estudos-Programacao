@@ -560,7 +560,7 @@ body {
 
 .projeto1 {
     width: 26vw;
-    height: 600px;
+    height: 580px;
     background-color: var(--cinza-header);
     border: 1px solid var(--neon);
     border-radius: 8px;
@@ -617,9 +617,8 @@ h2 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 113px;
+    height: 160px;
     gap: 30px;
-    background-color: #0a66c221;
 }
 
 .link-text-1 a {
@@ -646,7 +645,7 @@ h2 {
 
 .projeto2 {
     width: 26vw;
-    height: 600px;
+    height: 580px;
     background-color: var(--cinza-header);
     border: 1px solid var(--neon);
     border-radius: 8px;
@@ -702,7 +701,7 @@ h2 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 113px;
+    height: 160px;
     gap: 30px;
 }
 
@@ -730,12 +729,13 @@ h2 {
 
 .projeto3 {
     width: 26vw;
-    height: 600px;
+    height: 580px;
     background-color: var(--cinza-header);
     border: 1px solid var(--neon);
     border-radius: 8px;
     color: var(--neon);
     font-size: 15px;
+    
     z-index: 1;
 }
 
@@ -785,9 +785,8 @@ h2 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 113px;
+    height: 160px;
     gap: 30px;
-
 }
 
 .link-text-3 a {
