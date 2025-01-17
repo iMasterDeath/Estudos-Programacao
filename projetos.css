@@ -505,10 +505,12 @@ body {
     margin: 0 auto;
     display: flex;
     height: 90.1vh;
+    transition: 0.3s;
 }
 
 .main-section-projetos {
    width: 100%;
+   transition: 0.3s;
 }
 
 .section-up-projetos {
@@ -516,10 +518,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 0.3s;
 }
 
 .section-down-projetos {
     width: 100%;
+
 }
 
 .up-projetos {
@@ -534,6 +538,7 @@ body {
     margin-bottom: 60px;
     background-color: var(--cinza-header);
     border-radius: 8px;
+    transition: 0.3s;
 }
 
 .up-projetos a {
@@ -547,6 +552,7 @@ body {
 
 .up-projetos h1 {
     font-size: 34px;
+    transition: 0.3s;
 }
 
 .down-projetos {
@@ -554,6 +560,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    transition: 0.3s;
 }
 
 /* PROJETO 1 STYLE */
@@ -567,6 +574,7 @@ body {
     color: var(--neon);
     font-size: 15px;
     z-index: 1;
+    transition: 0.3s;
 }
 
 .projeto1 img {
@@ -577,28 +585,37 @@ body {
     border-bottom: 11px solid var(--branco);
     object-fit: cover;
     z-index: -1;
+    transition: 0.3s;
 }
 
 .tech-text {
     display: flex;
     flex-direction: row;
+    transition: 0.3s;
 }
 
 h2 {
     font-size: 16px;
+    transition: 0.3s;
 }
 
 .projeto1 h2 {
+    width: 85%;
     margin-top: 15px;
     margin-bottom: 30px;
     margin-left: 15px;
+    transition: 0.3s;
 }
 
 .projeto1 p {
+    width: 85%;
+    height: auto;
     margin: 25px 15px;
+    transition: 0.3s;
 }
 
 .projeto1 span {
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -610,15 +627,18 @@ h2 {
     background-color: #0ef6cc1f;
     font-size: 12px;
     box-shadow: 0px 0px 1px 5px #0ef6cc1f;
+    transition: 0.3s;
 }
 
 .link-text-1 {
+    margin-top: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 160px;
+    height: 50px;
     gap: 30px;
+    transition: 0.3s;
 }
 
 .link-text-1 a {
@@ -632,6 +652,7 @@ h2 {
     border: 2px solid var(--neon);
     border-radius: 6px;
     font-size: 14px;
+    transition: 0.3s;
 }
 
 .link-text-1 a:hover {
@@ -639,6 +660,7 @@ h2 {
     transition: .3s;
     color: var(--preto);
     font-weight: 500;
+    transition: 0.3s;
 }
 
 /* PROJETO 2 STYLE  */
@@ -652,6 +674,7 @@ h2 {
     color: var(--neon);
     font-size: 15px;
     z-index: 1;
+    transition: 0.3s;
 }
 
 .projeto2 img {
@@ -661,25 +684,33 @@ h2 {
     border-top-left-radius: 8px;
     object-fit: cover;
     z-index: -1;
+    transition: 0.3s;
 }
 
 .tech-text {
     display: flex;
     flex-direction: row;
+    transition: 0.3s;
 }
 
 h2 {
     font-size: 16px;
+    transition: 0.3s;
 }
 
 .projeto2 h2 {
+    width: 85%;
     margin-top: 15px;
     margin-bottom: 30px;
     margin-left: 15px;
+    transition: 0.3s;
 }
 
 .projeto2 p {
+    width: 85%;
+    height: auto;
     margin: 25px 15px;
+    transition: 0.3s;
 }
 
 .projeto2 span {
@@ -694,15 +725,18 @@ h2 {
     background-color: #0ef6cc1f;
     font-size: 12px;
     box-shadow: 0px 0px 1px 5px #0ef6cc1f;
+    transition: 0.3s;
 }
 
 .link-text-2 {
+    margin-top: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 160px;
+    height: 50px;
     gap: 30px;
+    transition: 0.3s;
 }
 
 .link-text-2 a {
@@ -716,6 +750,7 @@ h2 {
     border: 2px solid var(--neon);
     border-radius: 6px;
     font-size: 14px;
+    transition: 0.3s;
 }
 
 .link-text-2 a:hover {
@@ -723,6 +758,7 @@ h2 {
     transition: .3s;
     color: var(--preto);
     font-weight: 500;
+    transition: 0.3s;
 }
 
 /* PROJETO 3 STYLE */
@@ -735,8 +771,8 @@ h2 {
     border-radius: 8px;
     color: var(--neon);
     font-size: 15px;
-    
     z-index: 1;
+    transition: 0.3s;
 }
 
 .projeto3 img {
@@ -746,24 +782,32 @@ h2 {
     border-top-left-radius: 8px;
     object-fit: cover;
     z-index: -1;
+    transition: 0.3s;
 }
 
 .tech-text {
     display: flex;
+    transition: 0.3s;
 }
 
 h2 {
     font-size: 16px;
+    transition: 0.3s;
 }
 
 .projeto3 h2 {
+    width: 85%;
     margin-top: 15px;
     margin-bottom: 30px;
     margin-left: 15px;
+    transition: 0.3s;
 }
 
 .projeto3 p {
+    width: 85%;
+    height: auto;
     margin: 25px 15px;
+    transition: 0.3s;
 }
 
 .projeto3 span {
@@ -778,15 +822,18 @@ h2 {
     background-color: #0ef6cc1f;
     font-size: 12px;
     box-shadow: 0px 0px 1px 5px #0ef6cc1f;
+    transition: 0.3s;
 }
 
 .link-text-3 {
+    margin-top: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 160px;
+    height: 50px;
     gap: 30px;
+    transition: 0.3s;
 }
 
 .link-text-3 a {
@@ -800,6 +847,7 @@ h2 {
     border: 2px solid var(--neon);
     border-radius: 6px;
     font-size: 14px;
+    transition: 0.3s;
 }
 
 .link-text-3 a:hover {
@@ -807,13 +855,90 @@ h2 {
     transition: .3s;
     color: var(--preto);
     font-weight: 500;
+    transition: 0.3s;
 }
 
 
+@media (width <= 1187px) {
+    .link-text-3 {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        gap: 20px;
+        transition: 0.3s;
+    }
+    
+    
+}
 
-@media (width <= 1500px) {
+@media (width <= 1272px) {
+    .link-text-2 {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        gap: 20px;
+        transition: 0.3s;
+    }
     
     
+}
+
+
+@media (width <= 1100px) {
+    .link-text-1 a {
+        width: 100px;
+        font-size: 12px;
+    }
+    .link-text-2 a {
+        width: 100px;
+        font-size: 12px;
+    }
+    .link-text-3 a {
+        width: 100px;
+        font-size: 12px;
+    }
+    
+}
+
+@media (width <= 1050px) {
+    .link-text-1 {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        gap: 20px;
+        transition: 0.3s;
+    }
+
+    .link-text-2 {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        gap: 20px;
+        transition: 0.3s;
+    }
+
+    .link-text-3 {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        gap: 20px;
+        transition: 0.3s;
+    }
     
 }
 

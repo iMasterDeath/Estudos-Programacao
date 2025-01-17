@@ -496,11 +496,25 @@ body {
 }
 
 
+@media (width <= 1200px) {
+    .main-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        height: 90.1vh;
+        transition: 0.3s;
+    }
+    .container {
+        max-width: 85%;
+        margin: 0 auto;
+        transition: 0.2s;
+    }
+}
+
 
 @media (width <= 1050px) {
-    .links-navbar a {
-        color: yellow;
-    }     
+    
 }
 
 @media (width <= 1000px) {
@@ -509,28 +523,34 @@ body {
     }     
 }
 
-@media (width <= 950px) {
+@media (width <= 990px) {
     .links-navbar a {
-        color: #0a66c2;
+        color: #ff0000;
     }     
 }
 
-@media (width <= 900px) {
+@media (width <= 980px) {
     .links-navbar a {
-        color: red;
+        color: #15ff00;
     }    
 }
 
-@media (width <= 850px) {
+@media (width <= 970px) {
     .links-navbar a {
-        color: green;
+        color: #00ccff;
     }    
 }
 
-@media (width <= 800px) {
+@media (width <= 960px) {
     .links-navbar a {
-        color: blue;
-    }   
+        color: #ffd000;
+    }    
+}
+
+@media (width <= 950px) {
+    .links-navbar a {
+        color: #1100ff;
+    }    
 }
 
 
