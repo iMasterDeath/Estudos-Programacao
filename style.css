@@ -131,11 +131,12 @@ body {
 /* Estilo do ícone do menu hambúrguer */
 .menu-icon {
     display: flex;
-    justify-content: ;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     color: var(--neon);
-    font-size: 28px;
+    margin-top: -5px;
+    font-size: 32px;
     transition: background-color 0.3s;
     
 }
@@ -551,6 +552,9 @@ body {
     .links-navbar a {
         color: #1100ff;
     }    
+    .navbar-module-links-list {
+        display: none;
+    }
 }
 
 
