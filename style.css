@@ -34,7 +34,7 @@ body {
     background-color: var(--cinza-header);
     margin: 0;
     padding: 0;
-    
+    overflow: hidden;
 }
 
 .container {
@@ -296,18 +296,19 @@ body {
 /* ----- BACKGROUND ANIMADO ----- */
 
 .background {
-    width: 100vw;
-    height: 90.1vh;
-
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .background-section {
     opacity: 60%;
     position: absolute;
     width: 100%;
-    height: 90.1vh;
+    height: 100%;
     overflow: hidden;
     z-index: -1;
+    overflow: hidden;
 }
 
 .bolhas {
@@ -729,7 +730,34 @@ body {
 }
 
 @media (width <= 500px) {
-   
+    body {
+        min-height: 100vh;
+        font-family: "Orbitron", serif;
+        background-color: var(--cinza-header);
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        height: 90vh;
+        margin: 0 auto;
+        transition: 0.3s;
+    }
+
+    .background-section {
+        opacity: 60%;
+        position: absolute;
+        width: 100%;
+        height: 85vh;
+        overflow: hidden;
+        z-index: -1;
+    }
+
     .section-left {
         display: flex;
         flex-direction: column;
@@ -773,8 +801,16 @@ body {
     }
 }
 
-
-
+@media (width <= 350px) {
+    body {
+        min-height: 100vh;
+        font-family: "Orbitron", serif;
+        background-color: var(--cinza-header);
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+    }
+}
 
 
 
