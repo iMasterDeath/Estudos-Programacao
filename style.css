@@ -617,7 +617,10 @@ body {
         justify-content: center;
         width: 100%;
         height: auto;
-        margin: 30px 0px;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .section-right {
@@ -640,13 +643,13 @@ body {
     .section-left h1 {
         color: var(--branco);
         font-weight: 800;
-        font-size: 5vw;
+        font-size: 36px;
         margin-bottom: 10px;
         transition: .3s;
     }
     .section-left p {
         color: var(--neon);
-        font-size: 3.8vw;
+        font-size: 26px;
         font-weight: 700;
         margin-bottom: 40px;
         transition: .3s;
@@ -657,8 +660,8 @@ body {
         align-items: center;
         justify-content: center;
         width: 180px;
-        height: 50px;
-        font-size: 18px;
+        height: 40px;
+        font-size: 16px;
         font-weight: 500;
         background-color: transparent;
         border: 2px solid var(--neon);
@@ -722,7 +725,41 @@ body {
 }
 
 @media (width <= 600px) {
-    
+  
+}
+
+@media (width <= 500px) {
+    .section-left h1 {
+        color: var(--branco);
+        font-weight: 800;
+        font-size: 6vw;
+        margin-bottom: 10px;
+        transition: .3s;
+    }
+    .section-left p {
+        color: var(--neon);
+        font-size: 4.5vw;
+        font-weight: 700;
+        margin-bottom: 40px;
+        transition: .3s;
+    }
+    .curriculo {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: transparent;
+        border: 2px solid var(--neon);
+        border-radius: 8px;
+        color: var(--neon);
+        position: relative;
+        transition: .3s;
+        box-shadow: 0px 0px 10px 0px var(--neon);
+    }
 }
 
 
