@@ -1928,12 +1928,10 @@ body {
         background-color: var(--roxo-claro);
         margin-bottom: 0px;
     }
-    .logo {
+    .logo, .blocks {
         display: none;
     }
-    .blocks {
-        display: none;
-    }
+    
     .nav-info {
  
     }
@@ -2023,8 +2021,8 @@ body {
     #img-back-top-mobile {
         display: flex;
         align-items: right;
-        width: 1900px;
-        height: 1600px;
+        width: 100%;
+        height: auto;
     }
     .wrapper-home {
         margin-top: 70px;
