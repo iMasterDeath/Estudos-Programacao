@@ -942,6 +942,196 @@ h2 {
     
 }
 
+@media (width <= 700px) {
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        height: 90.1vh;
+        margin: 0 auto;
+        transition: 0.3s;
+    }
+
+    .section-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    .section-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .section-right img {
+        display: flex;
+        width: 80%;
+        height: auto;
+        border: 2px solid var(--neon);
+        border-radius: 50%;
+        background-color: var(--cinza-header);
+        box-shadow: 0px 0px 20px 0px #0ef6cc62;
+        transition: 0.3s;
+    }
+
+
+/* Estilo do menu lateral */
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cinza-header);
+    color: white;
+    padding: 30px;
+    box-sizing: border-box;
+    transition: left 0.3s ease;
+    z-index: 1;
+    border: none;
+    box-shadow: none;
+}
+
+/* Exibe o menu quando o checkbox está marcado */
+#menu-toggle:checked + label + .menu-lateral {
+    left: 0;
+}
+
+
+/* Estilo dos links do menu */
+.nav-mobile {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    transition: color 0.3s;
+    font-weight: 800;
+    position: relative;
+    width: 100%;
+}
+
+.nav-mobile a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: color 0.3s;
+    font-weight: 800;
+    position: relative;
+}
+
+.nav-mobile a::before {
+    display: none;
+}
+
+.nav-mobile a:hover {
+    color: var(--rosa);
+}
+
+
+/*  */
+
+.menu-logo-lateral {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0px;
+    margin-bottom: 30px;
+
+
+}
+
+.menu-lateral h2 {
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--neon);
+    color: var(--preto);
+}
+
+.menu-lateral a:hover {
+    
+}
+
+.bar-menu {
+    width: 100%;
+    margin: 5px 0px;
+    height: 1px;
+    background-color: var(--neon);
+}
+
+/* Estilo do botão fechar */
+
+.close-btn {
+    background-color: var(--neon);
+    border-radius: 6px;
+    color: var(--preto);
+    width: 43px;
+    height: 43px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    transition: 0.3s;
+    margin-top: -1px;
+}
+
+.close-btn:hover {
+    background-color: var(--rosa);
+    color: var(--roxo-escuro);
+}
+
+.header-sidebar-right {
+    display: flex;
+    width: 10%;
+    padding-right: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-right {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: right;
+}
+
+#sidebar {
+    margin-top: -20px;
+}
+
+.nav-item-spacing {
+    color: var(--cinza-claro);
+    cursor: default;
+    opacity: 50%;
+    margin-right: -20px;
+    padding-left: 10px;
+}
+
+
+  
+}
 
 
 
