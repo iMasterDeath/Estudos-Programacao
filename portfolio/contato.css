@@ -794,6 +794,164 @@ body {
     }
 }
 
+@media (width <= 770px) {
+    .section-up-contact {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .contact-title {
+        font-size: 30px;
+    }
+    .up-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .up-contact h1 {
+        font-size: 30px;
+    }
+    .section-form {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .form {
+        margin: 0px 0px;
+        gap: 0px;
+    }
+    .form-top {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .form-top input {
+        width: 350px;
+        height: 50px;
+        border: 2px solid var(--neon);
+        border-radius: 6px;
+        background-color: var(--cinza-header);
+        font-family: "Orbitron", serif;
+        font-weight: 600;
+        padding-left: 60px;
+        position: relative;
+        color: var(--branco);
+        z-index: 1;
+        font-size: 16px;
+    }
+
+    .img-person-form {
+        margin-left: -285px;
+        margin-top: 13px;
+        position: absolute;
+    }
+    .img-email-form {
+        margin-left: -285px;
+        margin-top: 93px;
+        position: absolute;
+    }
+    .img-phone-form {
+        margin-left: -285px;
+        margin-top: 13px;
+        position: absolute;
+    }
+    
+    .img-subject-form {
+        margin-left: -285px;
+        margin-top: 93px;
+        position: absolute;
+    }
+    .form-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .form-bottom input {
+        width: 350px;
+        height: 50px;
+        border: 2px solid var(--neon);
+        border-radius: 6px;
+        background-color: var(--cinza-header);
+        font-family: "Orbitron", serif;
+        font-weight: 600;
+        padding-left: 60px;
+        color: var(--branco);
+        font-size: 16px;
+    }
+
+    .form-mensagem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+    
+    .img-msg-form {
+        display: flex;
+        margin-top: -95px;
+        margin-left: -285px;
+        z-index: 2;
+        position: absolute;
+    }
+    
+    .form-mensagem textarea {
+        width: 350px;
+        height: 80px;
+        border: 2px solid var(--neon);
+        border-radius: 6px;
+        background-color: var(--cinza-header);
+        color: var(--branco);
+        font-family: "Orbitron", serif;
+        padding-top: 20px;
+        font-weight: 600;
+        padding-left: 60px;
+        font-size: 16px;
+        overflow: auto;
+        resize: none;
+    }
+
+    /*  */
+    .form-mensagem textarea::-webkit-scrollbar {
+        width: 12px;  /* Largura da barra de rolagem */
+        height: 12px; /* Altura da barra de rolagem (quando necessário para scroll horizontal) */
+    }
+    
+    .form-mensagem textarea::-webkit-scrollbar-thumb {
+        background-color: var(--cinza-header);  /* Cor do "thumb" (parte que você arrasta) */
+        border-radius: 100px;  /* Arredondamento das bordas do thumb */
+        border: 3px solid var(--neon); /* Borda para dar um efeito mais definido */
+    }
+    
+    .form-mensagem textarea::-webkit-scrollbar-thumb:hover {
+        background-color: var(--neon);  /* Cor do thumb quando estiver sendo hover */
+    }
+    
+    .form-mensagem textarea::-webkit-scrollbar-track {
+        background-color: var(--cinza-link);  /* Cor do fundo da barra de rolagem */
+        border-radius: 10px;
+    }
+    
+    .form-mensagem textarea::-webkit-scrollbar-track-piece {
+        background-color: #2b2726ce;  /* Cor do fundo da pista de rolagem */
+        border-radius: 10px;
+    }
+
+    /*  */
+}
+
+
 @media (width <= 700px) {
     .up-contact {
         display: flex;
@@ -858,7 +1016,7 @@ body {
     padding: 30px;
     box-sizing: border-box;
     transition: left 0.3s ease;
-    z-index: 1;
+    z-index: 3;
     border: none;
     box-shadow: none;
 }
