@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfólio</title>
-    <link rel="stylesheet" href="projetos.css">
+    <link rel="stylesheet" href="contato.css">
     <link rel="shortcut icon" href="assets/imagens/favicon-16x16.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -24,11 +24,11 @@
                 <div class="navbar-module-logo">iMaster &lt Dev/ > </div>
                     <nav>
                         <ul class="navbar-module-links-list">
-                            <li class="links-navbar"><a href="index.html">Início</a></li>
-                            <li class="nav-item-spacing">❘</li>
+                            <li class="links-navbar"><a href="../index.html">Início</a></li>
+                            <li class="nav-item-spacing">❘</li> 
                             <li class="links-navbar"><a href="sobre.html">Sobre</a></li>
                             <li class="nav-item-spacing">❘</li> 
-                            <!--   
+                            <!-- 
                             <li class="links-navbar-ocult"><a href="#Formações">Formações</a></li>
                             <li class="nav-item-spacing-ocult">❘</li>  
                             <li class="links-navbar-ocult"><a href="#Experiências">Experiências</a></li>
@@ -56,7 +56,7 @@
             <button class="close-btn" onclick="fecharMenu()">✖</button>
         </div>
             <ul class="menu-mobile-lateral-list">
-                <li class="nav-mobile"><a href="index.html">Inicio</a></li>
+                <li class="nav-mobile"><a href="../index.html">Inicio</a></li>
                 <li class="bar-menu"></li>
                 <li class="nav-mobile"><a href="sobre.html">Sobre</a></li>
                 <li class="bar-menu"></li>
@@ -159,109 +159,49 @@
             <span style="--i:24"></span>
         </div>
     </div>
-    <div class="container-projetos">
-        <main class="main-section-projetos">
-            <div class="section-up-projetos">
-                <div class="up-projetos">
-                    <h1><span class="projetos-title">// </span> Principais <a  href="html-css/">Projetos</a></h1>
+    <div class="container-contact">
+        <main class="main-section-contact">
+            <div class="section-up-contact">
+                <div class="up-contact">
+                    <h1><span class="contact-title">// </span> Contate  <span class="contact-title">Me!</span></h1>
+                    <div class="icones-contact">
+                        <a class="whatsapp" href="https://api.whatsapp.com/send/?phone=5543996018333&text&type=phone_number&app_absent=0"><img src="assets/icone-whatsapp.png" alt="icone do whatsapp" target></a>
+                        <a class="email" href="mailto:italodemichellifalasca@hotmail.com?body=Olá Italo, podemos conversar?&subject=Contato pelo Portfólio"><img src="assets/icone-email.png" alt="icone do email"></a></li>
+                        <a class="linkedin" href="https://www.linkedin.com/in/%C3%ADtalo-falasca-647428232/"><img src="assets/icone-linkedin.png" alt="icone do linkedin"></a>
+                        <a class="github" href="https://github.com/imasterdeath"><img src="assets/icone-github.png" alt="icone do github"></a>
+                    </div>
                 </div>
             </div>
-
-        <div class="section-down-projetos">
-            <div class="down-projetos">
-                <div class="projeto1">
-                    <img src="assets/meu playstation.jpg" alt="imagem site meu playstation">
-                        <h2>Meu Playstation</h2>
-                        <p>Copia do Projeto feito pelo meu amigo Marcelo</p>
-                        <p>Tecnologias Utilizadas:</p>
-                            <div class="tech-text">
-                                <span class="linguagem1">HTML</span>
-                                <span class="linguagem2">CSS</span>
-                            </div>
-                            <div class="link-text-1">
-                                <a href="https://imasterdeath.github.io/Estudos-Programacao/html-css/projetos/projeto-meuplaystation-08-04-24/index.html" target="_blank">DEPLOY</a>
-                                <a href="https://github.com/iMasterDeath/Estudos-Programacao/tree/main/html-css/projetos/projeto-meuplaystation-08-04-24" target="_blank">CODE</a>
-                            </div>
-                </div>
-                            <!--  -->
-                <div class="projeto2">
-                    <img src="assets/site-cartorio1.jpg" alt="imagem site cartorio">
-                        <h2>Cartório Pirapó</h2>
-                        <p>Projeto feito exclusivamente para o Cartório do Pirapó</p>
-                        <p>Tecnologias Utilizadas:</p>
-                            <div class="tech-text">
-                                <span class="linguagem1">HTML</span>
-                                <span class="linguagem2">CSS</span>
-                            </div>
-                            <div class="link-text-2">
-                                <a href="https://imasterdeath.github.io/Estudos-Programacao/html-css/projetos/projeto-site-cartorio/index.html">DEPLOY</a>
-                                <a href="https://github.com/iMasterDeath/Estudos-Programacao/tree/main/html-css/projetos/projeto-site-cartorio">CODE</a>
-                            </div>
-                </div>
-                            <!--  -->
-                <div class="projeto3">
-                    <img src="assets/em-andamento.jpg" alt="imagem terceiro site">
-                        <h2>Futuro Projeto</h2>
-                        <p>Aba feita para alocar o Futuro Projeto que iniciarei</p>
-                        <p>Tecnologias Utilizadas:</p>
-                            <div class="tech-text">
-                                <span class="linguagem1">HTML</span>
-                                <span class="linguagem2">CSS</span>
-                                <span class="linguagem3">JavaScript</span>
-                            </div>
-                            <div class="link-text-3">
-                                <a href="#">DEPLOY</a>
-                                <a href="#">CODE</a>
-                            </div>                    
-                </div>
-            </div>
-        </div>
+            <section class="section-form">
+                <form class="form" action="https://api.staticforms.xyz/submit" method="post">
+                    <div class="form-top">
+                        <label>Nome</label>
+                            <img class="img-person-form" src="assets/icone-pessoa-formulario.png" alt="icone pessoa">
+                                <input class="form-name" type="text" name="name" placeholder="Nome Completo">
+                        <label>Email</label>
+                            <img class="img-email-form" src="assets/icone-email-formulario.png" alt="icone email">
+                                <input class="form-email" type="text" name="email" placeholder="Email">  
+                    </div>
+                    <div class="form-bottom">
+                        <label>Telefone</label>
+                            <img class="img-phone-form" src="assets/icone-telefone-formulario.png" alt="icone telefone">
+                                <input class="form-phone" type="text" name="phone" placeholder="Telefone">
+                        <label>Assunto</label>
+                            <img class="img-subject-form" src="assets/icone-assunto-formulario.png" alt="icone assunto">
+                                <input class="form-subject" type="text" name="subject" placeholder="Assunto">
+                    </div>
+                    <div class="form-mensagem">
+                        <label>Mensagem</label>
+                            <img class="img-msg-form" src="assets/icone-mensagem-formulario.png" alt="icone mensagem">
+                                <textarea name="message" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
+                                    <button type="submit">Enviar Mensagem</button>
+                    </div>
+                    <input type="hidden" name="accessKey" value="55597182-a82b-4243-80a0-a1a557ad4583">
+                    <input type="hidden" name="redirectTo"  value="http://127.0.0.1:5500/portfolio/obrigado.html">
+                </form>
+            </section>
         
         </main>
     </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--  
-    </div>
-    <h1>Projetos HTML e CSS</h1>
-    <ul>
-        <li><a href="html-css/">Acessar projetos HTML e CSS</a></li>
-    </ul>
-    <div class="projects">
-        <a href="html-css/projetos/projeto-android/index.html">Projeto Android</a>
-        <a href="html-css/projetos/projeto-cordel/index.html">Projeto Cordel</a>
-        <a href="html-css/projetos/"></a>
-        <a href="html-css/projetos/"></a>
-        <a href="html-css/projetos/"></a>
-        <a href="html-css/projetos/"></a>
-        <a href="html-css/projetos/"></a>
-        <a href="html-css/projetos/"></a>
-        <a href="html-css/projetos/"></a>
-        <a href="html-css/projetos/"></a>
-        <a href="html-css/projetos/projeto-site-cartorio/index.html">Projeto Site Cartório</a>
--->
