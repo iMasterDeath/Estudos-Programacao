@@ -792,6 +792,20 @@ body {
     .navbar-module-links-list {
         display: none;
     }
+    .navbar-module-header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        height: 60px;
+        align-items: center;
+        border-bottom: 1.5px solid var(--neon);
+    }
+    .top-line {
+        width: 100%;
+        height: 60px;
+        border-bottom: 1.5px solid var(--neon);
+    }
 }
 
 @media (width <= 770px) {
