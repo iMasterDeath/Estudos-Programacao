@@ -301,7 +301,10 @@ body {
 .background {
     width: 100vw;
     height: 90.1vh;
+}
 
+.background-section-mobile {
+    display: none;
 }
 
 .background-section {
@@ -1080,6 +1083,18 @@ h2 {
 }
 
 @media (width <= 700px) {
+    .background-section-mobile {
+        display: flex;
+    }
+    .background-section-mobile img {
+        width: 100%;
+        height: 100vh;
+        opacity: 30%;
+        transform: rotate(180deg);
+    }
+    .bolhas {
+        display: none;
+    }
     .main-section {
         display: flex;
         flex-direction: column;
