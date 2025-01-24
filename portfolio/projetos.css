@@ -1336,8 +1336,8 @@ h2 {
         align-items: center;
         justify-content: center;
         color: var(--branco);
-        margin-top: 20px;
-        margin-bottom: 30px;
+        margin-top: 30px;
+        margin-bottom: 40px;
         background-color: var(--cinza-header);
         border-radius: 8px;
         transition: 0.3s;
@@ -1346,16 +1346,19 @@ h2 {
         display: none;
     }
     .up-projetos h1 {
-        font-size: 20px;
+        font-size: 23px;
         transition: 0.3s;
     }
     .section-down-projetos {
         width: 100%;
         height: auto;
     }
+
+    /*  */
+
     .projeto1 {
         width: 100%;
-        height: 430px;
+        height: 460px;
         background-color: var(--cinza-header);
         border: 1px solid var(--neon);
         border-radius: 8px;
@@ -1383,25 +1386,24 @@ h2 {
     
     .projeto1 h2 {
         width: 85%;
-        margin-top: 8px;
-        margin-bottom: 15px;
+        margin-top: 10px;
+        margin-bottom: 20px;
         margin-left: 15px;
         transition: 0.3s;
-        font-size: 14px;
+        font-size: 15px;
     }
     
     .projeto1 p {
         width: 85%;
         height: auto;
-        margin-top: 10px;
-        margin-bottom: 13px;
+        margin-top: 15px;
+        margin-bottom: 15px;
         margin-left: 15px;
         transition: 0.3s;
-        font-size: 12px;
+        font-size: 13px;
     }
     
     .projeto1 span {
-
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -1414,11 +1416,11 @@ h2 {
         font-size: 12px;
         box-shadow: 0px 0px 1px 5px #0ef6cc1f;
         transition: 0.3s;
-        font-size: 10px;
+        font-size: 11px;
     }
     
     .link-text-1 {
-        margin-top: 10px;
+        margin-top: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1429,8 +1431,8 @@ h2 {
     }
     
     .link-text-1 a {
-        width: 110px;
-        height: 30px;
+        width: 120px;
+        height: 35px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1440,9 +1442,11 @@ h2 {
         border-radius: 6px;
         font-size: 14px;
         transition: 0.3s;
-        font-size: 10px;
+        font-size: 11px;
     }
     
+    /*  */
+
     .link-text-1 a:hover {
         background-color: var(--neon);
         transition: .3s;
