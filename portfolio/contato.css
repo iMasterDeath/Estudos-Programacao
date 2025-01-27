@@ -975,6 +975,7 @@ body {
     }
     .background-section-mobile {
         display: flex;
+        overflow: hidden;
     }
     .background-section-mobile img {
         width: 100%;
