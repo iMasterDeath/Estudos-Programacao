@@ -513,7 +513,7 @@ body {
     max-width: 85%;
     margin: 0 auto;
     display: flex;
-    height: 90.1vh;
+    height: auto;
 
 }
 
@@ -788,6 +788,16 @@ body {
         width: 100%;
         height: auto;
         margin-bottom: 50px;
+    }
+
+    .section-left-sobre {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        padding: 0px 0px;
     }
 
     .section-right {
