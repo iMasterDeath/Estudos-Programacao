@@ -1083,6 +1083,9 @@ h2 {
 }
 
 @media (width <= 700px) {
+    .body {
+        overflow: hidden;
+    }
     .background-section-mobile {
         display: flex;
     }
