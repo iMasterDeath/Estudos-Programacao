@@ -707,6 +707,19 @@ body {
     transform: scaleX(1);
 }
 
+   /* Remove as setinhas (spinner) do campo de número */
+   input[type="number"]::-webkit-inner-spin-button,
+   input[type="number"]::-webkit-outer-spin-button {
+       -webkit-appearance: none; /* Remove no Chrome, Safari e Edge */
+       appearance: none; /* Remove nos navegadores modernos */
+       margin: 0; /* Remove margens para evitar deslocamento */
+   }
+
+   /* Garante que o campo não seja ajustável no Firefox */
+   input[type="number"] {
+       -moz-appearance: textfield; /* Remove no Firefox */
+   }
+
 /* ---------- CSS PAGINA OBRIGADO ---------- */
 
 .section-obrigado {
