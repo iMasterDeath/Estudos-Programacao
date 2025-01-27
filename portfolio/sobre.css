@@ -757,6 +757,11 @@ body {
         height: 100%;
         margin: 0 auto;
         transition: 0.3s;
+        overflow: hidden;
+    }
+
+    .main-section-sobre {
+        overflow: hidden;
     }
 
     .section-left {
