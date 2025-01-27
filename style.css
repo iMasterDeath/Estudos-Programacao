@@ -444,7 +444,7 @@ body {
 /* Modelo Curriculo ChatGPT */
 
   .modal {
-    display: flex;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -490,7 +490,8 @@ body {
     cursor: pointer;
     width: 50px;
     height: 50px;
-    
+    font-size: 16px;
+    font-weight: 600;
   }
 
   .close:hover {
@@ -973,7 +974,7 @@ body {
 }
 
 .modal {
-    display: flex;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -1019,7 +1020,8 @@ body {
     cursor: pointer;
     width: 50px;
     height: 50px;
-    
+    font-size: 16px;
+    font-weight: 600;
   }
 
   .close:hover {
