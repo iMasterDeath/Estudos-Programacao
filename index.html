@@ -15,6 +15,14 @@
     function fecharMenuMobile() {
         document.getElementById("menu-toggle").checked = false;
     }
+    // Funcao para abrir o curriculum 
+    function openModal() {
+      document.getElementById("curriculo-modal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("curriculo-modal").style.display = "none";
+    }
 </script>
 
 <body>
@@ -187,24 +195,43 @@
     <div class="container">
         <main class="main-section">
             <div class="section-left">
-                <h1>Italo Falasca</h1>
-                <p>Programador</p>
-                    <div class="icones">
-                        <a class="whatsapp" href="https://api.whatsapp.com/send/?phone=5543996018333&text&type=phone_number&app_absent=0"><img src="portfolio/assets/icone-whatsapp.png" alt="icone do whatsapp" target></a>
-                        <a class="email" href="mailto:italodemichellifalasca@hotmail.com?body=Olá Italo, podemos conversar?&subject=Contato pelo Portfólio"><img src="portfolio/assets/icone-email.png" alt="icone do email"></a></li>
-                        <a class="linkedin" href="https://www.linkedin.com/in/%C3%ADtalo-falasca-647428232/"><img src="portfolio/assets/icone-linkedin.png" alt="icone do linkedin"></a>
-                        <a class="github" href="https://github.com/imasterdeath"><img src="portfolio/assets/icone-github.png" alt="icone do github"></a>
+              <h1>Italo Falasca</h1>
+              <p>Programador</p>
+              <div class="icones">
+                <a class="whatsapp" href="https://api.whatsapp.com/send/?phone=5543996018333&text&type=phone_number&app_absent=0" target="_blank">
+                  <img src="portfolio/assets/icone-whatsapp.png" alt="icone do whatsapp">
+                </a>
+                <a class="email" href="mailto:italodemichellifalasca@hotmail.com?body=Olá Italo, podemos conversar?&subject=Contato pelo Portfólio">
+                  <img src="portfolio/assets/icone-email.png" alt="icone do email">
+                </a>
+                <a class="linkedin" href="https://www.linkedin.com/in/%C3%ADtalo-falasca-647428232/" target="_blank">
+                  <img src="portfolio/assets/icone-linkedin.png" alt="icone do linkedin">
+                </a>
+                <a class="github" href="https://github.com/imasterdeath" target="_blank">
+                  <img src="portfolio/assets/icone-github.png" alt="icone do github">
+                </a>
+              </div>
+          
+              <div class="section-curriculo">
+                <a class="curriculo" href="#!" onclick="openModal()">Currículo</a>
+                <div class="modal" id="curriculo-modal">
+                  <div class="modal-content">
+                    <div class="baixar-fechar">
+                        <a class="download" href="portfolio/assets/Currículo Italo de Michelli Falasca.pdf" download="Curriculo"> <img class="icone-down" src="portfolio/assets/icone-download-24.png" alt="icone de download"></a>
+                        <button class="close" onclick="closeModal()">X</button>
                     </div>
-                <div class="section-curriculo">
-                    <a class="curriculo" href="#curriculo">Currículo</a> 
-                </div>
-            </div>
+                    <img class="curriculum-img" src="portfolio/assets/Currículo-profissional.png" alt="Currículo">
 
-        <div class="section-right">
-            <img src="portfolio/assets/cartoon-italo.png" alt="Boneco do Italo">
-        </div>
-        
-        </main>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="section-right">
+              <img src="portfolio/assets/cartoon-italo.png" alt="Boneco do Italo">
+            </div>
+          </main>
+          
     </div>
 </body>
 </html>
