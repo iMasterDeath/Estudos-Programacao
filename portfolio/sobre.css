@@ -734,13 +734,22 @@ body {
     .body {
         overflow: hidden;
     }
+    
+    .background-section {
+        opacity: 60%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
     .background-section-mobile {
         display: flex;
         overflow: hidden;
     }
     .background-section-mobile img {
         width: 100%;
-        height: 90.1vh;
+        height: auto;
         opacity: 30%;
         transform: rotate(180deg);
         overflow: hidden;
