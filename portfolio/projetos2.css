@@ -1094,6 +1094,7 @@ h2 {
         height: 90.1vh;
         opacity: 30%;
         transform: rotate(180deg);
+        overflow: hidden;
     }
     .bolhas {
         display: none;
