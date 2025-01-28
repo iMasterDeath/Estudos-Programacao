@@ -395,9 +395,7 @@ body {
 
 @keyframes animar {
     0% {
-        transform: translateX(-10vw) scale(0);
-        
-        
+        transform: translateX(-10vw) scale(0);  
     }
 
     100% {
@@ -833,16 +831,16 @@ body {
 
 @media (width <= 700px) {
     .background-section-mobile {
-        display: none;
+        display: flex;
     }
     .background-section-mobile img {
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         opacity: 30%;
         transform: rotate(180deg);
     }
     .bolhas {
-        
+        display: none;
     }
     .main-section {
         display: flex;
