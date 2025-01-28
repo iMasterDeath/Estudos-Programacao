@@ -7,24 +7,6 @@
     <link rel="shortcut icon" href="portfolio/assets/favicon 16x16.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<script>
-    // Função para desmarcar o checkbox, fechando o menu
-    function fecharMenu() {
-        document.getElementById("menu-toggle").checked = false;
-    }
-    function fecharMenuMobile() {
-        document.getElementById("menu-toggle").checked = false;
-    }
-    // Funcao para abrir o curriculum 
-    function openModal() {
-      document.getElementById("curriculo-modal").style.display = "flex";
-    }
-
-    function closeModal() {
-      document.getElementById("curriculo-modal").style.display = "none";
-    }
-</script>
-
 <body>
     <div class="top-line">
         <div class="container"> <!-- 1 abre container -->
@@ -79,118 +61,7 @@
         <div class="background-section-mobile">
             <img src="portfolio/assets/background-futurista-vetor.png" alt="background cinza">
         </div>
-        <div class="bolhas">
-            <span style="--i:11"></span>
-            <span style="--i:17"></span>
-            <span style="--i:25"></span>
-            <span style="--i:14"></span>
-            <span style="--i:9"></span>
-            <span style="--i:2"></span>
-            <span style="--i:28"></span>
-            <span style="--i:16"></span>
-            <span style="--i:22"></span>
-            <span style="--i:4"></span>
-            <span style="--i:13"></span>
-            <span style="--i:27"></span>
-            <span style="--i:17"></span>
-            <span style="--i:9"></span>
-            <span style="--i:15"></span>
-            <span style="--i:24"></span>
-            <span style="--i:12"></span>
-            <span style="--i:26"></span>
-            <span style="--i:12"></span>
-            <span style="--i:17"></span>
-            <span style="--i:25"></span>
-            <span style="--i:14"></span>
-            <span style="--i:9"></span>
-            <span style="--i:2"></span>
-            <span style="--i:28"></span>
-            <span style="--i:16"></span>
-            <span style="--i:22"></span>
-            <span style="--i:4"></span>
-            <span style="--i:13"></span>
-            <span style="--i:27"></span>
-            <span style="--i:17"></span>
-            <span style="--i:9"></span>
-            <span style="--i:15"></span>
-            <span style="--i:24"></span>
-            <span style="--i:12"></span>
-            <span style="--i:26"></span>
-            <span style="--i:15"></span>
-            <span style="--i:17"></span>
-            <span style="--i:25"></span>
-            <span style="--i:14"></span>
-            <span style="--i:9"></span>
-            <span style="--i:2"></span>
-            <span style="--i:28"></span>
-            <span style="--i:16"></span>
-            <span style="--i:22"></span>
-            <span style="--i:4"></span>
-            <span style="--i:13"></span>
-            <span style="--i:27"></span>
-            <span style="--i:17"></span>
-            <span style="--i:9"></span>
-            <span style="--i:15"></span>
-            <span style="--i:24"></span>
-            <span style="--i:12"></span>
-            <span style="--i:26"></span>
-            <span style="--i:11"></span>
-            <span style="--i:17"></span>
-            <span style="--i:25"></span>
-            <span style="--i:14"></span>
-            <span style="--i:9"></span>
-            <span style="--i:2"></span>
-            <span style="--i:28"></span>
-            <span style="--i:16"></span>
-            <span style="--i:22"></span>
-            <span style="--i:4"></span>
-            <span style="--i:13"></span>
-            <span style="--i:27"></span>
-            <span style="--i:17"></span>
-            <span style="--i:9"></span>
-            <span style="--i:15"></span>
-            <span style="--i:24"></span>
-            <span style="--i:12"></span>
-            <span style="--i:26"></span>
-            <span style="--i:11"></span>
-            <span style="--i:17"></span>
-            <span style="--i:25"></span>
-            <span style="--i:14"></span>
-            <span style="--i:9"></span>
-            <span style="--i:2"></span>
-            <span style="--i:28"></span>
-            <span style="--i:16"></span>
-            <span style="--i:22"></span>
-            <span style="--i:4"></span>
-            <span style="--i:13"></span>
-            <span style="--i:27"></span>
-            <span style="--i:17"></span>
-            <span style="--i:9"></span>
-            <span style="--i:15"></span>
-            <span style="--i:24"></span>
-            <span style="--i:11"></span>
-            <span style="--i:17"></span>
-            <span style="--i:25"></span>
-            <span style="--i:14"></span>
-            <span style="--i:9"></span>
-            <span style="--i:2"></span>
-            <span style="--i:28"></span>
-            <span style="--i:16"></span>
-            <span style="--i:22"></span>
-            <span style="--i:4"></span>
-            <span style="--i:13"></span>
-            <span style="--i:27"></span>
-            <span style="--i:17"></span>
-            <span style="--i:9"></span>
-            <span style="--i:15"></span>
-            <span style="--i:24"></span>
-            <span style="--i:12"></span>
-            <span style="--i:26"></span>
-            <span style="--i:12"></span>
-            <span style="--i:17"></span>
-            <span style="--i:25"></span>
-
-        </div>
+        <div class="bolhas"></div>
     </div>
     <div class="container">
         <main class="main-section">
@@ -211,7 +82,6 @@
                   <img src="portfolio/assets/icone-github.png" alt="icone do github">
                 </a>
               </div>
-          
               <div class="section-curriculo">
                 <a class="curriculo" href="#!" onclick="openModal()">Currículo</a>
                 <div class="modal" id="curriculo-modal">
@@ -225,15 +95,11 @@
                 </div>
               </div>
             </div>
-          
             <div class="section-right">
               <img src="portfolio/assets/cartoon-italo.png" alt="Boneco do Italo">
             </div>
-          </main>
-          
+          </main> 
     </div>
 </body>
+<script src="script.js"></script>
 </html>
-
-
-

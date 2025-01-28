@@ -316,10 +316,61 @@ body {
     z-index: -1;
 }
 
+/* ------------------------------------------------------------------------------------------------- */
+
+/* Estilo do container das bolhas */
 .bolhas {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -2; /* Fica atrás do conteúdo */
+    pointer-events: none; /* Impede interação com as bolhas */
+}
+
+/* Estilo das bolhas */
+.bolhas span {
     position: absolute;
-    display: flex;
-    flex-direction: column;
+    background-color: #ff78dd; /* Cor padrão */
+    border-radius: 50%;
+    opacity: 0.8;
+    box-shadow: 0 0 10px 5px rgba(255, 120, 221, 0.5); /* Efeito de brilho */
+    animation: bolha-animation 12s linear infinite, float-animation 6s ease-in-out infinite;
+    transform: scale(0.2); /* Bolhas bem pequenas */
+    animation-delay: calc(var(--i) * 0.2s);
+    /* Inicia as bolhas em posições aleatórias */
+}
+
+/* Animação para mover as bolhas da esquerda para a direita e acima/abaixo */
+@keyframes bolha-animation {
+    0% {
+        transform: translateX(-100vw) translateY(0) scale(0.2);
+    }
+    100% {
+        transform: translateX(100vw) translateY(100vh) scale(0.5); /* As bolhas se movem por toda a tela */
+    }
+}
+
+/* Efeito de flutuação para dar mais naturalidade às bolhas */
+@keyframes float-animation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes dinâmicos no tamanho das bolhas */
+.bolhas span {
+    width: calc(5px + (var(--i) * 0.1)); /* Tamanho muito pequeno */
+    height: calc(5px + (var(--i) * 0.1)); /* Tamanho muito pequeno */
+    top: calc(5% + (var(--i) * 1)); /* Posição vertical das bolhas */
 }
 
 .bolhas span {
@@ -331,7 +382,7 @@ body {
     box-shadow: 0 0 0 10px hwb(169 5% 4% / 0.151),
     0 0 50px hwb(169 5% 4%),
     0 0 100px hwb(169 5% 4%);
-    animation: animar calc(100s / var(--i)) linear infinite;
+    animation: animar calc(130s / var(--i)) linear infinite;
 }
 
 .bolhas span:nth-of-type(even) {
@@ -343,9 +394,7 @@ body {
 
 @keyframes animar {
     0% {
-        transform: translateX(-10vw) scale(0);
-        
-        
+        transform: translateX(-10vw) scale(0); 
     }
 
     100% {
@@ -353,7 +402,7 @@ body {
     }
 }
 
-/* ----- BACKGROUND ANIMADO ----- */
+/* ------------------------------------------------------------------------------------------------- */
 
 .main-section {
     display: flex;
