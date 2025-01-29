@@ -316,7 +316,7 @@ body {
     z-index: -1;
 }
 
-/* ------------------------------------------------------------------------------------------------- */
+ /* ------------------------------------------------------------------------------------------------- */
 
 /* Estilo do container das bolhas */
 .bolhas {
@@ -394,7 +394,9 @@ body {
 
 @keyframes animar {
     0% {
-        transform: translateX(-10vw) scale(0); 
+        transform: translateX(-10vw) scale(0);
+        
+        
     }
 
     100% {
@@ -403,7 +405,6 @@ body {
 }
 
 /* ------------------------------------------------------------------------------------------------- */
-/* ----- BACKGROUND ANIMADO ----- */
 
 .main-section {
     display: flex;
@@ -1024,7 +1025,7 @@ h2 {
         transition: 0.3s;
     }
 
-    .link-text-2 {
+    .link-text-1 {
         margin-top: 50px;
         display: flex;
         align-items: center;
@@ -1038,6 +1039,21 @@ h2 {
 }
 
 @media (width <= 950px) {
+    .up-projetos {
+        gap: 50px;
+        width: 480px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--branco);
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background-color: var(--cinza-header);
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
     .navbar-module-links-list {
         display: none;
         transition: 0.3s;
@@ -1067,11 +1083,11 @@ h2 {
         transition: 0.3s;
     }
 
-    /* PROJETO 1 */
+    /* PROJETO 2 */
 
     .projeto1 {
         width: 100%;
-        height: 55vh;
+        height: 550px;
         background-color: var(--cinza-header);
         border: 1px solid var(--neon);
         border-radius: 8px;
@@ -1109,10 +1125,17 @@ h2 {
     }
     
     .link-text-1 {
-       
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        gap: 20px;
+        transition: 0.3s;
     }
     
-    .link-text-1 a {
+    .link-text-2 a {
       
     }
     
@@ -1142,7 +1165,7 @@ h2 {
     }
     .background-section-mobile img {
         width: 100%;
-        height: auto;
+        height: 100vh;
         opacity: 30%;
         transform: rotate(180deg);
         overflow: hidden;
@@ -1156,16 +1179,8 @@ h2 {
         justify-content: center;
         align-items: center;
         max-width: 100%;
-        height: auto;
+        height: 90.1vh;
         margin: 0 auto;
-        transition: 0.3s;
-    }
-
-    .container-projetos {
-        max-width: 85%;
-        margin: 0 auto;
-        display: flex;
-        height: auto;
         transition: 0.3s;
     }
 
@@ -1400,7 +1415,7 @@ h2 {
         justify-content: center;
         color: var(--branco);
         margin-top: 30px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         background-color: var(--cinza-header);
         border-radius: 8px;
         transition: 0.3s;
