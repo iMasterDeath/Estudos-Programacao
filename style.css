@@ -765,9 +765,10 @@ body {
         width: 100%;
         height: auto;
         margin-top: 60px;
-        margin-bottom: 40px;
+        margin-bottom: 80px;
         margin-left: 0px;
         margin-right: 0px;
+
     }
 
     .section-right {
@@ -860,7 +861,8 @@ body {
         justify-content: center;
         width: 100%;
         height: auto;
-        margin-bottom: 50px;
+        margin-top: 60px;
+        margin-bottom: 80px;
     }
 
     .section-right {
@@ -1132,7 +1134,7 @@ body {
         opacity: 60%;
         position: absolute;
         width: 100%;
-        height: 85vh;
+        height: 100vh;
         overflow: hidden;
         z-index: -1;
     }
@@ -1144,8 +1146,8 @@ body {
         justify-content: center;
         width: 100%;
         height: auto;
-        margin-top: 40px;
-        margin-bottom: 60px;
+        margin-top: 60px;
+        margin-bottom: 100px;
     }
     .section-left h1 {
         color: var(--branco);
