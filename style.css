@@ -29,7 +29,7 @@
 }
 
 body {
-    min-height: 100vh;
+    height: 100%;
     font-family: "Orbitron", serif;
     background-color: var(--cinza-header);
     margin: 0;
