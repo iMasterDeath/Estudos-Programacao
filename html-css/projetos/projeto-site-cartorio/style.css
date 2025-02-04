@@ -2218,9 +2218,7 @@ body {
 
 }
 
-
-
-@media screen and (max-width: 650px) {
+@media (min-width: 481px) and (max-width: 650px) {
     .container {
         max-width: 90%; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
         margin: 0 auto;
@@ -2996,3 +2994,7 @@ body {
 
 
 } 
+
+@media (min-width: 480px) and (max-width: 320px) {
+    
+}
