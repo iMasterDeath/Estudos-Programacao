@@ -2309,7 +2309,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 250px;
+        height: 200px;
         width: 100%;
     
     }
@@ -2329,7 +2329,7 @@ body {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 40px;
+        gap: 30px;
 
     }
     .wrapper-inicio1 {
