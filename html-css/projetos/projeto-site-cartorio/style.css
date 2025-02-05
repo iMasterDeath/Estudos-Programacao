@@ -410,7 +410,7 @@ body {
 
 .drop-menu {
     width: 188px;
-    height: 240px;
+    height: auto;
     position: absolute;
     background-color: var(--branco-1);
     display: none; 
@@ -603,7 +603,7 @@ body {
 }
 
 .tittle1 { 
-    font-size: 46px;
+    font-size: 42px;
     margin-bottom: 40px;
     color: var(--roxo-claro);
 }
@@ -661,7 +661,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 46px;
+    font-size: 42px;
     margin-bottom: 40px;
     color: var(--roxo-claro);
 }
@@ -798,7 +798,7 @@ body {
 
 .spacing-section2 {
     width: 100%;
-    height: 550px;
+    height: 500px;
 }
 
 .background-section-localidade {
@@ -808,33 +808,36 @@ body {
 }
 
 .section-local-e-fale {
-    
+    width: 100%;
+    height: 800px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
 
 }
 
 .section-localidade {
     display: flex;
+    
 }
 
 .localidade {    
     display: flex;
     flex-direction: column;
-
+    margin-left: -50px;
 }
 
 .p3 {
     padding-top: 80px;
-    font-size: 17px;
+    font-size: 18px;
     color: var(--cinza-subtitulo);
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .tittle3 {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 800;
     color: var(--roxo-claro);
     margin-bottom: 10px;
@@ -843,6 +846,7 @@ body {
 .description3 {
     width: 500px;
     margin-bottom: 40px;
+    font-size: 18px;
 }
 
 .bar-section-localidade {
@@ -851,8 +855,9 @@ body {
     background-color: #bebebe7e;
     width: 1px;
     height: 725px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 130px;
+    margin-right: 00px;
+    transition: 0.3s;
 }
 
 .section-duvidas {
@@ -860,7 +865,7 @@ body {
 }
 
 .duvidas {
-
+    margin-top: -33px;
 }
 
 .contact-box {
@@ -951,6 +956,8 @@ body {
 }
 
 .form-top {
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1517,8 +1524,8 @@ body {
 }
 
 .drop-menu {
-    width: 170px;
-    height: 260px;
+    width: 190px;
+    height: 331px;
     position: absolute;
     background-color: var(--branco-1);
     display: none; 
@@ -1544,9 +1551,32 @@ body {
 
 /* RESPONSIVIDADE */
 
-@media screen and (max-width: 1350px) {
-  
+@media screen and (max-width: 1500px) {
+    .bar-section-localidade {
+        display: flex;
+        margin-top: 80px;
+        background-color: #bebebe7e;
+        width: 1px;
+        height: 725px;
+        margin-left: 100px;
+        margin-right: 00px;
+        transition: 0.3s;
+    }
 }
+
+@media screen and (max-width: 1400px) {
+    .bar-section-localidade {
+        display: flex;
+        margin-top: 80px;
+        background-color: #bebebe7e;
+        width: 1px;
+        height: 725px;
+        margin-left: 80px;
+        margin-right: 00px;
+        transition: 0.3s;
+    }
+}
+
 
 @media screen and (max-width: 1300px) {
     .bar-section-localidade {
@@ -1562,7 +1592,28 @@ body {
         width: 560px;
         transition: 0.3s;
     }
+    .section-local-e-fale {
+        width: 90%;
+        height: 100%;
+        gap: 60px;
+    }
+    .section-duvidas {
+        width: auto;
+        height: 100%;
+    }
+    .duvidas {
+        width: auto;
+        height: 100%;
+        margin-top: -30px;
+    }
+    .form {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
     
+
 }
 
 @media screen and (max-width: 1250px) {
@@ -1576,18 +1627,26 @@ body {
         width: 530px;
         transition: 0.3s;
     }
-    .duvidas {
-        margin-left: -60px;
-    }
     .spacing-section2 {
         width: 100%;
         height: 550px;
         transition: 0.3s;
     }
-    .section-localidade {
-        padding-right: 100px;
+    .section-local-e-fale {
+        width: 90%;
+        height: 100%;
+        gap: 60px;
     }
-
+    .section-duvidas {
+        width: auto;
+        height: 100%;
+        margin-top: -30px;
+    }
+    .duvidas {
+        width: auto;
+        height: 100%;
+        margin-top: 0px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1609,11 +1668,111 @@ body {
     }
 
     .description3 {
-        width: 60%;
+        width: 90%;
         transition: 0.3s;
     }
     .duvidas {
-        margin-left: -100px;
+        width: 100%;
+        height: 100%;
+        margin-left: 0px;
+    }
+    .form-top {
+        width: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 1px;
+    }
+    .form-top input {
+        width: 200px;
+        height: 60px;
+        border: 1px solid var(--roxo-escuro);
+        border-radius: 4px;
+        background-color: var(--branco);
+        font-weight: 400;
+        padding-left: 60px;
+        color: var(--roxo-escuro);
+        font-size: 16px;
+        font-family: "Poppins", sans-serif;
+    }
+    .form-bottom {
+        width: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 1px;
+    }
+    .form-bottom input {
+        width: 200px;
+        height: 60px;
+        border: 1px solid var(--roxo-escuro);
+        border-radius: 4px;
+        background-color: var(--branco);
+        font-weight: 400;
+        padding-left: 60px;
+        color: var(--roxo-escuro);
+        font-size: 16px;
+        font-family: "Poppins", sans-serif;
+    }
+    .form-mensagem {
+        width: 100%;
+        height: 330px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    
+    .img-msg-form {
+        display: flex;
+        margin-top: 18px;
+        margin-left: 20px;
+        z-index: 2;
+        position: absolute;
+    }
+    
+    .form-mensagem textarea {
+        width: 85%;
+        height: 250px;
+        border: 1px solid var(--roxo-escuro);
+        border-radius: 4px;
+        background-color: var(--branco);
+        color: var(--roxo-escuro);
+        padding-top: 18px;
+        margin-bottom: 0px;
+        font-weight: 400;
+        padding-left: 63px;
+        font-size: 16px;
+        resize: none;
+        overflow: none;
+        font-family: "Poppins", sans-serif;
+    }
+    .form-mensagem button {
+        width: 200px;
+        height: 50px;
+        border: none;
+        background-color: var(--laranja);
+        border-radius: px;
+        color: var(--branco);
+        cursor: pointer;
+        color: var(--branco);
+        position: relative;
+        transition: .3s;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .img-email-form {
+        display: flex;
+        margin-left: 245px;
+        z-index: 2;
+        position: absolute;
+    }
+    .img-subject-form {
+        display: flex;
+        margin-left: 245px;
+        z-index: 2;
+        position: absolute;
     }
     
 }
@@ -1672,8 +1831,7 @@ body {
         transition: 0.3s;
     }
     .duvidas {
-        margin-left: -150px;
-        transition: 0.3s;
+        
     }
     .iframe-web {
         width: 400px;
@@ -1683,6 +1841,104 @@ body {
     .nav-item-spacing {
         display: none;
         transition: 0.5s;
+    }
+    .form-top {
+        width: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 1px;
+    }
+    .form-top input {
+        width: 200px;
+        height: 60px;
+        border: 1px solid var(--roxo-escuro);
+        border-radius: 4px;
+        background-color: var(--branco);
+        font-weight: 400;
+        padding-left: 60px;
+        color: var(--roxo-escuro);
+        font-size: 16px;
+        font-family: "Poppins", sans-serif;
+    }
+    .form-bottom {
+        width: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 1px;
+    }
+    .form-bottom input {
+        width: 200px;
+        height: 60px;
+        border: 1px solid var(--roxo-escuro);
+        border-radius: 4px;
+        background-color: var(--branco);
+        font-weight: 400;
+        padding-left: 60px;
+        color: var(--roxo-escuro);
+        font-size: 16px;
+        font-family: "Poppins", sans-serif;
+    }
+    .form-mensagem {
+        width: 100%;
+        height: 330px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    
+    .img-msg-form {
+        display: flex;
+        margin-top: 18px;
+        margin-left: 20px;
+        z-index: 2;
+        position: absolute;
+    }
+    
+    .form-mensagem textarea {
+        width: 85%;
+        height: 250px;
+        border: 1px solid var(--roxo-escuro);
+        border-radius: 4px;
+        background-color: var(--branco);
+        color: var(--roxo-escuro);
+        padding-top: 18px;
+        margin-bottom: 0px;
+        font-weight: 400;
+        padding-left: 63px;
+        font-size: 16px;
+        resize: none;
+        overflow: none;
+        font-family: "Poppins", sans-serif;
+    }
+    .form-mensagem button {
+        width: 200px;
+        height: 50px;
+        border: none;
+        background-color: var(--laranja);
+        border-radius: 0px;
+        color: var(--branco);
+        cursor: pointer;
+        color: var(--branco);
+        position: relative;
+        transition: .3s;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .img-email-form {
+        display: flex;
+        margin-left: 245px;
+        z-index: 2;
+        position: absolute;
+    }
+    .img-subject-form {
+        display: flex;
+        margin-left: 245px;
+        z-index: 2;
+        position: absolute;
     }
     
 }
