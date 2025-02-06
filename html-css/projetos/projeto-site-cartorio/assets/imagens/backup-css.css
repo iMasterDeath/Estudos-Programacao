@@ -855,8 +855,8 @@ body {
     background-color: #bebebe7e;
     width: 1px;
     height: 725px;
-    margin-left: 130px;
-    margin-right: -130px;
+    margin-left: 0px;
+    margin-right: 00px;
     transition: 0.3s;
 }
 
@@ -1551,22 +1551,7 @@ body {
 
 /* RESPONSIVIDADE */
 
-
-@media (width <= 1800px) {
-    .bar-section-localidade {
-        display: flex;
-        margin-top: 80px;
-        background-color: #bebebe7e;
-        width: 1px;
-        height: 725px;
-        margin-left: 130px;
-        margin-right: 0px;
-        transition: 0.3s;
-    }
-}
-
-
-@media (width <= 1500px) {
+@media screen and (max-width: 1500px) {
     .bar-section-localidade {
         display: flex;
         margin-top: 80px;
@@ -1579,7 +1564,7 @@ body {
     }
 }
 
-@media (width <= 1400px) {
+@media screen and (max-width: 1400px) {
     .bar-section-localidade {
         display: flex;
         margin-top: 80px;
@@ -1593,7 +1578,7 @@ body {
 }
 
 
-@media (width <= 1300px) {
+@media screen and (max-width: 1300px) {
     .bar-section-localidade {
         display: none;
     }
@@ -1631,7 +1616,7 @@ body {
 
 }
 
-@media (width <= 1250px) {
+@media screen and (max-width: 1250px) {
     .img-tabelionato {
         display: flex;
         width: 530px;
@@ -1664,7 +1649,7 @@ body {
     }
 }
 
-@media (width <= 1200px) {
+@media screen and (max-width: 1200px) {
 
     .img-tabelionato {
         display: flex;
@@ -1791,12 +1776,14 @@ body {
     }
     
 }
-@media (width <= 1150px) {
+
+@media screen and (max-width: 1150px) {
     .container {
         max-width: 90%; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
         margin: 0 auto;
         transition: 0.3s;
     }
+    
     .blocks {
         gap: 30px;
         transition: 0.2s;
@@ -1816,45 +1803,23 @@ body {
         height: 400px;
         transition: 0.3s;
     }
-    .section-local-e-fale {
-        width: 90%;
-        height: 100%;
-        gap: 100px;
-    }
-    .section-localidade {
-        width: 50%;
-        height: 100%;
-    }
-    .description3 {
-        width: 90%;
-    }
-    .section-duvidas {
-        width: auto;
-        height: 100%;
-        margin-top: 38px;
-    }
-    .duvidas {
-        width: auto;
-        height: 100%;
-        margin-top: 0px;
-    }
     .box-contact-email {
         width: 450px;
         height: 460px;
         transition: 0.3s;
     }
     .box-contact-email .email-top p input {
-        width: 200px;
+        width: 220px;
         height: 60px;
         transition: 0.3s;
     }
     .box-contact-email .email-bottom p input {
-        width: 200px;
+        width: 220px;
         height: 60px;
         transition: 0.3s;
     }
     .input-mensagem {
-        width: 85%;
+        width: 90%;
     }
     .bar-section-footer {
         margin-top:  15px;
@@ -1883,7 +1848,7 @@ body {
         align-items: center;
         justify-content: space-between;
         flex-direction: row;
-        gap: 10px;
+        gap: 1px;
     }
     .form-top input {
         width: 200px;
@@ -1903,7 +1868,7 @@ body {
         align-items: center;
         justify-content: space-between;
         flex-direction: row;
-        gap: 10px;
+        gap: 1px;
     }
     .form-bottom input {
         width: 200px;
@@ -1918,7 +1883,7 @@ body {
         font-family: "Poppins", sans-serif;
     }
     .form-mensagem {
-        width: 455px;
+        width: 100%;
         height: 330px;
         display: flex;
         flex-direction: column;
@@ -1934,8 +1899,8 @@ body {
     }
     
     .form-mensagem textarea {
-        width: 90%;
-        height: 200px;
+        width: 85%;
+        height: 250px;
         border: 1px solid var(--roxo-escuro);
         border-radius: 4px;
         background-color: var(--branco);
@@ -1978,7 +1943,7 @@ body {
     
 }
 
-@media (width <= 1120px) {
+@media screen and (max-width: 1120px) {
     .img-sobre {
         width: 520px;
         height: auto;
@@ -2097,6 +2062,10 @@ body {
         color: var(--cinza-claro);
         transition: 0.3s;
     }
+    .description3 {
+        width: 65%;
+        transition: 0.3s;
+    }
     .bar-section-footer {
         background-color: transparent;
         margin-left: 30px;
@@ -2106,7 +2075,7 @@ body {
 }
 
 
-@media (width <= 1050px) {
+@media screen and (max-width: 1050px) {
     .img-sobre {
         width: 480px;
         height: auto;
@@ -2166,164 +2135,9 @@ body {
         height: 320px;
         transition: 0.3s;
     }
-    .section-local-e-fale {
-        width: 100%;
-        height: auto;
-        display: flex;
-        align-items: center;
-        gap: 0px;
-    }
-    .background-section-localidade {
-        height: 1600px;
-    }
-    .section-duvidas {
-        width: auto;
-        height: 100%;
-        margin-top: 65px;
-    }
-    .duvidas {
-        width: 100%;
-        margin: 0px 0px;
-    }
-    .section-localidade {
-        width: 90%;
-        margin-right: -100px;
-    }
-    .localidade {
-        width: 100%;
-        margin: 0px 0px;
-    }
-    .iframe-web {
-        width: 350px;
-        height: 300px;
-        transition: 0.3s;
-    }
-    .description3 {
-        width: 65%;
-    }
-    .form {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-    .form-top {
-        width: 85%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        flex-direction: column;
-        gap: 15px;
-        
-    }
-    .form-top input {
-        width: 300px;
-        height: 50px;
-        border: 1px solid var(--roxo-escuro);
-        border-radius: 4px;
-        background-color: var(--branco);
-        font-weight: 400;
-        padding-left: 60px;
-        color: var(--roxo-escuro);
-        font-size: 16px;
-        font-family: "Poppins", sans-serif;
-    }
-    .form-bottom {
-        width: 85%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        flex-direction: column;
-        gap: 15px;
-    }
-    .form-bottom input {
-        width: 300px;
-        height: 50px;
-        border: 1px solid var(--roxo-escuro);
-        border-radius: 4px;
-        background-color: var(--branco);
-        font-weight: 400;
-        padding-left: 60px;
-        color: var(--roxo-escuro);
-        font-size: 16px;
-        font-family: "Poppins", sans-serif;
-    }
-    .form-mensagem {
-        width: 300px;
-        height: 330px;
-        display: flex;
-        flex-direction: column;
-        margin-top: 15px;
-    }
-    .form-mensagem textarea {
-        width: 100%;
-        height: 80px;
-        border: 1px solid var(--roxo-escuro);
-        border-radius: 4px;
-        background-color: var(--branco);
-        color: var(--roxo-escuro);
-        padding-top: 18px;
-        margin-bottom: 0px;
-        font-weight: 400;
-        padding-left: 63px;
-        font-size: 16px;
-        resize: none;
-        overflow: none;
-        font-family: "Poppins", sans-serif;
-    }
-    .form-mensagem button {
-        width: 200px;
-        height: 50px;
-        border: none;
-        background-color: var(--laranja);
-        border-radius: 0px;
-        color: var(--branco);
-        cursor: pointer;
-        color: var(--branco);
-        position: relative;
-        transition: .3s;
-        font-weight: 600;
-        font-size: 16px;
-    }
-    .img-person-form {
-        display: flex;
-        margin-left: 20px;
-        margin-top: 13px;
-        z-index: 2;
-        position: absolute;
-    }
-    .img-email-form {
-        display: flex;
-        margin-left: 20px;
-        margin-top: 72px;
-        z-index: 2;
-        position: absolute;
-    }
-    .img-subject-form {
-        display: flex;
-        margin-left: 20px;
-        margin-top: 72px;
-        z-index: 2;
-        position: absolute;
-    }
-    .img-phone-form {
-        display: flex;
-        margin-left: 20px;
-        margin-top: 13px;
-        z-index: 2;
-        position: absolute;
-    }
-    
-    .img-msg-form {
-        display: flex;
-        margin-top: 20px;
-        margin-left: 20px;
-        z-index: 2;
-        position: absolute;
-    }
 }
 
-@media (width <= 1000px) {
+@media screen and (max-width: 1000px) {
     .img-sobre {
         width: 430px;
         height: auto;
@@ -2345,8 +2159,7 @@ body {
         transition: 0.3s;
     }
     .duvidas {
-        margin-left: -0px;
-        transition: 0.3s;
+        margin-left: -150px;
     }
 
     .box-contact-email {
@@ -2370,20 +2183,16 @@ body {
     .p-contact-mensagem {
         width: 340px;
     }
-    .section-localidade {
-        width: 100%;
-        margin-right: 0px;
-    }
     .localidade {
-        margin: 0px 0px;
-        
+        margin-left: 20px;
+        margin-right: 120px;
     }
     .section-local-e-fale {
         /* AJUSTAR O FALE CONOSCO E O FORMULARIO */
     }
 }
 
-@media (width <= 950px) {
+@media screen and (max-width: 950px) {
     .dropdown {
         display: none;
     }
@@ -2445,19 +2254,30 @@ body {
     .description1 {
         width: 300px;
     }
+    .section-local-e-fale {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .background-section-localidade {
-        height: 1650px;
+        height: 1750px;
     }
     
     .section-duvidas {
-        margin-left: 0px;
+        margin-left: -50px;
     }
 
     .duvidas {
 
     }
     .description3 {
-        width: 75%;
+        width: 500px;
+    }
+    .iframe-web {
+        width: 500px;
+        height: 400px;
+        transition: 0.3s;
     }
 
     .box-contact-email {
@@ -2484,7 +2304,7 @@ body {
 
 }
 
-@media (width <= 900px) {
+@media screen and (max-width: 900px) {
     .container {
         max-width: 90%; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
         margin: 0 auto;
@@ -2526,19 +2346,14 @@ body {
         width: 300px;
     }
 
-    .section-servicos {
-        width: 100%;
-        height: 1000px;
-    }
-
     .spacing-section2 {
-        height: 1100px;
+        height: 1000px;
     }
     .localidade {
 
     }
     .section-duvidas {
-        margin-left: 50px;
+        margin-left: -50px;
     }
     .background-footer {
         height: 2000px;
@@ -2565,74 +2380,20 @@ body {
         display: flex;
         width: 200px;
     }
-    .section-sobre {
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0px; 
-    }
-    .p1 {
-        display: flex;
-        font-weight: bold;
-        font-size: 16px;
-    }
-    .tittle1 {
-        font-size: 40px;
-    }
-    .section-servicos {
-        height: 1000px;
-        flex-shrink: 0;
-    }
-    .tabelionato-de-notas {
-       width: 80%;
-    }
-    .img-tabelionato {
-        width: 100%;
-    }
-    .registro-civil {
-        width: 80%;
-    }
-    .img-civil {
-        width: 100%;
-    }
-    .spacing-section2 {
-        
-    }
-    .section-duvidas {
-        margin-left: 40px;
-    }
+
 
 }
 
-@media (width <= 850px) {
-    .section-localidade {
-        width: 100%;
-    }
-    .section-duvidas {
-        margin-left: 55px;
-    }
-}
-
-@media (width <= 800px) {
+@media screen and (max-width: 800px) {
     .section-localidade {
         width: 100%;
     }
     .section-duvidas {
         margin: 0px;
-        margin-left: -0px;
-    }
-    .duvidas {
-        margin-left: -90px;
-    }
-    .section-local-e-fale {
-        display: flex;
-        flex-direction: column;
     }
 }
 
-@media (width <= 750px) {
+@media screen and (max-width: 750px) {
     .section-sobre {
         display: flex;
     }
@@ -2646,7 +2407,7 @@ body {
 }
 
 
-@media (width <= 720px) {
+@media screen and (max-width: 720px) {
     .wrapper-home {
         gap: 20px;
     }
@@ -2699,7 +2460,7 @@ body {
 /*  TABLET */
 
 
-@media (width <= 700px) {
+@media screen and (max-width: 700px) {
     .img-sobre {
         width: 480px;
         height: auto;
@@ -2720,7 +2481,7 @@ body {
         transition: 0.3s;
     }
     .img-sobre {
-        width: 75vw;
+        width: 400px;
         height: auto;
         transition: 0.5s;
     }
@@ -2855,155 +2616,10 @@ body {
         height: 900px;
         opacity: 100%;
     }
-}
 
-@media (min-width: 320px) and (max-width: 480px) {
-    .container {
-        max-width: 90%; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
-        margin: 0 auto;
-        transition: 0.3s;
-    }
-    .img-sobre {
-        width: 75vw;
-        height: auto;
-        transition: 0.5s;
-    }
-    .section-duvidas {
-        margin-left: 100px;
-    }
-    .top-line {
-        display: none;
-    }
-    .header-siderbar-left {
-        display: flex;
-        z-index: 3;
-    }
-    .logo-sidebar {
-        display: flex;
-        padding-top: 6px;
-        padding-left: 10px;
-        width: 45px;
-        height: 45px;
-    }
-    .blocks {
-        display: none;
-    }
-    .header-content {
-        height: 10px;
-    }
-    .header-sidebar {
-        position: fixed;
-        width: 90%;
-        height: 70px;
-        box-shadow: 0px 0px 10px 0px var(--roxo-escuro);
-    }
-    .header-sidebar-right {
-        display: flex;
-        width: 40%;
-        padding-right: 20px;
-        padding-top: 10px;
-        align-items: center;
-        justify-content: center;
-        transition: 0.3s;
-    }
-    .menu-icon {
-        cursor: pointer;
-        width: 10px;
-        height: 10px;
-        border-radius: 100px;
-        background-color: var(--roxo-claro);
-        transition: background-color 0.3s;
-        transition: 0.3s;
-    }
-    .text-sobre {
-        display: flex;
-        flex-direction: column;
-        height: 500px;
-        margin-left: 0px;
-    }
-    .text-top-cartorio {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        align-items: center;
-        justify-content: center;
-    }
-    .title-top {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 40px;
-    }
-    .title-top h1 {
-        font-size: 9.5vw;
-    }
-    .title-top h3 {
-        font-size: 9vw;
-    }
-    .description {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 280px;
-        width: 100%;
-    
-    }
-    .p1-web {
-        display: none;
-    }
-    .p1-mobile {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 5vw;
 
-    }
-    .wrapper-home {
-        width: 100%;
-        height: 100px;
-        margin-top: 0px;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
 
-    }
-    .wrapper-inicio1 {
-        width: 150px;
-        font-size: 18px;
-    }
-    .wrapper-inicio2 {
-        width: 200px;
-        font-size: 18px;
-    }
-    .wrapper-inicio3 {
-        width: 260px;
-        font-size: 18px;
-    }
-    #img-back-top {
-        display: none;
-    }
-    #img-back-top-mobile {
-        display: flex;
-        position: ;
-    }
-    .img-background-top {
-        width: 100vw;
-        height: auto;
-    }
-    .wrapper-space {
-        display: flex;
-        width: 100%;
-        height: 900px;
-        opacity: 100%;
-    }
-}
 
-@media (width <= 299px) {
-
-}
 
 
 /*  MOBILE */
