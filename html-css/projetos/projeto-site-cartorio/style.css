@@ -3096,7 +3096,7 @@ body {
 }
 
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 250px) and (max-width: 480px) {
     .container {
         max-width: 90%; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
         margin: 0 auto;
@@ -3415,10 +3415,6 @@ body {
         z-index: 2;
         position: absolute;
     }
-}
-
-@media (width <= 99px) {
-
 }
 
 
