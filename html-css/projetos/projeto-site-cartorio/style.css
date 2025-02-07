@@ -2219,7 +2219,7 @@ body {
         flex-direction: column;
     }
     .form-top {
-        width: 85%;
+        width: 100%;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -2240,7 +2240,7 @@ body {
         font-family: "Poppins", sans-serif;
     }
     .form-bottom {
-        width: 85%;
+        width: 100%;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -2306,14 +2306,14 @@ body {
     .img-email-form {
         display: flex;
         margin-left: 20px;
-        margin-top: 72px;
+        margin-top: 77px;
         z-index: 2;
         position: absolute;
     }
     .img-subject-form {
         display: flex;
         margin-left: 20px;
-        margin-top: 72px;
+        margin-top: 77px;
         z-index: 2;
         position: absolute;
     }
@@ -2326,7 +2326,7 @@ body {
     }
     .img-msg-form {
         display: flex;
-        margin-top: 20px;
+        margin-top: 17px;
         margin-left: 20px;
         z-index: 2;
         position: absolute;
@@ -2682,7 +2682,7 @@ body {
         font-family: "Poppins", sans-serif;
     }
     .form-bottom {
-        width: 85%;
+        width: 100%;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -2702,7 +2702,7 @@ body {
         font-family: "Poppins", sans-serif;
     }
     .form-mensagem {
-        width: 400px;
+        width: 100%;
         height: 330px;
         display: flex;
         flex-direction: column;
@@ -2858,7 +2858,7 @@ body {
 }
 
 @media (min-width: 481px) and (max-width: 650px) {
-    }
+    
     .container {
         max-width: 90%; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
         margin: 0 auto;
@@ -2876,7 +2876,7 @@ body {
     }
     .logo-sidebar {
         width: 300px;
-        background-color: #07B650;
+
     }
     .background-section-localidade {
         height: 1850px;
@@ -3208,7 +3208,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 280px;
+        height: 200px;
         width: 100%;
     }
     .p1-web {
@@ -3278,16 +3278,16 @@ body {
     #img-back-top-mobile {
         display: flex;
         width: 100vw;
-        height: 900px;
+        height: 800px;
     }
     .img-background-top {
         width: 100vw;
-        height: auto;
+        height: 700px;
     }
     .wrapper-space {
         display: flex;
         width: 100%;
-        height: 900px;
+        height: 800px;
         opacity: 100%;
     }
     .section-localidade {
