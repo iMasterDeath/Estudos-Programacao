@@ -52,8 +52,11 @@ a {
 
 body {
     margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
     background-color: var(--branco);
     font-family: "Source Sans 3", sans-serif;
+    width: 100%;
     overflow-x: hidden;
 }
 
