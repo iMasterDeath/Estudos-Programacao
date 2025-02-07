@@ -2890,7 +2890,7 @@ body {
     .header-sidebar {
         margin-left: 0px;
         position: fixed;
-        width: 88vw;
+        width: 89vw;
         height: 70px;
         box-shadow: 0px 0px 10px 5px #5f5f5f33;
     }
@@ -3130,7 +3130,7 @@ body {
     }
     .header-sidebar {
         position: fixed;
-        width: 90%;
+        width: 89vw;
         height: 70px;
         box-shadow: 0px 0px 10px 0px var(--roxo-escuro);
     }
