@@ -21,7 +21,7 @@ font-family: "Source Sans 3", sans-serif;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    max-width: 100%;
+    
 }
 
 a {
@@ -2110,6 +2110,7 @@ body {
 
 
 @media (width <= 1050px) {
+    
     .img-sobre {
         width: 480px;
         height: auto;
@@ -2316,7 +2317,6 @@ body {
         z-index: 2;
         position: absolute;
     }
-    
     .img-msg-form {
         display: flex;
         margin-top: 20px;
@@ -2856,10 +2856,18 @@ body {
         margin: 0 auto;
         transition: 0.3s;
     }
+    .header-siderbar-left {
+        width: 100%;
+    }
     .img-sobre {
-        width: 75vw;
+        display: flex;
+        width: 100vw;
         height: auto;
-        transition: 0.5s;
+        transition: 0.3s;
+        
+    }
+    .logo-sidebar {
+        
     }
     .background-section-localidade {
         height: 1850px;
