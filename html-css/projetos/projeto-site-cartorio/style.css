@@ -54,6 +54,7 @@ body {
     margin: 0 auto;
     background-color: var(--branco);
     font-family: "Source Sans 3", sans-serif;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -2541,7 +2542,7 @@ body {
         margin-left: 50px;
     }
     .background-footer {
-        height: 1550px;
+        height: 1600px;
     }
     .bar-section-footer {
         display: none;
