@@ -274,7 +274,7 @@ body {
     text-decoration: none;
     display: block;
     padding: 10px 0;
-    font-size: 18px;
+    font-size: 20px;
     transition: color 0.3s;
     font-weight: 600;
 }
@@ -367,7 +367,7 @@ body {
 .dropdown-mobile  {
     color: var(--branco);
     font-weight: 600;
-    font-size: 18px;
+    font-size: 20px;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -1223,6 +1223,7 @@ body {
 }
 
 */
+
 .spacing-footer {
     width: 100%;
     height: 150px;
@@ -1392,153 +1393,19 @@ body {
     font-weight: 700;
 }
 
-/* Menu Lateral Responsividade Abaixo: */
+/* ----------------- CSS DO MENU HAMBURGUER ----------------- */
 
-.menu-lateral {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    align-items: center;
-    top: 0;
-    right: 100%;
-    width: 100%;
-    height: 100%;
-    background-color: var(--roxo-claro);
-    color: white;
-    padding: 30px;
-    box-sizing: border-box;
-    transition: left 0.3s ease;
-    z-index: 1;
+ /* Estilos básicos */
+ body {
+    overflow-x: hidden;
 }
 
-.menu-lateral a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0;
-    font-size: 50px;
-    transition: color 0.3s;
-    font-weight: 600;
-}
-
-.menu-logo-lateral {
-    width: 100%;
-    display: flex;
-    align-items: space-between;
-    justify-content: space-between;
-    margin-bottom: 150px;
-}
-
-.menu-mobile-lateral-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.menu-lateral h2 {
-    font-size: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height: 100px;
-    align-items: center;
-    border-radius: 4px;
-    background-color: var(--laranja);
-}
-
-.menu-lateral a:hover {
-    color: var(--laranja);
-    transition: 0.3s;
-    font-weight: 800;
-}
-
-.bar-menu {
-    display: flex;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 100%;
-    height: 1px;
-    background-color: var(--azul-2);
-}
-
-.close-btn {
-    background-color: var(--laranja);
-    border-radius: 6px;
-    color: white;
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    text-align: center;
-    font-size: 45px;
-    transition: 0.3s;
-    
-}
-
-.close-btn:hover {
-    background-color: var(--branco);
-    color: var(--roxo-escuro);
-    font-weight: bold;
-}
-
-.dropdown-mobile > a {
-    color: var(--branco);
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.drop-menu-mobile {
+/* Estilo do checkbox */
+#menu-toggle {
     display: none;
 }
 
-.dropdown-mobile:hover .drop-menu-mobile {
-    display: block;
-    transition: 0.3s;
-}
 
-.drop-menu-mobile > a {
-    color: var(--branco);
-    font-weight: 600;
-    font-size: 50px;
-    padding: 20px 0px;
-    padding-top: 50px;
-}
-
-.dropdown > a:hover {
-    color: var(--laranja);
-    font-weight: 900;
-    transition: 0.3s;
-}
-
-.drop-menu {
-    width: 190px;
-    height: 331px;
-    position: absolute;
-    background-color: var(--branco-1);
-    display: none; 
-    padding-top: 40px;
-    font-weight: 700;
-    transition: 0.3s;
-}
-
-.drop-menu a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--roxo-escuro);
-    margin-bottom: 15px;
-    transition: 0.3s;
-}
-
-.drop-menu a:hover {
-    color: var(--laranja);
-    font-weight: 900;
-    transition: 0.3s;
-}
 
 /* RESPONSIVIDADE */
 
@@ -2387,6 +2254,10 @@ body {
 }
 
 @media (width <= 950px) {
+    
+
+
+
     .dropdown {
         display: none;
     }
@@ -2618,9 +2489,9 @@ body {
     }
     .final-footer {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
-        width: 450px;
+        width: 100%;
     }
     .section-sobre {
         width: 100%;
@@ -2907,10 +2778,65 @@ body {
     .spacing-section2 {
         height: 1150px;
     }
+    .email {
+        display: none;
+        transition: 0.3s;
+    }
+    .telefone {
+        display: none;
+        transition: 0.3s;
+    }
+    .whatsapp {
+        display: none;
+        transition: 0.3s;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 650px) {
     
+    /* RESPONSIVIDADE MENU-LATERAL */
+
+    .menu-lateral {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background-color: var(--roxo-claro);
+        color: white;
+        padding: 30px;
+        box-sizing: border-box;
+        transition: left 0.3s ease;
+        z-index: 99;
+    }
+    #menu-toggle:checked + label + .menu-lateral {
+        left: 0;
+    }
+    .menu-lateral-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-logo-lateral h2 {
+        width: 120px;
+        height: 50px;
+        font-size: 26px;
+    }
+    .menu-logo-lateral {
+        margin-bottom: 100px;
+    }
+    .nav-mobile a {
+        font-size: 26px;
+    }
+
+    .dropdown-mobile a {
+        font-size: 26px;
+    }
+
+    /* --------------------------- */
     .container {
         max-width: 90%; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
         margin: 0 auto;
@@ -3214,6 +3140,51 @@ body {
         margin: 0 auto;
         transition: 0.3s;
     }
+
+    /* RESPONSIVIDADE MENU-LATERAL */
+
+    .menu-lateral {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background-color: var(--roxo-claro);
+        color: white;
+        padding: 30px;
+        box-sizing: border-box;
+        transition: left 0.3s ease;
+        z-index: 99;
+    }
+    #menu-toggle:checked + label + .menu-lateral {
+        left: 0;
+    }
+    .menu-lateral-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-logo-lateral h2 {
+        width: 120px;
+        height: 50px;
+        font-size: 26px;
+    }
+    .menu-logo-lateral {
+        margin-bottom: 100px;
+    }
+    .nav-mobile a {
+        font-size: 26px;
+    }
+
+    .dropdown-mobile a {
+        font-size: 26px;
+    }
+
+    /* --------------------------- */
+    
     .img-sobre {
         width: 75vw;
         height: auto;
