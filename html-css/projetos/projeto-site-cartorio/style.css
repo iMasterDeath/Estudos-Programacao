@@ -259,7 +259,7 @@ body {
     padding: 30px;
     box-sizing: border-box;
     transition: right 0.3s ease;
-    z-index: 5;
+    z-index: 99;
 }
 
 /* Exibe o menu quando o checkbox está marcado */
@@ -1232,7 +1232,7 @@ body {
 .background-footer {
     background-color: var(--roxo-claro);
     width: 100vw;
-    height: 650px;
+    height: 700px;
     padding-top: 90px;
 }
 
@@ -1368,10 +1368,12 @@ body {
 .final-footer {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--roxo-claro);
-    margin-top: 50px; 
+    margin-top: 60px; 
+    font-size: 17px;
 }
 
 .final-footer p {
@@ -2374,11 +2376,13 @@ body {
         margin-right: 0px;
     }
     .localidade {
-        margin: 0px 0px;
-        
+        margin: 0px 0px;  
     }
     .section-local-e-fale {
         /* AJUSTAR O FALE CONOSCO E O FORMULARIO */
+    }
+    .background-footer {
+        height: 730px;
     }
 }
 
@@ -2532,7 +2536,7 @@ body {
     .p-contact-mensagem {
         width: 500px;
     }
-
+    
 }
 
 @media (width <= 900px) {
@@ -2592,7 +2596,7 @@ body {
         margin-left: 50px;
     }
     .background-footer {
-        height: 1600px;
+        height: 1700px;
     }
     .bar-section-footer {
         display: none;
@@ -2614,7 +2618,9 @@ body {
     }
     .final-footer {
         display: flex;
-        width: 200px;
+        align-items: center;
+        justify-content: center;
+        width: 450px;
     }
     .section-sobre {
         width: 100%;
