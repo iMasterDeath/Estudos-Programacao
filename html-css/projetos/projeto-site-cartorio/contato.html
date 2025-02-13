@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartório Pirapó</title>
+    <link rel="stylesheet" href="contato.css">
+    <link rel="shortcut icon" href="assets/imagens/favicon-16x16.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <!-- Linha superior com dados da empresa -->
+        <div class="top-line">  
+            <div class="container">
+                <div class="email">
+                    <img class="img-top-line" src="assets/imagens/icone-email-laranja-22.png" alt="email">
+                    <a href="#email(alterar)">cartoriopirapo@gmail.com</a>
+                </div> 
+                <div class="telefone">
+                    <img class="img-top-line" src="assets/imagens/icone-telefone-laranja-21.png" alt="telefone">
+                    <a href="#telefone(alterar)">(43) 3440-1092</a>
+                </div>
+                <div class="whatsapp">
+                    <img class="img-top-line" src="assets/imagens/icone-whatsapp-laranja-22.png" alt="whatsapp">
+                    <a href="#whatsapp (alterar)">43 98435-4708</a>
+                </div>
+        </div>
+    </div>
+    <!-- Espaço com logo e blocos -->
+        <div class="header-content">
+            <nav class="container">
+                <div class="nav-info">
+                    <div class="logo">
+                        <a href="#home" id="logo-img-a"><img src="assets/imagens/logo-cartorio-top.png" class="logo-img" alt="logo do cartório"></a>
+                    </div>
+                    <div class="blocks">
+                        <div class="block1">
+                        <img id="img-block1" src="assets/imagens/icone-localização-cinzaclaro-24.png" alt="icone de localização na cor branca">
+                            <a href="#endereco">Rua Erwin Schindler, 340 <br> Pirapó, Apucarana-PR.</a>
+                        </div>
+                        <div class="block1">
+                        <img id="img-block2" src="assets/imagens/icone-relogio-cinzaclaro-24.png" alt="icone relogio na cor branca">
+                            <a href="#horario">Seg a Sex: 8:30h às 17h <br> Plantão de Óbito: 24h</a>
+                        </div>
+                            <a href="#contato" id="info-block3">Entre em contato</a>
+                    </div>
+                </div> 
+            </nav>
+            <!-- barra roxa embaixo do header -->
+            <div class="side-bar-header">‎ 
+            </div>   
+        </div>
+        <!-- Menu -->
+        <nav class="menu">
+            <div class="container">
+                <ul class="header-sidebar">
+                    <div class="header-siderbar-left">
+                        <a class="logo-sidebar" href="#home"><img src="assets/imagens/logo-sidebar.png" alt="Logo do Cartorio"></a>
+                        <li class="nav-item"><a href="sobre.html">Sobre Nós</a></li>
+                        <li class="nav-item-spacing">|</a></li>  
+                        <li class="nav-item"><a href="#registro-civil">Registro Civil</a></li>
+                        <li class="nav-item-spacing">|</a></li>
+                        <li class="nav-item"><a href="#tabelionato-de-notas">Tabelionado de Notas</a></li>
+                        <li class="nav-item-spacing">|</a></li>
+                        <li class="dropdown"><a href="#ServicosOnline">Serviços Online ↓</a>
+                        <div class="drop-menu">
+                            <a href="#ServicosOnline">Certidão</a>
+                            <a href="https://funarpen.com.br/consulta_selo_digital/">Consultar Selo</a>
+                            <a href="#EProclamas">Circunscrição</a>
+                            <a href="https://www.e-notariado.org.br/customer">E-Notariado</a>
+                            <a href="#EProclamas">Editais de Proclamas</a>
+                            <a href="https://extrajudicial.tjpr.jus.br/emolumentos">Emolumentos</a>
+                        </div>
+                        </li>     
+                        <!-- separadores ┃ ou ❘ - -->
+                        <li class="nav-item-spacing">|</a></li> 
+                        <li class="nav-item"><a href="#contato">Contato</a></li>
+                    </div>
+                    <div class="header-sidebar-right">
+                        <div class="menu-right">
+                            
+                        <!-- Checkbox que ativa o menu -->
+                        <input type="checkbox" id="menu-toggle">
+
+                        <!-- Ícone do menu -->
+                        <label for="menu-toggle" class="menu-btn">
+                            <div class="menu-icon"></div>
+                            <div class="menu-icon"></div>
+                            <div class="menu-icon"></div>
+                            <div class="menu-icon"></div>
+                        </label>
+                        <!-- Menu lateral -->
+                        <div class="menu-lateral">
+                            <div class="menu-logo-lateral">
+                                <h2>Menu</h2>
+                                <button class="close-btn" onclick="fecharMenu()">✖</button>
+                            </div>
+                        <ul class="menu-lateral-list">
+                            <li class="nav-mobile"><a href="#">Home</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="nav-mobile"><a href="#">Sobre Nós</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="nav-mobile"><a href="#">Contato</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="nav-mobile"><a href="#">Registro Civil</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="nav-mobile"><a href="#">Tabelionato de Notas</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="dropdown-mobile"><a href="#ServicosOnline">Serviços Online ↓</a>
+                                <div class="drop-menu-mobile">
+                                    <a href="#ServicosOnline">Certidão</a>
+                                    <a href="https://funarpen.com.br/consulta_selo_digital/">Consultar Selo</a>
+                                    <a href="#EProclamas">Circunscrição</a>                                 
+                                    <a href="https://www.e-notariado.org.br/customer">E-Notariado</a>                                   
+                                    <a href="#EProclamas">Editais de Proclamas</a>
+                                    <a href="https://extrajudicial.tjpr.jus.br/emolumentos">Emolumentos</a>
+                                </div>
+                        </ul>
+                        </div>
+
+                            <!-- Botão de fechar dentro do menu -->
+                        </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div id="sidebar">
+            </div>
+        </nav>
+    </header>
+<main>
+    <!-- Imagem e texto embaixo do Header -->
+        <section class="img-background-top">
+            <img id="img-back-top" src="assets/imagens/assets-contato/background-contato.jpg" alt="imagem do cartório com pontinhos brancos ao redor">
+            <img id="img-back-top-mobile" src="assets/imagens/background-mobile-400x900.jpg" alt="imagem do cartorio para versao mobile">
+        </section>
+        <div class="container">
+            <aside class="text-top-cartorio">
+                <div class="title-top">
+                    <h1>
+                        CONTATO
+                    </h1>
+                </div>
+
+            </aside>
+        </div>
+        <div class="wrapper-space">
+            <img id="img-back-top" src="assets/imagens/assets-contato/background-contato.jpg" alt="imagem do cartório com pontinhos brancos ao redor">
+            <img id="img-back-top-mobile" src="assets/imagens/background-mobile.jpg" alt="imagem do cartorio para versao mobile">
+        </div>
+        <div class="container">
+                <div class="section-local-e-fale">
+                    <div class="section-localidade">
+                        <div class="localidade">
+                            <p class="p3">Localização</p>
+                            <h3 class="tittle3">Onde Estamos</h3>
+                            <p class="description3">O Cartório do Pirapó é uma instituição importante na região de Apucarana, no estado do Paraná</p>
+                            <div class="contact-box">
+                                <i class="bxs-envelope1">
+                                    <img class="icone-email" src="assets/imagens/icone-email-roxo-25.png" alt="icone-email"/>
+                                        <a href="#home">cartoriopirapo@gmail.com</a>
+                                </i>
+                                <i class="bxs-envelope2">
+                                    <img class="icone-telefone" src="assets/imagens/icone-telefone-24.png" alt="icone de telefone">
+                                        <a href="#telefone">(43) 3440-1092</a>
+                                </i>
+                                <i class="bxs-envelope3">
+                                    <img class="icone-whatsapp" src="assets/imagens/icone-whats24-contact.png">
+                                        <a href="#telefone">(43) 98435-4708</a>
+                                </i>
+                            </div>
+                            <iframe class="iframe-web" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2577107805273!2d-51.53709610370307!3d-23.55918602723752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ec97db43c248a3%3A0xbee8714da8c144c1!2sCart%C3%B3rio%20Pirap%C3%B3%20-%20Servi%C3%A7o%20Distrital%20de%20Pirap%C3%B3!5e0!3m2!1spt-BR!2sbr!4v1728896807700!5m2!1spt-BR!2sbr" width="500" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe class="iframe-mobile" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2577107805273!2d-51.53709610370307!3d-23.55918602723752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ec97db43c248a3%3A0xbee8714da8c144c1!2sCart%C3%B3rio%20Pirap%C3%B3%20-%20Servi%C3%A7o%20Distrital%20de%20Pirap%C3%B3!5e0!3m2!1spt-BR!2sbr!4v1728896807700!5m2!1spt-BR!2sbr&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near" title="Cartório do Pirapo" aria-label="Cartorio do Pirapo"></iframe>
+                        </div>
+                        <div class="bar-section-localidade"></div>
+                    </div>
+                <div class="section-duvidas">
+                    <div class="duvidas">
+                        <p class="p3">Dúvidas</p>
+                        <h3 class="tittle3">Fale Conosco</h3>
+                        <p class="description3">Nós estamos a disposição da população para sanar os mais diversos tipos de dúvidas</p>
+                           <div class="contact-box">
+                                <div class="box-contact-email">
+                                    <form class="form" action="https://api.staticforms.xyz/submit" method="post">
+                                        <div class="form-top">
+                                            <label>Nome</label>
+                                                <img class="img-person-form" src="assets/imagens/icone-pessoa-roxo-24.png" alt="icone pessoa">
+                                                    <input class="form-name" type="text" name="name" placeholder="Nome Completo" required>
+                                            <label>Email</label>
+                                                <img class="img-email-form" src="assets/imagens/icone-email-roxo-24-.png" alt="icone email">
+                                                    <input class="form-email" type="email" name="email" placeholder="Email" required>  
+                                        </div>
+                                        <div class="form-bottom">
+                                            <label>Telefone</label>
+                                                <img class="img-phone-form" src="assets/imagens/icone-telefone-roxo-23.png" alt="icone telefone">
+                                                    <input class="form-phone" type="number" name="phone" placeholder="Telefone" required>
+                                            <label>Assunto</label>
+                                                <img class="img-subject-form" src="assets/imagens/icone-assunto-roxo-22.png" alt="icone assunto">
+                                                    <input class="form-subject" type="text" name="subject" placeholder="Assunto" required>
+                                        </div>
+                                        <div class="form-mensagem">
+                                            <label>Mensagem</label>
+                                                <img class="img-msg-form" src="assets/imagens/icone-mensagem-roxo-24-2.png" alt="icone mensagem">
+                                                    <textarea name="message" cols="30" rows="10" placeholder="Sua Mensagem"></textarea required>
+                                                        <button type="submit">Enviar Mensagem</button>
+                                        </div>
+                                        <input type="hidden" name="accessKey" value="colocar a key que vem pelo email">
+                                        <input type="hidden" name="redirectTo"  value="http://127.0.0.1:5500/portfolio/obrigado.html">
+                                    </form>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spacing-footer"></div>
+<footer>
+    <div class="background-footer">
+        <div class="container">
+            <div class="box-footer">
+                <div class="info-cartorio-footer">
+                    <img src="assets/imagens/logo-cartorio.png" alt="logo do cartório do pirapó">
+                    <p>Somos uma instituição de grande relevância na região de Apucarana, PR. Oferecendo serviços Notariais e de Registro Civil de alta qualidade e confiabilidade. Nosso objetivo é promover um atendimento eficiente e garantir a segurança jurídica, a satisfação e a confiança dos usuários, contribuindo para uma sociedade mais justa e equilibrada</p>
+                </div>
+                <div class="bar-section-footer"></div>
+                <div class="section-right-footer">
+                   <h3 class="footer-title">Acesse</h3>
+                    <p>‎</p>
+                    <a href="#sobrenos(trocar)">Sobre Nós</a>
+                    <a href="#tabelionato(trocar)">Tabelionato de Notas</a>
+                    <a href="#registrocivil(trocar)">Registro Civil</a>
+                    <a href="#politicaprivacidade(trocar)">Política de Privacidade</a>
+                    <a href="trabalheconosco(trocar)">Trabalhe Conosco</a>
+                    <a href="#contato(trocar)">Contato</a> 
+                </div>
+                <div class="section-right-footer2">
+                    <h3 class="footer-title">Atendimento</h3>
+                    <p>‎</p>
+                    <a id="horario-footer" href="#horario(trocar)">Seg a Sex 08:30 às 17:00</a>
+                    <a href="#óbito">Plantão de Óbito 24Horas</a>
+                    <a href="#telefone-whatssapp(trocar)">(43) 98435-4708</a>
+                    <a href="endereco(trocar)">Rua Erwin Schindler, 340 <br>
+                        Pirapó, Apucarana-PR.</a>
+                </div>
+                <div class="section-right-footer3">
+                    <h3 class="footer-title">Siga Nossas Redes Sociais</h3>
+                    <p>‎</p>
+                    <a href="https://www.instagram.com/cartoriopirapo/" target="_blank"><img src="assets/imagens/icone-instagram-branco-25.png" alt="logo do cartório"></a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="final-footer">
+                <p>© 2025. <a href="#home">Cartório do Pirapó.</a></p><br>
+                <p>Desenvolvido por <a href="https://imasterdeath.github.io/Estudos-Programacao/" target="_blank"> iMasterDeath</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+</main>
+</body>
+<script src="script.js"></script>
+</html>
