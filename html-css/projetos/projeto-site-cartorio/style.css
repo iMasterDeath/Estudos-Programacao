@@ -850,7 +850,7 @@ body {
 }
 
 .section-duvidas {
-    
+    width: auto;
 }
 
 .duvidas {
@@ -2254,10 +2254,6 @@ body {
 }
 
 @media (width <= 950px) {
-    
-
-
-
     .dropdown {
         display: none;
     }
@@ -2467,7 +2463,7 @@ body {
         margin-left: 50px;
     }
     .background-footer {
-        height: 1700px;
+        height: 1600px;
     }
     .bar-section-footer {
         display: none;
@@ -2541,6 +2537,9 @@ body {
         margin: 0 auto;
         transition: 0.3s;
     }
+    .background-section-localidade {
+        height: 1850px;
+    }
     .section-localidade {
         width: 90vw;
     }
@@ -2572,7 +2571,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        font-size: 20px;
+        font-size: 18px;
         height: auto;
         margin-bottom: 40px;
         transition: 0.3s;
@@ -2963,7 +2962,6 @@ body {
         align-items: center;
         justify-content: center;
         font-size: 24px;
-
     }
     .wrapper-home {
         width: 100%;
@@ -3077,7 +3075,7 @@ body {
     }
     .description3 {
         width: 100%;
-        font-size: 20px;
+        font-size: 18px;
     }
  
 }
@@ -3343,13 +3341,13 @@ body {
         transition: 0.3s;
     } 
     .h2-tabelionato {
-        font-size: 20px;
+        font-size: 18px;
     }
     .box-tab img {
         width: 50px;
     }
     .a-tabelionato {
-        font-size: 18px;
+        font-size: 16px;
     }
     .registro-civil {
         width: 90%;
@@ -3367,13 +3365,13 @@ body {
         transition: 0.3s;
     }
     .h2-civil {
-        font-size: 20px;
+        font-size: 18px;
     }
     .box-civil img {
         width: 50px;
     }
     .a-civil {
-        font-size: 18px;
+        font-size: 16px;
     }
     #img-back-top {
         display: none;
@@ -3417,13 +3415,13 @@ body {
     }
     .description3 {
         width: 100%;
-        font-size: 20px;
+        font-size: 18px;
     }
     .contact-box {
-        font-size: 20px;
+        font-size: 18px;
     }
     .iframe-web {
-        width: 80vw;
+        width: 100%;
         height: 300px;
         transition: 0.3s;
     }
@@ -3443,7 +3441,7 @@ body {
         
     }
     .form-top input {
-        width: 83vw;
+        width: 100%;
         height: 50px;
         border: 1px solid var(--roxo-escuro);
         border-radius: 4px;
@@ -3463,7 +3461,7 @@ body {
         gap: 18px;
     }
     .form-bottom input {
-        width: 83vw;
+        width: 100%;
         height: 50px;
         border: 1px solid var(--roxo-escuro);
         border-radius: 4px;
@@ -3475,7 +3473,7 @@ body {
         font-family: "Poppins", sans-serif;
     }
     .form-mensagem {
-        width: 83vw;
+        width: 100%;
         height: 330px;
         display: flex;
         flex-direction: column;
