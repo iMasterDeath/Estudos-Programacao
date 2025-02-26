@@ -187,6 +187,7 @@ h3 {
     width: 100%;
     height: 70px;
     display: flex;
+    list-style: none;
 }
 
 .header-siderbar-left {
@@ -1438,7 +1439,120 @@ body {
     display: none;
 }
 
+/* ABAS DO REGISTRO CIVIL ( QUE EXPANDEM ) */
 
+/* Texto inicial */
+.descricao {
+    font-size: 20px;
+    color: #555;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Lista */
+.lista-expansivel {
+    width: 100%;
+    max-width: 800px;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid var(--cinza-escuro);
+}
+
+/* Cada item da lista */
+.item {
+    border-bottom: 1px solid var(--cinza-escuro);
+}
+
+/* Título do item */
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.conteudo strong {
+    display: block;
+    margin-top: 25px; /* Adiciona espaço acima do subtítulo */
+    margin-bottom: 15px; /* Adiciona espaço abaixo do subtítulo */
+}
+
+/* Efeito hover */
+.titulo:hover {
+    color: var(--laranja);
+}
+
+/* Ícone de expandir/recolher */
+.icone {
+    font-size: 22px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+/* Conteúdo (inicialmente oculto) */
+.conteudo {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 16px;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    opacity: 0; /* Inicialmente invisível */
+}
+
+/* Quando ativo */
+.item.ativo .conteudo {
+    max-height: 500px; /* Ajuste conforme o conteúdo */
+    display: block;
+    padding: 0px 0px;
+    opacity: 1; /* Agora visível */
+}
+
+/* Ícone rotacionando */
+.item.ativo .icone {
+    transform: rotate(45deg);
+}
+
+.lista-expansivel ul {
+    list-style-type: disc !important; /* Nível 2 - Bolinha vazada */
+    margin-left: 0px;
+    padding-left: 20px;
+}
+
+.lista-expansivel ul ul {
+    list-style-type: circle !important; /* Nível 2 - Bolinha vazada */
+    margin-left: 0px;
+    padding-left: 20px;
+}
+
+.lista-expansivel ul ul ul {
+    list-style-type: square !important; /* Nível 3 - Quadrado */
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+/* Garante que os itens da lista sejam exibidos corretamente */
+.lista-expansivel li {
+    display: list-item !important; 
+    margin-left: 15px;
+    padding-left: 0px;
+    margin-bottom: 5px;
+}
+
+/* Se ainda não aparecer, remova a regra global dentro dessa classe */
+.lista-expansivel * {
+    list-style: unset !important;
+}
+
+
+
+/* Espaço entre os itens da lista */
+
+
+
+
+/*  */
 
 /* RESPONSIVIDADE */
 

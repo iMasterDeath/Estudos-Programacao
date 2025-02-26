@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartório Pirapó</title>
+    <link rel="stylesheet" href="civil.css">
+    <link rel="shortcut icon" href="assets/imagens/favicon-16x16.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <!-- Linha superior com dados da empresa -->
+        <div class="top-line">  
+            <div class="container">
+                <div class="email">
+                    <img class="img-top-line" src="assets/imagens/icone-email-laranja-22.png" alt="email">
+                    <a href="#email(alterar)">cartoriopirapo@gmail.com</a>
+                </div> 
+                <div class="telefone">
+                    <img class="img-top-line" src="assets/imagens/icone-telefone-laranja-21.png" alt="telefone">
+                    <a href="#telefone(alterar)">(43) 3440-1092</a>
+                </div>
+                <div class="whatsapp">
+                    <img class="img-top-line" src="assets/imagens/icone-whatsapp-laranja-22.png" alt="whatsapp">
+                    <a href="#whatsapp (alterar)">43 98435-4708</a>
+                </div>
+        </div>
+    </div>
+    <!-- Espaço com logo e blocos -->
+        <div class="header-content">
+            <nav class="container">                 
+                <div class="nav-info">
+                    <div class="logo">
+                        <a href="index.html" id="logo-img-a"><img src="assets/imagens/logo-cartorio-top.png" class="logo-img" alt="logo do cartório"></a>
+                    </div>
+                    <div class="blocks">
+                        <div class="block1">
+                        <img id="img-block1" src="assets/imagens/icone-localização-cinzaclaro-24.png" alt="icone de localização na cor branca">
+                            <a href="contato.html">Rua Erwin Schindler, 340 <br> Pirapó, Apucarana-PR.</a>
+                        </div>
+                        <div class="block1">
+                        <img id="img-block2" src="assets/imagens/icone-relogio-cinzaclaro-24.png" alt="icone relogio na cor branca">
+                            <a href="contato.html">Seg a Sex: 8:30h às 17h <br> Plantão de Óbito: 24h</a>
+                        </div>
+                            <a href="contato.html" id="info-block3">Entre em contato</a>
+                    </div>
+                </div> 
+            </nav>
+            <!-- barra roxa embaixo do header -->
+            <div class="side-bar-header">‎ 
+            </div>   
+        </div>
+        <!-- Menu -->
+        <nav class="menu">
+            <div class="container">
+                <ul class="header-sidebar">
+                    <div class="header-siderbar-left">
+                        <a class="logo-sidebar" href="index.html"><img src="assets/imagens/logo-sidebar.png" alt="Logo do Cartorio"></a>
+                        <li class="nav-item"><a href="sobre.html">Sobre Nós</a></li>
+                        <li class="nav-item-spacing">|</a></li>  
+                        <li class="nav-item"><a href="civil.html">Registro Civil</a></li>
+                        <li class="nav-item-spacing">|</a></li>
+                        <li class="nav-item"><a href="tabelionato.html">Tabelionado de Notas</a></li>
+                        <li class="nav-item-spacing">|</a></li>
+                        <li class="dropdown"><a href="#ServicosOnline">Serviços Online ↓</a>
+                        <div class="drop-menu">
+                            <a href="https://registrocivil.org.br/">Certidão</a>
+                            <a href="https://funarpen.com.br/consulta_selo_digital/">Consultar Selo</a>
+                            <a href="https://www.e-notariado.org.br/customer">E-Notariado</a>
+                            <a href="https://proclamas.org.br/">Editais de Proclamas</a>
+                            <a href="https://extrajudicial.tjpr.jus.br/emolumentos">Emolumentos</a>
+                        </div>
+                        </li>     
+                        <!-- separadores ┃ ou ❘ - -->
+                        <li class="nav-item-spacing">|</a></li> 
+                        <li class="nav-item"><a href="contato.html">Contato</a></li>
+                    </div>
+                    <div class="header-sidebar-right">
+                        <div class="menu-right">
+                            
+                        <!-- Checkbox que ativa o menu -->
+                        <input type="checkbox" id="menu-toggle">
+
+                        <!-- Ícone do menu -->
+                        <label for="menu-toggle" class="menu-btn">
+                            <div class="menu-icon"></div>
+                            <div class="menu-icon"></div>
+                            <div class="menu-icon"></div>
+                            <div class="menu-icon"></div>
+                        </label>
+                        <!-- Menu lateral -->
+                        <div class="menu-lateral">
+                            <div class="menu-logo-lateral">
+                                <h2>Menu</h2>
+                                <button class="close-btn" onclick="fecharMenu()">✖</button>
+                            </div>
+                        <ul class="menu-lateral-list">
+                            <li class="nav-mobile"><a href="index.html">Home</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="nav-mobile"><a href="sobre.html">Sobre Nós</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="nav-mobile"><a href="contato.html">Contato</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="nav-mobile"><a href="civil.html">Registro Civil</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="nav-mobile"><a href="tabelionato.html">Tabelionato de Notas</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="dropdown-mobile"><a href="#ServicosOnline">Serviços Online ↓</a>
+                                <div class="drop-menu-mobile">
+                                    <a href="https://registrocivil.org.br/">Certidão</a>
+                                    <a href="https://funarpen.com.br/consulta_selo_digital/">Consultar Selo</a>                                
+                                    <a href="https://www.e-notariado.org.br/customer">E-Notariado</a>                                   
+                                    <a href="https://proclamas.org.br/">Editais de Proclamas</a>
+                                    <a href="https://extrajudicial.tjpr.jus.br/emolumentos">Emolumentos</a>
+                                </div>
+                        </ul>
+                        </div>
+
+                            <!-- Botão de fechar dentro do menu -->
+                        </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div id="sidebar">
+            </div>
+        </nav>
+    </header>
+<main>
+    <!-- Imagem e texto embaixo do Header -->
+        <section class="img-background-top">
+            <img id="img-back-top" src="assets/imagens/assets-contato/background-contato.jpg" alt="imagem do cartório com pontinhos brancos ao redor">
+        </section>
+        <div class="container">
+            <aside class="text-top-cartorio">
+                <div class="title-top">
+                    <h1>
+                        REGISTRO CIVIL
+                    </h1>
+                </div>
+            </aside>
+        </div>
+        <div class="wrapper-space">
+            <img id="img-back-top" src="assets/imagens/assets-contato/background-contato.jpg" alt="imagem do cartório com pontinhos brancos ao redor"> 
+        </div>
+        <div class="container">
+            <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Expansível</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+            <p class="descricao">
+                O Registro Civil documenta os momentos mais marcantes da vida, como nascimentos, casamentos e óbitos, 
+                assegurando direitos essenciais. Explore as opções abaixo e alcance seu objetivo com facilidade.
+            </p>
+            
+            <div class="lista-expansivel">
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Alteração de Nome, Sobrenome e/ou Gênero
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul class="lista">
+                            <li class="subtitulo"><strong>Inclusão dos Sobrenomes de Ascendentes</strong>
+                                <ul>
+                                    <li>Requerimento pessoal no cartório ou procuração pública com poderes específicos;</li>
+                                    <li>Certidão de Nascimento atualizada (validade 90 dias);</li>
+                                    <li>Caso seja casado ou divorciado, trazer Certidão de Casamento ou Certidão de Casamento com Averbação, atualizadas;</li>
+                                    <li>Certidão civil ou documento pessoal do ancestral cujo sobrenome se deseja resgatar;</li>
+                                    <li>Documento original da cédula de identidade (RG);</li>
+                                    <li>Documento original de identificação civil nacional (ICN) se for o caso;</li>
+                                </ul>
+                            </li>
+                        
+                            <li><strong>Alteração de Sobrenome de Viúvo(a)</strong>
+                                <ul>
+                                    <li>Requerimento pessoal no cartório ou procuração pública com poderes específicos;</li>
+                                    <li>Certidão original de óbito do cônjuge falecido;</li>
+                                    <li>Certidão de Casamento com Averbação, atualizadas;</li>
+                                    <li>Documento original da cédula de identidade (RG);</li>
+                                    <li>Documento original de identificação civil nacional (ICN) se for o caso;</li>
+                                    <li>Documento original de passaporte brasileiro (se for o caso);</li>
+                                    <li>Documento original do Cadastro de Pessoa Física (CPF);</li>
+                                    <li>Documento original de Título de Eleitor;</li>
+                                    <li>Documento original de Carteira de Identidade Social (se for o caso);</li>
+                                    <li>Comprovante de endereço (em nome do requerente);</li>
+                                    <li>Certidões de todos os distribuidores cíveis do local de residência dos últimos cinco anos (estadual/federal);</li>
+                                    <li>Certidões de todos os distribuidores criminais do local de residência dos últimos cinco anos (estadual/federal);</li>
+                                    <li>Certidão de execução criminal do local de residência dos últimos cinco anos (estadual/federal);</li>
+                                    <li>Certidões de todos os tabelionatos de protestos do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça Eleitoral do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça do Trabalho do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça Militar (se for o caso);</li>
+                                    <li>Certidão de antecedentes criminais do local de residência.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Alteração de Sobrenome de Viúvo(a)</strong>
+                                <ul>
+                                    <li>Requerimento pessoal no cartório ou procuração pública com poderes específicos;</li>
+                                    <li>Certidão original de óbito do cônjuge falecido;</li>
+                                    <li>Certidão de Casamento com Averbação, atualizadas;</li>
+                                    <li>Documento original da cédula de identidade (RG);</li>
+                                    <li>Documento original de identificação civil nacional (ICN) se for o caso;</li>
+                                    <li>Documento original do Cadastro de Pessoa Física (CPF);</li>
+                                    <li>Documento original de Título de Eleitor;</li>
+                                    <li>Documento original de Carteira de Identidade Social (se for o caso);</li>
+                                    <li>Comprovante de endereço (em nome do requerente);</li>
+                                    <li>Certidões de todos os distribuidores cíveis do local de residência dos últimos cinco anos (estadual/federal);</li>
+                                    <li>Certidões de todos os distribuidores criminais do local de residência dos últimos cinco anos (estadual/federal);</li>
+                                    <li>Certidão de execução criminal do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidões de todos os tabelionatos de protestos do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça Eleitoral do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça do Trabalho do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça Militar (se for o caso);</li>
+                                    <li>Certidão de antecedentes criminais do local de residência.</li>
+                                </ul>
+                            </li>
+                        
+                            <li><strong>Alteração de Sobrenome de Casado(a) ou Divorciado(a), Durante ou Após o Término do Casamento</strong>
+                                <ul>
+                                    <li>Requerimento pessoal no cartório ou procuração pública com poderes específicos;</li>
+                                    <li>Certidão de Casamento ou Certidão de Casamento com Averbação, atualizadas;</li>
+                                    <li>Documento original da cédula de identidade (RG);</li>
+                                    <li>Documento original de identificação civil nacional (ICN) se for o caso;</li>
+                                    <li>Documento original do Cadastro de Pessoa Física (CPF);</li>
+                                    <li>Documento original de Título de Eleitor;</li>
+                                    <li>Documento original de Carteira de Identidade Social (se for o caso);</li>
+                                    <li>Comprovante de endereço (em nome do requerente);</li>
+                                    <li>Certidões de todos os distribuidores cíveis do local de residência dos últimos cinco anos (estadual/federal);</li>
+                                    <li>Certidões de todos os distribuidores criminais do local de residência dos últimos cinco anos (estadual/federal);</li>
+                                    <li>Certidão de execução criminal do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidões de todos os tabelionatos de protestos do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça Eleitoral do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça do Trabalho do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça Militar (se for o caso);</li>
+                                    <li>Certidão de antecedentes criminais do local de residência.</li>
+                                </ul>
+                            </li>
+                        
+                            <li><strong>Inclusão do Sobrenome do Companheiro Durante a União Estável</strong>
+                                <ul>
+                                    <li>Requerimento pessoal no cartório ou procuração pública com poderes específicos;</li>
+                                    <li>Certidão de nascimento com averbação da união estável;</li>
+                                    <li>Documento original da cédula de identidade (RG);</li>
+                                    <li>Documento original de identificação civil nacional (ICN) se for o caso;</li>
+                                    <li>Documento original do Cadastro de Pessoa Física (CPF);</li>
+                                    <li>Documento original de Título de Eleitor;</li>
+                                    <li>Documento original de Carteira de Identidade Social (se for o caso);</li>
+                                    <li>Comprovante de endereço (em nome do requerente);</li>
+                                    <li>Certidões de todos os distribuidores cíveis do local de residência dos últimos cinco anos (estadual/federal);</li>
+                                    <li>Certidões de todos os distribuidores criminais do local de residência dos últimos cinco anos (estadual/federal);</li>
+                                    <li>Certidão de execução criminal do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidões de todos os tabelionatos de protestos do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça Eleitoral do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça do Trabalho do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça Militar (se for o caso);</li>
+                                    <li>Certidão de antecedentes criminais do local de residência.</li>
+                                </ul>
+                            </li>
+                        
+                            <li><strong>Alteração de Prenome e Gênero (Conforme Provimento 73/2018 CNJ)</strong>
+                                <ul>
+                                    <li>Requerimento assinado pessoalmente pelo solicitante;</li>
+                                    <li>Certidão de Nascimento atualizada;</li>
+                                    <li>Se casado(a), Certidão de Casamento ou Certidão de Casamento com Averbação, atualizadas;</li>
+                                    <li>Documento original da cédula de identidade (RG);</li>
+                                    <li>Documento original de identificação civil nacional (ICN) se for o caso;</li>
+                                    <li>Documento original do Cadastro de Pessoa Física (CPF);</li>
+                                    <li>Documento original de Título de Eleitor;</li>
+                                    <li>Documento original de Carteira de Identidade Social (se for o caso);</li>
+                                    <li>Comprovante de endereço (em nome do requerente);</li>
+                                    <li>Certidões de todos os distribuidores cíveis do local de residência dos últimos cinco anos (estadual/federal);</li>
+                                    <li>Certidões de todos os distribuidores criminais do local de residência dos últimos cinco anos (estadual/federal);</li>
+                                    <li>Certidão de execução criminal do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidões de todos os tabelionatos de protestos do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça Eleitoral do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça do Trabalho do local de residência dos últimos cinco anos;</li>
+                                    <li>Certidão da Justiça Militar (se for o caso);</li>
+                                    <li>Certidão de antecedentes criminais do local de residência.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+        
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Certidões / 2ª Via de Registro
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul>
+                            <strong>Documentos Necessários:</strong>
+                            <li><strong>Registros no Cartório do Pirapó</strong>
+                                <ul>
+                                    <li><strong>Certidão de Nascimento</strong>
+                                        <ul>
+                                            <li>Nome completo do registrado;</li>
+                                            <li>Ano do nascimento;</li>
+                                            <li>Nome dos genitores (nome dos pais).</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Certidão de Casamento</strong>
+                                        <ul>
+                                            <li>Nome completo dos contraentes;</li>
+                                            <li>Ano do casamento.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Certidão de Óbito</strong>
+                                        <ul>
+                                            <li>Nome completo do falecido;</li>
+                                            <li>Ano do óbito;</li>
+                                            <li>Nome dos genitores (nome dos pais).</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Observações:</strong>
+                                        <ul>
+                                            <li>Buscas no acervo devem ser solicitadas pessoalmente na serventia e podem necessitar de um prazo de 24 horas para conclusão.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><strong>Registros de outros Cartórios:</strong>
+                                <ul>
+                                    <li><strong>Nascimento, Casamento e Óbito</strong>
+                                        <ul>
+                                            <li>Fotocópia da certidão a ser solicitada (ou dados de livro, folha e termo da certidão);</li>
+                                            <li>Nome do Cartório;</li>
+                                            <li>Cidade onde está localizado o cartório.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Observações:</strong>
+                                        <ul>
+                                            <li>Prazo: 5 dias;</li>
+                                            <li>Toda a documentação deverá ser original.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+        
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Dissolução de União Estável
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <p>Processo e requisitos para dissolução de união estável...</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Divórcio/ Separação Extrajudicial
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <p>Processo e requisitos para dissolução de união estável...</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Emancipação
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <p>Processo e requisitos para dissolução de união estável...</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Reconhecimento de Paternidade e/ou Maternidade
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <p>Processo e requisitos para dissolução de união estável...</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Reconhecimento de Filiação Socioafetiva
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <p>Processo e requisitos para dissolução de união estável...</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Registro de Casamento
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <p>Processo e requisitos para dissolução de união estável...</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Registro de Nascimento
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <p>Processo e requisitos para dissolução de união estável...</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Registro de Óbito
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <p>Processo e requisitos para dissolução de união estável...</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        União Estável
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <p>Processo e requisitos para dissolução de união estável...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+            <!--  -->
+            
+            
+        </div>
+        <div class="spacing-footer"></div>
+<footer>
+    <div class="background-footer">
+        <div class="container">
+            <div class="box-footer">
+                <div class="info-cartorio-footer">
+                    <img src="assets/imagens/logo-cartorio.png" alt="logo do cartório do pirapó">
+                    <p>Somos uma instituição de grande relevância na região de Apucarana, PR. Oferecendo serviços Notariais e de Registro Civil de alta qualidade e confiabilidade. Nosso objetivo é promover um atendimento eficiente e garantir a segurança jurídica, a satisfação e a confiança dos usuários, contribuindo para uma sociedade mais justa e equilibrada</p>
+                </div>
+                <div class="bar-section-footer"></div>
+                <div class="section-right-footer">
+                   <h3 class="footer-title">Acesse</h3>
+                    <p>‎</p>
+                    <a href="#sobrenos(trocar)">Sobre Nós</a>
+                    <a href="#tabelionato(trocar)">Tabelionato de Notas</a>
+                    <a href="#registrocivil(trocar)">Registro Civil</a>
+                    <a href="#politicaprivacidade(trocar)">Política de Privacidade</a>
+                    <a href="trabalheconosco(trocar)">Trabalhe Conosco</a>
+                    <a href="contato.html">Contato</a> 
+                </div>
+                <div class="section-right-footer2">
+                    <h3 class="footer-title">Atendimento</h3>
+                    <p>‎</p>
+                    <a id="horario-footer" href="#horario(trocar)">Seg a Sex 08:30 às 17:00</a>
+                    <a href="#óbito">Plantão de Óbito 24Horas</a>
+                    <a href="#telefone-whatssapp(trocar)">(43) 98435-4708</a>
+                    <a href="endereco(trocar)">Rua Erwin Schindler, 340 <br>
+                        Pirapó, Apucarana-PR.</a>
+                </div>
+                <div class="section-right-footer3">
+                    <h3 class="footer-title">Siga Nossas Redes Sociais</h3>
+                    <p>‎</p>
+                    <a href="https://www.instagram.com/cartoriopirapo/" target="_blank"><img src="assets/imagens/icone-instagram-branco-25.png" alt="logo do cartório"></a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="final-footer">
+                <p>© 2025. <a href="#home">Cartório do Pirapó.</a></p><br>
+                <p>Desenvolvido por <a href="https://imasterdeath.github.io/Estudos-Programacao/" target="_blank"> iMasterDeath</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+</main>
+</body>
+<script src="script.js"></script>
+</html>
