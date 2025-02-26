@@ -1452,9 +1452,11 @@ body {
 /* Lista */
 .lista-expansivel {
     width: 100%;
-    max-width: 800px;
     font-family: Arial, sans-serif;
     border-top: 1px solid var(--cinza-escuro);
+    background-color: var(--cinza-mais-clarinho);
+    margin-bottom: 100px;
+    height: auto;
 }
 
 /* Cada item da lista */
@@ -1499,14 +1501,17 @@ body {
     padding: 0 16px;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     opacity: 0; /* Inicialmente invisível */
+    background-color: var(--cinza-mais-clarinho);
 }
 
 /* Quando ativo */
 .item.ativo .conteudo {
-    max-height: 500px; /* Ajuste conforme o conteúdo */
+    height: auto; /* Ajuste conforme o conteúdo */
     display: block;
     padding: 0px 0px;
     opacity: 1; /* Agora visível */
+    margin-bottom: 50px;
+    padding-right: 20px;
 }
 
 /* Ícone rotacionando */
@@ -1515,7 +1520,7 @@ body {
 }
 
 .lista-expansivel ul {
-    list-style-type: disc !important; /* Nível 2 - Bolinha vazada */
+    list-style-type: none !important; /* Nível 2 - Bolinha vazada */
     margin-left: 0px;
     padding-left: 20px;
 }
@@ -1526,9 +1531,9 @@ body {
     padding-left: 20px;
 }
 
-.lista-expansivel ul ul ul {
-    list-style-type: square !important; /* Nível 3 - Quadrado */
-    margin-left: 0px;
+.lista-expansivel ul li {
+    list-style-type: disc !important; /* Nível 3 - Quadrado */
+    margin-left: 18px;
     padding-left: 0px;
 }
 
@@ -1545,6 +1550,15 @@ body {
     list-style: unset !important;
 }
 
+#circunscricao-nasc {
+    color: var(--roxo-claro);
+    text-decoration: underline;
+}
+
+#circunscricao-nasc:hover {
+    color: var(--laranja);
+    font-weight: 600;
+}
 
 
 /* Espaço entre os itens da lista */
