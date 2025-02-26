@@ -1443,6 +1443,7 @@ body {
 
 /* Texto inicial */
 .descricao {
+    width: 100%;
     font-size: 20px;
     color: #555;
     margin-top: 50px;
@@ -3002,7 +3003,7 @@ body {
 
     /* --------------------------- */
     .container {
-        max-width: 90%; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
+        max-width: 98%; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
         margin: 0 auto;
         transition: 0.3s;
     }
@@ -3105,10 +3106,14 @@ body {
         margin-bottom: 40px;
     }
     .title-top h1 {
+        display: flex;
         width: 100%;
-        height: 220px;
-        margin-top: 0px;
-        font-size: 45px;
+        align-items: center;
+        justify-content: center;
+        height: 0px;
+        margin-left: 5vh;
+        margin-top: -150px;
+        font-size: 9vw;
     }
     .title-top h3 {
         font-size: 44px;
@@ -3227,11 +3232,19 @@ body {
     }
     .spacing-footer {
         width: 100%;
-        height: 350px;
+        height: 0px;
         transition: 0.3s;
     }
     .section-right-footer3 {
         width: 50%;
+    }
+    .conteudo {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 16px;
+        transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        opacity: 0; /* Inicialmente invisível */
+        background-color: var(--branco);
     }
 }
 
@@ -3332,7 +3345,7 @@ body {
 
 @media (min-width: 300px) and (max-width: 480px) {
     .container {
-        max-width: 90%; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
+        max-width: 98%; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
         margin: 0 auto;
         transition: 0.3s;
     }
@@ -3460,10 +3473,14 @@ body {
         margin-top: 30px;
     }
     .title-top h1 {
+        display: flex;
         width: 100%;
-        height: 290px;
-        margin-top: 0px;
-        font-size: 11vw;
+        align-items: center;
+        justify-content: center;
+        height: 0px;
+        margin-left: 5vh;
+        margin-top: -220px;
+        font-size: 9vw;
     }
     .title-top h3 {
         font-size: 9vw;
@@ -3745,6 +3762,14 @@ body {
     }
     .section-right-footer3 {
         width: 50%;
+    }
+    .conteudo {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 16px;
+        transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        opacity: 0; /* Inicialmente invisível */
+        background-color: var(--branco);
     }
 }
 
