@@ -1551,14 +1551,8 @@ body {
     list-style: unset !important;
 }
 
-#circunscricao-nasc {
-    color: var(--roxo-claro);
-    text-decoration: underline;
-}
-
-#circunscricao-nasc:hover {
-    color: var(--laranja);
-    font-weight: 600;
+#ata-whatsapp {
+    color: var(--preto);
 }
 
 
