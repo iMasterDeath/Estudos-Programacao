@@ -1,0 +1,12 @@
+div.container {
+    display: flex;
+    background-color: lightsalmon;
+}
+
+div.item {
+    background-color: lightskyblue;
+    border: 1px solid black;
+    text-align: center;
+    flex: auto;         
+    /* FLEX AUTO = Item flexivel ao container */
+}
