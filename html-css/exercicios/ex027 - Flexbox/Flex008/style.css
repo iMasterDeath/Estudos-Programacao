@@ -1,0 +1,42 @@
+div.container {
+    display: flex;
+    background-color: lightsalmon;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    height: 400px;
+}
+
+div.item {
+    background-color: lightskyblue;
+    border: 1px solid black;
+    text-align: center;  
+    padding: 20px;
+    
+}
+#id1 {
+    
+}
+
+#id2 {
+    align-self: auto;
+}
+
+#id3 {
+    align-self: flex-end;
+}
+
+#id4 {
+    
+}
+
+#id5 {
+    align-self: center;
+}
+
+#id6 {
+    align-self: flex-start;
+}
+
+#id7 {
+    align-self: stretch;
+}

@@ -1,0 +1,40 @@
+div.container {
+    display: flex;
+    background-color: lightsalmon;
+    flex-flow: row wrap;
+}
+
+div.item {
+    background-color: lightskyblue;
+    border: 1px solid black;
+    text-align: center;  
+    padding: 20px;                                           /* FLEX AUTO = Item flexivel ao container */
+}
+
+#id1 {
+    order: 0;
+}
+
+#id2 {
+    order: -2;
+}
+
+#id3 {
+    order: 4;
+}
+
+#id4 {
+    order: 8;
+}
+
+#id5 {
+    order: 2;
+}
+
+#id6 {
+    order: 0;
+}
+
+#id7 {
+    order: -4;
+}
