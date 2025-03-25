@@ -8,7 +8,20 @@ div.item {
     background-color: lightskyblue;
     border: 1px solid black;
     text-align: center;
-    flex-basis: 250px;
-    flex-shrink: 1; /* Diminui o tamanho do item (contrai)*/
-    flex-grow: 1;   /* Aumenta o tamanho do item (expande)*/
+    flex-basis: 200px;
+}
+
+#cxA {
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+#cxB {
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+#cxC {
+    flex-shrink: 1;
+    flex-grow: 0;
 }
