@@ -849,6 +849,9 @@ input[type="number"] {
   .section-up-contact {
     height: 60px;
   }
+  .up-contact h1 {
+    font-size: 28px;
+  }
 }
 
 /* Responsividade Width */

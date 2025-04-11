@@ -936,15 +936,17 @@ h2 {
 /* Responsividade height: */
 
 @media (height <= 910px) {
+  .up-projetos h1 {
+    font-size: 26px;
+  }
+
   /* Projeto 1 */
   .projeto1 {
     height: 480px;
-    
   }
 
   .projeto1 img {
     height: 200px;
-   
   }
 
   .projeto1 h2 {
@@ -970,6 +972,7 @@ h2 {
   .link-text-1 a {
     height: 40px;
     font-size: 12px;
+    border: 1px solid var(--neon);
   }
 
   /* Projeto 2 */
@@ -1005,6 +1008,7 @@ h2 {
   .link-text-2 a {
     height: 40px;
     font-size: 12px;
+    border: 1px solid var(--neon);
   }
 
   /* Projeto 3 */
@@ -1039,6 +1043,7 @@ h2 {
   .link-text-3 a {
     height: 40px;
     font-size: 12px;
+    border: 1px solid var(--neon);
   }
 
 }
