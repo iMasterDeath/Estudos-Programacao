@@ -607,7 +607,7 @@ body {
 
 .projeto1 {
   width: 26vw;
-  height: 580px;
+  height: 61vh;
   background-color: var(--cinza-header);
   border: 1px solid var(--neon);
   border-radius: 8px;
@@ -705,7 +705,7 @@ h2 {
 
 .projeto2 {
   width: 26vw;
-  height: 580px;
+  height: 61vh;
   background-color: var(--cinza-header);
   border: 1px solid var(--neon);
   border-radius: 8px;
@@ -803,7 +803,7 @@ h2 {
 
 .projeto3 {
   width: 26vw;
-  height: 580px;
+  height: 61vh;
   background-color: var(--cinza-header);
   border: 1px solid var(--neon);
   border-radius: 8px;
