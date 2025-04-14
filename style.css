@@ -533,8 +533,9 @@ body {
   }
 
   .curriculum-img {
+    display: flex;
     width: 550px;
-    height: auto;
+    height: 90vh;
   }
 
   .close {
