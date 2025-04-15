@@ -3094,7 +3094,7 @@ body {
     .text-top-cartorio {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 98%;
         height: 170px;
         align-items: center;
         justify-content: flex-end;
@@ -3458,8 +3458,8 @@ body {
     .text-top-cartorio {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        height: 17vh;
+        width: 98%;
+        height: 165px;
         align-items: center;
         justify-content: flex-end;
     }
@@ -3472,7 +3472,7 @@ body {
     .title-top h1 {
         display: flex;
         width: 100%;
-        font-size: 9.3vw;
+        font-size: 9vw;
     }
     .title-top h3 {
         font-size: 9vw;

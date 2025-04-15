@@ -3817,7 +3817,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 170px;
+    height: 165px;
     align-items: center;
     justify-content: flex-end;
   }
@@ -3830,7 +3830,7 @@ body {
   .title-top h1 {
     width: 100%;
     height: auto;
-    font-size: 45px;
+    font-size: 8vw;
   }
   .title-top h3 {
     font-size: 9vw;
