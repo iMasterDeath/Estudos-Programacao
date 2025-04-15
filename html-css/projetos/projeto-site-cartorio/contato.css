@@ -3544,6 +3544,9 @@ body {
     .section-right-footer3 {
         width: 50%;
     }
+    .background-footer {
+        height: 1650px;
+      }
 }
 
 

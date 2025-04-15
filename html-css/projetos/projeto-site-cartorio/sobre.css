@@ -3558,6 +3558,9 @@ body {
     height: 150px;
     transition: 0.3s;
   }
+  .background-footer {
+    height: 1650px;
+  }
 }
 
 @media (width <= 299px) {
