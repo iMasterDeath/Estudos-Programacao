@@ -480,6 +480,7 @@ body {
   position: absolute;
   margin-top: 0px;
   z-index: 1;
+  transition: 0.3s;
 }
 
 .title-top {
@@ -487,6 +488,7 @@ body {
   font-weight: 700;
   letter-spacing: 3px;
   color: #51599cc2;
+  transition: 0.3s;
 }
 
 .description {
@@ -2682,7 +2684,8 @@ body {
   .title-top h1 {
     width: 100%;
     height: auto;
-    font-size: 45px;
+    font-size: 6vw;
+    transition: 0.3s;
   }
 }
 
@@ -2701,16 +2704,20 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--branco-1);
-    width: 83vw;
+    width: 85%;
     height: 250px;
     position: absolute;
     margin-top: 0px;
     z-index: 1;
+    transition: 0.3s;
   }
-  .title-top h1 {
-    width: 100%;
-    height: auto;
-    font-size: 39px;
+
+  .title-top {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #51599cc2;
+    transition: 0.3s;
   }
   .localidade {
     width: 100%;
@@ -3230,10 +3237,10 @@ body {
     width: 100%;
     height: auto;
     margin-left: 15px;
-}
-.final-footer {
+  }
+  .final-footer {
     margin-left: 15px;
-}
+  }
   .conteudo {
     max-height: 0;
     overflow: hidden;
@@ -3750,11 +3757,11 @@ body {
     width: 100%;
     height: auto;
     margin-left: 15px;
-}
-.final-footer {
+  }
+  .final-footer {
     margin-left: 15px;
-}
-.background-footer {
+  }
+  .background-footer {
     height: 1650px;
   }
   .conteudo {
