@@ -3602,7 +3602,8 @@ body {
     height: 60px;
     box-shadow: 0px 0px 10px 5px #50505033;
     transition: 0.3s;
-    border-bottom: 2px solid var(--roxo-claro);
+    border-bottom: 10px 10px 10px solid #181e4d46;
+    background-color: var(--branco);
   }
   .header-sidebar-right {
     display: flex;
