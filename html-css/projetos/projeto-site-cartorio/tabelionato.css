@@ -3229,7 +3229,7 @@ body {
     transition: 0.3s;
   }
   .section-right-footer3 {
-    width: 50%;
+    width: 70%;
   }
   .box-footer {
     color: var(--cinza-claro);
@@ -3749,7 +3749,7 @@ body {
     position: absolute;
   }
   .section-right-footer3 {
-    width: 50%;
+    width: 70%;
   }
   .box-footer {
     color: var(--cinza-claro);
@@ -4096,5 +4096,14 @@ body {
     margin-left: 20px;
     z-index: 2;
     position: absolute;
+  }
+  .final-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+  }
+  .background-footer {
+    height: auto;
   }
 }

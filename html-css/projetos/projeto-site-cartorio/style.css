@@ -3816,4 +3816,13 @@ body {
     z-index: 2;
     position: absolute;
   }
+  .final-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+  }
+  .background-footer {
+    height: auto;
+  }
 }
