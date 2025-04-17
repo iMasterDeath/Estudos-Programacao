@@ -186,6 +186,7 @@ h3 {
   height: 70px;
   display: flex;
   list-style: none;
+  z-index: 9999;
 }
 
 .header-siderbar-left {
@@ -286,7 +287,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 90px;
-  height: 50px;
+  height: 40px;
   align-items: center;
   border-radius: 4px;
   background-color: var(--laranja);
@@ -300,7 +301,7 @@ body {
 
 .bar-menu {
   width: 100%;
-  margin: 10px 0px;
+  margin: 5px 0px;
   height: 1px;
   background-color: var(--azul-2);
 }
@@ -310,8 +311,8 @@ body {
   background-color: var(--laranja);
   border-radius: 6px;
   color: white;
-  width: 50px;
-  height: 50px;
+  width: 41px;
+  height: 41px;
   cursor: pointer;
   text-align: center;
   font-size: 19px;
@@ -358,13 +359,14 @@ body {
 }
 
 .dropdown-mobile {
+  display: flex;
+  flex-direction: column;
   color: var(--branco);
   font-weight: 600;
   font-size: 20px;
   transition: 0.3s;
   cursor: pointer;
 }
-
 .dropdown-mobile:hover {
   color: var(--laranja);
   transition: 0.3s;
@@ -378,8 +380,8 @@ body {
 .drop-menu-mobile > a {
   color: var(--branco);
   display: flex;
-  padding: 10px 0;
-  font-size: 18px;
+  padding: 8px 0;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -2959,19 +2961,21 @@ body {
     align-items: center;
   }
   .menu-logo-lateral h2 {
-    width: 120px;
-    height: 50px;
-    font-size: 26px;
+    width: 90px;
+    height: 40px;
+    font-size: 22px;
   }
   .menu-logo-lateral {
     margin-bottom: 50px;
   }
   .nav-mobile a {
-    font-size: 26px;
+    font-size: 22px;
   }
-
+  .dropdown-mobile:hover {
+    margin-left: 55px;
+  }
   .dropdown-mobile a {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   /* --------------------------- */
@@ -3038,6 +3042,7 @@ body {
     transition: 0.3s;
     border-bottom: 10px 10px 10px solid #181e4d46;
     background-color: var(--branco);
+    z-index: 9999;
   }
   .header-sidebar-right {
     display: flex;
@@ -3351,19 +3356,21 @@ body {
     align-items: center;
   }
   .menu-logo-lateral h2 {
-    width: 120px;
-    height: 50px;
-    font-size: 26px;
+    width: 90px;
+    height: 40px;
+    font-size: 22px;
   }
   .menu-logo-lateral {
     margin-bottom: 50px;
   }
   .nav-mobile a {
-    font-size: 26px;
+    font-size: 22px;
   }
-
+  .dropdown-mobile:hover {
+    margin-left: 55px;
+  }
   .dropdown-mobile a {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   /* --------------------------- */
@@ -3406,6 +3413,7 @@ body {
     transition: 0.3s;
     border-bottom: 10px 10px 10px solid #181e4d46;
     background-color: var(--branco);
+    z-index: 9999;
   }
   .header-sidebar-right {
     display: flex;
@@ -3738,7 +3746,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    width: 100%;
+    width: 80%;
     margin-left: 15px;
   }
   .conteudo {
@@ -3798,6 +3806,7 @@ body {
     transition: 0.3s;
     border-bottom: 10px 10px 10px solid #181e4d46;
     background-color: var(--branco);
+    z-index: 9999;
   }
   .header-sidebar-right {
     display: flex;
@@ -4083,7 +4092,6 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    width: 100%;
   }
   .background-footer {
     height: auto;

@@ -184,6 +184,7 @@ h3 {
   width: 100%;
   height: 70px;
   display: flex;
+  z-index: 9999;
 }
 
 .header-siderbar-left {
@@ -284,7 +285,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 90px;
-  height: 50px;
+  height: 40px;
   align-items: center;
   border-radius: 4px;
   background-color: var(--laranja);
@@ -298,7 +299,7 @@ body {
 
 .bar-menu {
   width: 100%;
-  margin: 10px 0px;
+  margin: 5px 0px;
   height: 1px;
   background-color: var(--azul-2);
 }
@@ -308,8 +309,8 @@ body {
   background-color: var(--laranja);
   border-radius: 6px;
   color: white;
-  width: 50px;
-  height: 50px;
+  width: 41px;
+  height: 41px;
   cursor: pointer;
   text-align: center;
   font-size: 19px;
@@ -356,6 +357,8 @@ body {
 }
 
 .dropdown-mobile {
+  display: flex;
+  flex-direction: column;
   color: var(--branco);
   font-weight: 600;
   font-size: 20px;
@@ -376,8 +379,8 @@ body {
 .drop-menu-mobile > a {
   color: var(--branco);
   display: flex;
-  padding: 10px 0;
-  font-size: 18px;
+  padding: 8px 0;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -2485,7 +2488,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    width: 100%;
+    width: 80%;
   }
   .section-sobre {
     width: 100%;
@@ -2829,19 +2832,21 @@ body {
     align-items: center;
   }
   .menu-logo-lateral h2 {
-    width: 120px;
-    height: 50px;
-    font-size: 26px;
+    width: 90px;
+    height: 40px;
+    font-size: 22px;
   }
   .menu-logo-lateral {
     margin-bottom: 50px;
   }
   .nav-mobile a {
-    font-size: 26px;
+    font-size: 22px;
   }
-
+  .dropdown-mobile:hover {
+    margin-left: 55px;
+  }
   .dropdown-mobile a {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   /* --------------------------- */
@@ -2908,6 +2913,7 @@ body {
     transition: 0.3s;
     border-bottom: 10px 10px 10px solid #181e4d46;
     background-color: var(--branco);
+    z-index: 9999;
   }
   .header-sidebar-right {
     display: flex;
@@ -3200,19 +3206,19 @@ body {
     align-items: center;
   }
   .menu-logo-lateral h2 {
-    width: 120px;
-    height: 50px;
-    font-size: 26px;
+    width: 90px;
+    height: 40px;
+    font-size: 22px;
   }
   .menu-logo-lateral {
     margin-bottom: 50px;
   }
   .nav-mobile a {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .dropdown-mobile a {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   /* --------------------------- */
@@ -3255,6 +3261,7 @@ body {
     transition: 0.3s;
     border-bottom: 10px 10px 10px solid #181e4d46;
     background-color: var(--branco);
+    z-index: 9999;
   }
   .header-sidebar-right {
     display: flex;
@@ -3592,6 +3599,51 @@ body {
     margin: 0 auto;
     transition: 0.3s;
   }
+
+    /* Menu Responsividade */
+
+    .menu-lateral {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      background-color: var(--roxo-claro);
+      color: white;
+      padding: 30px;
+      box-sizing: border-box;
+      transition: left 0.3s ease;
+      z-index: 99;
+    }
+    #menu-toggle:checked + label + .menu-lateral {
+      left: 0;
+    }
+    .menu-lateral-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .menu-logo-lateral h2 {
+      width: 90px;
+      height: 40px;
+      font-size: 22px;
+    }
+    .menu-logo-lateral {
+      margin-bottom: 50px;
+    }
+    .nav-mobile a {
+      font-size: 22px;
+    }
+    .dropdown-mobile a {
+      font-size: 22px;
+    }
+
+  
+    /* ------------------- */
+
   .img-sobre {
     width: 75vw;
     height: auto;
@@ -3630,6 +3682,7 @@ body {
     transition: 0.3s;
     border-bottom: 10px 10px 10px solid #181e4d46;
     background-color: var(--branco);
+    z-index: 9999;
   }
   .header-sidebar-right {
     display: flex;
@@ -3914,7 +3967,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    width: 100%;
+    width: 80%;
   }
   .background-footer {
     height: auto;

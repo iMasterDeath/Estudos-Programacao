@@ -187,6 +187,7 @@ h3 {
     width: 100%;
     height: 70px;
     display: flex;
+    z-index: 9999;
 }
 
 .header-siderbar-left {
@@ -305,7 +306,7 @@ body {
 
 .bar-menu {
     width: 100%;
-    margin: 10px 0px;
+    margin: 5px 0px;
     height: 1px;
     background-color: var(--azul-2);
 }
@@ -364,13 +365,15 @@ body {
 }
 
 
-.dropdown-mobile  {
+.dropdown-mobile {
+    display: flex;
+    flex-direction: column;
     color: var(--branco);
     font-weight: 600;
     font-size: 20px;
     transition: 0.3s;
     cursor: pointer;
-}
+  }
 
 .dropdown-mobile:hover {
     color: var(--laranja);
@@ -385,8 +388,8 @@ body {
 .drop-menu-mobile > a {
     color: var(--branco);
     display: flex;
-    padding: 10px 0;
-    font-size: 18px;
+    padding: 8px 0;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -2490,7 +2493,7 @@ body {
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        width: 100%;
+        width: 80%;
     }
     .section-sobre {
         width: 100%;
@@ -2851,7 +2854,9 @@ body {
     .nav-mobile a {
         font-size: 26px;
     }
-
+    .dropdown-mobile:hover {
+        margin-left: 55px;
+    }
     .dropdown-mobile a {
         font-size: 26px;
     }
@@ -2920,6 +2925,7 @@ body {
         transition: 0.3s;
         border-bottom: 10px 10px 10px solid #181e4d46;
         background-color: var(--branco);
+        z-index: 9999;
     }
     .header-sidebar-right {
         display: flex;
@@ -3082,7 +3088,7 @@ body {
         opacity: 100%;
     }
     .section-right-footer3 {
-        width: 50%;
+        width: 70%;
     }
 }
 
@@ -3196,7 +3202,9 @@ body {
     .nav-mobile a {
         font-size: 26px;
     }
-
+    .dropdown-mobile:hover {
+        margin-left: 8vw;
+      }
     .dropdown-mobile a {
         font-size: 26px;
     }
@@ -3241,6 +3249,7 @@ body {
         transition: 0.3s;
         border-bottom: 10px 10px 10px solid #181e4d46;
         background-color: var(--branco);
+        z-index: 9999;
     }
     .header-sidebar-right {
         display: flex;
@@ -3565,7 +3574,7 @@ body {
         position: absolute;
     }
     .section-right-footer3 {
-        width: 50%;
+        width: 70%;
     }
     .background-footer {
         height: 1650px;
@@ -3619,6 +3628,7 @@ body {
         transition: 0.3s;
         border-bottom: 10px 10px 10px solid #181e4d46;
         background-color: var(--branco);
+        z-index: 9999;
       }
     .header-sidebar-right {
         display: flex;
@@ -3908,7 +3918,7 @@ body {
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        width: 100%;
+        width: 80%;
     }
     .background-footer {
         height: auto;
