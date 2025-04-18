@@ -2861,7 +2861,7 @@ body {
     display: none;
   }
   .header-content {
-    height: 10px;
+    display: none;
   }
   .header-sidebar {
     top: 0;
