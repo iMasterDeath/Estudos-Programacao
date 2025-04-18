@@ -247,7 +247,7 @@ body {
   flex-direction: column;
   position: fixed;
   top: 0;
-  right: -300px;
+  right: -330px;
   width: 300px;
   height: 100%;
   background-color: var(--roxo-claro);
@@ -256,6 +256,8 @@ body {
   box-sizing: border-box;
   transition: right 0.3s ease;
   z-index: 99;
+  border-left: 1px solid var(--azul-2);
+  box-shadow: 10px 10px 20px 5px var(--preto);
 }
 
 /* Exibe o menu quando o checkbox está marcado */
@@ -286,7 +288,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 90px;
-  height: 50px;
+  height: 40px;
   align-items: center;
   border-radius: 4px;
   background-color: var(--laranja);
@@ -310,8 +312,8 @@ body {
   background-color: var(--laranja);
   border-radius: 6px;
   color: white;
-  width: 50px;
-  height: 50px;
+  width: 41px;
+  height: 41px;
   cursor: pointer;
   text-align: center;
   font-size: 19px;
@@ -487,7 +489,7 @@ body {
 }
 
 .title-top {
-  font-size: 45px;
+  font-size: 42px;
   font-weight: 700;
   letter-spacing: 3px;
   color: #51599cc2;
@@ -2989,21 +2991,23 @@ body {
     align-items: center;
   }
   .menu-logo-lateral h2 {
-    width: 120px;
-    height: 50px;
-    font-size: 26px;
+    width: 90px;
+    height: 40px;
+    font-size: 22px;
   }
   .menu-logo-lateral {
     margin-bottom: 50px;
   }
   .nav-mobile a {
-    font-size: 26px;
+    font-size: 22px;
   }
-  .dropdown-mobile:hover {
-    margin-left: 55px;
+  .dropdown-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .dropdown-mobile a {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   /* --------------------------- */
@@ -3391,7 +3395,7 @@ body {
   .nav-mobile a {
     font-size: 22px;
   }
-  
+
   .dropdown-mobile a {
     font-size: 22px;
   }

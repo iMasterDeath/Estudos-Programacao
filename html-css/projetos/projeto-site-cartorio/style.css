@@ -246,7 +246,7 @@ body {
   flex-direction: column;
   position: fixed;
   top: 0;
-  right: -300px;
+  right: -330px;
   width: 300px;
   height: 100%;
   background-color: var(--roxo-claro);
@@ -255,6 +255,8 @@ body {
   box-sizing: border-box;
   transition: right 0.3s ease;
   z-index: 99;
+  border-left: 1px solid var(--azul-2);
+  box-shadow: 10px 10px 20px 5px var(--preto);
 }
 
 /* Exibe o menu quando o checkbox está marcado */
