@@ -3044,10 +3044,6 @@ body {
   .top-line {
     display: none;
   }
-  .header-siderbar-left {
-    display: flex;
-    z-index: 3;
-  }
   .logo-sidebar {
     display: flex;
     padding-top: 9px;
@@ -3075,6 +3071,10 @@ body {
     border-bottom: 10px 10px 10px solid #181e4d46;
     background-color: var(--branco);
     z-index: 9999;
+  }
+  .header-siderbar-left {
+    display: flex;
+    z-index: 3;
   }
   .header-sidebar-right {
     display: flex;

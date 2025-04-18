@@ -56,6 +56,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   resize: none;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -203,11 +204,6 @@ h3 {
 }
 
 /* ----------------- CSS DO MENU HAMBURGUER ( 4 BOLINHAS ) ----------------- */
-
-/* Estilos básicos */
-body {
-  overflow-x: hidden;
-}
 
 /* Estilo do checkbox */
 #menu-toggle {
@@ -1411,11 +1407,6 @@ input[type="number"] {
 }
 
 /* ----------------- CSS DO MENU HAMBURGUER ----------------- */
-
-/* Estilos básicos */
-body {
-  overflow-x: hidden;
-}
 
 /* Estilo do checkbox */
 #menu-toggle {
@@ -2985,12 +2976,8 @@ body {
   /* --------------------------- */
   .container {
     max-width: 98%; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
-    margin: 0 auto;
+    margin: none;
     transition: 0.3s;
-  }
-  .header-siderbar-left {
-    width: 100%;
-    height: auto;
   }
   .img-sobre {
     display: flex;
@@ -3032,7 +3019,8 @@ body {
   .header-sidebar {
     top: 0;
     left: 0;
-    margin: 0;
+    margin-left: 0px;
+    margin-right: 0px;
     position: fixed;
     padding-bottom: 10px;
     width: 100%;
@@ -3042,6 +3030,10 @@ body {
     border-bottom: 10px 10px 10px solid #181e4d46;
     background-color: var(--branco);
     z-index: 9999;
+  }
+  .header-siderbar-left {
+    display: flex;
+    z-index: 3;
   }
   .header-sidebar-right {
     display: flex;
@@ -3189,7 +3181,7 @@ body {
     height: 200px;
   }
   .img-background-top {
-    width: 100vw;
+    width: 100%;
     height: 200px;
   }
   .wrapper-space {
@@ -3209,7 +3201,7 @@ body {
   .box-footer {
     color: var(--cinza-claro);
     display: flex;
-    width: 98%;
+    width: 95vw;
     height: auto;
     margin-left: 15px;
   }
@@ -3220,6 +3212,7 @@ body {
     margin-left: 15px;
   }
   .background-footer {
+    width: 100%;
     height: 1650px;
   }
   .conteudo {
