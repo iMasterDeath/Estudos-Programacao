@@ -3244,11 +3244,12 @@ body {
   .box-footer {
     color: var(--cinza-claro);
     display: flex;
-    width: 100%;
+    width: 98%;
     height: auto;
     margin-left: 15px;
   }
   .final-footer {
+    width: 70%;
     margin-left: 15px;
   }
   .conteudo {
