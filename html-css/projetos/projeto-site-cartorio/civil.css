@@ -3206,6 +3206,7 @@ input[type="number"] {
     margin-left: 15px;
   }
   .info-cartorio-footer {
+    width: 95%;
   }
   .final-footer {
     width: 70%;
@@ -3318,7 +3319,7 @@ input[type="number"] {
 @media (min-width: 300px) and (max-width: 480px) {
   .container {
     max-width: 98%; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
-    margin: 0 auto;
+    margin: none;
     transition: 0.3s;
   }
 
@@ -3389,7 +3390,10 @@ input[type="number"] {
     display: none;
   }
   .header-content {
-    height: 10px;
+    display: none;
+  }
+  .header-content {
+    display: none;
   }
   .header-sidebar {
     top: 0;
@@ -3406,9 +3410,14 @@ input[type="number"] {
     background-color: var(--branco);
     z-index: 9999;
   }
+  .header-siderbar-left {
+    width: 50%;
+    display: flex;
+    z-index: 3;
+  }
   .header-sidebar-right {
     display: flex;
-    width: 40%;
+    width: 50%;
     padding-right: 20px;
     padding-top: 10px;
     align-items: center;
@@ -3726,10 +3735,13 @@ input[type="number"] {
   .section-right-footer3 {
     width: 70%;
   }
+  .info-cartorio-footer {
+    width: 98%;
+  }
   .box-footer {
     color: var(--cinza-claro);
     display: flex;
-    width: 100%;
+    width: 98%;
     height: auto;
     margin-left: 15px;
   }
@@ -3749,6 +3761,7 @@ input[type="number"] {
     background-color: var(--branco);
   }
   .background-footer {
+    width: 100%;
     height: 1650px;
   }
 }
