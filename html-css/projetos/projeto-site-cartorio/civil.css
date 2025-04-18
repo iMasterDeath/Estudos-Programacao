@@ -3392,9 +3392,6 @@ input[type="number"] {
   .header-content {
     display: none;
   }
-  .header-content {
-    display: none;
-  }
   .header-sidebar {
     top: 0;
     left: 0;
@@ -3736,12 +3733,12 @@ input[type="number"] {
     width: 70%;
   }
   .info-cartorio-footer {
-    width: 98%;
+    width: 95%;
   }
   .box-footer {
     color: var(--cinza-claro);
     display: flex;
-    width: 98%;
+    width: 95%;
     height: auto;
     margin-left: 15px;
   }
