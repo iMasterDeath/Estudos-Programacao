@@ -591,7 +591,7 @@ body {
 }
 
 .up-projetos h1 {
-  font-size: 34px;
+  font-size: 28px;
   transition: 0.3s;
 }
 
@@ -607,7 +607,7 @@ body {
 
 .projeto1 {
   width: 26vw;
-  height: 61vh;
+  height: 70vh;
   background-color: var(--cinza-header);
   border: 1px solid var(--neon);
   border-radius: 8px;
@@ -619,7 +619,7 @@ body {
 
 .projeto1 img {
   width: 100%;
-  height: 250px;
+  height: 230px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   object-fit: cover;
@@ -640,10 +640,12 @@ h2 {
 
 .projeto1 h2 {
   width: 85%;
+  flex-wrap: nowrap;
   margin-top: 15px;
   margin-bottom: 30px;
   margin-left: 15px;
   transition: 0.3s;
+  font-size: 15px;
 }
 
 .projeto1 p {
@@ -651,6 +653,7 @@ h2 {
   height: auto;
   margin: 25px 15px;
   transition: 0.3s;
+  font-size: 12px;
 }
 
 .projeto1 span {
@@ -663,13 +666,13 @@ h2 {
   margin-top: -5px;
   margin-left: 20px;
   background-color: #0ef6cc1f;
-  font-size: 12px;
+  font-size: 10px;
   box-shadow: 0px 0px 1px 5px #0ef6cc1f;
   transition: 0.3s;
 }
 
 .link-text-1 {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -680,16 +683,16 @@ h2 {
 }
 
 .link-text-1 a {
-  width: 120px;
+  width: 110px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--neon);
   background-color: transparent;
-  border: 2px solid var(--neon);
+  border: 1px solid var(--neon);
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 12px;
   transition: 0.3s;
 }
 
@@ -705,7 +708,7 @@ h2 {
 
 .projeto2 {
   width: 26vw;
-  height: 61vh;
+  height: 70vh;
   background-color: var(--cinza-header);
   border: 1px solid var(--neon);
   border-radius: 8px;
@@ -717,7 +720,7 @@ h2 {
 
 .projeto2 img {
   width: 100%;
-  height: 250px;
+  height: 230px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   object-fit: cover;
@@ -742,6 +745,7 @@ h2 {
   margin-bottom: 30px;
   margin-left: 15px;
   transition: 0.3s;
+  font-size: 15px;
 }
 
 .projeto2 p {
@@ -749,6 +753,7 @@ h2 {
   height: auto;
   margin: 25px 15px;
   transition: 0.3s;
+  font-size: 12px;
 }
 
 .projeto2 span {
@@ -761,13 +766,13 @@ h2 {
   margin-top: -5px;
   margin-left: 20px;
   background-color: #0ef6cc1f;
-  font-size: 12px;
+  font-size: 10px;
   box-shadow: 0px 0px 1px 5px #0ef6cc1f;
   transition: 0.3s;
 }
 
 .link-text-2 {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -778,16 +783,16 @@ h2 {
 }
 
 .link-text-2 a {
-  width: 120px;
+  width: 110px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--neon);
   background-color: transparent;
-  border: 2px solid var(--neon);
+  border: 1px solid var(--neon);
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 12px;
   transition: 0.3s;
 }
 
@@ -801,9 +806,9 @@ h2 {
 
 /* PROJETO 3 STYLE */
 
-.projeto3 {
+.projeto3  {
   width: 26vw;
-  height: 61vh;
+  height: 70vh;
   background-color: var(--cinza-header);
   border: 1px solid var(--neon);
   border-radius: 8px;
@@ -815,7 +820,7 @@ h2 {
 
 .projeto3 img {
   width: 100%;
-  height: 250px;
+  height: 230px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   object-fit: cover;
@@ -825,6 +830,7 @@ h2 {
 
 .tech-text {
   display: flex;
+  flex-direction: row;
   transition: 0.3s;
 }
 
@@ -839,6 +845,7 @@ h2 {
   margin-bottom: 30px;
   margin-left: 15px;
   transition: 0.3s;
+  font-size: 15px;
 }
 
 .projeto3 p {
@@ -846,6 +853,7 @@ h2 {
   height: auto;
   margin: 25px 15px;
   transition: 0.3s;
+  font-size: 12px;
 }
 
 .projeto3 span {
@@ -858,13 +866,13 @@ h2 {
   margin-top: -5px;
   margin-left: 20px;
   background-color: #0ef6cc1f;
-  font-size: 12px;
+  font-size: 10px;
   box-shadow: 0px 0px 1px 5px #0ef6cc1f;
   transition: 0.3s;
 }
 
 .link-text-3 {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -875,16 +883,16 @@ h2 {
 }
 
 .link-text-3 a {
-  width: 120px;
+  width: 110px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--neon);
   background-color: transparent;
-  border: 2px solid var(--neon);
+  border: 1px solid var(--neon);
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 12px;
   transition: 0.3s;
 }
 
@@ -1043,123 +1051,332 @@ h2 {
 
 /* Responsividade width: */
 
-@media (width <= 1272px) {
-  .link-text-1 {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 50px;
-    gap: 20px;
-    transition: 0.3s;
-  }
-  .link-text-2 {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 50px;
-    gap: 20px;
-    transition: 0.3s;
-  }
-}
+@media (width <= 1070px) {
+  
+  /* PROJETO 1 */
 
-@media (width <= 1187px) {
-  .link-text-3 {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 50px;
-    gap: 20px;
+  .projeto1 {
+    width: 26vw;
+    height: 70vh;
+    background-color: var(--cinza-header);
+    border: 1px solid var(--neon);
+    border-radius: 8px;
+    color: var(--neon);
+    font-size: 15px;
+    z-index: 1;
     transition: 0.3s;
   }
-}
-
-@media (width <= 1188px) {
+  
+  .projeto1 img {
+    width: 100%;
+    height: 230px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    object-fit: cover;
+    z-index: -1;
+    transition: 0.3s;
+  }
+  
+  .tech-text {
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+  }
+  
+  h2 {
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .projeto1 h2 {
+    width: 85%;
+    flex-wrap: nowrap;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    transition: 0.3s;
+    font-size: 1.3vw;
+  }
+  
   .projeto1 p {
-    font-size: 14.5px;
+    width: 85%;
+    height: auto;
+    margin: 25px 15px;
+    transition: 0.3s;
+    font-size: 1.05vw;
   }
-  .link-text-2 {
-    margin-top: 50px;
+  
+  .projeto1 span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    border-radius: 2px;
+    margin-top: -5px;
+    margin-left: 20px;
+    background-color: #0ef6cc1f;
+    font-size: 0.9vw;
+    box-shadow: 0px 0px 1px 5px #0ef6cc1f;
+    transition: 0.3s;
+  }
+  
+  .link-text-1 {
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 50px;
-    gap: 20px;
+    gap: 30px;
     transition: 0.3s;
   }
-}
-
-@media (width <= 1100px) {
+  
   .link-text-1 a {
-    width: 100px;
-    font-size: 12px;
+    width: 9vw;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neon);
+    background-color: transparent;
+    border: 1px solid var(--neon);
+    border-radius: 6px;
+    font-size: 1.1vw;
+    transition: 0.3s;
   }
+  
+  .link-text-1 a:hover {
+    background-color: var(--neon);
+    transition: 0.3s;
+    color: var(--preto);
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  /* PROJETO 2 */
+
+  .projeto2 {
+    width: 26vw;
+    height: 70vh;
+    background-color: var(--cinza-header);
+    border: 1px solid var(--neon);
+    border-radius: 8px;
+    color: var(--neon);
+    font-size: 15px;
+    z-index: 1;
+    transition: 0.3s;
+  }
+  
+  .projeto2 img {
+    width: 100%;
+    height: 230px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    object-fit: cover;
+    z-index: -1;
+    transition: 0.3s;
+  }
+  
+  .tech-text {
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+  }
+  
+  h2 {
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .projeto2 h2 {
+    width: 85%;
+    flex-wrap: nowrap;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    transition: 0.3s;
+    font-size: 1.3vw;
+  }
+  
+  .projeto2 p {
+    width: 85%;
+    height: auto;
+    margin: 25px 15px;
+    transition: 0.3s;
+    font-size: 1.05vw;
+  }
+  
+  .projeto2 span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    border-radius: 2px;
+    margin-top: -5px;
+    margin-left: 20px;
+    background-color: #0ef6cc1f;
+    font-size: 0.9vw;
+    box-shadow: 0px 0px 1px 5px #0ef6cc1f;
+    transition: 0.3s;
+  }
+  
+  .link-text-2 {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    gap: 30px;
+    transition: 0.3s;
+  }
+  
   .link-text-2 a {
-    width: 100px;
-    font-size: 12px;
+    width: 9vw;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neon);
+    background-color: transparent;
+    border: 1px solid var(--neon);
+    border-radius: 6px;
+    font-size: 1.1vw;
+    transition: 0.3s;
   }
+  
+  .link-text-2 a:hover {
+    background-color: var(--neon);
+    transition: 0.3s;
+    color: var(--preto);
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  /* PROJETO 3 */
+
+  .projeto3 {
+    width: 26vw;
+    height: 70vh;
+    background-color: var(--cinza-header);
+    border: 1px solid var(--neon);
+    border-radius: 8px;
+    color: var(--neon);
+    font-size: 15px;
+    z-index: 1;
+    transition: 0.3s;
+  }
+  
+  .projeto3 img {
+    width: 100%;
+    height: 230px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    object-fit: cover;
+    z-index: -1;
+    transition: 0.3s;
+  }
+  
+  .tech-text {
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+  }
+  
+  h2 {
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .projeto3 h2 {
+    width: 85%;
+    flex-wrap: nowrap;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    transition: 0.3s;
+    font-size: 1.3vw;
+  }
+  
+  .projeto3 p {
+    width: 85%;
+    height: auto;
+    margin: 25px 15px;
+    transition: 0.3s;
+    font-size: 1.05vw;
+  }
+  
+  .projeto3 span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    border-radius: 2px;
+    margin-top: -5px;
+    margin-left: 20px;
+    background-color: #0ef6cc1f;
+    font-size: 0.9vw;
+    box-shadow: 0px 0px 1px 5px #0ef6cc1f;
+    transition: 0.3s;
+  }
+  
+  .link-text-3 {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    gap: 30px;
+    transition: 0.3s;
+  }
+  
   .link-text-3 a {
-    width: 100px;
-    font-size: 12px;
-  }
-}
-
-@media (width <= 1050px) {
-  .link-text-1 {
-    margin-top: 50px;
+    width: 9vw;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 50px;
-    gap: 20px;
+    color: var(--neon);
+    background-color: transparent;
+    border: 1px solid var(--neon);
+    border-radius: 6px;
+    font-size: 1.1vw;
+    transition: 0.3s;
+  }
+  
+  .link-text-3 a:hover {
+    background-color: var(--neon);
+    transition: 0.3s;
+    color: var(--preto);
+    font-weight: 500;
     transition: 0.3s;
   }
 
-  .link-text-1 {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 50px;
-    gap: 20px;
-    transition: 0.3s;
-  }
 }
 
-@media (width <= 998px) {
-  .link-text-1 {
-    margin-top: 31px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 50px;
-    gap: 20px;
-    transition: 0.3s;
-  }
-}
 
 @media (width <= 950px) {
   .up-projetos {
-    gap: 50px;
+    gap: 0px;
     width: 480px;
-    height: 60px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--branco);
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     background-color: var(--cinza-header);
     border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  .up-projetos h1 {
+    font-size: 22px;
     transition: 0.3s;
   }
 
@@ -1185,64 +1402,110 @@ h2 {
 
   .down-projetos {
     width: 100%;
-    height: auto;
+    height: 90%;
     display: flex;
-    justify-content: space-between;
+    
+    justify-content: center;
     gap: 40px;
     transition: 0.3s;
   }
 
-  /* PROJETO 2 */
+  /* PROJETO 1 */
 
   .projeto1 {
-    width: 100%;
-    height: 550px;
+    width: 80%;
+    height: 70vh;
     background-color: var(--cinza-header);
     border: 1px solid var(--neon);
     border-radius: 8px;
     color: var(--neon);
-    font-size: 15px;
     z-index: 1;
     transition: 0.3s;
   }
-
+  
   .projeto1 img {
     width: 100%;
-    height: 250px;
+    height: 230px;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
     object-fit: cover;
     z-index: -1;
     transition: 0.3s;
   }
-
+  
+  .tech-text {
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+  }
+  
   .projeto1 h2 {
-    width: 95%;
+    width: 85%;
+    flex-wrap: nowrap;
     margin-top: 15px;
     margin-bottom: 30px;
     margin-left: 15px;
     transition: 0.3s;
-    font-size: 16px;
+    font-size: 16px;   
   }
-
+  
   .projeto1 p {
-    width: 95%;
+    width: 85%;
     height: auto;
     margin: 25px 15px;
     transition: 0.3s;
-    font-size: 14px;
+    font-size: 13px;
   }
-
+  
+  .projeto1 span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    border-radius: 2px;
+    margin-top: -5px;
+    margin-left: 20px;
+    background-color: #0ef6cc1f;
+    font-size: 10px;
+    box-shadow: 0px 0px 1px 5px #0ef6cc1f;
+    transition: 0.3s;
+  }
+  
   .link-text-1 {
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 50px;
-    gap: 20px;
+    gap: 30px;
     transition: 0.3s;
   }
+  
+  .link-text-1 a {
+    width: 12vw;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neon);
+    background-color: transparent;
+    border: 1px solid var(--neon);
+    border-radius: 6px;
+    font-size: 10px;
+    transition: 0.3s;
+  }
+  
+  .link-text-1 a:hover {
+    background-color: var(--neon);
+    transition: 0.3s;
+    color: var(--preto);
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  /* PROJETO 2 */
 
   .link-text-2 a {
   }
@@ -1255,7 +1518,7 @@ h2 {
   }
   .select-pages {
     width: 100%;
-    height: auto;
+    height: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
