@@ -45,3 +45,8 @@ function criarBolhas() {
 
 // Chama a função para criar as bolhas assim que o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', criarBolhas);
+
+// ---------------------------------------------------------------------
+
+// funcao para mostrar os cards (responsividade)
+

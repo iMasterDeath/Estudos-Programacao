@@ -666,6 +666,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 50px;
   }
   .sobre-left::-webkit-scrollbar {
     width: 12px; /* Largura da barra de rolagem */
