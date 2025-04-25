@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cartório Pirapó</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contato.css">
     <link rel="shortcut icon" href="assets/imagens/favicon-16x16.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -28,10 +28,10 @@
     </div>
     <!-- Espaço com logo e blocos -->
         <div class="header-content">
-            <nav class="container">
+            <nav class="container">                 
                 <div class="nav-info">
                     <div class="logo">
-                        <a href="#home" id="logo-img-a"><img src="assets/imagens/logo-cartorio-top.png" class="logo-img" alt="logo do cartório"></a>
+                        <a href="index.html" id="logo-img-a"><img src="assets/imagens/logo-cartorio-top.png" class="logo-img" alt="logo do cartório"></a>
                     </div>
                     <div class="blocks">
                         <div class="block1">
@@ -42,7 +42,7 @@
                         <img id="img-block2" src="assets/imagens/icone-relogio-cinzaclaro-24.png" alt="icone relogio na cor branca">
                             <a href="#horario">Seg a Sex: 8:30h às 17h <br> Plantão de Óbito: 24h</a>
                         </div>
-                            <a href="#contato" id="info-block3">Entre em contato</a>
+                            <a href="contato.html" id="info-block3">Entre em contato</a>
                     </div>
                 </div> 
             </nav>
@@ -58,17 +58,18 @@
                         <a class="logo-sidebar" href="index.html"><img src="assets/imagens/logo-sidebar.png" alt="Logo do Cartorio"></a>
                         <li class="nav-item"><a href="sobre.html">Sobre Nós</a></li>
                         <li class="nav-item-spacing">|</a></li>  
-                        <li class="nav-item"><a href="civil.html">Registro Civil</a></li>
+                        <li class="nav-item"><a href="#registro-civil">Registro Civil</a></li>
                         <li class="nav-item-spacing">|</a></li>
-                        <li class="nav-item"><a href="tabelionato.html">Tabelionado de Notas</a></li>
+                        <li class="nav-item"><a href="#tabelionato-de-notas">Tabelionado de Notas</a></li>
                         <li class="nav-item-spacing">|</a></li>
                         <li class="dropdown"><a href="#ServicosOnline">Serviços Online ↓</a>
                         <div class="drop-menu">
-                            <a href="https://registrocivil.org.br/" target="_blank">Certidão</a>
-                            <a href="https://funarpen.com.br/consulta_selo_digital/" target="_blank">Consultar Selo</a>
-                            <a href="https://www.e-notariado.org.br/customer" target="_blank">E-Notariado</a>
-                            <a href="https://proclamas.org.br/" target="_blank">Editais de Proclamas</a>
-                            <a href="https://extrajudicial.tjpr.jus.br/emolumentos" target="_blank">Emolumentos</a>
+                            <a href="#ServicosOnline">Certidão</a>
+                            <a href="https://funarpen.com.br/consulta_selo_digital/">Consultar Selo</a>
+                            <a href="#EProclamas">Circunscrição</a>
+                            <a href="https://www.e-notariado.org.br/customer">E-Notariado</a>
+                            <a href="#EProclamas">Editais de Proclamas</a>
+                            <a href="https://extrajudicial.tjpr.jus.br/emolumentos">Emolumentos</a>
                         </div>
                         </li>     
                         <!-- separadores ┃ ou ❘ - -->
@@ -95,23 +96,24 @@
                                 <button class="close-btn" onclick="fecharMenu()">✖</button>
                             </div>
                         <ul class="menu-lateral-list">
-                            <li class="nav-mobile"><a href="index.html">Home</a></li>
+                            <li class="nav-mobile"><a href="#">Home</a></li>
                             <li class="bar-menu"></li>
-                            <li class="nav-mobile"><a href="sobre.html">Sobre Nós</a></li>
+                            <li class="nav-mobile"><a href="#">Sobre Nós</a></li>
                             <li class="bar-menu"></li>
-                            <li class="nav-mobile"><a href="contato.html">Contato</a></li>
+                            <li class="nav-mobile"><a href="#">Contato</a></li>
                             <li class="bar-menu"></li>
-                            <li class="nav-mobile"><a href="civil.html">Registro Civil</a></li>
+                            <li class="nav-mobile"><a href="#">Registro Civil</a></li>
                             <li class="bar-menu"></li>
-                            <li class="nav-mobile"><a href="tabelionato.html">Tabelionato de Notas</a></li>
+                            <li class="nav-mobile"><a href="#">Tabelionato de Notas</a></li>
                             <li class="bar-menu"></li>
                             <li class="dropdown-mobile"><a href="#ServicosOnline">Serviços Online ↓</a>
                                 <div class="drop-menu-mobile">
-                                    <a href="https://registrocivil.org.br/" target="_blank">🔸Certidão</a>
-                                    <a href="https://selo.funarpen.com.br/Consulta/" target="_blank">🔸Consultar Selo</a>                                
-                                    <a href="https://www.e-notariado.org.br/customer" target="_blank">🔸E-Notariado</a>                                   
-                                    <a href="https://proclamas.org.br/" target="_blank">🔸Editais de Proclamas</a>
-                                    <a href="https://extrajudicial.tjpr.jus.br/emolumentos" target="_blank">🔸Emolumentos</a>
+                                    <a href="#ServicosOnline">Certidão</a>
+                                    <a href="https://funarpen.com.br/consulta_selo_digital/">Consultar Selo</a>
+                                    <a href="#EProclamas">Circunscrição</a>                                 
+                                    <a href="https://www.e-notariado.org.br/customer">E-Notariado</a>                                   
+                                    <a href="#EProclamas">Editais de Proclamas</a>
+                                    <a href="https://extrajudicial.tjpr.jus.br/emolumentos">Emolumentos</a>
                                 </div>
                         </ul>
                         </div>
@@ -129,77 +131,22 @@
 <main>
     <!-- Imagem e texto embaixo do Header -->
         <section class="img-background-top">
-            <img id="img-back-top" src="assets/imagens/background-cartorio.jpg" alt="imagem do cartório com pontinhos brancos ao redor">
-            <img id="img-back-top-mobile" src="assets/imagens/background-mobile-400x900.jpg" alt="imagem do cartorio para versao mobile">
+            <img id="img-back-top" src="assets/imagens/assets-contato/background-contato.jpg" alt="imagem do cartório com pontinhos brancos ao redor">
         </section>
         <div class="container">
             <aside class="text-top-cartorio">
                 <div class="title-top">
                     <h1>
-                        Bem vindo ao
+                        CONTATO
                     </h1>
-                    <h3>
-                        Cartório do Pirapó
-                    </h3>
                 </div>
-                <div class="description">
-                    <p class="p1-web">
-                        O Serviço Distrital de Pirapó, presta serviços essenciais à população, desde 1954. <br> Atuando nas área de Registro Civil de Pessoas Naturais e Tabelionato de Notas.
-                    </p>
-                    <p class="p1-mobile">
-                    O Serviço Distrital de Pirapó, presta serviços essenciais à população, desde 1954. Atuando nas área de Registro Civil de Pessoas Naturais e Tabelionato de Notas.
-                    </p>
-                    
-                </div>
-                <div class="wrapper-home">
-                    <a class="wrapper-inicio1" href="#saibamais">Saiba Mais</a>
-                    <a class="wrapper-inicio2" href="contato.html">Entre em Contato</a>
-                    <a class="wrapper-inicio3" href="https://www.tjpr.jus.br/codigo-de-normas-foro-judicial" target="_blank">Código de Normas TJPR</a>
-                </div>
+
             </aside>
         </div>
         <div class="wrapper-space">
-            <img id="img-back-top" src="assets/imagens/background-cartorio.jpg" alt="imagem do cartório com pontinhos brancos ao redor">
-            <img id="img-back-top-mobile" src="assets/imagens/background-mobile.jpg" alt="imagem do cartorio para versao mobile">
+            <img id="img-back-top" src="assets/imagens/assets-contato/background-contato.jpg" alt="imagem do cartório com pontinhos brancos ao redor"> 
         </div>
         <div class="container">
-            <section class="sobre-nos">
-                <div class="section-sobre">
-                    <img class="img-sobre" src="assets/imagens/mao-batendo-carimbo-sobre.png" alt="imagem de uma mão batendo um carimbo numa folha">
-                        <div class="text-sobre">
-                            <p class="p1">Saiba mais</p>
-                            <h1 class="tittle1">Sobre Nós
-                            </h1>
-                            <p class="description1">Aqui no Cartório do Pirapó, transformamos o poder da palavra escrita em uma ferramenta de segurança jurídica, permitindo que as pessoas possam avançar em seus projetos de vida com confiança e tranquilidade..
-                            </p>
-                            <a id="button-saiba" href="#saibamais">Saiba Mais</a>
-                        </div>
-                </div>
-                <div class="spacing-section"></div>
-                    <section class="section-servicos">
-                        <p class="p2">O que fazemos</p>
-                        <h1 class="tittle2">Nossos Serviços</h1>
-                            <div class="wrappers">
-                                <div class="tabelionato-de-notas">
-                                    <img class="img-tabelionato" src="assets/imagens/tabelionato-de-notas.png" alt="foto com duas mulheres, onde uma está segurando uma caneta e sorrindo">
-                                        <div class="box-tab">
-                                            <h2 class="h2-tabelionato"><img src="assets/imagens/caderno.png" alt="imagem de um caderno laranjado">Tabelionato de Notas</h2>
-                                             <a class="a-tabelionato" href="#tabelionato(trocar)">Saiba Mais ➔</a>
-                                        </div>
-                            </div>
-                                <div class="registro-civil">
-                                    <img class="img-civil" src="assets/imagens/registro-civil.png" alt="foto com um homem e uma mulher assinando um livro de casamento em cartório">
-                                        <div class="box-civil">
-                                            <h2 class="h2-civil"><img src="assets/imagens/aliancas.png" alt="imagem de uma aliança laranjada">Registro Civil</h2>
-                                            <a class="a-civil" href="#civil(trocar)">Saiba Mais ➔</a>
-                                        </div>
-                                </div>
-                    </section>
-                </div>
-        </div>
-        <div class="spacing-section2"></div>
-        <div class="background-section-localidade">
-            <div class="container">
                 <div class="section-local-e-fale">
                     <div class="section-localidade">
                         <div class="localidade">

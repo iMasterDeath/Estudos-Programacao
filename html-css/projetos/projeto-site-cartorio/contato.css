@@ -3156,6 +3156,9 @@ body {
 
   /* --------------------------- */
 
+  .nav-info {
+    display: none;
+  }
   .img-sobre {
     width: 75vw;
     height: auto;

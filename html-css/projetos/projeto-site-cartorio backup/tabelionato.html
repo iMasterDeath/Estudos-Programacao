@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartório Pirapó</title>
+    <link rel="stylesheet" href="tabelionato.css">
+    <link rel="shortcut icon" href="assets/imagens/favicon-16x16.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <!-- Linha superior com dados da empresa -->
+        <div class="top-line">  
+            <div class="container">
+                <div class="email">
+                    <img class="img-top-line" src="assets/imagens/icone-email-laranja-22.png" alt="email">
+                    <a href="#email(alterar)">cartoriopirapo@gmail.com</a>
+                </div> 
+                <div class="telefone">
+                    <img class="img-top-line" src="assets/imagens/icone-telefone-laranja-21.png" alt="telefone">
+                    <a href="#telefone(alterar)">(43) 3440-1092</a>
+                </div>
+                <div class="whatsapp">
+                    <img class="img-top-line" src="assets/imagens/icone-whatsapp-laranja-22.png" alt="whatsapp">
+                    <a href="#whatsapp (alterar)">43 98435-4708</a>
+                </div>
+        </div>
+    </div>
+    <!-- Espaço com logo e blocos -->
+        <div class="header-content">
+            <nav class="container">                 
+                <div class="nav-info">
+                    <div class="logo">
+                        <a href="index.html" id="logo-img-a"><img src="assets/imagens/logo-cartorio-top.png" class="logo-img" alt="logo do cartório"></a>
+                    </div>
+                    <div class="blocks">
+                        <div class="block1">
+                        <img id="img-block1" src="assets/imagens/icone-localização-cinzaclaro-24.png" alt="icone de localização na cor branca">
+                            <a href="contato.html">Rua Erwin Schindler, 340 <br> Pirapó, Apucarana-PR.</a>
+                        </div>
+                        <div class="block1">
+                        <img id="img-block2" src="assets/imagens/icone-relogio-cinzaclaro-24.png" alt="icone relogio na cor branca">
+                            <a href="contato.html">Seg a Sex: 8:30h às 17h <br> Plantão de Óbito: 24h</a>
+                        </div>
+                            <a href="contato.html" id="info-block3">Entre em contato</a>
+                    </div>
+                </div> 
+            </nav>
+            <!-- barra roxa embaixo do header -->
+            <div class="side-bar-header">‎ 
+            </div>   
+        </div>
+        <!-- Menu -->
+        <nav class="menu">
+            <div class="container">
+                <ul class="header-sidebar">
+                    <div class="header-siderbar-left">
+                        <a class="logo-sidebar" href="index.html"><img src="assets/imagens/logo-sidebar.png" alt="Logo do Cartorio"></a>
+                        <li class="nav-item"><a href="sobre.html">Sobre Nós</a></li>
+                        <li class="nav-item-spacing">|</a></li>  
+                        <li class="nav-item"><a href="civil.html">Registro Civil</a></li>
+                        <li class="nav-item-spacing">|</a></li>
+                        <li class="nav-item"><a href="tabelionato.html">Tabelionado de Notas</a></li>
+                        <li class="nav-item-spacing">|</a></li>
+                        <li class="dropdown"><a href="#ServicosOnline">Serviços Online ↓</a>
+                        <div class="drop-menu">
+                            <a href="https://registrocivil.org.br/" target="_blank">Certidão</a>
+                            <a href="https://funarpen.com.br/consulta_selo_digital/" target="_blank">Consultar Selo</a>
+                            <a href="https://www.e-notariado.org.br/customer" target="_blank">E-Notariado</a>
+                            <a href="https://proclamas.org.br/" target="_blank">Editais de Proclamas</a>
+                            <a href="https://extrajudicial.tjpr.jus.br/emolumentos" target="_blank">Emolumentos</a>
+                        </div>
+                        </li>     
+                        <!-- separadores ┃ ou ❘ - -->
+                        <li class="nav-item-spacing">|</a></li> 
+                        <li class="nav-item"><a href="contato.html">Contato</a></li>
+                    </div>
+                    <div class="header-sidebar-right">
+                        <div class="menu-right">
+                            
+                        <!-- Checkbox que ativa o menu -->
+                        <input type="checkbox" id="menu-toggle">
+
+                        <!-- Ícone do menu -->
+                        <label for="menu-toggle" class="menu-btn">
+                            <div class="menu-icon"></div>
+                            <div class="menu-icon"></div>
+                            <div class="menu-icon"></div>
+                            <div class="menu-icon"></div>
+                        </label>
+                        <!-- Menu lateral -->
+                        <div class="menu-lateral">
+                            <div class="menu-logo-lateral">
+                                <h2>Menu</h2>
+                                <button class="close-btn" onclick="fecharMenu()">✖</button>
+                            </div>
+                        <ul class="menu-lateral-list">
+                            <li class="nav-mobile"><a href="index.html">Home</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="nav-mobile"><a href="sobre.html">Sobre Nós</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="nav-mobile"><a href="contato.html">Contato</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="nav-mobile"><a href="civil.html">Registro Civil</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="nav-mobile"><a href="tabelionato.html">Tabelionato de Notas</a></li>
+                            <li class="bar-menu"></li>
+                            <li class="dropdown-mobile"><a href="#ServicosOnline">Serviços Online ↓</a>
+                                <div class="drop-menu-mobile">
+                                    <a href="https://registrocivil.org.br/" target="_blank">🔸Certidão</a>
+                                    <a href="https://funarpen.com.br/consulta_selo_digital/" target="_blank">🔸Consultar Selo</a>                                
+                                    <a href="https://www.e-notariado.org.br/customer" target="_blank">🔸E-Notariado</a>                                   
+                                    <a href="https://proclamas.org.br/" target="_blank">🔸Editais de Proclamas</a>
+                                    <a href="https://extrajudicial.tjpr.jus.br/emolumentos" target="_blank">🔸Emolumentos</a>
+                                </div>
+                        </ul>
+                        </div>
+
+                            <!-- Botão de fechar dentro do menu -->
+                        </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div id="sidebar">
+            </div>
+        </nav>
+    </header>
+<main>
+    <!-- Imagem e texto embaixo do Header -->
+        <section class="img-background-top">
+            <img id="img-back-top" src="assets/imagens/background-tabelionato-de-notas.jpg" alt="imagem do cartório com pontinhos brancos ao redor">
+        </section>
+        <div class="container">
+            <aside class="text-top-cartorio">
+                <div class="title-top">
+                    <h1>
+                        TABELIONATO DE NOTAS
+                    </h1>
+                </div>
+            </aside>
+        </div>
+        <div class="wrapper-space">
+            <img id="img-back-top" src="assets/imagens/background-tabelionato-de-notas.jpg" alt="imagem do cartório com pontinhos brancos ao redor"> 
+        </div>
+        <div class="container">
+    <div class="container">
+        <div class="container">
+            <p class="descricao">
+                O Tabelionato de Notas é responsável por proporcionar segurança jurídica à atos, contratos e negócios firmados pelas pessoas. Sua atuação valida informações essenciais, além de prevenir e apaziguar conflitos judiciais. <br>
+            Elaboramos este espaço para lhe ajudar. Clique nas opções abaixo e descubra tudo o que você precisa para realizar seu objetivo.
+            </p>
+
+            <!-- Conferir Tudo -->
+             
+            <div class="lista-expansivel">
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Abertura e Reconhecimento de Firma
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul>
+                            Abertura de firma consiste no arquivamento do padrão de assinatura de uma pessoa em tabelionato de notas. Tal procedimento é realizado com o objetivo de permitir que o detentor da firma arquivada, ou terceiro interessado, solicite o reconhecimento da assinatura que consta de documentos públicos ou particulares, de modo a garantir sua autenticidade e evitar a prática de fraudes.
+                            <li><strong>Por semelhança:</strong> reconhece-se a firma mediante comparação entre a assinatura aposta no documento e as assinaturas constantes na ficha de firma do interessado (cartão de autógrafo). O reconhecimento de firma por semelhança comprova que a assinatura existente no documento é semelhante à assinatura existente no cartão de autógrafo arquivado no tabelionato. Neste caso, basta que o signatário do documento tenha firma aberta no tabelionato, não sendo necessário o seu comparecimento pessoal para o ato de reconhecimento de firma.</li>
+                            <li><strong>Por autenticidade:</strong> atesta que o interessado compareceu ao Cartório, foi identificado, e assinou o documento e o Livro de Termo de Comparecimento na presença do tabelião ou escrevente autorizado. Neste caso, o signatário deve comparecer pessoalmente ao Cartório munido de documentos pessoais.</li>
+                            <br>
+                            Atenção! O Departamento Estadual de Trânsito – DETRAN exige o reconhecimento por autenticidade (verdadeiro) das firmas constantes do Certificado de Registro de Veículo (CRV) como requisito para transferência de propriedade perante o órgão.
+                            <br>
+                            No caso de autorizações para viagem de menores, recomenda-se o reconhecimento de firma por autenticidade.
+                            <br>
+                            Objetivando impedir a prática de fraudes, o Serviço Distrital do Pirapó realiza a identificação biométrica e fotográfica dos detentores de cartão de autógrafos, os quais são mantidos arquivados em banco de dados digital de acesso restrito ao tabelião e escreventes do Cartório.</li>
+                            
+                            <li><strong>Documentos Necessários</strong></li>
+                            <ul>
+                                <li>RG e CPF originais;</li>
+                                <li>A cédula de identidade pode ser substituída pelos seguintes documentos:</li>
+                                <li>Carteira Nacional de Habilitação – modelo novo (com foto);</li>
+                                <li>Carteira de Conselhos Profissionais (ex: OAB, CREA, CRM, CRF, CRO, etc.);</li>
+                                <li>Certidão de identidade expedida pelos Ministérios do Exército, da Marinha ou da Aeronáutica.</li>
+                            </ul>
+                        </ul>
+                        
+                        
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Apostilamento de Haia
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul>
+                            <ul>
+                                Serviço Indisponivel
+                                <!-- HABILITAR CASO NECESSARIO NO FUTURO ( SE COMECAR FAZER APOSTILAMENTO ) -->
+                                <!--
+                                <li><strong>O que é Apostila?</strong></li>
+                                <ul>
+                                    É um certificado de autenticidade emitido por países signatários da Convenção da Haia, que é colocado em um documento público para atestar sua origem (assinatura, cargo de agente público, selo ou carimbo de instituição). Esse documento público apostilado será apresentado em outro país, também signatário da Convenção da Haia, uma vez que a Apostila só é válida entre países signatários.
+                                    <br> <br>
+                                    O Conselho Nacional de Justiça (CNJ) aprovou em 17/06/2016, através da Resolução 228/2016, a implantação do Sistema Eletrônico de Informação e Apostilamento (SEI Apostila) e da regulamentação da Convenção da Apostila da Haia no Brasil.
+                                    <br> <br>
+                                    O tratado tem o objetivo de agilizar e simplificar a legalização de documentos entre os 112 países signatários, permitindo o reconhecimento mútuo de documentos brasileiros no exterior e de documentos estrangeiros no Brasil.
+                                    <br> <br>
+                                    Com a mudança, a legalização de documentos que antes era feita nos Consulados agora passou a ser feita diretamente nos Tabelionatos de Notas, onde você terá seu documento apostilado, podendo ser aceito em qualquer um dos 112 países signatários da Convenção.
+                                </ul>
+                            
+                                <li><strong>A que tipo de documento se aplica a Apostila?</strong></li>
+                                <ul>
+                                    Somente podem ser apostilados documentos públicos ou aqueles de natureza particular que tenham sido previamente reconhecidos por notário ou autoridade pública competente.
+                                    <br> <br>
+                                    O artigo 1º da Convenção estabelece serem documentos públicos:
+                                    <ul>
+                                        <li>Os documentos provenientes de uma autoridade ou de um agente público vinculados a qualquer jurisdição do Estado, inclusive os documentos provenientes do Ministério Público, de escrivão judiciário ou de oficial de justiça;</li>
+                                        <li>Os documentos administrativos;</li>
+                                        <li>Os atos notariais;</li>
+                                        <li>As declarações oficiais apostas em documentos de natureza privada, tais como certidões que comprovem o registro de um documento ou a sua existência em determinada data, e reconhecimentos de assinatura.</li>
+                                    </ul>
+                                    Cada país pode definir quais documentos considera aptos ao apostilamento.
+                                </ul>
+                            
+                                <li><strong>Qual o prazo para emissão de Apostila?</strong></li>
+                                <ul>
+                                    <li>O Cartório do Pirapó emite o apostilamento imediatamente, tanto presencialmente, quanto pela plataforma do e-notariado.</li>
+                                </ul>
+                            
+                                <li><strong>A Apostila tem prazo de validade?</strong></li>
+                                <ul>
+                                    <li>Não. A Apostila não “vence”, mas também não influi na validade dos documentos apostilados. Por exemplo, se sua certidão possui prazo de validade, a emissão da Apostila não se prolongará.</li>
+                                </ul>
+                            </ul>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Atas Notariais
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul>
+                            <ul>
+                                A ata notarial é o documento por meio do qual o Tabelião de Notas, seu substituto ou seu escrevente, a requerimento da parte interessada, atesta objetivamente a existência ou o modo de existir de algum fato, tal como apreendido por quaisquer dos seus sentidos, sem a emissão de juízo de valor. Pode ser lavrada, entre outros exemplos, para a captura de imagens e de conteúdo de sites (internet), vistorias em objetos e lugares, bem como narração de situações fáticas, com o intuito de prevenir direitos e responsabilidades e pode conter imagens, vídeos ou gravações digitais.
+                            
+                                <li><strong>Documentos necessários:</strong></li>
+                                <ul>
+                                    <li>Documento de identificação (cédula de identidade – RG, Carteira Nacional de Habilitação – CNH, Carteira de Trabalho e Previdência Social – CTPS, passaporte ou Carteira do Registro Nacional Migratório – RNM, antigo Registro Nacional de Estrangeiro – RNE);</li>
+                                    <li>Cadastro de pessoas físicas (CPF);</li>
+                                    <li>O Tabelião de Notas poderá recusar documento de identificação plastificado ou quando a identificação de seu portador restar impossibilitada pelo estado de conservação ou distância temporal de sua expedição (artigo 732, § 3º, Código de Normas do Foro Extrajudicial).</li>
+                                </ul>
+                            
+                                <li><strong>Observação</strong></li>
+                                <ul>
+                                    As atas notariais podem ser realizadas mediante agendamento de horário. Agende pelo <a id="ata-whatsapp" href="https://wa.me/5543984354708">WhatsApp (+55 41 99190-2580)</a> ou e-mail: <a id="ata-whatsapp" href="mailto:cartoriopirapo@gmail.com.br">cartoriopirapo@gmail.com</a> para maiores informações.
+                                </ul>
+                            </ul>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Autenticação de Documentos
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul>
+                            <ul>
+                                <strong>Documentos necessários:</strong>
+                                <ul>
+                                    <li>Documento original cuja cópia se pretende autenticar.</li>
+                                </ul>
+                                <br> <br>
+                                <ul>
+                                Atenção! Não são autenticadas cópias de outra cópia autenticada anteriormente ou, ainda, quando o documento apresentado estiver nas seguinte situações:
+                                <br>
+                                    <li>com rasuras;</li>
+                                    <li>adulterado por raspagem, lavagem com solventes;</li>
+                                    <li>com escritos à lápis;</li>
+                                    <li>com espaços em branco;</li>
+                                    <li>for em forma de papel térmico (de fax).</li>
+                                </ul>
+                            </ul>
+                            
+                        </ul> 
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Compra e Venda
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul>
+                            <ul>
+                                <strong>Documentos necessários:</strong>
+                                    <strong>Dos Vendedores</strong>
+                                    <ul>
+                                        <li><strong>Pessoa Física</strong></li>
+                                        <ul>
+                                            <li>Cédula de identidade (CPF e RG); Documento de identificação (cédula de identidade – RG, Carteira Nacional de Habilitação – CNH, Carteira de Trabalho e Previdência Social – CTPS, passaporte ou Carteira do Registro Nacional Migratório – RNM, antigo Registro Nacional de Estrangeiro – RNE);</li>
+                                            <li>CPF/MF;</li>
+                                        </ul>
+                                        <li><strong>Pessoa Jurídica</strong></li>
+                                        <ul>
+                                            <li>CNPJ;</li>
+                                            <li>Contrato social e última alteração contratual (se for o caso), original e/ou cópia autenticada;</li>
+                                            <li>Cédula de Identidade, CPF e RG dos sócios;</li>
+                                            <li>Certidão simplificada do órgão de registro da pessoa jurídica – Junta Comercial ou Registro Civil das Pessoas Jurídicas, original e atualizada com no máximo 30 dias.</li>
+                                        </ul>
+                                        <li><strong>Do Imóvel</strong></li>
+                                        <ul>
+                                            <li>Matrícula do imóvel;</li>
+                                            <li>Talão do IPTU; (último exercício).</li>
+                                            <li>Certificado de Cadastro de Imóvel Rural (CCIR - INCRA) no caso de imóvel rural;</li>
+                                            <li>Declaração de quitação de condomínio.</li>
+                                        </ul>
+                                        <li><strong>Mandatário</strong></li>
+                                        <ul>
+                                            <li>Certidão original e atualizada da procuração. (máximo 30 dias);</li>
+                                            <li>Cédula de identidade (CPF e RG); Documento de identificação (cédula de identidade – RG, Carteira Nacional de Habilitação – CNH, Carteira de Trabalho e Previdência Social – CTPS, passaporte ou Carteira do Registro Nacional Migratório – RNM, antigo Registro Nacional de Estrangeiro – RNE);</li>
+                                            <li>CPF/MF;</li>
+                                        </ul>
+                                    <br> <br>
+                                <li>O Tabelião de Notas poderá recusar documento de identificação plastificado ou quando a identificação de seu portador restar impossibilitada pelo estado de conservação ou distância temporal de sua expedição (artigo 732, § 3º, Código de Normas do Foro Extrajudicial).</li>
+                            </ul>
+                        </ul> 
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Declaração de União Estável
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul>
+                            <ul>
+                                <strong>Documentos Necessários</strong>
+                                <ul>
+                                    <strong>Partes:</strong>
+                                    <ul>
+                                        <li>Cédula de identidade (RG);</li>
+                                        <li>Cadastro Pessoa Física (CPF);</li>
+                                        <li>CNH ou Carteira de Trabalho contendo número de identidade (RG);</li>
+                                        <li>Comprovante de estado civil (atualizado em até 90 dias a contar da data de expedição);</li>
+                                    </ul>
+                                    <strong>Solteiros:</strong>
+                                    <ul>
+                                        <li>Certidão de Nascimento;</li>
+                                    </ul>
+                                    <strong>Divorciados:</strong>
+                                    <ul>
+                                        <li>Certidão de Casamento com Averbação de Divórcio + Formal de Partilha</li>
+                                        <li>Certidão de homologação de Partilha;</li>
+                                        <li>Certidão de Inexistência de Partilha de Bens no Casamento/Divórcio, ou Escritura Pública de Divórcio;</li>
+                                    </ul>
+                                    <strong>Viúvos:</strong>
+                                    <ul>
+                                        <li>Certidão de Casamento com a Anotação de Óbito + Formal de Partilha</li>
+                                        <li>Inventário ou Escritura Negativa de Inventário.</li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                            
+                        </ul>       
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Declaração de Únicos Herdeiros
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul>
+                            <ul>
+                                <strong>Documentos Necessários</strong>
+                                <ul>
+                                    <strong>Dos Herdeiros (todos)</strong>
+                                    <ul>
+                                        <li>Documento de identificação (cédula de identidade – RG, Carteira Nacional de Habilitação – CNH, Carteira de Trabalho e Previdência Social – CTPS, passaporte ou Carteira do Registro Nacional Migratório – RNM, antigo Registro Nacional de Estrangeiro – RNE);</li>
+                                        <li>Cadastro de Pessoas Físicas – CPF/MF;</li>
+                                        <li>Comprovante de estado civil;<br>
+                                            Caso seja casado(a), divorciado(a) ou viúvo(a) trazer certidão de casamento, divórcio ou óbito.</li>
+                                    </ul>
+                                    <strong>Do Falecido</strong>
+                                    <ul>
+                                        <li>Documento de identificação (cédula de identidade – RG, Carteira Nacional de Habilitação – CNH, Carteira de Trabalho e Previdência Social – CTPS, passaporte ou Carteira do Registro Nacional Migratório – RNM, antigo Registro Nacional de Estrangeiro – RNE);</li>
+                                        <li>Cadastro de Pessoas Físicas – CPF/MF;</li>
+                                        <li>Certidão de óbito;</li>
+                                        <li>Comprovante de estado civil (com anotação do óbito).</li>
+                                        <li>Caso seja casado, divorciado ou viúvo, trazer certidão de casamento, divórcio ou óbito.</li>
+                                    </ul>
+                                    <strong>Observação</strong>
+                                    <ul>
+                                        <li>Há a possibilidade de somente um dos herdeiros comparecer no cartório portando todos os documentos citados acima (incluindo dos outros herdeiros), dessa forma declarando por todos.</li>
+                                        <li>Notário poderá recusar documento de identificação plastificado ou quando pelo estado de conservação ou distância temporal de sua expedição impossibilitar a identificação de seu portador. (Art. 732, § 3º, Código de Normas).</li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                            
+                        </ul>  
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Emancipação
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul>
+                            Emancipação é a cessação da incapacidade do menor entre 16 e 18 anos. A concessão da emancipação deve ser dada por ambos os pais em conjunto, mediante escritura pública.
+                            <br> <br>
+                            É possível a concessão de emancipação por apenas um dos pais, desde que o outro: a) seja falecido (mediante comprovação) ou b) esteja desaparecido ou em lugar incerto e não sabido (mediante comprovação).
+                            <br>
+                            Uma vez emancipado o menor passa a responder por todos os atos da vida civil, podendo assinar atos como contratos de trabalho, abertura de empresas, venda de imóveis, inventários, dentre outros. A emancipação, porém, não confere ao mesmo maioridade penal, nem autoriza a retirada de carteira de motorista.
+                            <br> <br>
+                            A emancipação será obrigatoriamente registrada no 1º Ofício do Registro Civil da Comarca e depois averbada no assento de nascimento do Registro Civil onde foi lavrado.
+                            <strong>Documentos necessários:</strong>
+                            <li>RG, CPF e Certidão de Nascimento atualizada do menor emancipando</li>
+                            <li>RG e CPF dos genitores</li>
+                            <br> <br>
+                            É necessária a assinatura do menor emancipando na escritura pública, conjuntamente com os pais.
+                            <br>
+                            No caso de um dos genitores falecido – certidão de óbtio
+                            <br>
+                            No caso de um dos genitores desaparecido ou em local incerto – decisão judicial comprobatória e a presença de 2 testemunhas para o ato.
+                        </ul> 
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Mediação e Conciliação Extrajudicial
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul>
+                            <ul>
+                                A mediação e a conciliação extrajudicial são importantes instrumentos para a resolução de conflitos de forma ágil, pacífica e eficaz. O Cartório do Bacacheri está autorizado pelo Tribunal de Justiça do Estado do Paraná a realizar esta atividade, garantindo segurança jurídica e excelência no atendimento de seus clientes.
+                            
+                                <li><strong>Quais as principais diferenças?</strong>
+                                    <ul>
+                                        <li>Mediação: Voltada para situações em que as partes possuem um vínculo continuado, como conflitos familiares, societários ou condominiais. O mediador atua como facilitador do diálogo, ajudando os envolvidos a identificarem interesses em comum e construírem uma solução consensual.</li>
+                                        <li>Conciliação: Indicada para questões mais pontuais, como negociações comerciais ou dívidas. O conciliador propõe alternativas práticas e auxilia na construção de um acordo equilibrado.</li>
+                                    </ul>
+                                </li>
+                            
+                                <li><strong>Vantagens de resolver conflitos no Tabelionato de Notas:</strong>
+                                    <ul>
+                                        <li>Rapidez: Diferentemente dos processos judiciais, os acordos são firmados de maneira célere, com reuniões agendadas em curto prazo.</li>
+                                        <li>Custo-benefício: Redução de custos com honorários e despesas processuais.</li>
+                                        <li>Segurança jurídica: Os acordos firmados são formalizados perante o tabelião em escritura pública, título com força de título executivo extrajudicial.</li>
+                                        <li>Confidencialidade: As tratativas realizadas no ambiente do Cartório do Bacacheri garantem sigilo absoluto.</li>
+                                        <li>Ambiente neutro: O tabelião ou preposto, devidamente capacitado, atua de forma imparcial, promovendo equilíbrio entre as partes.</li>
+                                    </ul>
+                                </li>
+                            
+                                <li><strong>Como funciona o procedimento?</strong>
+                                    <ul>
+                                        <li>Início: As partes interessadas apresentam a questão ao Cartório do Bacacheri e manifestam interesse em resolver o conflito de forma amigável.</li>
+                                        <li>Convocação: O tabelião entra em contato com a outra parte para agendar a reunião de mediação ou conciliação.</li>
+                                        <li>Sessão: Com a presença do tabelião e/ou conciliador(a) capacitado(a), as partes dialogam e buscam construir o acordo.</li>
+                                        <li>Formalização: O acordo, quando alcançado, é registrado em uma escritura pública, assegurando sua validade jurídica.</li>
+                                    </ul>
+                                </li>
+                            
+                                <li><strong>Casos mais comuns atendidos no Tabelionato:</strong>
+                                    <ul>
+                                        <li>Conflitos familiares (guarda de filhos, divisão de bens, pensão alimentícia).</li>
+                                        <li>Questões condominiais (uso de áreas comuns, inadimplência).</li>
+                                        <li>Negociações comerciais (dívidas, rescisões contratuais).</li>
+                                        <li>Dissolução de sociedades empresariais ou unipessoais.</li>
+                                        <li>Relações de consumo, direito bancário e creditório.</li>
+                                    </ul>
+                                </li>
+                                <br> <br>
+                                O Cartório do Pirapó está preparado para solucionar conflitos com profissionalismo e dedicação, promovendo soluções que valorizam o diálogo, a cooperação e a justiça. Em caso de dúvidas ou para agendar uma sessão de mediação ou conciliação, entre em contato conosco, para resolver seus conflitos de forma segura e eficiente!
+                            </ul>
+                            
+                        </ul> 
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Inventários e Partilhas
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul>
+                            <ul>
+                                <li><strong>Requisitos</strong>
+                                    <ul>
+                                        <li>Consenso entre os herdeiros;</li>
+                                        <li>Informar a existência de herdeiros menores ou incapazes (casos que serão acompanhados pelo Ministério Público).</li>
+                                    </ul>
+                                </li>
+                            
+                                <li><strong>Do Advogado</strong>
+                                    <ul>
+                                        <li>Carteira da OAB</li>
+                                        <li>Petição/Requerimento (contendo os requisitos formais: qualificação de todas as partes, indicação de quem é inventariante, indicação de quais são os bens, valores atribuídos, e forma/intenção de partilha dos bens).</li>
+                                    </ul>
+                                </li>
+                            
+                                <li><strong>Dos Herdeiros</strong>
+                                    <ul>
+                                        <li>Certidão de Óbito do autor da herança;</li>
+                                        <li>Documento de identificação (cédula de identidade – RG, Carteira Nacional de Habilitação – CNH, Carteira de Trabalho e Previdência Social – CTPS, passaporte ou Carteira do Registro Nacional Migratório – RNM, antigo Registro Nacional de Estrangeiro – RNE);</li>
+                                        <li>Cadastro de Pessoas Físicas – CPF/MF;</li>
+                                        <li>Certidão comprobatória do vínculo de parentesco dos herdeiros;</li>
+                                        <li>Certidão de Casamento do cônjuge sobrevivente e dos herdeiros casados e Pacto Antenupcial, se houver;</li>
+                                    </ul>
+                                </li>
+                            
+                                <li><strong>Dos Bens Imóveis</strong>
+                                    <ul>
+                                        <li>Certidão atualizada da matrícula (no registro de imóveis respectivo dentro do prazo de 30 dias);</li>
+                                        <li>Certidão de ônus, feitos, ações reais e pessoais reipersecutórias (no registro de imóveis respectivo dentro do prazo de 30 dias); OU em substituição dos dois itens acima:</li>
+                                        <li>Certidão de situação jurídica atualizada do imóvel, também dentro do prazo de 30 dias;</li>
+                                        <li>Certidão municipal do imóvel (prefeitura dentro de 30 dias);</li>
+                                        <li>Certificado de cadastro de imóvel rural – CCIR (INCRA), no caso de imóvel rural;</li>
+                                        <li>Certidão de quitação, última declaração ou os cinco (5) últimos comprovantes de adimplemento, referentes ao ITR, no caso do imóvel rural;</li>
+                                        <li>CAR – Cadastro Imóvel Rural;</li>
+                                        <li>NIRF – Cadastro de Imóvel Rural junto à Receita Federal;</li>
+                                        <li>Quando for Transcrição: Cadastro Imobiliário, Cópia da Planta, Declaração de Confrontantes, Declaração de endereço;</li>
+                                    </ul>
+                                </li>
+                            
+                                <li><strong>Dos Bens Móveis</strong>
+                                    <ul>
+                                        <li>Comprovantes de propriedade dos bens móveis;</li>
+                                        <li>Veículos: Certificados de registro e licenciamento;</li>
+                                        <li>Declaração de valores depositados na instituição financeira (devidamente carimbado e assinado pela instituição responsável);</li>
+                                        <li>Certificados de aplicações;</li>
+                                        <li>Declaração da instituição financeira de demais haveres;</li>
+                                        <li>Outros documentos que comprovem a propriedade e/ou titularidade dos bens e/ou direitos.</li>
+                                    </ul>
+                                </li>
+                                <br> <br>
+                                Os documentos apresentados no ato da lavratura da escritura devem ser originais ou em cópias autenticadas.
+                            </ul>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Procuração Pública e Substabelecimento
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul>
+                            <ul>
+                                <strong>Documentos Necessários</strong>
+                            
+                                <li><strong>Pessoa Jurídica</strong>
+                                    <ul>
+                                        <li>CNPJ;</li>
+                                        <li>Contrato Social ou Estatuto Social;</li>
+                                        <li>Últimas Alterações Contratuais ou Estatutárias;</li>
+                                        <li>Ata de eleição do representante legal;</li>
+                                        <li>Dados completos do representante legal:
+                                            <ul>
+                                                <li>Documento de identificação (cédula de identidade – RG, Carteira Nacional de Habilitação – CNH, Carteira de Trabalho e Previdência Social – CTPS, passaporte ou Carteira do Registro Nacional Migratório – RNM, antigo Registro Nacional de Estrangeiro – RNE);</li>
+                                                <li>Cadastro de Pessoas Físicas – CPF/MF;</li>
+                                                <li>Endereço, nacionalidade, profissão, estado civil;</li>
+                                            </ul>
+                                        </li>
+                                        <li>Certidão Simplificada da Junta Comercial: Emitida nos últimos 30 dias ou Certidão de Breve Relato do Cartório de Título e Documentos, emitida nos últimos 30 dias;</li>
+                                    </ul>
+                                </li>
+                            
+                                <li><strong>Pessoa Física</strong>
+                                    <ul>
+                                        <li>Nome completo</li>
+                                        <li>Nacionalidade</li>
+                                        <li>Estado civil: casados, divorciados ou viúvos devem trazer certidão comprobatória atualizada</li>
+                                        <li>Profissão</li>
+                                        <li>Documento de identificação (cédula de identidade – RG, Carteira Nacional de Habilitação – CNH, Carteira de Trabalho e Previdência Social – CTPS, passaporte ou Carteira do Registro Nacional Migratório – RNM, antigo Registro Nacional de Estrangeiro – RNE);</li>
+                                        <li>Cadastro de Pessoas Físicas – CPF/MF;</li>
+                                        <li>Endereço</li>
+                                    </ul>
+                                </li>
+                            
+                                <li><strong>Procuração para compra e venda de Imóvel:</strong>
+                                    <ul>
+                                        <li>Apresentar certidão atualizada da matrícula do imóvel.</li>
+                                    </ul>
+                                </li>
+                            
+                                <li><strong>Procuração para compra e venda de Veículo:</strong>
+                                    <ul>
+                                        <li>Apresentar documento do veículo e CRLV.</li>
+                                    </ul>
+                                </li>
+                            
+                                <li><strong>Procuração para Inventário:</strong>
+                                    <ul>
+                                        <li>Certidão de óbito do falecido(a) e demais certidões que comprovem o vínculo de parentesco.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                        </ul>                        
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Reconhecimento de Firma
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul>
+                            <ul>
+                                <strong>Documentos necessários:</strong>
+                                    <ul>
+                                        <li>Documento de identificação (cédula de identidade – RG, Carteira Nacional de Habilitação – CNH, Carteira de Trabalho e Previdência Social – CTPS, passaporte ou Carteira do Registro Nacional Migratório – RNM, antigo Registro Nacional de Estrangeiro – RNE);</li>
+                                        <li>Cadastro de Pessoas Físicas – CPF/MF;</li>
+                                        <li>O Tabelião de Notas poderá recusar documento de identificação replastificado ou quando a identificação de seu portador restar impossibilitada pelo estado de conservação ou distância temporal de sua expedição (artigo 732, § 3º, Código de Normas do Foro Extrajudicial).</li>
+                                    </ul>
+                            
+                                <strong>Tipos de Reconhecimento de Firma</strong>
+                                    <ul>
+                                        <strong>Por Autenticidade/ Verdadeiro</strong>
+                                            <ul>
+                                                <li>Ato de reconhecimento de assinatura em que o usuário comprova pessoalmente que é signatário do documento apresentado para o reconhecimento de firma. O usuário deve assinar diante do tabelião ou escrevente o documento que pretende ter a firma reconhecida como autêntica. Além disso, deverá também assinar termo em livro próprio do cartório, que comprova que a pessoa foi até o cartório para assinar o documento.</li>
+                                            </ul>
+                                        
+                                        <strong>Por Semelhança</strong>
+                                            <ul>
+                                                <li>Neste caso, o Cartório do Bacacheri certifica que a assinatura aposta no documento confere com a assinatura depositada em seus padrões e em seu banco de dados. Ou seja, não é necessário o comparecimento pessoal do signatário depois da abertura da ficha. O reconhecimento de firma por semelhança pode ser com valor econômico ou sem valor econômico, de acordo com o conteúdo e a natureza do documento.</li>
+                                            </ul>
+                                        
+                                    </ul>
+                            </ul>
+                            
+                        </ul>                        
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo" onclick="toggleItem(this)">
+                        Testamento
+                        <span class="icone">+</span>
+                    </div>
+                    <div class="conteudo">
+                        <ul>
+                            <ul>
+                                <li><strong>Quem pode fazer testamento?</strong>
+                                        A partir dos 16 anos de idade, toda pessoa capaz (que tenha pleno discernimento) pode dispor, por testamento, da totalidade dos seus bens, ou de parte deles, para depois de sua morte, desde que a legítima dos herdeiros necessários não seja incluída no testamento.
+                                </li>
+                            
+                                <li><strong>Quem deve comparecer?</strong>
+                                    O testador e duas testemunhas, não podendo ser ascendente, descendente, irmão e cônjuge do testador ou dos herdeiros instituídos ou legatários.
+                                </li>
+                            
+                                <li><strong>É necessária a presença de Advogado?</strong>
+                                        Não há necessidade de assistência de advogado. Se você tiver um advogado, recomendamos que o consulte para orientações jurídicas.
+                                </li>
+                            
+                                <li><strong>A pessoa cega pode fazer testamento?</strong>
+                                        Sim. Ao cego só se permite o testamento público, que lhe será lido, em voz alta, duas vezes, uma pelo tabelião ou por sua substituta legal, e a outra por uma das testemunhas, designada pelo testador, fazendo-se de tudo circunstanciada menção no testamento.
+                                </li>
+                            
+                                <li><strong>A pessoa surda pode fazer testamento?</strong>
+                                        Sim. O indivíduo inteiramente surdo, sabendo ler, lerá o seu testamento, e, se não o souber, designará quem o leia em seu lugar, presentes as testemunhas.
+                                </li>
+                            
+                                <li><strong>O que é Testamento Vital?</strong>
+                                    <ul>
+                                        <li>O testamento vital não é um testamento, mas sim uma escritura pública declaratória que traz um conjunto de instruções e vontades a respeito do corpo da pessoa, da sua personalidade, administração familiar e patrimonial para a eventualidade de ser acometido de moléstia grave ou acidente que venha a impedi-lo de expressar sua vontade.</li>
+                                        <li>Pela declaração antecipada de vontade, o declarante poderá orientar os profissionais médicos sobre cuidados e tratamentos que quer, ou não, receber no momento em que estiver incapacitado de expressar, livre e conscientemente, sua vontade.</li>
+                                        <li>No testamento vital a pessoa também poderá constituir procuradores para, na eventualidade de não poder expressar sua vontade, administrar seus bens e representá-lo perante médicos e hospitais sobre os tratamentos a que será ou poderá ser submetido.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                        </ul>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <!--  -->
+        </div>
+        <div class="spacing-footer"></div>
+<footer>
+    <div class="background-footer">
+        <div class="container">
+            <div class="box-footer">
+                <div class="info-cartorio-footer">
+                    <img src="assets/imagens/logo-cartorio.png" alt="logo do cartório do pirapó">
+                    <p>Somos uma instituição de grande relevância na região de Apucarana, PR. Oferecendo serviços Notariais e de Registro Civil de alta qualidade e confiabilidade. Nosso objetivo é promover um atendimento eficiente e garantir a segurança jurídica, a satisfação e a confiança dos usuários, contribuindo para uma sociedade mais justa e equilibrada</p>
+                </div>
+                <div class="bar-section-footer"></div>
+                <div class="section-right-footer">
+                   <h3 class="footer-title">Acesse</h3>
+                    <p>‎</p>
+                    <a href="#sobrenos(trocar)">Sobre Nós</a>
+                    <a href="#tabelionato(trocar)">Tabelionato de Notas</a>
+                    <a href="#registrocivil(trocar)">Registro Civil</a>
+                    <a href="#politicaprivacidade(trocar)">Política de Privacidade</a>
+                    <a href="trabalheconosco(trocar)">Trabalhe Conosco</a>
+                    <a href="contato.html">Contato</a> 
+                </div>
+                <div class="section-right-footer2">
+                    <h3 class="footer-title">Atendimento</h3>
+                    <p>‎</p>
+                    <a id="horario-footer" href="#horario(trocar)">Seg a Sex 08:30 às 17:00</a>
+                    <a href="#óbito">Plantão de Óbito 24Horas</a>
+                    <a href="#telefone-whatssapp(trocar)">(43) 98435-4708</a>
+                    <a href="endereco(trocar)">Rua Erwin Schindler, 340 <br>
+                        Pirapó, Apucarana-PR.</a>
+                </div>
+                <div class="section-right-footer3">
+                    <h3 class="footer-title">Siga Nossas Redes Sociais</h3>
+                    <p>‎</p>
+                    <a href="https://www.instagram.com/cartoriopirapo/" target="_blank"><img src="assets/imagens/icone-instagram-branco-25.png" alt="logo do cartório"></a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="final-footer">
+                <p>© 2025. <a href="#home">Cartório do Pirapó.</a></p><br>
+                <p>Desenvolvido por <a href="https://imasterdeath.github.io/Estudos-Programacao/" target="_blank"> iMasterDeath</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+</main>
+</body>
+<script src="script.js"></script>
+</html>
