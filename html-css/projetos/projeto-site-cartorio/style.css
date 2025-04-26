@@ -2767,6 +2767,7 @@ body {
     box-sizing: border-box;
     transition: left 0.3s ease;
     z-index: 99;
+    box-shadow: none;
   }
   #menu-toggle:checked + label + .menu-lateral {
     left: 0;
@@ -3109,6 +3110,7 @@ body {
     box-sizing: border-box;
     transition: left 0.3s ease;
     z-index: 99;
+    box-shadow: none;
   }
   #menu-toggle:checked + label + .menu-lateral {
     left: 0;
