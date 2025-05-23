@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Loops - Dados</h1>
+    <script>
+      //  ----------------------------------------------------------------------------------------------
+      //
+      // LOOP WHILE
+      // Ideal quando nao sabemos quantas vezes sera executado
+      //
+      // LOOP FOR
+      // Ideal quando sabemos exatamente quantas vezes sera executado
+      //
+      // LOOP DO WHILE
+      // Similar ao while, mas executa ao menos uma vez, mesmo que na primeira vez, a condicao seja falsa
+      //
+      //  ----------------------------------------------------------------------------------------------
+
+      // LOOP WHILE
+
+      // jogue um dado e guarde o numero
+      let dado1 = parseInt(Math.random() * 6 + 1);
+      // jogue o outro dado e guarde o numero
+      let dado2 = parseInt(Math.random() * 6 + 1);
+      // crie contador = 0
+      let contador = 1;
+      // enquanto dado1 for diferente de dado2
+      // some um ao contador
+      // jogue novamente os dados
+      while (dado1 !== dado2) {
+        console.log(dado1, dado2);
+        contador++;
+        dado1 = parseInt(Math.random() * 6 + 1);
+        dado2 = parseInt(Math.random() * 6 + 1);
+      }
+      // mostre na tela qual o numero se repetiu e quantas vezes os dados foram jogados
+      console.log(
+        "Os dados foram jogados " +
+          contador +
+          " vezes. E o numero repetido foi o " +
+          dado1
+      );
+
+      console.log("-----------------------");
+
+      // LOOP DO WHILE
+
+      dado1 = parseInt(Math.random() * 6 + 1);
+      dado2 = parseInt(Math.random() * 6 + 1);
+
+      contador = 1;
+
+      do {
+        console.log(dado1, dado2);
+        contador++;
+        dado1 = parseInt(Math.random() * 6 + 1);
+        dado2 = parseInt(Math.random() * 6 + 1);
+      } while (dado1 !== dado2);
+
+      console.log(
+        "Os dados foram jogados " +
+          contador +
+          " vezes. E o numero repetido foi o " +
+          dado1
+      );
+    </script>
+  </body>
+</html>

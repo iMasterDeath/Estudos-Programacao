@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>break vs continue</h1>
+    <script>
+      // Mostre na tela os numeros de 0 a 100 ignorando os multiplos de 10. Porem, a cada interacao, sorteie um numero de 1 a 100. Se o numero mostrado for divisivel pelo numero sorteado, interrompa o loop.
+
+      for (i = 0; i <= 100; i++) {
+        if (i % 10 === 0) {
+          continue;
+        }
+        console.log(i);
+        let sorteio = parseInt(Math.random() * 100 + 1);
+        console.log("Sorteio", sorteio);
+
+        if (i % sorteio === 0) {
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>

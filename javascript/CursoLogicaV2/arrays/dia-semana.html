@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <h1>Dia da semana</h1>
+    <script>
+      const diaSemana = [
+        "Domingo",
+        "Segunda",
+        "Terca",
+        "Quarta",
+        "Quinta",
+        "Sexta",
+        "Sabado",
+      ];
+
+      const hoje = new Date();
+      const diaSemanaHoje = hoje.getDay();
+      alert("Hoje e: " + diaSemana[diaSemanaHoje]);
+
+      /*  new Date().getDay()
+        0 - Domingo
+        1 - Segunda
+        2 - Terca
+        3 - Quarta
+        4 - Quinta
+        5 - Sexta
+        6 - Sabado
+      */
+    </script>
+  </body>
+</html>

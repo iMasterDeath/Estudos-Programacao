@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Loops - Tabuada</h1>
+    <script>
+      // LOOP WHILE
+      let n = parseFloat(prompt("Digite um numero para ver a tabuada: "));
+
+      let contador = 0;
+
+      // enquanto (contador <= 1000)
+      while (contador <= 1000) {
+        document.write(n + " x " + contador + ": " + n * contador + "<br>");
+        contador++;
+      }
+
+      document.write("saiu do loop");
+
+      // Um Loop sempre precisa ter uma condicao de saida (se nao fica infinito)
+    </script>
+  </body>
+</html>

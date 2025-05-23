@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <h1>Arrays</h1>
+    <script>
+
+      // Sintaxe funcao construtora (menos usada)
+      //   let nomes1 = new Arrays("Joao", "Maria", "Daniel", "Beatriz");
+
+      // Sintaxe Literal (mais usada)
+      let nomes = ["Joao", "Maria", "Daniel", "Beatriz", "Ricardo", "Luciane"];
+
+      let nomeDigitado = prompt("Digite seu nome")
+
+      nomes[nomes.length] = nomeDigitado     
+      // nomes e a array completa, o nomes.length, e todo o conteudo que fica dentro dela, e o nomeDigitado e oque o usuario digitou e aparecera por ultimo na array
+
+      for (let i = 0; i < nomes.length; i++){
+        document.write("nome: " + nomes[i] + "<br>")
+      }
+
+      document.write("A lista de nomes possui: " + nomes.length + "elementos")
+    </script>
+  </body>
+</html>

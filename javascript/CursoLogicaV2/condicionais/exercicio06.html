@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Crie uma variavel e atribua a ela qualquer valor (qualquer mesmo, numero, string, boolean, null ou qualquer outro que voce conheca)
+      let myVar = null;
+
+      // Utilizando a condicional switch, mostre em um alert o tipo da variavel
+      switch (typeof myVar) {
+        case "number":
+          alert("myVar e numero");
+          break;
+        case "string":
+          alert("myVar e texto");
+          break;
+        case "boolean":
+          alert("myVar e boleana");
+          break;
+        case "object":
+          alert("myVar e objeto");
+          break;
+        case "function":
+          alert("myVar e funcao");
+          break;
+        case "undefined":
+          alert("myVar e indefinido");
+          break;
+        default:
+          alert("myVar e de um tipo desconhecido");
+      }
+
+      // Tenha uma carta na manga para mostrar uma mensagem padrao caso voce desconheca o tipo da variavel
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Loops - Numeros Pares</h1>
+    <script>
+      //  Pedir para um usuario digitar um numero e mostrar a tabuada de 1 a 1000, colocando uma linha divisoria ou uma quebra de linha sempre que mudar de dezena
+
+      let n = parseFloat(prompt("Digite um numero"));
+
+      for (let contador = 1; contador <= 1000; contador++) {
+        document.write(n + " x " + contador + ": " + n * contador + "<br>");
+        if (contador % 10 === 0) document.write("<hr>");
+      }
+    </script>
+  </body>
+</html>

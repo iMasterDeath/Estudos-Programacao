@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>break vs continue</h1>
+    <script>
+      // Jogue dois dados quantas vezes forem necessarias ate que a soma dos pontos dos dados seja par por 10 vezes. Quantas vezes os dados foram jogados? (2 variaveis vai ter que criar)
+
+      // Explicacao: Criamos duas variaveis: 1) quantasVezesDadosJogados e a 2) quantasVezesASomaEhPar
+      // Ai embaixo dizemos que: enquanto for verdadeiro e colocamos o valor aleatorio nos dado1 e dado2, fazemos eles multiplicarem por *6 e acrescentar um
+      // Pedimos para mostrar no log
+
+      let quantasVezesDadosJogados = 0;
+      let quantasVezesASomaEhPar = 0;
+
+      while (true) {
+        let dado1 = parseInt(Math.random() * 6 + 1);
+        let dado2 = parseInt(Math.random() * 6 + 1);
+
+        console.log(
+          dado1,
+          dado2,
+          quantasVezesDadosJogados,
+          quantasVezesASomaEhPar
+        );
+        quantasVezesDadosJogados++;
+        if ((dado1 + dado2) % 2 === 0) {
+          quantasVezesASomaEhPar++;
+        }
+        if (quantasVezesASomaEhPar >= 10) {
+          break;
+        }
+      }
+      console.log(
+        "Os dados foram jogados " + quantasVezesDadosJogados + " vezes"
+      );
+    </script>
+  </body>
+</html>
