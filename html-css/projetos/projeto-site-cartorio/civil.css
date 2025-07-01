@@ -1614,6 +1614,9 @@ input[type="number"] {
     display: flex;
     flex-direction: column;
   }
+   .background-footer {
+    height: 750px;
+  }
 }
 
 @media (width <= 1250px) {
@@ -1646,6 +1649,9 @@ input[type="number"] {
     width: auto;
     height: 100%;
     margin-top: 0px;
+  }
+  .background-footer {
+    height: 800px;
   }
 }
 
@@ -2378,7 +2384,7 @@ input[type="number"] {
     /* AJUSTAR O FALE CONOSCO E O FORMULARIO */
   }
   .background-footer {
-    height: 730px;
+    height: 830px;
   }
 }
 
@@ -2584,7 +2590,7 @@ input[type="number"] {
     margin-left: 50px;
   }
   .background-footer {
-    height: 1600px;
+    height: 1800px;
   }
   .bar-section-footer {
     display: none;
@@ -3213,10 +3219,6 @@ input[type="number"] {
     width: 70%;
     margin-left: 15px;
   }
-  .background-footer {
-    width: 100%;
-    height: 1650px;
-  }
   .conteudo {
     max-height: 0;
     overflow: hidden;
@@ -3758,10 +3760,6 @@ input[type="number"] {
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     opacity: 0; /* Inicialmente invisível */
     background-color: var(--branco);
-  }
-  .background-footer {
-    width: 100%;
-    height: 1650px;
   }
 }
 

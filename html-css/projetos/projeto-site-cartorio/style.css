@@ -102,6 +102,10 @@ h3 {
   color: var(--laranja);
 }
 
+.title {
+  color: #07b650;
+}
+
 /* Espaço com logo e blocos */
 
 .header-content {
@@ -847,7 +851,7 @@ body {
 }
 
 .contact-box {
-  width: 300px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -863,6 +867,10 @@ body {
 .contact-box a {
   color: var(--roxo-escuro);
   font-weight: 500;
+}
+.contact-bxs-p {
+  color: var(--roxo-escuro);
+  font-weight: 600;
 }
 
 .bxs-envelope1 {
@@ -898,6 +906,18 @@ body {
 }
 
 .bxs-envelope3 a:hover {
+  transition: 0.3s;
+  color: var(--laranja);
+  font-weight: 700;
+}
+
+.bxs-envelope4 {
+  display: flex;
+  gap: 10px;
+  font-style: normal;
+}
+
+.bxs-envelope4 a:hover {
   transition: 0.3s;
   color: var(--laranja);
   font-weight: 700;
@@ -1465,6 +1485,9 @@ body {
     display: flex;
     flex-direction: column;
   }
+  .background-footer {
+    height: 750px;
+  }
 }
 
 @media (width <= 1250px) {
@@ -1497,6 +1520,9 @@ body {
     width: auto;
     height: 100%;
     margin-top: 0px;
+  }
+  .background-footer {
+    height: 800px;
   }
 }
 
@@ -2221,7 +2247,7 @@ body {
     /* AJUSTAR O FALE CONOSCO E O FORMULARIO */
   }
   .background-footer {
-    height: 730px;
+    height: 830px;
   }
 }
 
@@ -2432,7 +2458,7 @@ body {
     margin-left: 50px;
   }
   .background-footer {
-    height: 1600px;
+    height: 1800px;
   }
   .bar-section-footer {
     display: none;
@@ -3060,17 +3086,26 @@ body {
   .spacing-section2 {
     height: 800px;
   }
+  .contact-box {
+    font-size: 18px;
+  }
 }
 
 @media (width <= 450px) {
   .spacing-section2 {
     height: 740px;
   }
+  .contact-box {
+    font-size: 17px;
+  }
 }
 
 @media (width <= 420px) {
   .spacing-section2 {
     height: 700px;
+  }
+  .contact-box {
+    font-size: 16px;
   }
 }
 
@@ -3083,6 +3118,10 @@ body {
 @media (width <= 350px) {
   .spacing-section2 {
     height: 50vh;
+  }
+  .contact-bxs-p {
+    display: none;
+    transition: 0.3s;
   }
 }
 
@@ -3373,9 +3412,7 @@ body {
     width: 100%;
     font-size: 18px;
   }
-  .contact-box {
-    font-size: 18px;
-  }
+
   .iframe-web {
     width: 100%;
     height: 300px;
@@ -3502,9 +3539,6 @@ body {
   }
   .section-right-footer3 {
     width: 70%;
-  }
-  .background-footer {
-    height: 1650px;
   }
 }
 
@@ -3756,7 +3790,7 @@ body {
     font-size: 20px;
   }
   .contact-box {
-    font-size: 20px;
+    font-size: 16px;
   }
   .iframe-web {
     width: 80vw;
