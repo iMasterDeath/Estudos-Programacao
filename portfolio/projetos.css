@@ -1396,7 +1396,10 @@ h2 {
     height: 60px;
     border-bottom: 1.5px solid var(--neon);
   }
-
+  .section-down-projetos {
+    width: 100%;
+    height: 65%;
+  }
   .down-projetos {
     width: 100%;
     height: 90%;
@@ -1513,7 +1516,7 @@ h2 {
   }
   .select-pages {
     width: 100%;
-    height: 25vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1742,6 +1745,18 @@ h2 {
 }
 
 @media (width <= 500px) {
+  .container-projetos {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  height: 100vh;
+  transition: 0.3s;
+}
+  .main-section-projetos {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
   .up-projetos {
     gap: 10px;
     width: 100%;
@@ -1760,12 +1775,23 @@ h2 {
     display: none;
   }
   .up-projetos h1 {
-    font-size: 23px;
+    font-size: 21px;
     transition: 0.3s;
   }
   .section-down-projetos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: auto;
+  }
+  .down-projetos {
+    width: 85%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    transition: 0.3s;
   }
 
   /*  */
@@ -1773,12 +1799,11 @@ h2 {
   .projeto1 {
     display: block;
     width: 100%;
-    height: 500px;
+    height: 46vh;
     background-color: var(--cinza-header);
     border: 1px solid var(--neon);
     border-radius: 8px;
     color: var(--neon);
-    font-size: 15px;
     z-index: 1;
     transition: 0.3s;
   }
@@ -1800,19 +1825,19 @@ h2 {
   }
 
   .projeto1 h2 {
-    width: 85%;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
     margin-left: 15px;
     transition: 0.3s;
     font-size: 15px;
   }
 
   .projeto1 p {
-    width: 85%;
+    width: 95%;
     height: auto;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 13px;
     margin-left: 15px;
     transition: 0.3s;
     font-size: 13px;
@@ -1828,10 +1853,9 @@ h2 {
     margin-top: 0px;
     margin-left: 20px;
     background-color: #0ef6cc1f;
-    font-size: 12px;
+    font-size: 11px;
     box-shadow: 0px 0px 1px 5px #0ef6cc1f;
     transition: 0.3s;
-    font-size: 11px;
   }
 
   .link-text-1 {
@@ -1840,14 +1864,14 @@ h2 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 10vh;
+    height: 4vh;
     gap: 30px;
     transition: 0.3s;
   }
 
   .link-text-1 a {
     width: 120px;
-    height: 35px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1855,9 +1879,8 @@ h2 {
     background-color: transparent;
     border: 1px solid var(--neon);
     border-radius: 6px;
-    font-size: 14px;
-    transition: 0.3s;
     font-size: 11px;
+    transition: 0.3s;
   }
 
   .link-text-1 a:hover {
@@ -1885,13 +1908,13 @@ h2 {
 
 @media (width <= 350px) {
   .up-projetos h1 {
-    font-size: 6.5vw;
+    font-size: 6vw;
     transition: 0.3s;
   }
   .projeto1 {
     display: block;
     width: 100%;
-    height: 500px;
+    height: 46vh;
     background-color: var(--cinza-header);
     border: 1px solid var(--neon);
     border-radius: 8px;
@@ -1918,19 +1941,19 @@ h2 {
   }
 
   .projeto1 h2 {
-    width: 85%;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
     margin-left: 15px;
     transition: 0.3s;
     font-size: 4.2vw;
   }
 
   .projeto1 p {
-    width: 85%;
+    width: 95%;
     height: auto;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 13px;
     margin-left: 15px;
     transition: 0.3s;
     font-size: 3.7vw;
@@ -1958,7 +1981,7 @@ h2 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 10vh;
+    height: 4vh;
     gap: 30px;
     transition: 0.3s;
   }
