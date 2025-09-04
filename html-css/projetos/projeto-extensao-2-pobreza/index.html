@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empreenda Local - Fortaleça a Comunidade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Empreende Pirapó</h1>
+            <nav class="nav-menu">
+                <a href="#empreendedores" class="btn-cta">Conheça os Empreendedores</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Dê visibilidade ao que é nosso.</h2>
+                    <p>Uma plataforma para conectar talentos e negócios da comunidade com novos clientes.</p>
+                    <a href="#empreendedores" class="btn">Explore agora</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="empreendedores" class="empreendedores-section">
+            <div class="container">
+                <h3>Conheça os Empreendedores Locais</h3>
+                <p class="subtitle">Descubra serviços e produtos únicos, feitos com talento e dedicação.</p>
+                <div class="empreendedores-grid">
+                    <div class="card">
+                        <img src="https://pointer.com.br/blog/wp-content/uploads/2018/04/160045-artesanato-nordestino-4-itens-para-incorporar-na-decoracao.jpg" alt="Artesanato">
+                        <h4>Artesanato Criativo</h4>
+                        <p>Peças exclusivas de decoração e presentes, feitas à mão.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://donanena.com.br/wp-content/uploads/2024/11/comida-caseira-site-dona-nena-scaled.jpg" alt="Culinária Local">
+                        <h4>Culinária Caseira</h4>
+                        <p>Doces, salgados e refeições com o sabor de casa. Peça já!</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://sulbrasilmanutencao.com.br/wp-content/uploads/2020/12/pequenos-reparos.jpg" alt="Serviços Diversos">
+                        <h4>Serviços Diversos</h4>
+                        <p>De reparos a aulas particulares, encontre o que você precisa aqui.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Empreende Pirapó. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
