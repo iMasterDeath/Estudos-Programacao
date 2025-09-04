@@ -1746,17 +1746,17 @@ h2 {
 
 @media (width <= 500px) {
   .container-projetos {
-  max-width: 100%;
-  margin: 0 auto;
-  display: flex;
-  height: 100vh;
-  transition: 0.3s;
-}
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    height: 100vh;
+    transition: 0.3s;
+  }
   .main-section-projetos {
-  width: 100%;
-  height: 100%;
-  transition: 0.3s;
-}
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+  }
   .up-projetos {
     gap: 10px;
     width: 100%;
@@ -1879,7 +1879,7 @@ h2 {
     background-color: transparent;
     border: 1px solid var(--neon);
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 11px;
     transition: 0.3s;
   }
 
