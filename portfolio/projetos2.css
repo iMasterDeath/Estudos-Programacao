@@ -1799,7 +1799,7 @@ h2 {
   .projeto2 {
     display: block;
     width: 100%;
-    height: 46vh;
+    height: 420px;
     background-color: var(--cinza-header);
     border: 1px solid var(--neon);
     border-radius: 8px;
@@ -1864,7 +1864,7 @@ h2 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 4vh;
+    height: 30px;
     gap: 30px;
     transition: 0.3s;
   }
@@ -1914,7 +1914,7 @@ h2 {
   .projeto2 {
     display: block;
     width: 100%;
-    height: 46vh;
+    height: 420px;
     background-color: var(--cinza-header);
     border: 1px solid var(--neon);
     border-radius: 8px;
@@ -1981,14 +1981,14 @@ h2 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 4vh;
+    height: 30px;
     gap: 30px;
     transition: 0.3s;
   }
 
   .link-text-2 a {
     width: 30vw;
-    height: 35px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
