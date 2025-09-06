@@ -1392,6 +1392,9 @@ input[type="number"] {
   }
 }
 
+@media (width <= 350px) {
+
+}
 /* CSS SEPARADO PELAS ABAS 
 
 .container-sobre {
