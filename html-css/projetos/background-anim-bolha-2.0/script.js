@@ -1,24 +1,3 @@
-   // Função para desmarcar o checkbox, fechando o menu
-   function fecharMenu() {
-    document.getElementById("menu-toggle").checked = false;
-}
-function fecharMenuMobile() {
-    document.getElementById("menu-toggle").checked = false;
-}
-// Funcao para abrir o curriculum 
-function openModal() {
-  document.getElementById("curriculo-modal").style.display = "flex";
-}
-
-function closeModal() {
-  document.getElementById("curriculo-modal").style.display = "none";
-}
-
-
-// ----------------------------------------------------------------------
-
-// Background animado //
-
 document.addEventListener('DOMContentLoaded', () => {
     const background = document.querySelector('.background-particles');
     const canvas = document.getElementById('particle-canvas');

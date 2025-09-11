@@ -1,0 +1,98 @@
+.background-particles {
+    position: fixed;
+    top: 73px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2B2726;
+    z-index: -1;
+}
+
+#particle-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.particle {
+    position: absolute;
+    width: 4px; 
+    height: 4px; 
+    background-color: #0EF6CC; 
+    border-radius: 50%;
+    opacity: 0.7; 
+    box-shadow: 0 0 5px 1px rgba(14, 246, 204, 0.4); 
+    
+    /* Animações individuais de rotação e flutuação */
+    animation: 
+        particleRotate var(--rotation-duration) infinite linear,
+        particleFloat var(--float-duration) infinite ease-in-out alternate;
+    
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+    will-change: transform, opacity;
+}
+
+/* Define durações de animação variáveis para cada partícula */
+.particle:nth-child(odd) { 
+    --rotation-duration: 20s; 
+    --float-duration: 15s; 
+}
+.particle:nth-child(even) { 
+    --rotation-duration: 25s; 
+    --float-duration: 18s; 
+}
+.particle:nth-child(3n) { 
+    --rotation-duration: 18s; 
+    --float-duration: 12s; 
+}
+.particle:nth-child(4n) { 
+    --rotation-duration: 22s; 
+    --float-duration: 16s; 
+}
+.particle:nth-child(5n) { 
+    --rotation-duration: 28s; 
+    --float-duration: 20s; 
+}
+
+/* Animação de Giro */
+@keyframes particleRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Animação de Flutuação */
+@keyframes particleFloat {
+    0% { transform: translateY(0) scale(1); opacity: 0.7; }
+    50% { transform: translateY(-5px) scale(1.05); opacity: 0.8; }
+    100% { transform: translateY(0) scale(1); opacity: 0.7; }
+}
+
+
+.particle.active {
+    background-color: #0EF6CC; 
+    box-shadow: 0 0 15px 5px rgba(14, 246, 204, 1); 
+    opacity: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 20vh;
+}
+
+@media (max-width: 768px) {
+    .particle {
+        width: 3px; 
+        height: 3px;
+        box-shadow: 0 0 3px 1px rgba(14, 246, 204, 0.3);
+    }
+    .content h1 {
+        font-size: 2em;
+    }
+    .content p {
+        font-size: 1em;
+    }
+}

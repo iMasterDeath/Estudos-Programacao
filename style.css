@@ -295,113 +295,107 @@ body {
 
 /* ----------------- ENCERRA MENU HAMBURGUER ----------------- */
 
-/* ----- BACKGROUND ANIMADO ----- */
+/* ----- BACKGROUND ANIMADO  ----- - */
 
-.background {
+
+.background-particles {
+    position: fixed;
+    top: 73px;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-}
-
-.background-section-mobile {
-    display: none;
-}
-
-.background-section {
-    opacity: 60%;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    background-color: #2B2726;
     z-index: -1;
 }
 
-/* ------------------------------------------------------------------------------------------------- */
-
-/* Estilo do container das bolhas */
-.bolhas {
-    position: relative;
+#particle-canvas {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    z-index: -2; /* Fica atrás do conteúdo */
-    pointer-events: none; /* Impede interação com as bolhas */
+    height: 100%;
 }
 
-/* Estilo das bolhas */
-.bolhas span {
+.particle {
     position: absolute;
-    background-color: #ff78dd; /* Cor padrão */
+    width: 4px; 
+    height: 4px; 
+    background-color: #0EF6CC; 
     border-radius: 50%;
-    opacity: 0.8;
-    box-shadow: 0 0 10px 5px rgba(255, 120, 221, 0.5); /* Efeito de brilho */
-    animation: bolha-animation 12s linear infinite, float-animation 6s ease-in-out infinite;
-    transform: scale(0.2); /* Bolhas bem pequenas */
-    animation-delay: calc(var(--i) * 0.2s);
-    /* Inicia as bolhas em posições aleatórias */
+    opacity: 0.7; 
+    box-shadow: 0 0 5px 1px rgba(14, 246, 204, 0.4); 
+    
+    /* Animações individuais de rotação e flutuação */
+    animation: 
+        particleRotate var(--rotation-duration) infinite linear,
+        particleFloat var(--float-duration) infinite ease-in-out alternate;
+    
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+    will-change: transform, opacity;
 }
 
-/* Animação para mover as bolhas da esquerda para a direita e acima/abaixo */
-@keyframes bolha-animation {
-    0% {
-        transform: translateX(-100vw) translateY(0) scale(0.2);
-    }
-    100% {
-        transform: translateX(100vw) translateY(100vh) scale(0.5); /* As bolhas se movem por toda a tela */
-    }
+/* Define durações de animação variáveis para cada partícula */
+.particle:nth-child(odd) { 
+    --rotation-duration: 20s; 
+    --float-duration: 15s; 
+}
+.particle:nth-child(even) { 
+    --rotation-duration: 25s; 
+    --float-duration: 18s; 
+}
+.particle:nth-child(3n) { 
+    --rotation-duration: 18s; 
+    --float-duration: 12s; 
+}
+.particle:nth-child(4n) { 
+    --rotation-duration: 22s; 
+    --float-duration: 16s; 
+}
+.particle:nth-child(5n) { 
+    --rotation-duration: 28s; 
+    --float-duration: 20s; 
 }
 
-/* Efeito de flutuação para dar mais naturalidade às bolhas */
-@keyframes float-animation {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+/* Animação de Giro */
+@keyframes particleRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-/* Ajustes dinâmicos no tamanho das bolhas */
-.bolhas span {
-    width: calc(5px + (var(--i) * 0.1)); /* Tamanho muito pequeno */
-    height: calc(5px + (var(--i) * 0.1)); /* Tamanho muito pequeno */
-    top: calc(5% + (var(--i) * 1)); /* Posição vertical das bolhas */
+/* Animação de Flutuação */
+@keyframes particleFloat {
+    0% { transform: translateY(0) scale(1); opacity: 0.7; }
+    50% { transform: translateY(-5px) scale(1.05); opacity: 0.8; }
+    100% { transform: translateY(0) scale(1); opacity: 0.7; }
 }
 
-.bolhas span {
-    width: 10px;
-    height: 10px;
-    background: var(--neon);
-    margin: 0px 4px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 10px hwb(169 5% 4% / 0.151),
-    0 0 50px hwb(169 5% 4%),
-    0 0 100px hwb(169 5% 4%);
-    animation: animar calc(130s / var(--i)) linear infinite;
+
+.particle.active {
+    background-color: #0EF6CC; 
+    box-shadow: 0 0 15px 5px rgba(14, 246, 204, 1); 
+    opacity: 1;
 }
 
-.bolhas span:nth-of-type(even) {
-    background: #ff78dd;
-    box-shadow: 0 0 0 10px #ff78dd15,
-    0 0 50px #ff78dd,
-    0 0 100px #ff78dd;
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 20vh;
 }
 
-@keyframes animar {
-    0% {
-        transform: translateX(-10vw) scale(0);  
+@media (max-width: 768px) {
+    .particle {
+        width: 3px; 
+        height: 3px;
+        box-shadow: 0 0 3px 1px rgba(14, 246, 204, 0.3);
     }
-
-    100% {
-        transform: translateX(100vw) scale(1);
+    .content h1 {
+        font-size: 2em;
+    }
+    .content p {
+        font-size: 1em;
     }
 }
-
 
 
 /* ------------------------------------------------------------------------------------------------- */
@@ -831,18 +825,19 @@ body {
 }
 
 @media (width <= 700px) {
-    .background-section-mobile {
-        display: flex;
+    /* Background Animado */
+    .particle {
+        width: 3px; 
+        height: 3px;
+        box-shadow: 0 0 3px 1px rgba(14, 246, 204, 0.3);
     }
-    .background-section-mobile img {
-        width: 100vw;
-        height: 100vh;
-        opacity: 30%;
-        transform: rotate(180deg);
+    .content h1 {
+        font-size: 2em;
     }
-    .bolhas {
-        display: none;
+    .content p {
+        font-size: 1em;
     }
+    /* Background Animado */
     .main-section {
         display: flex;
         flex-direction: column;
