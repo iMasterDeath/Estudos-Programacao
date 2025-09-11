@@ -35,23 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Configurações específicas para desktop
     const desktopRepelDistance = 300;
     const desktopRepelForce = 30;
-    const desktopNumParticles = 120;
+    const desktopNumParticles = 55; // Valor para desktop
     const desktopBaseSpeed = 0.5;
 
-    // Configurações específicas para mobile (ou telas menores)
-    const mobileNumParticles = 60; // Reduzimos o número de partículas
-    const mobileBaseSpeed = 0.2; // Reduzimos a velocidade base
+    // Configurações específicas para mobile
+    const mobileRepelDistance = 200;
+    const mobileRepelForce = 15;
+    const mobileNumParticles = 25; // Valor para mobile
+    const mobileBaseSpeed = 0.2;
     
     let mouseX = -1000;
     let mouseY = -1000;
     let isMouseOverNavbar = false;
-    let isDesktop = window.innerWidth > 700; // Flag para verificar o tipo de dispositivo
+    let isDesktop = window.innerWidth > 700;
 
     function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         isDesktop = window.innerWidth > 700;
-        // Reinicia a animação com base no novo tamanho da tela
         reinitializeParticles();
     }
     resizeCanvas();
@@ -70,6 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function createParticle(num) {
+        const currentBaseSpeed = isDesktop ? desktopBaseSpeed : mobileBaseSpeed;
+        
         for (let i = 0; i < num; i++) {
             const particle = document.createElement('div');
             particle.classList.add('particle');
@@ -77,8 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const y = Math.random() * canvas.height;
             particle.style.left = `${x}px`;
             particle.style.top = `${y}px`;
-            const baseSpeedX = (Math.random() - 0.5) * (isDesktop ? desktopBaseSpeed : mobileBaseSpeed);
-            const baseSpeedY = (Math.random() - 0.5) * (isDesktop ? desktopBaseSpeed : mobileBaseSpeed);
+            const baseSpeedX = (Math.random() - 0.5) * currentBaseSpeed;
+            const baseSpeedY = (Math.random() - 0.5) * currentBaseSpeed;
             background.appendChild(particle);
 
             particles.push({
@@ -93,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Função para reinicializar as partículas
     function reinitializeParticles() {
         particles.forEach(p => p.element.remove());
         particles = [];
@@ -104,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     reinitializeParticles();
 
     document.addEventListener('mousemove', (e) => {
-        if (!isDesktop || isMouseOverNavbar) return;
+        if (isMouseOverNavbar) return;
         
         mouseX = e.clientX;
         mouseY = e.clientY;
@@ -123,16 +125,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (distP < lineDistance) {
                     let opacity = baseLineOpacity * (1 - (distP / lineDistance));
 
-                    if (isDesktop) {
-                        const distMouseP1 = Math.hypot(mouseX - p1.x, mouseY - p1.y);
-                        const distMouseP2 = Math.hypot(mouseX - p2.x, mouseY - p2.y);
+                    const currentRepelDistance = isDesktop ? desktopRepelDistance : mobileRepelDistance;
+                    const distMouseP1 = Math.hypot(mouseX - p1.x, mouseY - p1.y);
+                    const distMouseP2 = Math.hypot(mouseX - p2.x, mouseY - p2.y);
 
-                        if (distMouseP1 < desktopRepelDistance || distMouseP2 < desktopRepelDistance) {
-                            const maxDist = Math.max(distMouseP1, distMouseP2);
-                            const mouseInfluence = 1 - (maxDist / desktopRepelDistance);
-                            if (mouseInfluence > 0) {
-                                opacity = Math.min(activeLineOpacity, opacity + mouseInfluence);
-                            }
+                    if (distMouseP1 < currentRepelDistance || distMouseP2 < currentRepelDistance) {
+                        const maxDist = Math.max(distMouseP1, distMouseP2);
+                        const mouseInfluence = 1 - (maxDist / currentRepelDistance);
+                        if (mouseInfluence > 0) {
+                            opacity = Math.min(activeLineOpacity, opacity + mouseInfluence);
                         }
                     }
 
@@ -146,34 +147,24 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.stroke();
 
         particles.forEach(p => {
-            if (isDesktop) {
-                const distMouse = Math.hypot(mouseX - p.x, mouseY - p.y);
+            const currentRepelDistance = isDesktop ? desktopRepelDistance : mobileRepelDistance;
+            const currentRepelForce = isDesktop ? desktopRepelForce : mobileRepelForce;
+            const distMouse = Math.hypot(mouseX - p.x, mouseY - p.y);
 
-                if (distMouse < desktopRepelDistance) {
-                    const angle = Math.atan2(p.y - mouseY, p.x - mouseX);
-                    const dynamicRepelForce = desktopRepelForce * (1 - (distMouse / desktopRepelDistance));
+            if (distMouse < currentRepelDistance) {
+                const angle = Math.atan2(p.y - mouseY, p.x - mouseX);
+                const dynamicRepelForce = currentRepelForce * (1 - (distMouse / currentRepelDistance));
 
-                    const repelX = Math.cos(angle) * dynamicRepelForce;
-                    const repelY = Math.sin(angle) * dynamicRepelForce;
+                const repelX = Math.cos(angle) * dynamicRepelForce;
+                const repelY = Math.sin(angle) * dynamicRepelForce;
 
-                    p.speedX = p.baseSpeedX + repelX;
-                    p.speedY = p.baseSpeedY + repelY;
-                } else {
-                    p.speedX = p.baseSpeedX;
-                    p.speedY = p.baseSpeedY;
-                }
-
-                if (distMouse < minDistance) {
-                    if (!p.element.classList.contains('active')) {
-                        p.element.classList.add('active');
-                    }
-                } else {
-                    if (p.element.classList.contains('active')) {
-                        p.element.classList.remove('active');
-                    }
-                }
+                p.speedX = p.baseSpeedX + repelX;
+                p.speedY = p.baseSpeedY + repelY;
+            } else {
+                p.speedX = p.baseSpeedX;
+                p.speedY = p.baseSpeedY;
             }
-            
+
             p.x += p.speedX;
             p.y += p.speedY;
 
@@ -185,9 +176,14 @@ document.addEventListener('DOMContentLoaded', () => {
             p.element.style.left = `${p.x}px`;
             p.element.style.top = `${p.y}px`;
 
-            if (!isDesktop) {
-                // Remove a classe 'active' para telas mobile
-                p.element.classList.remove('active');
+            if (distMouse < minDistance) {
+                if (!p.element.classList.contains('active')) {
+                    p.element.classList.add('active');
+                }
+            } else {
+                if (p.element.classList.contains('active')) {
+                    p.element.classList.remove('active');
+                }
             }
         });
 
