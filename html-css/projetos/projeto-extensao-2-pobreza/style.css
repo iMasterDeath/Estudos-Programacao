@@ -153,13 +153,16 @@ a {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
+/* --- Correção da Imagem: Garantindo que o estilo não atrapalhe --- */
 .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    width: 100%; /* Garante que a imagem ocupe a largura total do card */
+    height: 200px; /* Altura fixa para padronização */
+    object-fit: cover; /* Recorta a imagem para cobrir o espaço, sem distorcer */
+    border-radius: 8px; /* Mantém os cantos arredondados */
+    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+    display: block; /* Garante que a imagem se comporte como um bloco para melhor alinhamento */
 }
+/* ----------------------------------------------------------------- */
 
 .card h4 {
     font-size: 1.4em;
@@ -195,19 +198,19 @@ a {
     }
 
     .hero-content h2 {
-        font-size: 2.5em; /* Diminui o tamanho do título principal */
+        font-size: 2.5em;
     }
 
     .hero-content p {
-        font-size: 1em; /* Diminui o tamanho do parágrafo */
+        font-size: 1em;
     }
 
     .empreendedores-section h3 {
-        font-size: 2em; /* Diminui o título da seção de empreendedores */
+        font-size: 2em;
     }
 
     .empreendedores-grid {
-        grid-template-columns: 1fr; /* Muda para uma coluna por linha */
+        grid-template-columns: 1fr;
     }
 }
 
@@ -217,7 +220,7 @@ a {
     }
 
     .btn-cta {
-        padding: 8px 15px; /* Diminui o preenchimento do botão */
+        padding: 8px 15px;
     }
 
     .hero-section {
