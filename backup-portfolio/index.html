@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="portfolio/assets/favicon 16x16.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="top-line">
+        <div class="container"> <!-- 1 abre container -->
+            <header class="navbar-module-header">
+                <div class="navbar-module-logo"><a class="navbar-module-logo" href="index.html">iMaster &lt Dev/ ></a></div>
+                    <nav>
+                        <ul class="navbar-module-links-list">
+                            <li class="links-navbar"><a href="index.html">Início</a></li>
+                            <li class="nav-item-spacing">❘</li> 
+                            <li class="links-navbar"><a href="portfolio/sobre.html">Sobre</a></li>
+                            <li class="nav-item-spacing">❘</li>
+                            <!--    
+                            <li class="links-navbar-ocult"><a href="#Formações">Formações</a></li>
+                            <li class="nav-item-spacing-ocult">❘</li>  
+                            <li class="links-navbar-ocult"><a href="#Experiências">Experiências</a></li>
+                            <li class="nav-item-spacing-ocult">❘</li>    
+                            <li class="links-navbar-ocult"><a href="#Habilidades">Habilidades</a></li>
+                            <li class="nav-item-spacing-ocult">❘</li> 
+                            --> 
+                            <li class="links-navbar"><a href="portfolio/projetos.html">Projetos</a></li>
+                            <li class="nav-item-spacing">❘</li>  
+                            <li class="links-navbar"><a href="portfolio/contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
+
+<!-- Checkbox que ativa o menu -->
+    <input type="checkbox" id="menu-toggle">
+<!-- Ícone do menu -->
+    <label for="menu-toggle" class="menu-btn">
+        <div class="menu-icon">☰</div>
+    </label>
+     <!-- 1 fecha o container -->
+
+    <div class="menu-lateral">
+        <div class="menu-logo-lateral">
+            <h2>Menu</h2>
+            <button class="close-btn" onclick="fecharMenu()">✖</button>
+        </div>
+            <ul class="menu-mobile-lateral-list">
+                <li class="nav-mobile"><a href="index.html">Inicio</a></li>
+                <li class="bar-menu"></li>
+                <li class="nav-mobile"><a href="portfolio/sobre.html">Sobre</a></li>
+                <li class="bar-menu"></li>
+                <li class="nav-mobile"><a href="portfolio/projetos.html">Projetos</a></li>
+                <li class="bar-menu"></li>
+                <li class="nav-mobile"><a href="portfolio/contato.html">Contato</a></li>
+            </ul>
+        </div> <!-- fecha container -->
+    </div> <!-- fecha topline -->
+            </header>
+ <div class="background-particles">
+        <canvas id="particle-canvas"></canvas>
+    </div>
+    <div class="container">
+        <main class="main-section">
+            <div class="section-left">
+              <h1>Italo Falasca</h1>
+              <p>Programador</p>
+              <div class="icones">
+                <a class="whatsapp" href="https://api.whatsapp.com/send/?phone=5543996018333&text&type=phone_number&app_absent=0" target="_blank">
+                  <img src="portfolio/assets/icone-whatsapp.png" alt="icone do whatsapp">
+                </a>
+                <a class="email" href="mailto:italodemichellifalasca@hotmail.com?body=Olá Italo, podemos conversar?&subject=Contato pelo Portfólio">
+                  <img src="portfolio/assets/icone-email.png" alt="icone do email">
+                </a>
+                <a class="linkedin" href="https://www.linkedin.com/in/%C3%ADtalo-falasca-647428232/" target="_blank">
+                  <img src="portfolio/assets/icone-linkedin.png" alt="icone do linkedin">
+                </a>
+                <a class="github" href="https://github.com/imasterdeath" target="_blank">
+                  <img src="portfolio/assets/icone-github.png" alt="icone do github">
+                </a>
+              </div>
+              <div class="section-curriculo">
+                <a class="curriculo" href="#!" onclick="openModal()">Currículo</a>
+                <div class="modal" id="curriculo-modal">
+                  <div class="modal-content">
+                    <div class="baixar-fechar">
+                        <a class="download" href="portfolio/assets/Currículo Italo de Michelli Falasca.pdf" download="Curriculo"> <img class="icone-down" src="portfolio/assets/icone-download-24.png" alt="icone de download"></a>
+                        <button class="close" onclick="closeModal()">X</button>
+                    </div>
+                    <img class="curriculum-img" src="portfolio/assets/Currículo-profissional.jpg" alt="Currículo">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-right">
+              <img src="portfolio/assets/cartoon-italo.png" alt="Boneco do Italo">
+            </div>
+          </main> 
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
