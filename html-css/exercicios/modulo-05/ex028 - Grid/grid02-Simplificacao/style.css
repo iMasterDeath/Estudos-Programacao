@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+div.container {
+    border: 3px solid rgb(248, 182, 0);
+    height: 400px;
+    display: grid;
+    /* grid-template-columns: auto auto auto; */ /* SUBSTITUIDO PELO CODIGO ABAIXO: */
+    /* grid-template-rows: auto auto auto; */ /* SUBSTITUIDO PELO CODIGO ABAIXO: */
+    grid-template: repeat(3, auto) / repeat(3, auto); /* ROWS e COLUM respectivos*/
+    gap: 10px;
+    /* align-items: start;          SUBSTITUIDO PELO CODIGO: place-items
+    justify-items: center;          SUBSTITUIDO PELO CODIGO: place-items
+    align-content:  space-between;  SUBSTITUIDO PELO CODIGO: place-content
+    justify-content: end;           SUBSTITUIDO PELO CODIGO: place-content */
+    place-items: start center;
+    place-content: space-between end;
+}
+
+div.item {
+    border: 3px solid rgb(0, 255, 157);
+    padding: 5px;
+}
