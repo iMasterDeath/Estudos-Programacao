@@ -1,0 +1,119 @@
+/* ======== ESTILO GERAL ======== */
+body {
+    background: radial-gradient(circle at top, #001845, #000814);
+    color: #38ffb3;
+    font-family: "Press Start 2P", monospace, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 480px;
+    margin: auto;
+}
+
+/* ======== TÍTULOS ======== */
+.titulo {
+    font-size: 21px;
+    text-shadow: 0 0 10px #00ffa6;
+    margin-bottom: 26px;
+    line-height: 1.5;
+}
+
+.sucesso-titulo {
+    color: #00ffa6;
+}
+
+/* ======== SUBTÍTULOS ======== */
+.subtitulo {
+    font-size: 13px;
+    color: #9fffe0;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* ======== LABEL ======== */
+.label {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 12px;
+    color: #00d68f;
+}
+
+/* ======== INPUT ======== */
+input {
+    width: 90%;
+    padding: 16px;
+    font-size: 12px;
+    border: 2px solid #38ffb3;
+    border-radius: 8px;
+    background: #000;
+    color: #38ffb3;
+    text-align: center;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #00ffa6;
+    box-shadow: 0 0 12px #00ffa6;
+}
+
+/* ======== BOTÃO PRINCIPAL ======== */
+.botao {
+    width: 90%;
+    padding: 17px 0;
+    margin-top: 25px;
+    font-size: 13px;
+    cursor: pointer;
+    border: 3px solid #ffd60a;
+    background: #ffc300;
+    color: #000814;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+.botao:hover {
+    transform: scale(1.06);
+}
+
+/* ======== ERRO ======== */
+.erro {
+    min-height: 24px;
+    font-size: 11px;
+    color: #ff4d4d;
+    margin-top: 18px;
+}
+
+/* ======== SUCESSO (ESCONDIDO INIT) ======== */
+.hidden {
+    display: none;
+}
+
+/* ======== BOTÃO DO VOUCHER ======== */
+.voucher-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 18px 25px;
+    background: #00ffa6;
+    color: #000;
+    font-size: 14px;
+    border-radius: 12px;
+    border: 3px solid #00c67d;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.voucher-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 12px #00ffa6;
+}
+
+/* ======== MOBILE EXTRA ======== */
+@media (max-width: 420px) {
+    .titulo { font-size: 18px; }
+    .subtitulo { font-size: 12px; }
+    .botao { font-size: 12px; }
+}
