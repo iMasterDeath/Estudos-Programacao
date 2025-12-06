@@ -9,9 +9,14 @@ body {
     overflow-x: hidden;
 }
 
+/* 🔧 CORREÇÃO PRINCIPAL:
+   Removido max-width fixo e alterado para 100% com limite seguro */
 .container {
+    width: 100%;
     max-width: 480px;
     margin: auto;
+    padding: 0 12px;
+    box-sizing: border-box;
 }
 
 /* ======== TÍTULOS ======== */
@@ -44,7 +49,7 @@ body {
 
 /* ======== INPUT ======== */
 input {
-    width: 90%;
+    width: 100%;
     padding: 16px;
     font-size: 12px;
     border: 2px solid #38ffb3;
@@ -54,6 +59,7 @@ input {
     text-align: center;
     outline: none;
     transition: 0.2s;
+    box-sizing: border-box;
 }
 
 input:focus {
@@ -63,7 +69,7 @@ input:focus {
 
 /* ======== BOTÃO PRINCIPAL ======== */
 .botao {
-    width: 90%;
+    width: 100%;
     padding: 17px 0;
     margin-top: 25px;
     font-size: 13px;
@@ -73,6 +79,7 @@ input:focus {
     color: #000814;
     border-radius: 12px;
     transition: 0.2s;
+    box-sizing: border-box;
 }
 
 .botao:hover {
@@ -104,6 +111,8 @@ input:focus {
     border: 3px solid #00c67d;
     text-decoration: none;
     transition: 0.2s;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .voucher-btn:hover {
@@ -122,86 +131,68 @@ input:focus {
    🔥 ULTRA RESPONSIVIDADE – Compatível com TODOS os celulares
    ========================================================== */
 
-/* Faz todo o conteúdo se ajustar melhor */
+/* Previne scroll lateral em QUALQUER tela */
 html {
     width: 100%;
     overflow-x: hidden;
 }
 
-/* Impede elementos maiores que a tela */
 body, .container, section {
     max-width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
 }
 
-/* Fonte flexível conforme o tamanho da tela */
+/* Fonte adaptável para qualquer tela */
 body {
     font-size: clamp(10px, 2.4vw, 16px);
 }
 
-/* Garante que o container nunca fique esmagado */
-.container {
-    width: 100%;
-    padding: 0 12px;
-}
-
-/* TITULOS escalam proporcionalmente */
+/* TITULOS */
 .titulo {
     font-size: clamp(14px, 5vw, 20px) !important;
     line-height: 1.4;
 }
 
-/* Subtítulos ajustam para telas pequenas */
+/* Subtítulos */
 .subtitulo {
     font-size: clamp(10px, 3.4vw, 14px) !important;
 }
 
-/* Inputs nunca ultrapassam a tela */
+/* Inputs */
 input {
-    width: 100% !important;
     padding: clamp(12px, 4vw, 18px);
     font-size: clamp(10px, 3.5vw, 14px);
 }
 
-/* Botões responsivos */
+/* Botões */
 .botao,
 .voucher-btn {
-    width: 100% !important;
     padding: clamp(14px, 4vw, 18px);
     font-size: clamp(11px, 3.8vw, 15px);
 }
 
-/* Mensagem de erro se ajusta também */
+/* Mensagem de erro */
 .erro {
     font-size: clamp(10px, 3vw, 12px);
 }
 
-/* 🔽 Extremamente pequeno (celulares bem antigos / resoluções mini) */
+/* 🔽 Celulares bem antigos */
 @media (max-width: 340px) {
-    .titulo {
-        font-size: 12px !important;
-    }
-    .subtitulo {
-        font-size: 9px !important;
-    }
-    input {
-        font-size: 9px !important;
-        padding: 10px !important;
-    }
-    .botao, .voucher-btn {
-        font-size: 10px !important;
-    }
+    .titulo { font-size: 12px !important; }
+    .subtitulo { font-size: 9px !important; }
+    input { font-size: 9px !important; padding: 10px !important; }
+    .botao, .voucher-btn { font-size: 10px !important; }
 }
 
-/* 🔽 Telas muito altas (celulares modernos e dobráveis em pé) */
+/* 🔽 Telas muito altas */
 @media (max-width: 600px) and (min-height: 900px) {
     .container {
         padding-top: 40px;
     }
 }
 
-/* 🔽 Ajuste para celulares com notch (iPhone X e similares) */
+/* 🔽 Celulares com notch */
 @supports (padding: max(0px)) {
     body {
         padding-top: max(16px, env(safe-area-inset-top));
