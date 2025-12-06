@@ -1,0 +1,166 @@
+/* ==========================================
+   🔧 AJUSTE MAIS IMPORTANTE (ANTI-CORTE)
+   ========================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ======== ESTILO GERAL ======== */
+body {
+    background: radial-gradient(circle at top, #001845, #000814);
+    color: #38ffb3;
+    font-family: "Press Start 2P", monospace, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 480px;
+    width: 100%;
+    margin: auto;
+    padding: 0 12px; /* impede corte lateral */
+}
+
+/* ======== TÍTULOS ======== */
+.titulo {
+    font-size: clamp(14px, 5vw, 20px);
+    text-shadow: 0 0 10px #00ffa6;
+    margin-bottom: 26px;
+    line-height: 1.4;
+}
+
+.sucesso-titulo {
+    color: #00ffa6;
+}
+
+/* ======== SUBTÍTULOS ======== */
+.subtitulo {
+    font-size: clamp(10px, 3.4vw, 14px);
+    color: #9fffe0;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* ======== LABEL ======== */
+.label {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 12px;
+    color: #00d68f;
+}
+
+/* ======== INPUT ======== */
+input {
+    width: 100%;
+    max-width: 100%;
+    padding: clamp(12px, 4vw, 18px);
+    font-size: clamp(10px, 3.5vw, 14px);
+    border: 2px solid #38ffb3;
+    border-radius: 8px;
+    background: #000;
+    color: #38ffb3;
+    text-align: center;
+    outline: none;
+    transition: 0.2s;
+    display: block;
+    margin: 0 auto;
+}
+
+input:focus {
+    border-color: #00ffa6;
+    box-shadow: 0 0 12px #00ffa6;
+}
+
+/* ======== BOTÃO PRINCIPAL ======== */
+.botao {
+    width: 100%;
+    max-width: 100%;
+    padding: clamp(14px, 4vw, 18px);
+    margin-top: 25px;
+    font-size: clamp(11px, 3.8vw, 15px);
+    cursor: pointer;
+    border: 3px solid #ffd60a;
+    background: #ffc300;
+    color: #000814;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+.botao:hover {
+    transform: scale(1.06);
+}
+
+/* ======== ERRO ======== */
+.erro {
+    min-height: 24px;
+    font-size: clamp(10px, 3vw, 12px);
+    color: #ff4d4d;
+    margin-top: 18px;
+}
+
+/* ======== SUCESSO (ESCONDIDO INIT) ======== */
+.hidden {
+    display: none;
+}
+
+/* ======== BOTÃO DO VOUCHER ======== */
+.voucher-btn {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    padding: clamp(14px, 4vw, 18px);
+    margin-top: 40px;
+    background: #00ffa6;
+    color: #000;
+    font-size: clamp(11px, 3.8vw, 15px);
+    border-radius: 12px;
+    border: 3px solid #00c67d;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.voucher-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 12px #00ffa6;
+}
+
+/* 🔽 Extremamente pequeno (celulares antigos e mini) */
+@media (max-width: 340px) {
+    .titulo {
+        font-size: 12px !important;
+    }
+    .subtitulo {
+        font-size: 9px !important;
+    }
+    input {
+        font-size: 9px !important;
+        padding: 10px !important;
+    }
+    .botao, .voucher-btn {
+        font-size: 10px !important;
+    }
+}
+
+/* 🔽 Telas muito altas / celulares modernos */
+@media (max-width: 600px) and (min-height: 900px) {
+    .container {
+        padding-top: 40px;
+    }
+}
+
+/* 🔽 Suporte a celulares com notch (iPhone X e similares) */
+@supports (padding: max(0px)) {
+    body {
+        padding-top: max(16px, env(safe-area-inset-top));
+        padding-bottom: max(16px, env(safe-area-inset-bottom));
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio de Amizade - Casamento</title>
+
+    <!-- Estilo externo -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonte retrô -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- TELA DO DESAFIO -->
+    <section id="desafio">
+        <h1 class="titulo">DESAFIO DE AMIZADE<br>NÍVEL: CASAMENTO</h1>
+
+        <p class="subtitulo">
+            O Loot Box do seu presente de Casamento está trancado.<br> <br>
+            Para desbloquear o presente prove que você se lembra do nosso jogo de Play2 que jogávamos quando éramos crianca tanto na minha casa quanto na sua casa <br> Obs: Nós tínhamos muito medo kkkk
+        </p>
+
+        <label for="codigo" class="label">Nome do Jogo:</label>
+        <input type="text" id="codigo" placeholder="Digite aqui..." autocomplete="off" />
+
+        <button onclick="verificarCodigo()" class="botao">Desbloquear Presente de Casamento</button>
+
+        <div id="erroMsg" class="erro"></div>
+    </section>
+
+    <!-- TELA DE SUCESSO -->
+    <section id="sucesso" class="hidden">
+        <h1 class="titulo sucesso-titulo">PARABÉNS!</h1>
+
+        <p class="subtitulo">
+            Você desbloqueou o título<br>
+            <strong>“Amigo Nível Lendário”</strong>!<br>
+            O presente de casamento é seu. <br> Game Over.
+        </p>
+
+        <!-- IMPORTANTE:
+             Trocar o link do voucher aqui se necessário:
+             href="./voucher_amigo.pdf"
+        -->
+        <a class="voucher-btn" href="assets/Voucher-Amigo-Lendario.pdf" download>
+            DOWNLOAD DO VOUCHER OFICIAL
+        </a>
+    </section>
+
+</div>
+
+<!-- Script externo -->
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
