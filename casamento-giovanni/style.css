@@ -16,7 +16,7 @@ body {
 
 /* ======== TÍTULOS ======== */
 .titulo {
-    font-size: 21px;
+    font-size: 18px;
     text-shadow: 0 0 10px #00ffa6;
     margin-bottom: 26px;
     line-height: 1.5;
@@ -28,7 +28,7 @@ body {
 
 /* ======== SUBTÍTULOS ======== */
 .subtitulo {
-    font-size: 13px;
+    font-size: 12px;
     color: #9fffe0;
     line-height: 1.7;
     margin-bottom: 30px;

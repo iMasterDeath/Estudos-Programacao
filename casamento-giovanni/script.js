@@ -1,14 +1,8 @@
-// -----------------------------
-// CONFIGURAÇÃO DAS TENTATIVAS
-// -----------------------------
-let tentativasRestantes = 3; // <-- AQUI você controla quantas tentativas terá
-const maxTentativas = 3;     // Apenas para referência se quiser usar depois
-// -----------------------------
+let tentativasRestantes = 3; // Número máximo de tentativas
 
 function verificarCodigo() {
     // Lista de senhas válidas
     const senhasCorretas = [
-        "evil",
         "resident",
         "Resident Evil",
         "Resident Evil 4",
@@ -23,15 +17,14 @@ function verificarCodigo() {
 
     const input = document.getElementById("codigo").value.trim().toUpperCase();
     const erro = document.getElementById("erroMsg");
-    const botao = document.getElementById("btnEnviar");
-    const campo = document.getElementById("codigo");
 
-    // Normaliza as senhas do array
+    // Normaliza todas as senhas
     const senhasNormalizadas = senhasCorretas.map(s => s.toUpperCase());
 
-    // Verifica se acertou
+    // Verifica se está correto
     const senhaValida = senhasNormalizadas.includes(input);
 
+    // Caso acertar
     if (senhaValida) {
         document.getElementById("desafio").classList.add("hidden");
         document.getElementById("sucesso").classList.remove("hidden");
@@ -39,19 +32,15 @@ function verificarCodigo() {
         return;
     }
 
-    // Se errou:
+    // Caso erre
     tentativasRestantes--;
 
-    // Se ainda tem tentativas
     if (tentativasRestantes > 0) {
-        erro.textContent = `⚠ Senha incorreta! Você ainda tem ${tentativasRestantes} tentativa(s).`;
-        return;
+        erro.textContent =
+            `⚠ Senha incorreta. Você tem ${tentativasRestantes} tentativa(s) restante(s).`;
+    } else {
+        erro.textContent =
+            "❌ Acesso bloqueado! Você usou todas as tentativas. Contate um administrador.";
+        document.getElementById("codigo").disabled = true;
     }
-
-    // Se acabou as tentativas → BLOQUEIA GERAL
-    erro.textContent = "❌ Acesso BLOQUEADO! Você usou todas as tentativas.";
-    campo.disabled = true;
-    botao.disabled = true;
-    botao.style.opacity = "0.5";
-    botao.style.cursor = "not-allowed";
 }
