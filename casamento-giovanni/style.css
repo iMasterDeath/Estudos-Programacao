@@ -117,3 +117,94 @@ input:focus {
     .subtitulo { font-size: 12px; }
     .botao { font-size: 12px; }
 }
+
+/* ==========================================================
+   🔥 ULTRA RESPONSIVIDADE – Compatível com TODOS os celulares
+   ========================================================== */
+
+/* Faz todo o conteúdo se ajustar melhor */
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Impede elementos maiores que a tela */
+body, .container, section {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Fonte flexível conforme o tamanho da tela */
+body {
+    font-size: clamp(10px, 2.4vw, 16px);
+}
+
+/* Garante que o container nunca fique esmagado */
+.container {
+    width: 100%;
+    padding: 0 12px;
+}
+
+/* TITULOS escalam proporcionalmente */
+.titulo {
+    font-size: clamp(14px, 5vw, 20px) !important;
+    line-height: 1.4;
+}
+
+/* Subtítulos ajustam para telas pequenas */
+.subtitulo {
+    font-size: clamp(10px, 3.4vw, 14px) !important;
+}
+
+/* Inputs nunca ultrapassam a tela */
+input {
+    width: 100% !important;
+    padding: clamp(12px, 4vw, 18px);
+    font-size: clamp(10px, 3.5vw, 14px);
+}
+
+/* Botões responsivos */
+.botao,
+.voucher-btn {
+    width: 100% !important;
+    padding: clamp(14px, 4vw, 18px);
+    font-size: clamp(11px, 3.8vw, 15px);
+}
+
+/* Mensagem de erro se ajusta também */
+.erro {
+    font-size: clamp(10px, 3vw, 12px);
+}
+
+/* 🔽 Extremamente pequeno (celulares bem antigos / resoluções mini) */
+@media (max-width: 340px) {
+    .titulo {
+        font-size: 12px !important;
+    }
+    .subtitulo {
+        font-size: 9px !important;
+    }
+    input {
+        font-size: 9px !important;
+        padding: 10px !important;
+    }
+    .botao, .voucher-btn {
+        font-size: 10px !important;
+    }
+}
+
+/* 🔽 Telas muito altas (celulares modernos e dobráveis em pé) */
+@media (max-width: 600px) and (min-height: 900px) {
+    .container {
+        padding-top: 40px;
+    }
+}
+
+/* 🔽 Ajuste para celulares com notch (iPhone X e similares) */
+@supports (padding: max(0px)) {
+    body {
+        padding-top: max(16px, env(safe-area-inset-top));
+        padding-bottom: max(16px, env(safe-area-inset-bottom));
+    }
+}
