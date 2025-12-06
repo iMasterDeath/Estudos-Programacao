@@ -1,46 +1,39 @@
-let tentativasRestantes = 3; // Número máximo de tentativas
+let tentativasRestantes = 3;
 
 function verificarCodigo() {
-    // Lista de senhas válidas
     const senhasCorretas = [
         "resident",
-        "Resident Evil",
-        "Resident Evil 4",
+        "resident evil",
+        "resident evil 4",
         "residentevil",
         "residentevil4",
-        "RE4",
-        "Leon",
-        "Leon Kennedy",
-        "Ashley",
-        "Las Plagas"
+        "re4",
+        "leon",
+        "leon kennedy",
+        "ashley",
+        "las plagas"
     ];
 
-    const input = document.getElementById("codigo").value.trim().toUpperCase();
+    const campo = document.getElementById("codigo");
+    const resposta = campo.value.trim().toUpperCase();
     const erro = document.getElementById("erroMsg");
 
-    // Normaliza todas as senhas
-    const senhasNormalizadas = senhasCorretas.map(s => s.toUpperCase());
+    const listaNormalizada = senhasCorretas.map(s => s.toUpperCase());
+    const correto = listaNormalizada.includes(resposta);
 
-    // Verifica se está correto
-    const senhaValida = senhasNormalizadas.includes(input);
-
-    // Caso acertar
-    if (senhaValida) {
-        document.getElementById("desafio").classList.add("hidden");
-        document.getElementById("sucesso").classList.remove("hidden");
-        erro.textContent = "";
+    if (correto) {
+        // Redireciona para a nova página
+        window.location.href = "voucher.html";
         return;
     }
 
-    // Caso erre
+    // ERROU
     tentativasRestantes--;
 
     if (tentativasRestantes > 0) {
-        erro.textContent =
-            `⚠ Senha incorreta. Você tem ${tentativasRestantes} tentativa(s) restante(s).`;
+        erro.textContent = `⚠ Senha incorreta! Restam ${tentativasRestantes} tentativa(s).`;
     } else {
-        erro.textContent =
-            "❌ Acesso bloqueado! Você usou todas as tentativas. Contate um administrador.";
-        document.getElementById("codigo").disabled = true;
+        erro.textContent = "❌ Todas as tentativas foram usadas! Acesso bloqueado.";
+        campo.disabled = true;
     }
 }
