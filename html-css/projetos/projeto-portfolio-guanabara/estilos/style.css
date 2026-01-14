@@ -14,6 +14,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 :root {
   --fundo-principal: #f5f5f5;
   --texto: #222222;
@@ -23,11 +28,21 @@
   --fundo-card: #ffffff;
 }
 
+body.escuro {
+  --fundo-principal: #222222;
+  --texto: #e0e0e0;
+  --texto-inverso: #333333;
+  --destaque: #ff5522;
+  --destaque-inverso: #a73917;
+  --fundo-card: #444444;
+}
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
+  transition: background-color 0.5s, color 0.5s;
 }
 
 header {
@@ -37,6 +52,9 @@ header {
   display: flex;
   justify-content: flex-end;
   align-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 nav#menu ul {
@@ -210,17 +228,98 @@ article h2 {
   font-size: 1.1em;
 }
 
+#projeto-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#projeto-container .projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-color 0.5s, border-width 0.5s;
+}
+
+#projeto-container .projeto:hover {
+  border-color: var(--destaque);
+  border-left-width: 15px;
+  cursor: pointer;
+}
+
+#projeto-container .foto {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  text-align: center;
+  padding: 15px;
+}
+
+footer a {
+  color: var(--texto-inverso);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--destaque-inverso);
+}
 
 
 
 
 
-
-
-
-
+/* Responsividade */
 @media screen and (min-width: 768px) {
+  main {
+    grid-template-columns: auto 300px 1fr auto; 
+  }
+
+  section#ficha {
+    grid-column: 2 / 3;
+    height: fit-content;
+    position: sticky;
+    top: 65px;
+  }
+
+  section#detalhes {
+    grid-column: 3 / 4;
+  }
+
   #skill-container {
     grid-template-columns: 1fr 1fr;
   }
+
+  #projeto-container .projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #projeto-container .projeto-info {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+  }
+
+  #projeto-container .foto {
+    aspect-ratio: 1/1;
+    max-width: 20%;
+    max-height: 150px;
+  }
+
+
+
 }

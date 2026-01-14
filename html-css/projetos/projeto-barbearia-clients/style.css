@@ -1,0 +1,183 @@
+/* --------------- Reset Basico e CSS Grid ------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --cor-primaria: #d4af37;
+    --branco: #fff;
+    --cinza-claro: #d1d1d1; 
+    --cinza-escuro: #949494;
+    --preto: #000000;
+}
+
+/* Configuração para Monitores */
+.container-principal {
+  display: grid;
+  /* 3 colunas: as das pontas são margens (1fr), o meio é o conteúdo (1200px) */
+  grid-template-columns: 1fr 1200px 1fr;
+  grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
+}
+
+/* ------------------------------------------------------------ */
+
+header {
+    width: 100vw;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 25px;
+    background-color: #000000;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+/* 2. CONTAINER DO MENU (HEADER) */
+.menu-container {
+    background: #000;
+    padding: 15px 25px;
+    position: relative;
+    z-index: 1000;
+    border-bottom: 2px solid #1a1a1a;
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão X/Hamburguer na direita */
+    align-items: center;
+    min-height: 70px;
+}
+
+/* 3. BOTÃO HAMBÚRGUER / X */
+#menu-toggle { display: none; }
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 23px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #d4af37; /* Dourado da logo */
+    transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+/* Transformação para o X */
+#menu-toggle:checked + .hamburger .line:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+    background-color: #fff; /* Muda para branco quando vira X */
+}
+
+#menu-toggle:checked + .hamburger .line:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .hamburger .line:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+    background-color: #fff;
+}
+
+/* 4. O MENU (GAVETA LATERAL DIREITA) */
+.nav-menu {
+    position: absolute;
+    top: 80px; /* Brota logo abaixo do header */
+    right: 1;    /* ALINHAMENTO À DIREITA: Corrige o erro de sumir da tela */
+    width: 88vw; /* Largura ideal para mobile */
+    background: rgba(0, 0, 0, 0.98); /* Preto quase sólido */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid var(--cinza-claro);
+    box-sizing: border-box;
+    
+    /* Estado inicial (escondido) */
+    max-height: 0; 
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.301);
+    
+}
+
+/* Estado Ativo (quando clica) */
+#menu-toggle:checked ~ .nav-menu {
+    max-height: 100vh; /* Abre o quanto for necessário */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 5. ITENS DO MENU */
+.nav-menu li {
+    width: 100%;
+    border-bottom: 1px solid var(--cinza-claro);
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 18px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center; /* Texto alinhado à direita para seguir o botão */
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+/* Efeito ao passar o mouse ou segurar o dedo */
+.nav-menu li a:hover {
+    background: #111;
+    color: #d4af37;
+    padding-right: 40px; /* Pequeno movimento para a esquerda no hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query para Tablet (geralmente abaixo de 1024px) */
+@media (max-width: 1024px) {
+  .container-principal {
+    /* Diminuímos o conteúdo para caber na tela do tablet */
+    grid-template-columns: 1fr 90% 1fr; 
+  }
+}
+
+/* Media Query para Celular (abaixo de 768px ou 480px) */
+@media (max-width: 768px) {
+  .container-principal {
+    /* No celular, eliminamos as margens laterais do grid */
+    grid-template-columns: auto 100% auto; 
+  }
+  
+}
