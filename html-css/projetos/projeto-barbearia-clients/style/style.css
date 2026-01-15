@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+@font-face {
+    font-family: 'Cheap Pine Sans'; /* O nome que você vai usar no código */
+    src: url('../Fonts/FontCheapPineSans.otf') format('truetype'); /* Caminho correto do arquivo */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lexend Deca'; /* O nome que você vai usar no código */
+    src: url('../Fonts/FontLexendDeca.ttf') format('truetype'); /* Caminho correto do arquivo */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* --------------- Reset Basico e CSS Grid ------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --cor-primaria: #bd9923;
+    --cor-secundaria: #ecb500;
+    --branco: #fff;
+    --cinza-claro: #d1d1d1; 
+    --cinza-escuro: #949494;
+    --preto: #000000;
+}
+
+/* Configuração para Monitores (Desktop) */
+.container-principal {
+  display: grid;
+  /* O segredo: usamos minmax para o conteúdo não esmagar e 1fr para as laterais sugarem o espaço */
+  grid-template-columns: auto 90vw auto;
+  /* min-height: 100vh;  */
+  background-color: var(--preto);
+}
+
+/* Garanta que o conteúdo central fique sempre na coluna 2 */
+header, main, footer {
+  grid-column: 2;
+  width: 100%;
+}
+
+/* ------------------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query para Tablet (Abaixo de 1024px) */
+@media (max-width: 1024px) {
+  .container-principal {
+    /* No tablet, o conteúdo ocupa 95% para não encostar na borda física do aparelho */
+    grid-template-columns: 1fr 95% 1fr; 
+  }
+}
+
+
+
+
+
+/* Media Query para Celular (Abaixo de 768px) */
+@media (max-width: 768px) {
+  .container-principal {
+    /* No celular, removemos as colunas laterais extras para evitar erros de cálculo */
+    grid-template-columns: auto 90vw auto; 
+    width: 100%;
+  }
+  
+header {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 25px;
+    background-color: #000000;
+    border-bottom: 2px solid var(--cor-primaria);
+}
+
+.logo img {
+    width: 60px;
+    padding-top: 5px;
+    height: auto;
+}
+
+.menu-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-left: 20px;
+    width: 100%;
+    gap: 20px;
+}
+
+.menu-social a img {
+    width: 30px;
+}
+.menu-social a img:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+
+/* 2. CONTAINER DO MENU (HEADER) */
+.menu-container {
+    background: var(--preto);
+    padding: 15px 35px;
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão X/Hamburguer na direita */
+    align-items: center;
+    min-height: 70px;
+    
+}
+
+/* 3. BOTÃO HAMBÚRGUER / X */
+#menu-toggle { 
+    display: none;
+    outline: none;
+    box-shadow: none !important;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 23px;
+    cursor: pointer;
+    z-index: 1001;
+    
+}
+
+.line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #d4af37; /* Dourado da logo */
+    transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    
+}
+
+/* Transformação para o X */
+#menu-toggle:checked + .hamburger .line:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+    background-color: #fff; /* Muda para branco quando vira X */
+}
+
+#menu-toggle:checked + .hamburger .line:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .hamburger .line:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+    background-color: #fff;
+}
+
+/* 4. O MENU (GAVETA LATERAL DIREITA) */
+.nav-menu {
+    position: absolute;
+    top: 71px; /* Brota logo abaixo do header */
+    right: 0;    /* ALINHAMENTO À DIREITA: Corrige o erro de sumir da tela */
+    width: 100vw; /* Largura ideal para mobile */
+    background: rgba(0, 0, 0, 0.918); /* Preto quase sólido */
+    list-style: none;
+    border-top: 1px solid var(--cinza-claro);
+    /* Estado inicial (escondido) */
+    max-height: 0; 
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.301);
+    
+}
+
+/* Estado Ativo (quando clica) */
+#menu-toggle:checked ~ .nav-menu {
+    max-height: 100vh; /* Abre o quanto for necessário */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 5. ITENS DO MENU */
+.nav-menu li {
+    width: 100%;
+    border-bottom: 1px solid var(--cinza-claro);
+}
+
+.nav-menu li a {
+    font-family: Lexend Deca;
+    display: block;
+    padding: 18px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center; /* Texto alinhado à direita para seguir o botão */
+    font-size: 12px;
+    letter-spacing:2px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+/* Efeito ao passar o mouse ou segurar o dedo */
+.nav-menu li a:hover {
+    background: #111;
+    color: #d4af37;
+    padding-right: 40px; /* Pequeno movimento para a esquerda no hover */
+}
+
+/* main abaixo: */
+
+main {
+    color: var(--preto);
+}
+
+
+.hero-section {
+
+}
+
+.hero-section img {
+    position: relative;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+    opacity: 70%;
+    filter: grayscale(100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+
+.hero-content {
+    width: 90vw;
+    position: absolute;
+    padding-left: 15px;
+    top: 23%;
+}
+
+.tagline {
+    font-family: Cheap Pine Sans;
+    color: var(--cor-secundaria);
+    display: flex;
+    font-size: 26px;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.349);
+    padding-bottom: 10px;
+}
+
+.line-text {
+    margin-top: 14px;
+    margin-right: 10px;
+    display: block;
+    width: 23px;
+    height: 3px;
+    background-color: var(--cor-secundaria); /* Dourado da logo */
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.300);
+}
+
+.hero-content h1 {
+    font-family: Cheap Pine Sans;
+    font-size: 36px;
+    color: var(--branco);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+.btn-agendar {
+    font-family: Cheap Pine Sans;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 28px;
+    padding: 10px;
+    border: 2px solid var(--cor-secundaria);
+    margin-top: 50px;
+}
+
+.btn-agendar:hover {
+    background-color: var(--cor-primaria);
+    color: var(--preto);
+    transition: 0.2s;
+}
+
+.elementor-widget-container {
+    height: auto;
+}
+
+.widget-video iframe {
+    width: 100%;
+    height: 854px;
+    -webkit-mask-image: linear-gradient(to top, black 80%, transparent 100%);
+    mask-image: linear-gradient(to top, black 80%, transparent 100%);
+    clip-path: inset(85px 0 0 0);
+    margin-top: -50px;
+}
+
+.widget-info p {
+    font-family: Lexend Deca;
+    color: white;
+    font-size: 14px;
+    font-weight: 0;
+}
+
+
+
+
+}
+
