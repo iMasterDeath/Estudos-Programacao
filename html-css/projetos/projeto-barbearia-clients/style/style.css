@@ -88,11 +88,11 @@ main, footer {
  
 header {
     top: 0;
-    height: 75px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 25px;
+    padding-left: 17px;
     background-color: #000000;
     border-bottom: 2px solid var(--cor-primaria);
     z-index: 100000;
@@ -100,7 +100,7 @@ header {
 }
 
 .logo img {
-    width: 60px;
+    width: 110px;
     padding-top: 5px;
     height: auto;
 }
@@ -110,13 +110,12 @@ header {
     align-items: center;
     justify-content: center;
     padding-top: 5px;
-    padding-left: 20px;
     width: 100%;
     gap: 20px;
 }
 
 .menu-social a img {
-    width: 30px;
+    width: 25px;
 }
 .menu-social a img:hover {
     transform: scale(1.1);
@@ -126,14 +125,12 @@ header {
 /* 2. CONTAINER DO MENU (HEADER) */
 .menu-container {
     background: var(--preto);
-    padding: 15px 35px;
+    padding: 0px 17px;
     position: relative;
     z-index: 1000;
     display: flex;
     justify-content: flex-end; /* Alinha o botão X/Hamburguer na direita */
     align-items: center;
-    min-height: 70px;
-    
 }
 
 /* 3. BOTÃO HAMBÚRGUER / X */
@@ -147,8 +144,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 23px;
+    width: 28px;
+    height: 20px;
     cursor: pointer;
     z-index: 1001;
     
@@ -181,7 +178,7 @@ header {
 /* 4. O MENU (GAVETA LATERAL DIREITA) */
 .nav-menu {
     position: absolute;
-    top: 71px; /* Brota logo abaixo do header */
+    top: 41px; /* Brota logo abaixo do header */
     right: 0;    /* ALINHAMENTO À DIREITA: Corrige o erro de sumir da tela */
     width: 100vw; /* Largura ideal para mobile */
     background: rgba(0, 0, 0, 0.918); /* Preto quase sólido */
@@ -362,16 +359,17 @@ header {
 
 .widget-info {
     height: auto;
+    margin-top: 30px;
 }
 
 .widget-info span {
-    margin-top: 20px;
+    font-size: 30px;
 }
 
 .widget-info p {
     font-family: Lexend Deca;
     color: white;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 0;
 }
 
@@ -446,8 +444,8 @@ header {
     grid-template-columns: auto 1fr auto auto;
     font-family: Cheap Pine Sans;
     width: 100%;
-    gap: 40px;
-    font-size: 16px;
+    gap: 35px;
+    font-size: 18px;
     color: #000000c7;
     padding-bottom: 3px;
 }
@@ -479,7 +477,7 @@ header {
 
 .servicos {
     font-family: Cheap Pine Sans;
-    font-size: 23px;
+    font-size: 25px;
     display: grid;
     grid-template-columns: auto 1fr auto auto;
     grid-auto-rows: auto;
@@ -489,6 +487,7 @@ header {
 
 .grid-servicos a {
     color: var(--preto);
+    font-weight: bold;
 }
 
 .elementor-divider {
@@ -500,18 +499,21 @@ header {
 
 .valor-avulso {
     grid-column: 3 / 4;
+    font-weight: bold;
+    font-size: 23px;
 }
 
 .valor-clube {
     grid-column: 4 / 5;
+    font-weight: bold;
+    font-size: 23px;
 }
 
 .grid-servicos p {
     grid-column: 1 / 5;
     font-family: Lexend Deca;
-    font-size: 14px;
-    margin-top: -20px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    margin-top: -15px;
 }
 
 }
