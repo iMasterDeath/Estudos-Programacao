@@ -34,17 +34,21 @@
 
 /* Configuração para Monitores (Desktop) */
 .container-principal {
-  display: grid;
-  /* O segredo: usamos minmax para o conteúdo não esmagar e 1fr para as laterais sugarem o espaço */
-  grid-template-columns: auto 90vw auto;
-  /* min-height: 100vh;  */
-  background-color: var(--preto);
+    display: grid;
+    grid-template-columns: auto 90vw auto; 
 }
 
 /* Garanta que o conteúdo central fique sempre na coluna 2 */
-header, main, footer {
+main, footer {
   grid-column: 2;
   width: 100%;
+}
+
+.background-black {
+    grid-column-start: 0 / 3;
+    width: 100%;
+    background-color: var(--preto);
+    padding-bottom: 50px;
 }
 
 /* ------------------------------------------------------------ */
@@ -79,18 +83,11 @@ header, main, footer {
 }
 
 
-
-
-
 /* Media Query para Celular (Abaixo de 768px) */
 @media (max-width: 768px) {
-  .container-principal {
-    /* No celular, removemos as colunas laterais extras para evitar erros de cálculo */
-    grid-template-columns: auto 90vw auto; 
-    width: 100%;
-  }
-  
+ 
 header {
+    top: 0;
     height: 75px;
     display: flex;
     align-items: center;
@@ -98,6 +95,8 @@ header {
     padding-left: 25px;
     background-color: #000000;
     border-bottom: 2px solid var(--cor-primaria);
+    z-index: 100000;
+    position: sticky;
 }
 
 .logo img {
@@ -189,7 +188,7 @@ header {
     list-style: none;
     border-top: 1px solid var(--cinza-claro);
     /* Estado inicial (escondido) */
-    max-height: 0; 
+    max-height: 0;
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
@@ -232,20 +231,57 @@ header {
     padding-right: 40px; /* Pequeno movimento para a esquerda no hover */
 }
 
-/* main abaixo: */
+/* ------------------- main abaixo: -------------------- */
 
-main {
-    color: var(--preto);
+ .container-principal {
+    display: grid;
+    /* auto 90vw auto: Cria colunas flexíveis nas pontas e trava o meio em 90% da largura da tela */
+    grid-template-columns: auto 90vw auto;
+    
+    /* min-content: Garante que cada linha tenha apenas a altura do seu conteúdo, evitando espaços vazios ou sobreposição */
+    grid-auto-rows: min-content; 
+    
+    /* Garante que o grid use toda a largura disponível para calcular as margens 'auto' */
+    width: 100%;
+  }
+
+/* O símbolo '>' seleciona apenas os filhos diretos (sections e articles) */
+.container-principal > * {
+    /* grid-column: 2: Força todos os elementos a ficarem na coluna central (90vw) por padrão */
+    grid-column: 2;
+    width: 100%;
+} 
+
+
+/* ESTICANDO O FUNDO (FULL-BLEED) */
+.background-black {
+    /* 1 / -1: Faz a section ignorar as margens e ir da borda 1 até a última borda (-1) */
+    grid-column: 1 / -1; 
+    background-color: #000;
+    
+    /* Transformamos a section em um grid interno para poder centralizar o texto novamente */
+    display: grid;
+    /* 'inherit' ou repetir o esquema original para que o conteúdo interno se alinhe com o resto do site */
+    grid-template-columns: auto 90vw auto;
+}
+
+/* Garante que o conteúdo DENTRO da section preta não bata na borda da tela */
+.background-black > * {
+    /* Joga o texto/vídeo de volta para a coluna 2 (o meio) */
+    grid-column: 2; 
+    width: 100%;
 }
 
 
 .hero-section {
-
+   /* position relative: Permite que elementos filhos com 'absolute' usem esta seção como base */
+   position: relative;
+   
+   /* Como ela faz parte do topo preto, também deve ocupar a largura total da tela */
+   grid-column: 1 / -1;
 }
 
 .hero-section img {
-    position: relative;
-    display: block;
     width: 100%;
     object-fit: cover;
     height: 400px;
@@ -257,10 +293,11 @@ main {
 
 
 .hero-content {
-    width: 90vw;
     position: absolute;
+    top: 30%;
+    width: 100%;
     padding-left: 15px;
-    top: 23%;
+    padding-right: 15px;
 }
 
 .tagline {
@@ -283,7 +320,7 @@ main {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.300);
 }
 
-.hero-content h1 {
+.h1-content {
     font-family: Cheap Pine Sans;
     font-size: 36px;
     color: var(--branco);
@@ -291,13 +328,14 @@ main {
 }
 
 .btn-agendar {
+    width: 100%;
     font-family: Cheap Pine Sans;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: var(--branco);
-    font-size: 28px;
+    font-size: 26px;
     padding: 10px;
     border: 2px solid var(--cor-secundaria);
     margin-top: 50px;
@@ -322,6 +360,14 @@ main {
     margin-top: -50px;
 }
 
+.widget-info {
+    height: auto;
+}
+
+.widget-info span {
+    margin-top: 20px;
+}
+
 .widget-info p {
     font-family: Lexend Deca;
     color: white;
@@ -329,8 +375,144 @@ main {
     font-weight: 0;
 }
 
+.card-review {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
+.planos-section {
+    position: relative;
+}
 
+.banner-vertical {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    background-color: #bd9923;
+    height: 680px;
+    margin-bottom: 50px;
+
+}
+
+.banner-horizontal {
+    display: none;
+}
+
+.planos-content {
+    top: 8%;
+    left: 10%;
+    width: 80%;
+    position: absolute; /* era ABSOLUTE */
+}
+
+.planos-content a {
+    margin-top: 25px;
+}
+
+.servicos-section {
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.h2-tittle {
+    font-family: Cheap Pine Sans;
+    font-size: 32px;
+}
+
+.line-black {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--preto);
+}
+
+.tag-preco {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    padding-right: 1px;
+    font-family: Cheap Pine Sans;
+    font-size: 18px;
+    align-items: flex-end;
+}
+
+.wrapper-preco-clube {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    font-family: Cheap Pine Sans;
+    width: 100%;
+    gap: 40px;
+    font-size: 16px;
+    color: #000000c7;
+    padding-bottom: 3px;
+}
+
+.preenchimento1 {
+
+}
+
+.preenchimento2 {
+     grid-column: 2 / 3;
+    border-bottom: 0px dotted var(--preto);
+    margin-left: -10px;
+    width: 100%;
+}
+
+.tag-avulso {
+    grid-column: 3;
+}
+
+.tag-clube {
+    
+}
+
+.grid-servicos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.servicos {
+    font-family: Cheap Pine Sans;
+    font-size: 23px;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    grid-auto-rows: auto;
+    align-items: center;
+    gap: 25px;
+}
+
+.grid-servicos a {
+    color: var(--preto);
+}
+
+.elementor-divider {
+    grid-column: 2 / 3;
+    border-bottom: 2px dotted var(--preto);
+    margin-left: -10px;
+    width: 100%;
+}
+
+.valor-avulso {
+    grid-column: 3 / 4;
+}
+
+.valor-clube {
+    grid-column: 4 / 5;
+}
+
+.grid-servicos p {
+    grid-column: 1 / 5;
+    font-family: Lexend Deca;
+    font-size: 14px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
 
 }
 
