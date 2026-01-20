@@ -24,12 +24,13 @@
 }
 
 :root {
-    --cor-primaria: #bd9923;
-    --cor-secundaria: #ecb500;
+    --cor-primaria: #DA940B;
+    --cor-secundaria: #a7740d;
     --branco: #fff;
     --cinza-claro: #d1d1d1; 
     --cinza-escuro: #949494;
     --preto: #000000;
+    color-scheme: only light; /* se for escuro ai seria only dark */
 }
 
 /* Configuração para Monitores (Desktop) */
@@ -109,9 +110,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 10px;
     padding-top: 5px;
     width: 100%;
-    gap: 20px;
+    gap: 15px;
 }
 
 .menu-social a img {
@@ -299,7 +301,7 @@ header {
 
 .tagline {
     font-family: Cheap Pine Sans;
-    color: var(--cor-secundaria);
+    color: var(--cor-primaria);
     display: flex;
     font-size: 26px;
     font-weight: 400;
@@ -313,7 +315,7 @@ header {
     display: block;
     width: 23px;
     height: 3px;
-    background-color: var(--cor-secundaria); /* Dourado da logo */
+    background-color: var(--cor-primaria); /* Dourado da logo */
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.300);
 }
 
@@ -334,7 +336,7 @@ header {
     color: var(--branco);
     font-size: 26px;
     padding: 10px;
-    border: 2px solid var(--cor-secundaria);
+    border: 2px solid var(--cor-primaria);
     margin-top: 50px;
 }
 
@@ -342,6 +344,45 @@ header {
     background-color: var(--cor-primaria);
     color: var(--preto);
     transition: 0.2s;
+}
+
+.adress-section {
+    width: 100%;
+    font-family: Cheap Pine Sans;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.adress {
+    margin-top: 20px;
+}
+
+.tagline2 {
+    width: 65%;
+    height: 1px;
+    border-radius: 50%
+    ;
+    background-color: var(--cor-primaria);
+}
+
+.number1 {
+    width: 100%;
+    font-family: Cheap Pine Sans;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 30px;
+    padding-top: 10px;
+    margin-bottom: 20px;
 }
 
 .elementor-widget-container {
@@ -354,7 +395,7 @@ header {
     -webkit-mask-image: linear-gradient(to top, black 80%, transparent 100%);
     mask-image: linear-gradient(to top, black 80%, transparent 100%);
     clip-path: inset(85px 0 0 0);
-    margin-top: -50px;
+    margin-top: -80px;
 }
 
 .widget-info {
@@ -516,5 +557,104 @@ header {
     margin-top: -15px;
 }
 
+.wrapper-servicos {
+    font-family: Cheap Pine Sans;
+    font-size: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
+.link-wrapper1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    text-decoration: none;
+    border: 3px solid var(--cor-primaria);
+    color: var(--preto);
+    transition: all 0.2s ease-in-out;
+}
+
+.link-wrapper1:hover {
+    background-color: var(--cor-primaria);
+    transition: all 0.2s ease-in-out;
+}
+
+.link-wrapper2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    text-decoration: none;
+    border: 3px solid var(--preto);
+    background-color: var(--preto);
+    color: var(--branco);
+    transition: all 0.2s ease-in-out;
+}
+
+.link-wrapper2:hover {
+    color: var(--preto);
+    background-color: var(--branco);
+    border: 3px solid var(--preto);
+    transition: all 0.2s ease-in-out;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query Abaixo de  (Abaixo de 400px) */
+@media (max-width: 350px) {
+  header {
+    top: 0;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    border-bottom: 2px solid var(--cor-primaria);
+    z-index: 100000;
+    position: sticky;
+}
+  .menu-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    width: 100%;
+    gap: 0px;
+  }
+}
