@@ -34,8 +34,9 @@
     --cor-secundaria: #a7740d;
     --branco: #fff;
     --cinza-claro: #d1d1d1;
-    --cinza-escuro: #949494;
+    --cinza-escuro: #1C1C1C;
     --preto: #000000;
+    --cinza-black: #1D1D1D;
     color-scheme: only light;
     /* se for escuro ai seria only dark */
 }
@@ -53,12 +54,6 @@ footer {
     width: 100%;
 }
 
-.background-black {
-    grid-column-start: 0 / 3;
-    width: 100%;
-    background-color: var(--preto);
-    padding-bottom: 50px;
-}
 
 /* ------------------------------------------------------------ */
 
@@ -121,11 +116,11 @@ footer {
         padding-left: 10px;
         padding-top: 5px;
         width: 100%;
-        gap: 15px;
+        gap: 20px;
     }
 
     .menu-social a img {
-        width: 25px;
+        width: 28px;
     }
 
     .menu-social a img:hover {
@@ -281,6 +276,7 @@ footer {
         display: grid;
         /* 'inherit' ou repetir o esquema original para que o conteúdo interno se alinhe com o resto do site */
         grid-template-columns: auto 90vw auto;
+        padding-bottom: 50px;
     }
 
     /* Garante que o conteúdo DENTRO da section preta não bata na borda da tela */
@@ -366,8 +362,10 @@ footer {
         transition: 0.2s;
     }
 
-    .adress-section {
+    .adress {
         width: 100%;
+        border-top: 1px solid var(--cor-primaria);
+        border-bottom: 1px solid var(--cor-primaria);
         font-family: Cheap Pine Sans;
         display: flex;
         flex-direction: column;
@@ -379,7 +377,12 @@ footer {
         padding-top: 10px;
     }
 
-    .adress {
+    .adress a {
+        text-decoration: none;
+        color: var(--branco);
+    }
+
+    .adress2 {
         margin-top: 20px;
     }
 
@@ -388,9 +391,10 @@ footer {
         height: 1px;
         border-radius: 50%;
         background-color: var(--cor-primaria);
+        box-shadow: 0 2px 10px #ffc400af;
     }
 
-    .number1 {
+    .number2 {
         width: 100%;
         font-family: Cheap Pine Sans;
         display: flex;
@@ -400,7 +404,7 @@ footer {
         text-decoration: none;
         color: var(--branco);
         font-size: 30px;
-        padding-top: 10px;
+        padding-top: 0px;
         margin-bottom: 20px;
     }
 
@@ -470,23 +474,34 @@ footer {
     }
 
     .servicos-section {
+        /* position relative: Permite que elementos filhos com 'absolute' usem esta seção como base */
+        position: relative;
+
+        /* Como ela faz parte do topo preto, também deve ocupar a largura total da tela */
+        grid-column: 1 / -1;
         flex-direction: column;
         width: 100%;
 
     }
 
-    .h2-tittle {
-        font-family: Cheap Pine Sans;
-        font-size: 32px;
+    .header-servicos {
+        display: flex;
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        align-items: center;
+        justify-content: center;
     }
 
-    .line-black {
+    .servicos-section img {
+        width: 80%;
+       
+    }
+
+    .line-top {
         display: block;
         width: 100%;
-        height: 2px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        background-color: var(--preto);
+        height: 50px;
     }
 
     .tag-preco {
@@ -522,9 +537,12 @@ footer {
 
     .tag-avulso {
         grid-column: 3;
+        color: var(--branco);
     }
 
-    .tag-clube {}
+    .tag-clube {
+        color: var(--branco);
+    }
 
     .grid-servicos {
         display: grid;
@@ -542,32 +560,39 @@ footer {
         gap: 25px;
     }
 
+    .servicos-nome {
+        width: 100%;
+        border: 1px solid var(--branco);
+        padding: 5px
+    }
+
     .grid-servicos a {
-        color: var(--preto);
-        font-weight: bold;
+        letter-spacing: 1px;
+        color: var(--branco);
     }
 
     .elementor-divider {
         grid-column: 2 / 3;
-        border-bottom: 2px dotted var(--preto);
+        border-bottom: 2px dotted var(--branco);
         margin-left: -10px;
         width: 100%;
     }
 
     .valor-avulso {
         grid-column: 3 / 4;
-        font-weight: bold;
         font-size: 23px;
+        color: var(--branco);
     }
 
     .valor-clube {
         grid-column: 4 / 5;
-        font-weight: bold;
         font-size: 23px;
+        color: var(--branco);
     }
 
     .grid-servicos p {
         grid-column: 1 / 5;
+        color: var(--branco);
         font-family: Lexend Deca;
         font-size: 15px;
         margin-top: -15px;
@@ -581,9 +606,9 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 20px;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        gap: 30px;
+        padding-top: 60px;
+        padding-bottom: 20px;
     }
 
     .link-wrapper1 {
@@ -593,13 +618,14 @@ footer {
         width: 100%;
         height: 60px;
         text-decoration: none;
-        border: 3px solid var(--cor-primaria);
-        color: var(--preto);
+        border: 3px solid var(--branco);
+        color: var(--branco);
         transition: all 0.2s ease-in-out;
     }
 
     .link-wrapper1:hover {
-        background-color: var(--cor-primaria);
+        background-color: var(--branco);
+        color: var(--preto);
         transition: all 0.2s ease-in-out;
     }
 
@@ -610,7 +636,7 @@ footer {
         width: 100%;
         height: 60px;
         text-decoration: none;
-        border: 3px solid var(--preto);
+        border: 3px solid var(--cor-primaria);
         background-color: var(--preto);
         color: var(--branco);
         transition: all 0.2s ease-in-out;
@@ -618,8 +644,8 @@ footer {
 
     .link-wrapper2:hover {
         color: var(--preto);
-        background-color: var(--branco);
-        border: 3px solid var(--preto);
+        background-color: var(--cor-primaria);
+        border: 3px solid var(--cor-primaria);
         transition: all 0.2s ease-in-out;
     }
 
@@ -666,6 +692,185 @@ footer {
         text-align: center;
         line-height: 23px;
     }
+
+    /* Card Barbeiros */
+
+    .equipe {
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .equipe h2 {
+        color: #d4af37; 
+        margin-bottom: 30px;
+    }
+
+/* 1. Aumentado a largura total do container, e limitado o tamanho do card */
+    .swiper {
+        width: 100%;
+        max-width: 700px; /* Largura total maior para a seta ter onde ficar */
+        padding: 20px 80px; /* (vazio para as setas) */
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+/* 2. Centralizado o card e definido um tamanho menor para a imagem não colar nas setas */
+    .card-barbeiro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .moldura {
+        width: 70%; /* AJUSTE: Tamanho fixo menor para a imagem ficar no meio */
+        height: auto; /* Ajustar conforme a proporção das fotos */
+        max-height: 600px;
+        border: 1px solid #d4af37;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: #1a1a1a;
+        box-shadow: 0 2px 10px #d4af37af;
+    }
+
+    .moldura img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    /* 3. Posicionamento das setas totalmente nos cantos do container */
+    .swiper-button-prev {
+        left: 10px !important; /* Fixa bem no canto esquerdo */
+    }
+
+    .swiper-button-next {
+        right: 10px !important; /* Fixa bem no canto direito */
+    }
+
+    /* 4. Estilo das setas (Redondas e Douradas) */
+    .swiper-button-next,
+    .swiper-button-prev {
+        
+        color: #d4af37 !important;
+        transition: all 0.3s ease;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-family: Cheap Pine Sans;
+        font-size: 25px !important;
+        font-weight: bold;
+    }
+
+    /* Nome do Barbeiro */
+    .card-barbeiro h3 {
+        font-family: Cheap Pine Sans;
+        color: #d4af37;
+        margin-bottom: 20px;
+        font-size: 8.2vw;
+        letter-spacing: 2px;
+        
+    }
+
+    /* ------------------------------------- */
+
+    .adress-section {
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .tittle-adress {
+        font-family: Cheap Pine Sans;
+        font-size: 34px;
+        color: var(--branco);
+        padding-bottom: 30px;
+    }
+
+    .content-adress {
+        font-family: Lexend Deca;
+        font-size: 16px;
+        font-weight: 0;
+        color: var(--branco);
+        line-height: 25px;  
+    }
+
+    .iframe-adress {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .iframe-adress iframe {
+        width: 100%;
+        height: 400px; 
+        border: 2px solid #d4af37;
+        border-radius: 10px;
+        /* O segredo para o modo escuro: */
+        filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
+        margin-top: 10px;
+    }
+
+    .background-footer-logo {
+        grid-column: 1 / -1;
+    }
+
+    .logo-footer {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--branco);
+    }
+
+    .logo-footer img {
+        width: 150px;
+    }
+
+    .background-cinza-black {
+                /* 1 / -1: Faz a section ignorar as margens e ir da borda 1 até a última borda (-1) */
+        grid-column: 1 / -1;
+        background-color: var(--cinza-escuro);
+        /* Transformamos a section em um grid interno para poder centralizar o texto novamente */
+        display: grid;
+        /* 'inherit' ou repetir o esquema original para que o conteúdo interno se alinhe com o resto do site */
+        grid-template-columns: auto 90vw auto;
+        padding-bottom: 50px;
+    }
+
+    .background-cinza-black>* {
+        /* Joga o texto/vídeo de volta para a coluna 2 (o meio) */
+        grid-column: 2;
+        width: 100%;
+    }
+
+
+    .background-cinza-black-footer {
+        width: 100%;
+        background-color: var(--cinza-escuro);
+    }
+    .footer-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0px;
+        color: var(--branco);
+        font-family: Lexend Deca;
+        font-size: 12px;
+        text-align: center;
+    }
+    .footer-section img {
+        padding-top: 15px;
+        width: 100px;
+    }
+
+
+
+
 }
 
 
@@ -679,22 +884,42 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Media Query Abaixo de  (Abaixo de 400px) */
+@media (max-width: 550px) {
+    header {
+        top: 0;
+        width: 100%;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        border-bottom: 2px solid var(--cor-primaria);
+        z-index: 100000;
+        position: sticky;
+    }
+
+    .logo img {
+        margin-left: 0px;
+    }
+
+    .menu-social {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-top: 5px;
+        width: 100%;
+        gap: 10px;
+    }
+
+}
+
+
+
+
+
+
+/* Media Query Abaixo de  (Abaixo de 350px) */
 @media (max-width: 350px) {
     header {
         top: 0;
@@ -715,6 +940,6 @@ footer {
         justify-content: center;
         padding-top: 5px;
         width: 100%;
-        gap: 0px;
+        gap: 5px;
     }
 }
