@@ -90,6 +90,52 @@ footer {
 /* Media Query para Celular (Abaixo de 768px) */
 @media (max-width: 768px) {
 
+    /* ---------- Config Padrao Abaixo ( Main ) ---------- */
+
+    .container-principal {
+        display: grid;
+        /* auto 90vw auto: Cria colunas flexíveis nas pontas e trava o meio em 90% da largura da tela */
+        grid-template-columns: auto 90vw auto;
+
+        /* min-content: Garante que cada linha tenha apenas a altura do seu conteúdo, evitando espaços vazios ou sobreposição */
+        grid-auto-rows: min-content;
+
+        /* Garante que o grid use toda a largura disponível para calcular as margens 'auto' */
+        width: 100%;
+    }
+
+    /* O símbolo '>' seleciona apenas os filhos diretos (sections e articles) */
+    .container-principal>* {
+        /* grid-column: 2: Força todos os elementos a ficarem na coluna central (90vw) por padrão */
+        grid-column: 2;
+        width: 100%;
+    }
+
+
+    /* ESTICANDO O FUNDO (FULL-BLEED) */ 
+    .background-black { 
+        /* 1 / -1: Faz a section ignorar as margens e ir da borda 1 até a última borda (-1) */
+        grid-column: 1 / -1;
+        background-color: #000;
+
+        /* Transformamos a section em um grid interno para poder centralizar o texto novamente */
+        display: grid;
+        /* 'inherit' ou repetir o esquema original para que o conteúdo interno se alinhe com o resto do site */
+        grid-template-columns: auto 90vw auto;
+        padding-bottom: 50px;
+    }
+
+    /* Garante que o conteúdo DENTRO da section preta não bata na borda da tela */
+    .background-black>* {
+        /* Joga o texto/vídeo de volta para a coluna 2 (o meio) */
+        grid-column: 2;
+        width: 100%;
+    }
+
+    /* ---------- Config Padrao Abaixo ( Main ) ---------- */
+
+    /* -------------------- Header ------------------- */
+
     header {
         top: 0;
         height: 65px;
@@ -244,48 +290,9 @@ footer {
         /* Pequeno movimento para a esquerda no hover */
     }
 
-    /* ------------------- main abaixo: -------------------- */
+    /* -------------------- Header ------------------- */
 
-    .container-principal {
-        display: grid;
-        /* auto 90vw auto: Cria colunas flexíveis nas pontas e trava o meio em 90% da largura da tela */
-        grid-template-columns: auto 90vw auto;
-
-        /* min-content: Garante que cada linha tenha apenas a altura do seu conteúdo, evitando espaços vazios ou sobreposição */
-        grid-auto-rows: min-content;
-
-        /* Garante que o grid use toda a largura disponível para calcular as margens 'auto' */
-        width: 100%;
-    }
-
-    /* O símbolo '>' seleciona apenas os filhos diretos (sections e articles) */
-    .container-principal>* {
-        /* grid-column: 2: Força todos os elementos a ficarem na coluna central (90vw) por padrão */
-        grid-column: 2;
-        width: 100%;
-    }
-
-
-    /* ESTICANDO O FUNDO (FULL-BLEED) */
-    .background-black {
-        /* 1 / -1: Faz a section ignorar as margens e ir da borda 1 até a última borda (-1) */
-        grid-column: 1 / -1;
-        background-color: #000;
-
-        /* Transformamos a section em um grid interno para poder centralizar o texto novamente */
-        display: grid;
-        /* 'inherit' ou repetir o esquema original para que o conteúdo interno se alinhe com o resto do site */
-        grid-template-columns: auto 90vw auto;
-        padding-bottom: 50px;
-    }
-
-    /* Garante que o conteúdo DENTRO da section preta não bata na borda da tela */
-    .background-black>* {
-        /* Joga o texto/vídeo de volta para a coluna 2 (o meio) */
-        grid-column: 2;
-        width: 100%;
-    }
-
+    /* ----------- Secao Principal (Index) ----------- */
 
     .hero-section {
         /* position relative: Permite que elementos filhos com 'absolute' usem esta seção como base */
@@ -299,7 +306,7 @@ footer {
         width: 100%;
         object-fit: cover;
         height: 400px;
-        opacity: 70%;
+        opacity: 30%;
         filter: grayscale(100%);
         -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
         mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
@@ -473,6 +480,126 @@ footer {
         margin-top: 25px;
     }
 
+    .adress-section {
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .tittle-adress {
+        font-family: Cheap Pine Sans;
+        font-size: 34px;
+        color: var(--branco);
+        padding-bottom: 30px;
+    }
+
+    .content-adress {
+        font-family: Lexend Deca;
+        font-size: 16px;
+        font-weight: 0;
+        color: var(--branco);
+        line-height: 25px;  
+    }
+
+    .iframe-adress {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .iframe-adress iframe {
+        width: 100%;
+        height: 400px; 
+        border: 2px solid #d4af37;
+        border-radius: 10px;
+        /* O segredo para o modo escuro: */
+        filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
+        margin-top: 10px;
+    }
+
+
+
+    /* ----------- Secao Principal (Index) ----------- */
+
+    /* --------------- Section Footer ---------------- */
+
+    .background-footer-logo {
+        grid-column: 1 / -1;
+    }
+
+    .logo-footer {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--branco);
+        
+    }
+
+    .logo-footer img {
+        width: 150px;
+    }
+
+    .background-cinza-black {
+                /* 1 / -1: Faz a section ignorar as margens e ir da borda 1 até a última borda (-1) */
+        grid-column: 1 / -1;
+        background-color: var(--cinza-escuro);
+        /* Transformamos a section em um grid interno para poder centralizar o texto novamente */
+        display: grid;
+        /* 'inherit' ou repetir o esquema original para que o conteúdo interno se alinhe com o resto do site */
+        grid-template-columns: auto 90vw auto;
+        padding-bottom: 50px;
+    }
+
+    .background-cinza-black>* {
+        /* Joga o texto/vídeo de volta para a coluna 2 (o meio) */
+        grid-column: 2;
+        width: 100%;
+    }
+
+    
+    .background-black-footer {
+                /* 1 / -1: Faz a section ignorar as margens e ir da borda 1 até a última borda (-1) */
+        grid-column: 1 / -1;
+        background-color: var(--preto);
+        /* Transformamos a section em um grid interno para poder centralizar o texto novamente */
+        display: grid;
+        /* 'inherit' ou repetir o esquema original para que o conteúdo interno se alinhe com o resto do site */
+        grid-template-columns: auto 90vw auto;
+    }
+
+    .background-black-footer>* {
+        /* Joga o texto/vídeo de volta para a coluna 2 (o meio) */
+        grid-column: 2;
+        width: 100%;
+    }
+
+
+    .background-cinza-black-footer {
+        width: 100%;
+        background-color: var(--cinza-escuro);
+    }
+    .footer-section {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--branco);
+        font-family: Lexend Deca;
+        
+        font-size: 13px;
+        text-align: center;
+    }
+    .footer-section img {
+        padding-top: 10px;
+        width: 100px;
+    }
+    
+    /* --------------- Section Footer ---------------- */
+
+    /* --------------- Pagina Servicos --------------- */
+
     .servicos-section {
         /* position relative: Permite que elementos filhos com 'absolute' usem esta seção como base */
         position: relative;
@@ -483,7 +610,7 @@ footer {
         width: 100%;
 
     }
-
+    
     .header-servicos {
         display: flex;
         width: 100%;
@@ -494,7 +621,7 @@ footer {
     }
 
     .servicos-section img {
-        width: 80%;
+        width: 90%;
        
     }
 
@@ -637,7 +764,7 @@ footer {
         height: 60px;
         text-decoration: none;
         border: 3px solid var(--cor-primaria);
-        background-color: var(--preto);
+        background-color: var(--cinza-black);
         color: var(--branco);
         transition: all 0.2s ease-in-out;
     }
@@ -648,6 +775,10 @@ footer {
         border: 3px solid var(--cor-primaria);
         transition: all 0.2s ease-in-out;
     }
+
+    /* --------------- Pagina Servicos --------------- */
+
+    /* -------------- Pagina Barbeiros --------------- */
 
     .barbeiros-section {
         width: 100%;
@@ -705,7 +836,7 @@ footer {
         margin-bottom: 30px;
     }
 
-/* 1. Aumentado a largura total do container, e limitado o tamanho do card */
+    /* 1. Aumentado a largura total do container, e limitado o tamanho do card */
     .swiper {
         width: 100%;
         max-width: 700px; /* Largura total maior para a seta ter onde ficar */
@@ -715,7 +846,7 @@ footer {
         overflow: hidden;
     }
 
-/* 2. Centralizado o card e definido um tamanho menor para a imagem não colar nas setas */
+    /* 2. Centralizado o card e definido um tamanho menor para a imagem não colar nas setas */
     .card-barbeiro {
         display: flex;
         flex-direction: column;
@@ -775,103 +906,500 @@ footer {
         
     }
 
-    /* ------------------------------------- */
+    /* -------------- Pagina Barbeiros --------------- */
 
-    .adress-section {
+    /* -------------- Pagina Trabalhos -------------- */
+
+    .trabalho-section {
         width: 100%;
-        padding-top: 50px;
     }
 
-    .tittle-adress {
-        font-family: Cheap Pine Sans;
-        font-size: 34px;
-        color: var(--branco);
-        padding-bottom: 30px;
-    }
-
-    .content-adress {
-        font-family: Lexend Deca;
-        font-size: 16px;
-        font-weight: 0;
-        color: var(--branco);
-        line-height: 25px;  
-    }
-
-    .iframe-adress {
+    .trabalho-img {
         width: 100%;
-        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0px;
     }
 
-    .iframe-adress iframe {
+    .trabalho-img img {
+        width: 90%;
+    }
+
+    .trabalhos-content {
+    
+    }
+
+    .trabalhos-content img {
         width: 100%;
-        height: 400px; 
-        border: 2px solid #d4af37;
+        padding: 0px 0px;
+        border: 2px solid var(--cor-primaria);
+        margin: 5px 0px;
         border-radius: 10px;
-        /* O segredo para o modo escuro: */
-        filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
+    }
+
+    .trabalho-btn-agendar {
+        width: 100%;
+        font-family: Cheap Pine Sans;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 26px;
+        padding: 15px;
+        border: 2px solid var(--cor-primaria);
+        border-radius: 10px;
         margin-top: 10px;
     }
 
-    .background-footer-logo {
+    .trabalho-btn-agendar:hover {
+        background-color: var(--cor-primaria);
+        color: var(--preto);
+        transition: 0.2s;
+    }
+
+    /* -------------- Pagina Trabalhos -------------- */
+
+    /* -------------- Pagina Contato ------------------ */
+    /* -------------- Pagina Contato ------------------ */
+
+    /* -------------- Pagina Clube ------------------ */
+
+    .clube-section {
+        /* position relative: Permite que elementos filhos com 'absolute' usem esta seção como base */
+        position: relative;
+
+        /* Como ela faz parte do topo preto, também deve ocupar a largura total da tela */
         grid-column: 1 / -1;
     }
 
-    .logo-footer {
+    .clube-section img {
         width: 100%;
-        height: 150px;
+        object-fit: cover;
+        height: 400px;
+        opacity: 20%;
+        filter: grayscale(100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    }
+
+
+    .clube-content {
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .tagline-clube {
+        font-family: Cheap Pine Sans;
+        color: var(--cor-primaria);
+        display: flex;
+        font-size: 26px;
+        font-weight: 400;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.349);
+        padding-bottom: 10px;
+    }
+
+    .clube-line-text {
+        margin-top: 14px;
+        margin-right: 10px;
+        display: block;
+        width: 23px;
+        height: 3px;
+        background-color: var(--cor-primaria);
+        /* Dourado da logo */
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.300);
+    }
+
+    .h1-clube-content {
+        font-family: Cheap Pine Sans;
+        font-size: 36px;
+        color: var(--branco);
+        text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    }
+
+    .clube-btn-agendar {
+        width: 100%;
+        font-family: Cheap Pine Sans;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--branco);
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 26px;
+        padding: 10px;
+        border: 2px solid var(--cor-primaria);
+        margin-top: 70px;
     }
 
-    .logo-footer img {
-        width: 150px;
+    .clube-btn-agendar:hover {
+        background-color: var(--cor-primaria);
+        color: var(--preto);
+        transition: 0.2s;
     }
 
-    .background-cinza-black {
-                /* 1 / -1: Faz a section ignorar as margens e ir da borda 1 até a última borda (-1) */
-        grid-column: 1 / -1;
-        background-color: var(--cinza-escuro);
-        /* Transformamos a section em um grid interno para poder centralizar o texto novamente */
-        display: grid;
-        /* 'inherit' ou repetir o esquema original para que o conteúdo interno se alinhe com o resto do site */
-        grid-template-columns: auto 90vw auto;
-        padding-bottom: 50px;
+    .clube-widget-info {
+        height: auto;
+        margin-top: 30px
     }
 
-    .background-cinza-black>* {
-        /* Joga o texto/vídeo de volta para a coluna 2 (o meio) */
-        grid-column: 2;
+    .clube-widget-info span {
+        font-size: 30px;
+    }
+
+    .clube-widget-info p {
+        font-family: Lexend Deca;
+        color: white;
+        font-size: 15px;
+        font-weight: 0;
+    }
+
+    .tagline-clube {
+
+    }
+
+    .wrapper-beneficios {
         width: 100%;
-    }
-
-
-    .background-cinza-black-footer {
-        width: 100%;
-        background-color: var(--cinza-escuro);
-    }
-    .footer-section {
-        width: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px 0px;
-        color: var(--branco);
+        background-color: var(--preto);
+        
+    }
+
+    .wrapper-top {
+        position: relative; /* Base para o posicionamento do H2 */
+        width: 100%;
+        height: 500px; /* Ajuste para não cortar tanto a imagem */
+        overflow: hidden;
+    }
+
+    .wrapper-top img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.9;
+        -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 95%, transparent 100%);        
+    }
+
+    .wrapper-top h2 {
+    
+        position: absolute;
+        bottom: 16px; /* Fixa o título na parte de baixo da imagem */
+        left: 10px;
+        right: 10px;
+        font-family: Cheap Pine Sans;
+        font-size: 36px;
+        color: var(--cor-primaria);
+        text-shadow: 1px 1px 1px rgb(0, 0, 0);
+
+    }    
+
+    .wrapper-bottom {
+        
+    }
+
+
+
+    .widget-wrapper {
+         margin-top: 10px;
+    }
+
+    .widget-wrapper ul li {
+        list-style-type: none;
         font-family: Lexend Deca;
-        font-size: 12px;
-        text-align: center;
+        color: white;
+        font-size: 15px;
+        font-weight: 0;
+        letter-spacing: 0.5px;
+        gap: 10px;
+        
     }
-    .footer-section img {
-        padding-top: 15px;
-        width: 100px;
+
+    /* Adiciona a bolinha dourada personalizada antes do texto */
+    .widget-wrapper ul li::before {
+        content: "•";
+        color: var(--branco);
+        font-size: 16px;
+        font-weight: bold;
+        display: inline-block; 
+        width: 0.8em;
+        padding: 8px 0px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
+    
+    .seta-clube {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: var(--preto); /* Mantendo o padrão das suas fotos */
+    }
+
+        /* Efeito de rolagem suave para todo o site */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .scroll-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        text-decoration: none;
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle {
+        width: 45px;
+        height: 45px;
+        border: 2px solid var(--cor-primaria); /* Dourado #DA940B */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .chevron {
+        width: 12px;
+        height: 12px;
+        border-right: 3px solid var(--cor-primaria);
+        border-bottom: 3px solid var(--cor-primaria);
+        transform: rotate(45deg);
+        margin-top: -5px; /* Ajuste fino para centralizar o ícone */
+    }
+
+    /* Efeito de Hover (Interatividade) */
+    .scroll-arrow:hover .circle {
+        background-color: var(--cor-primaria);
+        transform: translateY(5px); /* Pequeno pulo para indicar clique */
+    }
+
+    .scroll-arrow:hover .chevron {
+        border-color: var(--preto); /* Inverte a cor no hover */
+    }
+    
+    #clube-info-section {
+        scroll-margin-top: 70px;
+    }
+
+:root {
+    --dourado: #DA940B;
+    --preto: #000000;
+    --cinza-escuro: #1A1A1A;
+}
+
+.janela-carrossel {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid var(--dourado);
+    background-color: var(--preto);
+}
+
+.trilho-planos {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-plano {
+    min-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.imagem-plano img {
+    width: 100%;
+    filter: grayscale(100%);
+    border: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+.titulo-plano {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cheap Pine Sans', sans-serif;
+    color: var(--dourado);
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* CONTAINER DO PREÇO */
+.container-preco {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.box-valor {
+    background-color: var(--cinza-escuro);
+    width: 85%;
+    padding: 15px 10px;
+    text-align: center;
+    position: relative;
+    border-radius: 4px;
+}
+
+.validade {
+    color: var(--dourado);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.preco-linha {
+    position: relative;
+    z-index: 5;
+    background-color: var(--cinza-escuro);
+    display: inline-block;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.text-valor {
+    font-family: Lexend Deca;
+    font-size: 20px;
+    color: var(--cor-primaria);
+}
+
+.valor {
+    font-family: Cheap Pine Sans;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+/* A LINHA DOURADA QUE ENVOLVE O VALOR */
+.linha-dourada-envolta {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background-color: var(--dourado);
+    z-index: 1;
+}
+
+/* SETAS NAS LATERAIS (ENTRE A BOX E O CARD) */
+.seta {
+    position: absolute;
+    background: none;
+    border: none;
+    color: var(--dourado);
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.anterior { left: -10px; }
+.proximo { right: -10px; }
+
+/* BOTÃO E LISTA */
+.botao-quero {
+    width: 100%;
+    height: auto;
+}
+
+.btn-quero-plano {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--dourado);
+    color: #fff;
+    text-align: center;
+    font-family: 'Cheap Pine Sans', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-quero-plano:hover {
+    background-color: var(--cor-primaria);
+    color: var(--preto);
+    transition: all 0.3s ease-in-out;
+}
+
+.lista-beneficios {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-beneficios li {
+    color: #fff;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.lista-beneficios li::before {
+    content: "•";
+    color: var(--dourado);
+    position: absolute;
+    left: 0;
+    font-size: 22px;
+    line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* -------------- Pagina Clube ------------------ */
 
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
