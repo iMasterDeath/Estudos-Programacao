@@ -1728,6 +1728,10 @@ main, header, footer {
         display: none;
     }
 
+    .nav-menu-desktop {
+        display: none;
+    }
+
     .menu-container {
         width: 90px;
         background: var(--preto);
