@@ -59,3 +59,4 @@ function mover(direcao, idTrilho) {
     const deslocamento = indiceAtual * -100;
     trilhoAtivo.style.transform = `translateX(${deslocamento}%)`;
 }
+

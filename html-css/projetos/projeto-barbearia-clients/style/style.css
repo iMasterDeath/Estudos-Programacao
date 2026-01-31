@@ -549,7 +549,7 @@ main, header, footer {
 
     .tittle-adress {
         font-family: Cheap Pine Sans;
-        font-size: 44px;
+        font-size: 39px;
         color: var(--branco);
         padding-bottom: 30px;
     }
@@ -560,7 +560,7 @@ main, header, footer {
         justify-content: center;
         text-align: center;
         font-family: Lexend Deca;
-        font-size: 19px;
+        font-size: 18px;
         font-weight: 0;
         color: var(--branco);
         line-height: 25px;  
@@ -1001,7 +1001,7 @@ main, header, footer {
     }
 
     .btn-agendar-barb {
-        width: 70%;
+        width: 500px;
         font-family: Cheap Pine Sans;
         display: flex;
         align-items: center;
@@ -1022,6 +1022,490 @@ main, header, footer {
 
     /* -------- Pagina Barbeiros ( ate 1024) ---------- */
 
+    /* -------------- Pagina Trabalhos ( ate 1024) -------------- */
+
+    .trabalho-section {
+        width: 100%;
+    }
+
+    .trabalho-img {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 0px;
+    }
+
+    .trabalho-img img {
+        width: 550px;
+    }
+
+    .trabalhos-content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .trabalhos-content img {
+        width: 510px;
+        padding: 0px 0px;
+        border: 2px solid var(--cor-primaria);
+        margin: 0px 0px;
+        border-radius: 10px;
+    }
+
+    .trabalho-btn-agendar {
+        width: 80%;
+        font-family: Cheap Pine Sans;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 26px;
+        padding: 15px;
+        border: 2px solid var(--cor-primaria);
+        border-radius: 10px;
+        margin-top: 50px;
+    }
+
+    .trabalho-btn-agendar:hover {
+        background-color: var(--cor-primaria);
+        color: var(--preto);
+        transition: 0.2s;
+    }
+
+    /* -------------- Pagina Trabalhos ( ate 1024) -------------- */
+
+    /* -------------- Pagina Clube ( ate 1024) ------------------ */
+
+    .clube-section {
+        /* position relative: Permite que elementos filhos com 'absolute' usem esta seção como base */
+        position: relative;
+
+        /* Como ela faz parte do topo preto, também deve ocupar a largura total da tela */
+        grid-column: 2 / -2;
+        width: 100%;
+    }
+
+    .clube-section img {
+        width: 100%;
+        object-fit: cover;
+        height: 500px;
+        opacity: 20%;
+        filter: grayscale(100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    }
+
+
+    .clube-content {
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .tagline-clube {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Cheap Pine Sans;
+        color: var(--cor-primaria);
+        display: flex;
+        font-size: 30px;
+        font-weight: 400;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.349);
+        padding-bottom: 10px;
+    }
+
+    .clube-line-text {
+        margin-top: 15px;
+        margin-right: 10px;
+        display: block;
+        width: 0px;
+        height: 3px;
+        background-color: var(--cor-primaria);
+        /* Dourado da logo */
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.300);
+    }
+
+    .h1-clube-content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Cheap Pine Sans;
+        font-size: 40px;
+        color: var(--branco);
+        text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    }
+
+    .section-btn-club {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .clube-btn-agendar {
+        width: 40%;
+        font-family: Cheap Pine Sans;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 26px;
+        padding: 10px;
+        border: 2px solid var(--cor-primaria);
+        margin-top: 70px;
+    }
+
+    .clube-btn-agendar:hover {
+        background-color: var(--cor-primaria);
+        color: var(--preto);
+        transition: 0.2s;
+    }
+
+    .clube-widget-info {
+        width: 100%;
+        height: auto;
+        margin-top: 30px
+    }
+
+    .clube-widget-info span {
+        font-size: 40px;
+        padding-bottom: 40px;
+    }
+
+    .clube-widget-info p {
+        font-family: Lexend Deca;
+        color: white;
+        font-size: 16px;
+        font-weight: 0;
+        text-align: center;
+        padding: 0px 150px;
+    }
+
+    .tagline-clube {
+
+    }
+
+    .wrapper-beneficios {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--preto);
+        
+    }
+
+    .wrapper-top {
+        position: relative; /* Base para o posicionamento do H2 */
+        width: 100%;
+        height: 500px; /* Ajuste para não cortar tanto a imagem */
+        overflow: hidden;
+    }
+
+    .wrapper-top img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+        -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 95%, transparent 100%);        
+    }
+
+    .wrapper-top h2 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 16px; /* Fixa o título na parte de baixo da imagem */
+        font-family: Cheap Pine Sans;
+        font-size: 36px;
+        color: var(--cor-primaria);
+        text-shadow: 1px 1px 1px rgb(0, 0, 0);
+
+    }    
+
+    .wrapper-bottom {
+        
+    }
+
+
+
+    .widget-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+         margin-top: 10px;
+    }
+
+    .widget-wrapper ul li {
+        list-style-type: none;
+        font-family: Lexend Deca;
+        color: white;
+        font-size: 18px;
+        font-weight: 0;
+        letter-spacing: 0.5px;
+        gap: 10px;
+        
+    }
+
+    /* Adiciona a bolinha dourada personalizada antes do texto */
+    .widget-wrapper ul li::before {
+        content: "•";
+        color: var(--branco);
+        font-size: 18px;
+        font-weight: bold;
+        display: inline-block; 
+        width: 0.8em;
+        padding: 8px 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+    
+    .seta-clube {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: var(--preto); /* Mantendo o padrão das suas fotos */
+    }
+
+        /* Efeito de rolagem suave para todo o site */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .scroll-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        text-decoration: none;
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle {
+        width: 45px;
+        height: 45px;
+        border: 2px solid var(--cor-primaria); /* Dourado #DA940B */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .chevron {
+        width: 12px;
+        height: 12px;
+        border-right: 3px solid var(--cor-primaria);
+        border-bottom: 3px solid var(--cor-primaria);
+        transform: rotate(45deg);
+        margin-top: -5px; /* Ajuste fino para centralizar o ícone */
+    }
+
+    /* Efeito de Hover (Interatividade) */
+    .scroll-arrow:hover .circle {
+        background-color: var(--cor-primaria);
+        transform: translateY(5px); /* Pequeno pulo para indicar clique */
+    }
+
+    .scroll-arrow:hover .chevron {
+        border-color: var(--preto); /* Inverte a cor no hover */
+    }
+    
+    #clube-info-section {
+        scroll-margin-top: 70px;
+    }
+
+    :root {
+        --dourado: #DA940B;
+        --preto: #000000;
+        --cinza-escuro: #1A1A1A;
+    }
+
+    .janela-carrossel {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        border: 2px solid var(--dourado);
+        background-color: var(--preto);
+    }
+
+    .trilho-planos {
+        display: flex;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-plano {
+        min-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .imagem-plano img {
+        width: 100%;
+        filter: grayscale(100%);
+        border: 1px solid #333;
+        margin-bottom: 20px;
+    }
+
+    .titulo-plano {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Cheap Pine Sans', sans-serif;
+        color: var(--dourado);
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    /* CONTAINER DO PREÇO */
+    .container-preco {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    .box-valor {
+        background-color: var(--cinza-escuro);
+        width: 85%;
+        padding: 15px 10px;
+        text-align: center;
+        position: relative;
+        border-radius: 4px;
+    }
+
+    .validade {
+        color: var(--dourado);
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .preco-linha {
+        position: relative;
+        z-index: 5;
+        background-color: var(--cinza-escuro);
+        display: inline-block;
+        padding: 0 15px;
+        color: #fff;
+    }
+
+    .text-valor {
+        font-family: Lexend Deca;
+        font-size: 20px;
+        color: var(--cor-primaria);
+    }
+
+    .valor {
+        font-family: Cheap Pine Sans;
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+    /* A LINHA DOURADA QUE ENVOLVE O VALOR */
+    .linha-dourada-envolta {
+        position: absolute;
+        top: 70%;
+        left: 10%;
+        right: 10%;
+        height: 1px;
+        background-color: var(--dourado);
+        z-index: 1;
+    }
+
+    /* SETAS NAS LATERAIS (ENTRE A BOX E O CARD) */
+    .seta {
+        position: absolute;
+        background: none;
+        border: none;
+        color: var(--dourado);
+        font-size: 40px;
+        cursor: pointer;
+        z-index: 10;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .anterior { left: -10px; }
+    .proximo { right: -10px; }
+
+    /* BOTÃO E LISTA */
+    .botao-quero {
+        width: 100%;
+        height: auto;
+    }
+
+    .btn-quero-plano {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        border: 2px solid var(--dourado);
+        color: #fff;
+        text-align: center;
+        font-family: 'Cheap Pine Sans', sans-serif;
+        font-size: 24px;
+        text-decoration: none;
+        margin-bottom: 30px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btn-quero-plano:hover {
+        background-color: var(--cor-primaria);
+        color: var(--preto);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .lista-beneficios {
+        list-style: none;
+        padding: 0;
+    }
+
+    .lista-beneficios li {
+        color: #fff;
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 15px;
+        margin-bottom: 12px;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .lista-beneficios li::before {
+        content: "•";
+        color: var(--dourado);
+        position: absolute;
+        left: 0;
+        font-size: 22px;
+        line-height: 1;
+    }
+
+
+
+    /* -------------- Pagina Clube ( ate 1024) ------------------ */
 
 
 @media (max-width: 1200px) {
@@ -1601,7 +2085,476 @@ main, header, footer {
 
     /* -------------- Pagina Barbeiros ( - de 1024) --------------- */
 
+    /* -------------- Pagina Trabalhos ( - de 1024) -------------- */
 
+    .trabalho-section {
+        width: 100%;
+    }
+
+    .trabalho-img {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0px;
+    }
+
+    .trabalho-img img {
+        width: 55vw;
+    }
+
+    .trabalhos-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .trabalhos-content img {
+        width: 70%;
+        padding: 0px 0px;
+        border: 2px solid var(--cor-primaria);
+        margin: 5px 0px;
+        border-radius: 10px;
+    }
+
+    .trabalho-btn-agendar {
+        width: 70%;
+        font-family: Cheap Pine Sans;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 26px;
+        padding: 15px;
+        border: 2px solid var(--cor-primaria);
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    .trabalho-btn-agendar:hover {
+        background-color: var(--cor-primaria);
+        color: var(--preto);
+        transition: 0.2s;
+    }
+
+    /* -------------- Pagina Trabalhos ( - de 1024) -------------- */
+
+    /* -------------- Pagina Clube ( - de 1024) ------------------ */
+
+    .clube-section {
+        /* position relative: Permite que elementos filhos com 'absolute' usem esta seção como base */
+        position: relative;
+
+        /* Como ela faz parte do topo preto, também deve ocupar a largura total da tela */
+        grid-column: 2 / -2;
+        width: 100%;
+    }
+
+    .clube-section img {
+        width: 100%;
+        object-fit: cover;
+        height: 500px;
+        opacity: 20%;
+        filter: grayscale(100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    }
+
+
+    .clube-content {
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .tagline-clube {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Cheap Pine Sans;
+        color: var(--cor-primaria);
+        display: flex;
+        font-size: 30px;
+        font-weight: 400;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.349);
+        padding-bottom: 10px;
+    }
+
+    .clube-line-text {
+        margin-top: 15px;
+        margin-right: 10px;
+        display: block;
+        width: 0px;
+        height: 3px;
+        background-color: var(--cor-primaria);
+        /* Dourado da logo */
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.300);
+    }
+
+    .h1-clube-content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Cheap Pine Sans;
+        font-size: 40px;
+        color: var(--branco);
+        text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    }
+
+    .clube-btn-agendar {
+        width: 100%;
+        font-family: Cheap Pine Sans;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 26px;
+        padding: 10px;
+        border: 2px solid var(--cor-primaria);
+        margin-top: 70px;
+    }
+
+    .clube-btn-agendar:hover {
+        background-color: var(--cor-primaria);
+        color: var(--preto);
+        transition: 0.2s;
+    }
+
+    .clube-widget-info {
+        height: auto;
+        margin-top: 30px
+    }
+
+    .clube-widget-info span {
+        font-size: 40px;
+    }
+
+    .clube-widget-info p {
+        font-family: Lexend Deca;
+        color: white;
+        font-size: 16px;
+        font-weight: 0;
+        text-align: center;
+    }
+
+    .tagline-clube {
+
+    }
+
+    .wrapper-beneficios {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--preto);
+        
+    }
+
+    .wrapper-top {
+        position: relative; /* Base para o posicionamento do H2 */
+        width: 100%;
+        height: 500px; /* Ajuste para não cortar tanto a imagem */
+        overflow: hidden;
+    }
+
+    .wrapper-top img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+        -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 95%, transparent 100%);        
+    }
+
+    .wrapper-top h2 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 16px; /* Fixa o título na parte de baixo da imagem */
+        font-family: Cheap Pine Sans;
+        font-size: 36px;
+        color: var(--cor-primaria);
+        text-shadow: 1px 1px 1px rgb(0, 0, 0);
+
+    }    
+
+    .wrapper-bottom {
+        
+    }
+
+
+
+    .widget-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+         margin-top: 10px;
+    }
+
+    .widget-wrapper ul li {
+        list-style-type: none;
+        font-family: Lexend Deca;
+        color: white;
+        font-size: 15px;
+        font-weight: 0;
+        letter-spacing: 0.5px;
+        gap: 10px;
+        
+    }
+
+    /* Adiciona a bolinha dourada personalizada antes do texto */
+    .widget-wrapper ul li::before {
+        content: "•";
+        color: var(--branco);
+        font-size: 16px;
+        font-weight: bold;
+        display: inline-block; 
+        width: 0.8em;
+        padding: 8px 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .seta-clube {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: var(--preto); /* Mantendo o padrão das suas fotos */
+    }
+
+        /* Efeito de rolagem suave para todo o site */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .scroll-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        text-decoration: none;
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle {
+        width: 45px;
+        height: 45px;
+        border: 2px solid var(--cor-primaria); /* Dourado #DA940B */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .chevron {
+        width: 12px;
+        height: 12px;
+        border-right: 3px solid var(--cor-primaria);
+        border-bottom: 3px solid var(--cor-primaria);
+        transform: rotate(45deg);
+        margin-top: -5px; /* Ajuste fino para centralizar o ícone */
+    }
+
+    /* Efeito de Hover (Interatividade) */
+    .scroll-arrow:hover .circle {
+        background-color: var(--cor-primaria);
+        transform: translateY(5px); /* Pequeno pulo para indicar clique */
+    }
+
+    .scroll-arrow:hover .chevron {
+        border-color: var(--preto); /* Inverte a cor no hover */
+    }
+    
+    #clube-info-section {
+        scroll-margin-top: 70px;
+    }
+
+    :root {
+        --dourado: #DA940B;
+        --preto: #000000;
+        --cinza-escuro: #1A1A1A;
+    }
+
+    .janela-carrossel {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        border: 2px solid var(--dourado);
+        background-color: var(--preto);
+    }
+
+    .trilho-planos {
+        display: flex;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-plano {
+        min-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .imagem-plano img {
+        width: 100%;
+        filter: grayscale(100%);
+        border: 1px solid #333;
+        margin-bottom: 20px;
+    }
+
+    .titulo-plano {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Cheap Pine Sans', sans-serif;
+        color: var(--dourado);
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    /* CONTAINER DO PREÇO */
+    .container-preco {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    .box-valor {
+        background-color: var(--cinza-escuro);
+        width: 85%;
+        padding: 15px 10px;
+        text-align: center;
+        position: relative;
+        border-radius: 4px;
+    }
+
+    .validade {
+        color: var(--dourado);
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .preco-linha {
+        position: relative;
+        z-index: 5;
+        background-color: var(--cinza-escuro);
+        display: inline-block;
+        padding: 0 15px;
+        color: #fff;
+    }
+
+    .text-valor {
+        font-family: Lexend Deca;
+        font-size: 20px;
+        color: var(--cor-primaria);
+    }
+
+    .valor {
+        font-family: Cheap Pine Sans;
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+    /* A LINHA DOURADA QUE ENVOLVE O VALOR */
+    .linha-dourada-envolta {
+        position: absolute;
+        top: 70%;
+        left: 10%;
+        right: 10%;
+        height: 1px;
+        background-color: var(--dourado);
+        z-index: 1;
+    }
+
+    /* SETAS NAS LATERAIS (ENTRE A BOX E O CARD) */
+    .seta {
+        position: absolute;
+        background: none;
+        border: none;
+        color: var(--dourado);
+        font-size: 40px;
+        cursor: pointer;
+        z-index: 10;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .anterior { left: -10px; }
+    .proximo { right: -10px; }
+
+    /* BOTÃO E LISTA */
+    .botao-quero {
+        width: 100%;
+        height: auto;
+    }
+
+    .btn-quero-plano {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        border: 2px solid var(--dourado);
+        color: #fff;
+        text-align: center;
+        font-family: 'Cheap Pine Sans', sans-serif;
+        font-size: 24px;
+        text-decoration: none;
+        margin-bottom: 30px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btn-quero-plano:hover {
+        background-color: var(--cor-primaria);
+        color: var(--preto);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .lista-beneficios {
+        list-style: none;
+        padding: 0;
+    }
+
+    .lista-beneficios li {
+        color: #fff;
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 15px;
+        margin-bottom: 12px;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .lista-beneficios li::before {
+        content: "•";
+        color: var(--dourado);
+        position: absolute;
+        left: 0;
+        font-size: 22px;
+        line-height: 1;
+    }
+
+
+
+    /* -------------- Pagina Clube ( - de 1024) ------------------ */
 
 }
 
@@ -1657,7 +2610,10 @@ main, header, footer {
 
 
     .background-black-header {
-        display: block;
+        top: 0;
+        width: 100%;
+        position: sticky;
+        z-index: 9;
     }
 
     .wrapper-phone {
@@ -1666,14 +2622,13 @@ main, header, footer {
 
     /* 2. O FILHO: Trava o conteúdo nos 80% e não deixa vazar */
     .container-header {
+        top: 0;
         display: block;
         width: 100%;
-        margin: 0 auto;
     
 }
 
     .header {
-        top: 0;
         height: 75px;
         display: flex;
         flex-direction: row;
@@ -1681,9 +2636,8 @@ main, header, footer {
         justify-content: space-between;
         padding-left: 17px;
         border-bottom: 2px solid var(--cor-primaria);
-        background-color: #000000;
-        z-index: 100000;
-        position: sticky;
+        background-color: transparent;
+        z-index: 10000011111111111;
     }
 
     .logo {
@@ -2084,6 +3038,8 @@ main, header, footer {
 
     .adress-section {
         width: 100%;
+        display: flex;
+        align-items: flex-start;
         padding-top: 50px;
     }
 
@@ -2095,11 +3051,13 @@ main, header, footer {
     }
 
     .content-adress {
+        width: 90%;
         font-family: Lexend Deca;
         font-size: 16px;
         font-weight: 0;
         color: var(--branco);
-        line-height: 25px;  
+        line-height: 25px;
+        text-align: start; 
     }
 
     .iframe-adress {
@@ -2987,17 +3945,6 @@ main, header, footer {
     font-size: 22px;
     line-height: 1;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
