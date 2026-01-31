@@ -41,22 +41,545 @@
     /* se for escuro ai seria only dark */
 }
 
-/* Configuração para Monitores (Desktop) */
-.container-principal {
-    display: grid;
-    grid-template-columns: auto 90vw auto;
-}
-
-/* Garanta que o conteúdo central fique sempre na coluna 2 */
-main,
-footer {
+main, header, footer {
     grid-column: 2;
-    width: 100%;
 }
 
 
 /* ------------------------------------------------------------ */
 
+/* -------------------  Acima de 1024px  ---------------------- */
+
+/* -------------------- Header ------------------- */
+
+
+/* 1. O PAI: Garante o fundo preto de ponta a ponta */
+    .background-black-header {
+        width: 100%;
+        height: auto;
+        background-color: var(--preto);
+        display: flex;
+        border-bottom: 2px solid var(--cor-primaria);
+        margin: 0 auto;
+        padding: 0px 0px;
+        z-index: 3;
+}
+
+/* 2. O FILHO: Trava o conteúdo nos 80% e não deixa vazar */
+    .container-header {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 80vw auto;
+        height: auto;
+        padding: 0px 0px;
+        margin: 0px 0px;
+    
+}
+
+    .header {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--preto);
+        padding: 0px 0px;
+        margin: 0px 0px;
+        z-index: 10000011111;
+    }
+
+    .wrapper-phone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 40px;
+        background-color: var(--cor-primaria);
+        font-family: Lexend Deca;
+        font-size: 15px;
+    }
+
+    .phone-link {
+        text-decoration: none;
+        color: var(--branco);
+        padding: 0px 0px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .phone-link:hover {
+        transform: scale(1.1);
+        
+    }
+
+    .phone-link i {
+        font-size: 18px;
+        padding-right: 5px;
+    }
+
+    .phone {
+        display: flex;
+        gap: 530px; 
+    }
+
+
+    .wrapper-social-phone i {
+        font-size: 18px;
+        padding: 0px 5px;
+    }
+
+    .logo {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .img-retangular {
+        display: none;
+    }
+
+    .img-redonda {
+        display: flex;
+        width: 200px;
+        height: auto;
+        top: 0;
+        padding-top: 0px;
+        z-index: 100000009;
+        background-color: var(--preto);
+        margin-top: 0px;
+        border: 5px solid var(--preto);
+        border-radius: 50%;
+    }
+
+    .menu-social {
+        display: none;
+    }
+
+    /* 2. CONTAINER DO MENU (HEADER) */
+    .menu-container {
+        display: none;
+    }
+
+    /* 3. BOTÃO HAMBÚRGUER / X */
+    #menu-toggle {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+
+    }
+
+    .line {
+        display: none;
+
+    }
+
+    /* Transformação para o X */
+    #menu-toggle:checked+.hamburger .line:nth-child(1) {
+        transform: translateY(9.5px) rotate(45deg);
+        display: flex;
+        background-color: #fff;
+        /* Muda para branco quando vira X */
+    }
+
+    #menu-toggle:checked+.hamburger .line:nth-child(2) {
+        display: flex;
+        opacity: 0;
+    }
+
+    #menu-toggle:checked+.hamburger .line:nth-child(3) {
+        display: flex;
+        transform: translateY(-9.5px) rotate(-45deg);
+        background-color: #fff;
+    }
+
+    /* Estado Ativo (quando clica) */
+    #menu-toggle:checked~.nav-menu {
+        display: none;
+    }
+
+
+
+    /* 4. O MENU (GAVETA LATERAL DIREITA) */
+    .menu-container-desktop {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 5%;
+        width: 0%;
+        height: 138px;
+        
+    }
+
+    .nav-menu-desktop {
+        width: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 0px;
+        margin: 0px 0px;
+        gap: 0px;
+    }
+
+    .spacing-menu-desktop {
+        width: 400px;
+    }
+
+    /* Estado Ativo (quando clica) */
+    #menu-toggle:checked~.nav-menu {
+        display: none;
+    }
+
+    /* 5. ITENS DO MENU */
+    .nav-menu-desktop li {
+        padding: 0px 20px;
+    }
+
+    .nav-menu-desktop li a {
+        font-family: Lexend Deca;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 0px;
+        gap: 10px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        text-align: center;
+        
+        /* Texto alinhado à direita para seguir o botão */
+        font-size: 14px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        
+    }
+
+    .nav-menu-desktop li a img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
+
+    .icone-before {
+        padding-top: 0px;
+        width: 15px;
+        height: auto;
+    }
+
+    /* Efeito ao passar o mouse ou segurar o dedo */
+    .nav-menu li a:hover {
+        color: var(--cor-primaria);
+        /* Pequeno movimento para a esquerda no hover */
+    }
+
+    /* -------------------- Header ------------------- */
+
+    /* ---------- Config Padrao Abaixo ( Main ) ---------- */
+
+    .container-principal {
+        display: grid;
+        /* auto 90vw auto: Cria colunas flexíveis nas pontas e trava o meio em 90% da largura da tela */
+        grid-template-columns: auto 80vw auto;
+
+        /* min-content: Garante que cada linha tenha apenas a altura do seu conteúdo, evitando espaços vazios ou sobreposição */
+        grid-auto-rows: min-content;
+
+        /* Garante que o grid use toda a largura disponível para calcular as margens 'auto' */
+        width: 100%;
+    }
+
+    /* O símbolo '>' seleciona apenas os filhos diretos (sections e articles) */
+    .container-principal>* {
+        /* grid-column: 2: Força todos os elementos a ficarem na coluna central (90vw) por padrão */
+        grid-column: 2;
+        width: 100%;
+    }
+
+
+    /* ESTICANDO O FUNDO (FULL-BLEED) */ 
+    .background-black { 
+        /* 1 / -1: Faz a section ignorar as margens e ir da borda 1 até a última borda (-1) */
+        grid-column: 1 / -1;
+        background-color: #000;
+
+        /* Transformamos a section em um grid interno para poder centralizar o texto novamente */
+        display: grid;
+        /* 'inherit' ou repetir o esquema original para que o conteúdo interno se alinhe com o resto do site */
+        grid-template-columns: auto 80vw auto;
+        padding-bottom: 50px;
+    }
+
+    /* Garante que o conteúdo DENTRO da section preta não bata na borda da tela */
+    .background-black>* {
+        /* Joga o texto/vídeo de volta para a coluna 2 (o meio) */
+        grid-column: 2;
+        width: 100%;
+    }
+
+    /* ---------- Config Padrao Abaixo ( Main ) ---------- */
+
+    /* ----------- Secao Principal (Index) ----------- */
+
+    .hero-section {
+        position: relative;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .hero-img-desktop {
+        display: grid;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        background-color: #333;
+        border-left: 1px solid var(--cor-primaria);
+        border-right: 1px solid var(--cor-primaria);
+        border-bottom: 1px solid var(--cor-primaria);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        opacity: 40%;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        position: absolute;
+        top: 40%;
+        width: 55%;
+        padding-left: 20px;
+        padding-right: 20px;
+        z-index: 3;
+    }
+
+    .tagline {
+        font-family: Cheap Pine Sans;
+        color: var(--cor-primaria);
+        display: flex;
+        font-size: 30px;
+        font-weight: 400;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.349);
+        padding-bottom: 10px;
+    }
+
+    .line-text {
+        margin-top: 14px;
+        margin-right: 10px;
+        display: block;
+        width: 23px;
+        height: 3px;
+        background-color: var(--cor-primaria);
+        /* Dourado da logo */
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.300);
+    }
+
+    .h1-content {
+        font-family: Cheap Pine Sans;
+        font-size: 46px;
+        color: var(--branco);
+        text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    }
+
+    .btn-agendar {
+        width: 50%;
+        font-family: Cheap Pine Sans;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 26px;
+        padding: 10px;
+        border: 2px solid var(--cor-primaria);
+        margin-top: 30px;
+    }
+
+    .btn-agendar:hover {
+        background-color: var(--cor-primaria);
+        color: var(--preto);
+        transition: 0.2s;
+    }
+
+
+    .adress {
+        position: absolute;
+        width: 90%;
+        font-family: Cheap Pine Sans;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 30px;
+        padding-top: 230px;
+        padding-right: 10px;
+    }
+
+    .adress a {
+        text-decoration: none;
+        color: var(--branco);
+    }
+
+    .adress2 {
+        margin-top: 20px;
+    }
+
+    .tagline2 {
+        width: 100%;
+        height: 1px;
+        border-radius: 50%;
+        background-color: var(--cor-primaria);
+        box-shadow: 0 2px 10px #ffc400af;
+    }
+
+    .number2 {
+        position: absolute;
+        width: 100%;
+        font-family: Cheap Pine Sans;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 30px;
+        padding-top: 200px;
+    }
+
+    .elementor-widget-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 50px;
+        height: auto;
+    }
+
+    .widget-video iframe {
+        width: 400px;
+        height: 750px;
+        -webkit-mask-image: linear-gradient(to top, black 80%, transparent 100%);
+        mask-image: linear-gradient(to top, black 80%, transparent 100%);
+        clip-path: inset(90px 0 0 0);
+        margin-top: -60px;
+    }
+
+    .widget-info {
+        width: 50%;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .widget-info span {
+        font-size: 40px;
+    }
+
+    .widget-info p {
+        font-family: Lexend Deca;
+        color: white;
+        font-size: 17px;
+        font-weight: 0;
+    }
+
+    .card-review {
+        width: 100%;
+        height: 400px;
+        padding: 0px 0px;
+    }
+
+    .elfsight-app-17a5749c-2aef-4ce5-8061-16c28fcfdea9 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-top: 50px;
+        padding-right: 20px;
+        padding-left: 20px;
+        
+    }
+
+    .planos-section {
+        width: 100%;
+    }
+
+    .banner-vertical {
+        display: none;
+
+    }
+
+    .banner-horizontal {
+
+        display: block;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        padding-bottom: 50px;
+    }
+
+    .planos-content {
+        display: block;
+        padding-top: 100px;
+        width: 40%;
+        left: 12%;
+        position: absolute;
+        /* era ABSOLUTE */
+    }
+
+    .planos-content a {
+        margin-top: 25px;
+    }
+
+    .adress-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+    }
+
+    .tittle-adress {
+        font-family: Cheap Pine Sans;
+        font-size: 44px;
+        color: var(--branco);
+        padding-bottom: 30px;
+    }
+
+    .content-adress {
+        width: 60%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: Lexend Deca;
+        font-size: 19px;
+        font-weight: 0;
+        color: var(--branco);
+        line-height: 25px;  
+    }
+
+    .iframe-adress {
+        width: 80%;
+        padding-top: 20px;
+    }
+
+    .iframe-adress iframe {
+        width: 100%;
+        height: 500px; 
+        border: 2px solid #d4af37;
+        border-radius: 10px;
+        /* O segredo para o modo escuro: */
+        filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
+        margin-top: 10px;
+    }
 
 
 
@@ -69,21 +592,1017 @@ footer {
 
 
 
+    /* ----------- Secao Principal (Index) ----------- */
 
 
 
+    /* --------------- Section Footer ---------------- */
+
+    .background-footer-logo {
+        grid-column: 1 / -1;
+    }
+
+    
+
+    .logo-footer {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--branco);
+        
+    }
+
+    .logo-footer img {
+        width: 150px;
+    }
+
+    
+    .background-black-footer {
+                /* 1 / -1: Faz a section ignorar as margens e ir da borda 1 até a última borda (-1) */
+        grid-column: 1 / -1;
+        background-color: var(--preto);
+        /* Transformamos a section em um grid interno para poder centralizar o texto novamente */
+        display: grid;
+        /* 'inherit' ou repetir o esquema original para que o conteúdo interno se alinhe com o resto do site */
+        grid-template-columns: 1fr 80vw 1fr;
+    }
+
+    .background-black-footer>* {
+        /* Joga o texto/vídeo de volta para a coluna 2 (o meio) */
+        grid-column: 2;
+        width: 100%;
+    }
+
+
+    .background-cinza-black-footer {
+        width: 100%;
+        background-color: var(--cinza-escuro);
+    }
+    .footer-section {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--branco);
+        font-family: Lexend Deca;
+        
+        font-size: 13px;
+        text-align: center;
+    }
+    .footer-section img {
+        padding-top: 10px;
+        width: 100px;
+    }
+    
+    /* --------------- Section Footer ---------------- */
+
+    /* -------- Pagina Servicos (ate 1024px)  -------- */
+
+    .background-cinza-black {
+                /* 1 / -1: Faz a section ignorar as margens e ir da borda 1 até a última borda (-1) */
+        grid-column: 1 / -1;
+        background-color: var(--cinza-escuro);
+        /* Transformamos a section em um grid interno para poder centralizar o texto novamente */
+        display: grid;
+        /* 'inherit' ou repetir o esquema original para que o conteúdo interno se alinhe com o resto do site */
+        grid-template-columns: auto 80vw auto;
+        padding-bottom: 50px;
+    }
+
+    .background-cinza-black>* {
+        /* Joga o texto/vídeo de volta para a coluna 2 (o meio) */
+        grid-column: 2;
+        width: 100%;
+    }
+
+    .servicos-section {
+        /* position relative: Permite que elementos filhos com 'absolute' usem esta seção como base */
+        position: relative;
+        /* Como ela faz parte do topo preto, também deve ocupar a largura total da tela */
+        flex-direction: column;
+        width: 100%;
+
+    }
+    
+    .header-servicos {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .servicos-section img {
+        width: 560px;
+        padding-top: 50px;
+    }
+
+    .line-top {
+        display: block;
+        width: 100%;
+        height: 50px;
+    }
+
+    .tag-preco {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 40px;
+        padding-right: 1px;
+        font-family: Cheap Pine Sans;
+        font-size: 20px;
+        align-items: flex-end;
+    }
+
+    .wrapper-preco-clube {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        font-family: Cheap Pine Sans;
+        width: 80%;
+        gap: 43px;
+        font-size: 24px;
+        color: #000000c7;
+        padding-bottom: 3px;
+        justify-self: center;
+    }
+
+    .preenchimento1 {}
+
+    .preenchimento2 {
+        grid-column: 2 / 3;
+        border-bottom: 0px dotted var(--preto);
+        margin-left: -10px;
+        width: 100%;
+    }
+
+    .tag-avulso {
+        grid-column: 3;
+        color: var(--branco);
+    }
+
+    .tag-clube {
+        color: var(--branco);
+    }
+
+    .grid-servicos {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        width: 80%;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        
+    }
+
+    .servicos {
+        font-family: Cheap Pine Sans;
+        font-size: 32px;
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        grid-auto-rows: auto;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .servicos-nome {
+        width: 100%;
+        border: 1px solid var(--branco);
+        padding: 6px
+    }
+
+    .grid-servicos a {
+        letter-spacing: 1.5px;
+        color: var(--branco);
+    }
+
+    .elementor-divider {
+        grid-column: 2 / 3;
+        border-bottom: 2px dotted var(--branco);
+        margin-left: -10px;
+        width: 100%;
+    }
+
+    .valor-avulso {
+        grid-column: 3 / 4;
+        font-size: 34px;
+        color: var(--branco);
+    }
+
+    .valor-clube {
+        grid-column: 4 / 5;
+        font-size: 34px;
+        color: var(--branco);
+    }
+
+    .grid-servicos p {
+        grid-column: 1 / 5;
+        color: var(--branco);
+        font-family: Lexend Deca;
+        font-size: 17px;
+        margin-top: -15px;
+    }
+
+    .wrapper-servicos {
+        font-family: Cheap Pine Sans;
+        font-size: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        padding-top: 60px;
+        padding-bottom: 20px;
+    }
+
+    .link-wrapper1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 60px;
+        text-decoration: none;
+        border: 3px solid var(--branco);
+        color: var(--branco);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .link-wrapper1:hover {
+        background-color: var(--branco);
+        color: var(--preto);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .link-wrapper2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 60px;
+        text-decoration: none;
+        border: 3px solid var(--cor-primaria);
+        background-color: var(--cinza-black);
+        color: var(--branco);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .link-wrapper2:hover {
+        color: var(--preto);
+        background-color: var(--cor-primaria);
+        border: 3px solid var(--cor-primaria);
+        transition: all 0.2s ease-in-out;
+    }
+
+     /* -------- Pagina Servicos (ate 1024px)  -------- */
+
+    /* -------- Pagina Barbeiros ( ate 1024) ---------- */
+
+    .barbeiros-section {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .barbeiros-img {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .barbeiros-img img {
+        width: 500px;
+        padding-top: 50px;
+    }
+
+    .barbeiros-content {
+        width: 100%;
+        font-family: Lexend Deca;
+        font-size: 18px;
+        color: var(--branco);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 50px;
+
+    }
+
+    .barbeiros-content span {
+        padding-top: px;
+        
+        width: 50vw;
+    }
+
+    .barbeiros-text-top {
+        width: 100%;
+        margin: 20px 0px;
+        text-align: center;
+        line-height: 23px;
+    }
+
+    .barbeiros-text-bottom {
+        text-align: center;
+        line-height: 23px;
+    }
+
+    /* Card Barbeiros */
+
+    .equipe {
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .equipe h2 {
+        color: #d4af37; 
+        margin-bottom: 30px;
+    }
+
+    /* 1. Aumentado a largura total do container, e limitado o tamanho do card */
+    .swiper {
+        width: 100%;
+        max-width: 700px; /* Largura total maior para a seta ter onde ficar */
+        padding: 20px 80px; /* (vazio para as setas) */
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    /* 2. Centralizado o card e definido um tamanho menor para a imagem não colar nas setas */
+    .card-barbeiro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .moldura {
+        width: 70%; /* AJUSTE: Tamanho fixo menor para a imagem ficar no meio */
+        height: auto; /* Ajustar conforme a proporção das fotos */
+        max-height: 600px;
+        border: 1px solid #d4af37;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: #1a1a1a;
+        box-shadow: 0 2px 10px #d4af37af;
+    }
+
+    .moldura img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    /* 3. Posicionamento das setas totalmente nos cantos do container */
+    .swiper-button-prev {
+        left: 10px !important; /* Fixa bem no canto esquerdo */
+    }
+
+    .swiper-button-next {
+        right: 10px !important; /* Fixa bem no canto direito */
+    }
+
+    /* 4. Estilo das setas (Redondas e Douradas) */
+    .swiper-button-next,
+    .swiper-button-prev {
+        
+        color: #d4af37 !important;
+        transition: all 0.3s ease;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-family: Cheap Pine Sans;
+        font-size: 25px !important;
+        font-weight: bold;
+    }
+
+    /* Nome do Barbeiro */
+    .card-barbeiro h3 {
+        font-family: Cheap Pine Sans;
+        color: #d4af37;
+        margin-bottom: 20px;
+        font-size: 60px;
+        letter-spacing: 2px;
+        
+    }
+
+    .section-button-barb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-agendar-barb {
+        width: 70%;
+        font-family: Cheap Pine Sans;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 26px;
+        padding: 10px;
+        border: 2px solid var(--cor-primaria);
+        margin-top: 30px;
+    }
+
+    .btn-agendar-barb:hover {
+        background-color: var(--cor-primaria);
+        color: var(--preto);
+        transition: 0.2s;
+    }
+
+    /* -------- Pagina Barbeiros ( ate 1024) ---------- */
 
 
 
+@media (max-width: 1200px) {
+    .nav-menu-desktop li {
+        padding: 0px 10px;
+    }
+  
+}
 
-
+/* -------------------  Acima de 1024px  ---------------------- */
 
 /* Media Query para Tablet (Abaixo de 1024px) */
 @media (max-width: 1024px) {
     .container-principal {
         /* No tablet, o conteúdo ocupa 95% para não encostar na borda física do aparelho */
-        grid-template-columns: 1fr 95% 1fr;
+        grid-template-columns: auto 80vw auto;
     }
+
+    /* -------------------- Header ------------------- */
+    /* 2. O FILHO: Trava o conteúdo nos 80% e não deixa vazar */
+    .container-header {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    
+    }
+
+    .background-black-header {
+        display: block;
+    }
+
+    .hero-img-desktop {
+        display: block;
+    }
+    .hero-img {
+        display: none;
+    }
+
+    .header {
+        position: none;
+        top: 0;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid var(--cor-primaria);
+        background-color: var(--preto);
+        padding: 10px 0px;
+        z-index: 100000;
+    }
+
+    .wrapper-phone {
+        display: none;
+    }
+
+    .img-retangular {
+        display: none;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .img-redonda {
+        position: none;
+        width: 130px;
+        height: auto;
+        margin-top: 5px;
+        border: 5px solid var(--preto);
+        border-radius: 50%;
+    }
+
+    .menu-social {
+        display: none;
+    }
+
+    /* 2. CONTAINER DO MENU (HEADER) */
+    .menu-container {
+        display: block;
+        width: 100%;
+        background: var(--preto);
+        z-index: 10000;
+        position: static;
+        margin-top: 0px;
+    }
+
+
+    /* 3. BOTÃO HAMBÚRGUER / X */
+    #menu-toggle {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+
+    }
+
+    .line {
+        display: none;
+
+    }
+
+    /* Transformação para o X */
+    #menu-toggle:checked+.hamburger .line:nth-child(1) {
+        transform: translateY(9.5px) rotate(45deg);
+        display: flex;
+        background-color: #fff;
+        /* Muda para branco quando vira X */
+    }
+
+    #menu-toggle:checked+.hamburger .line:nth-child(2) {
+        display: flex;
+        opacity: 0;
+    }
+
+    #menu-toggle:checked+.hamburger .line:nth-child(3) {
+        display: flex;
+        transform: translateY(-9.5px) rotate(-45deg);
+        background-color: #fff;
+    }
+
+    /* 4. O MENU (GAVETA LATERAL DIREITA) */
+    .menu-container-desktop {
+        display: none;
+    }
+
+    .menu-container {
+        
+    }
+
+    .nav-menu {
+        display: flex;
+    }
+
+    /* Estado Ativo (quando clica) */
+    #menu-toggle:checked~.nav-menu {
+        display: none;
+    }
+
+    /* 5. ITENS DO MENU */
+    .nav-menu li {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-menu li a {
+        display: block;
+        font-family: Lexend Deca;
+        display: block;
+        padding: 10px 0px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        text-align: center;
+        /* Texto alinhado à direita para seguir o botão */
+        font-size: 14px;
+        letter-spacing: 2px;
+        
+    }
+
+    /* Efeito ao passar o mouse ou segurar o dedo */
+    .nav-menu li a:hover {
+        color: var(--cor-primaria);
+        /* Pequeno movimento para a esquerda no hover */
+    }
+
+    /* -------------------- Header ------------------- */
+
+    /* ---------------- Section (main) --------------- */
+
+   .elementor-widget-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+        height: auto;
+    }
+
+    .widget-video iframe {
+        width: 400px;
+        height: 750px;
+        -webkit-mask-image: linear-gradient(to top, black 80%, transparent 100%);
+        mask-image: linear-gradient(to top, black 80%, transparent 100%);
+        clip-path: inset(90px 0 0 0);
+        margin-top: -60px;
+    }
+
+    .widget-info {
+        text-align: center;
+        width: 50%;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .widget-info span {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+    }
+
+    .widget-info p {
+        font-family: Lexend Deca;
+        color: white;
+        font-size: 17px;
+        font-weight: 0;
+    }
+
+    .btn-agendar {
+        width: 100%;
+    }
+
+    /* ---------------- Section (main) --------------- */
+
+    /* -------- Pagina Servicos ( - de 1024px)  -------- */
+
+    .background-cinza-black {
+                /* 1 / -1: Faz a section ignorar as margens e ir da borda 1 até a última borda (-1) */
+        grid-column: 1 / -1;
+        background-color: var(--cinza-escuro);
+        /* Transformamos a section em um grid interno para poder centralizar o texto novamente */
+        display: grid;
+        /* 'inherit' ou repetir o esquema original para que o conteúdo interno se alinhe com o resto do site */
+        grid-template-columns: auto 80vw auto;
+        padding-bottom: 50px;
+    }
+
+    .background-cinza-black>* {
+        /* Joga o texto/vídeo de volta para a coluna 2 (o meio) */
+        grid-column: 2;
+        width: 100%;
+    }
+
+    .servicos-section {
+        /* position relative: Permite que elementos filhos com 'absolute' usem esta seção como base */
+        position: relative;
+        /* Como ela faz parte do topo preto, também deve ocupar a largura total da tela */
+        flex-direction: column;
+        width: 100%;
+
+    }
+    
+    .header-servicos {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .servicos-section img {
+        width: 55vw;
+        padding-top: 50px;
+    }
+
+    .line-top {
+        display: block;
+        width: 100%;
+        height: 50px;
+    }
+
+    .tag-preco {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 40px;
+        padding-right: 1px;
+        font-family: Cheap Pine Sans;
+        font-size: 20px;
+        align-items: flex-end;
+    }
+
+    .wrapper-preco-clube {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        font-family: Cheap Pine Sans;
+        width: 90%;
+        gap: 40px;
+        font-size: 22px;
+        color: #000000c7;
+        padding-bottom: 3px;
+        justify-self: center;
+    }
+
+    .preenchimento1 {}
+
+    .preenchimento2 {
+        grid-column: 2 / 3;
+        border-bottom: 0px dotted var(--preto);
+        margin-left: -10px;
+        width: 100%;
+    }
+
+    .tag-avulso {
+        grid-column: 3;
+        color: var(--branco);
+    }
+
+    .tag-clube {
+        color: var(--branco);
+    }
+
+    .grid-servicos {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        
+    }
+
+    .servicos {
+        font-family: Cheap Pine Sans;
+        font-size: 28px;
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        grid-auto-rows: auto;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .servicos-nome {
+        width: 100%;
+        border: 1px solid var(--branco);
+        padding: 5px
+    }
+
+    .grid-servicos a {
+        letter-spacing: 1.5px;
+        color: var(--branco);
+    }
+
+    .elementor-divider {
+        grid-column: 2 / 3;
+        border-bottom: 2px dotted var(--branco);
+        margin-left: -10px;
+        width: 100%;
+    }
+
+    .valor-avulso {
+        grid-column: 3 / 4;
+        font-size: 28px;
+        color: var(--branco);
+    }
+
+    .valor-clube {
+        grid-column: 4 / 5;
+        font-size: 28px;
+        color: var(--branco);
+    }
+
+    .grid-servicos p {
+        grid-column: 1 / 5;
+        color: var(--branco);
+        font-family: Lexend Deca;
+        font-size: 17px;
+        margin-top: -15px;
+    }
+
+    .wrapper-servicos {
+        font-family: Cheap Pine Sans;
+        font-size: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        padding-top: 60px;
+        padding-bottom: 20px;
+    }
+
+    .link-wrapper1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 60px;
+        text-decoration: none;
+        border: 3px solid var(--branco);
+        color: var(--branco);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .link-wrapper1:hover {
+        background-color: var(--branco);
+        color: var(--preto);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .link-wrapper2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 60px;
+        text-decoration: none;
+        border: 3px solid var(--cor-primaria);
+        background-color: var(--cinza-black);
+        color: var(--branco);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .link-wrapper2:hover {
+        color: var(--preto);
+        background-color: var(--cor-primaria);
+        border: 3px solid var(--cor-primaria);
+        transition: all 0.2s ease-in-out;
+    }
+
+    /* -------- Pagina Servicos ( - de 1024px)  -------- */
+
+    /* -------------- Pagina Barbeiros ( - de 1024) --------------- */
+
+    .barbeiros-section {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .barbeiros-img {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .barbeiros-img img {
+        width: 55vw;
+        padding: 30px 0px;
+    }
+
+    .barbeiros-content {
+        width: 100%;
+        font-family: Lexend Deca;
+        font-size: 18px;
+        color: var(--branco);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .barbeiros-content span {
+        width: 100%;
+    }
+
+    .barbeiros-text-top {
+        width: 100%;
+        margin: 20px 0px;
+        text-align: center;
+        line-height: 23px;
+    }
+
+    .barbeiros-text-bottom {
+        text-align: center;
+        line-height: 23px;
+    }
+
+    /* Card Barbeiros */
+
+    .equipe {
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .equipe h2 {
+        color: #d4af37; 
+        margin-bottom: 30px;
+    }
+
+    /* 1. Aumentado a largura total do container, e limitado o tamanho do card */
+    .swiper {
+        width: 100%;
+        max-width: 700px; /* Largura total maior para a seta ter onde ficar */
+        padding: 20px 80px; /* (vazio para as setas) */
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    /* 2. Centralizado o card e definido um tamanho menor para a imagem não colar nas setas */
+    .card-barbeiro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .moldura {
+        width: 70%; /* AJUSTE: Tamanho fixo menor para a imagem ficar no meio */
+        height: auto; /* Ajustar conforme a proporção das fotos */
+        max-height: 600px;
+        border: 1px solid #d4af37;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: #1a1a1a;
+        box-shadow: 0 2px 10px #d4af37af;
+    }
+
+    .moldura img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    /* 3. Posicionamento das setas totalmente nos cantos do container */
+    .swiper-button-prev {
+        left: 10px !important; /* Fixa bem no canto esquerdo */
+    }
+
+    .swiper-button-next {
+        right: 10px !important; /* Fixa bem no canto direito */
+    }
+
+    /* 4. Estilo das setas (Redondas e Douradas) */
+    .swiper-button-next,
+    .swiper-button-prev {
+        
+        color: #d4af37 !important;
+        transition: all 0.3s ease;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-family: Cheap Pine Sans;
+        font-size: 25px !important;
+        font-weight: bold;
+    }
+
+    /* Nome do Barbeiro */
+    .card-barbeiro h3 {
+        font-family: Cheap Pine Sans;
+        color: #d4af37;
+        margin-bottom: 20px;
+        font-size: 8.2vw;
+        letter-spacing: 2px;
+        
+    }
+
+    .section-button-barb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-agendar-barb {
+        width: 70%;
+        font-family: Cheap Pine Sans;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 26px;
+        padding: 10px;
+        border: 2px solid var(--cor-primaria);
+        margin-top: 30px;
+    }
+
+    .btn-agendar-barb:hover {
+        background-color: var(--cor-primaria);
+        color: var(--preto);
+        transition: 0.2s;
+    }
+
+    /* -------------- Pagina Barbeiros ( - de 1024) --------------- */
+
+
+
 }
 
 
@@ -126,7 +1645,7 @@ footer {
     }
 
     /* Garante que o conteúdo DENTRO da section preta não bata na borda da tela */
-    .background-black>* {
+    .background-black > * {
         /* Joga o texto/vídeo de volta para a coluna 2 (o meio) */
         grid-column: 2;
         width: 100%;
@@ -136,22 +1655,52 @@ footer {
 
     /* -------------------- Header ------------------- */
 
-    header {
+
+    .background-black-header {
+        display: block;
+    }
+
+    .wrapper-phone {
+        display: none;
+    }
+
+    /* 2. O FILHO: Trava o conteúdo nos 80% e não deixa vazar */
+    .container-header {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    
+}
+
+    .header {
         top: 0;
-        height: 65px;
+        height: 75px;
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding-left: 17px;
-        background-color: #000000;
         border-bottom: 2px solid var(--cor-primaria);
+        background-color: #000000;
         z-index: 100000;
         position: sticky;
     }
 
-    .logo img {
+    .logo {
+        width: auto
+    }
+
+    .img-redonda {
+        display: none;
+    }
+
+    .img-retangular {
+        display: block;
         width: 110px;
         padding-top: 5px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
         height: auto;
     }
 
@@ -175,13 +1724,18 @@ footer {
     }
 
     /* 2. CONTAINER DO MENU (HEADER) */
+    .menu-container-desktop {
+        display: none;
+    }
+
     .menu-container {
+        width: 90px;
         background: var(--preto);
-        padding: 0px 17px;
+        padding: 0px 20px;
         position: relative;
         z-index: 1000;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         /* Alinha o botão X/Hamburguer na direita */
         align-items: center;
     }
@@ -217,23 +1771,31 @@ footer {
     /* Transformação para o X */
     #menu-toggle:checked+.hamburger .line:nth-child(1) {
         transform: translateY(9.5px) rotate(45deg);
+        display: block;
         background-color: #fff;
         /* Muda para branco quando vira X */
     }
 
     #menu-toggle:checked+.hamburger .line:nth-child(2) {
+        display: block;
         opacity: 0;
     }
 
     #menu-toggle:checked+.hamburger .line:nth-child(3) {
+        display: block;
         transform: translateY(-9.5px) rotate(-45deg);
         background-color: #fff;
     }
 
     /* 4. O MENU (GAVETA LATERAL DIREITA) */
+    .menu-container {
+        position: none;
+    }
+
     .nav-menu {
+        display: block;
         position: absolute;
-        top: 41px;
+        top: 46px;
         /* Brota logo abaixo do header */
         right: 0;
         /* ALINHAMENTO À DIREITA: Corrige o erro de sumir da tela */
@@ -255,6 +1817,7 @@ footer {
 
     /* Estado Ativo (quando clica) */
     #menu-toggle:checked~.nav-menu {
+        display: block;
         max-height: 100vh;
         /* Abre o quanto for necessário */
         opacity: 1;
@@ -263,11 +1826,13 @@ footer {
 
     /* 5. ITENS DO MENU */
     .nav-menu li {
+        display: block;
         width: 100%;
         border-bottom: 1px solid var(--cinza-claro);
     }
 
     .nav-menu li a {
+        display: block;
         font-family: Lexend Deca;
         display: block;
         padding: 18px 30px;
@@ -284,6 +1849,7 @@ footer {
 
     /* Efeito ao passar o mouse ou segurar o dedo */
     .nav-menu li a:hover {
+        display: block;
         background: #111;
         color: #d4af37;
         padding-right: 40px;
@@ -297,12 +1863,18 @@ footer {
     .hero-section {
         /* position relative: Permite que elementos filhos com 'absolute' usem esta seção como base */
         position: relative;
-
+        display: grid;
         /* Como ela faz parte do topo preto, também deve ocupar a largura total da tela */
         grid-column: 1 / -1;
     }
 
-    .hero-section img {
+    .hero-img-desktop {
+        display: none;
+    }
+   
+
+    .hero-img {
+        display: block;
         width: 100%;
         object-fit: cover;
         height: 400px;
@@ -314,11 +1886,15 @@ footer {
 
 
     .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        grid-column: 2 / -1;
         position: absolute;
         top: 30%;
         width: 100%;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .tagline {
@@ -370,7 +1946,9 @@ footer {
     }
 
     .adress {
+        position: static;
         width: 100%;
+        height: 150px;
         border-top: 1px solid var(--cor-primaria);
         border-bottom: 1px solid var(--cor-primaria);
         font-family: Cheap Pine Sans;
@@ -381,7 +1959,8 @@ footer {
         text-decoration: none;
         color: var(--branco);
         font-size: 30px;
-        padding-top: 10px;
+        padding-top: 0px;
+        padding-bottom: 20px;
     }
 
     .adress a {
@@ -411,11 +1990,13 @@ footer {
         text-decoration: none;
         color: var(--branco);
         font-size: 30px;
-        padding-top: 0px;
+        padding-top: 110px;
         margin-bottom: 20px;
     }
 
     .elementor-widget-container {
+        width: 100%;
+        display: block;
         height: auto;
     }
 
@@ -429,12 +2010,16 @@ footer {
     }
 
     .widget-info {
+        width: 100%;
         height: auto;
         margin-top: 30px;
     }
 
     .widget-info span {
-        font-size: 30px;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-size: 34px;
     }
 
     .widget-info p {
@@ -442,12 +2027,24 @@ footer {
         color: white;
         font-size: 15px;
         font-weight: 0;
+        text-align: start;
     }
 
     .card-review {
         width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
+        height: 400px;
+        padding: 0px 0px;
+    }
+
+    .elfsight-app-17a5749c-2aef-4ce5-8061-16c28fcfdea9 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-top: 50px;
+        overflow-x: hidden;
+       
+        
     }
 
     .planos-section {
@@ -455,6 +2052,7 @@ footer {
     }
 
     .banner-vertical {
+        display: block;
         position: relative;
         object-fit: cover;
         width: 100%;
@@ -525,6 +2123,8 @@ footer {
         grid-column: 1 / -1;
     }
 
+    
+
     .logo-footer {
         width: 100%;
         height: 120px;
@@ -537,23 +2137,6 @@ footer {
 
     .logo-footer img {
         width: 150px;
-    }
-
-    .background-cinza-black {
-                /* 1 / -1: Faz a section ignorar as margens e ir da borda 1 até a última borda (-1) */
-        grid-column: 1 / -1;
-        background-color: var(--cinza-escuro);
-        /* Transformamos a section em um grid interno para poder centralizar o texto novamente */
-        display: grid;
-        /* 'inherit' ou repetir o esquema original para que o conteúdo interno se alinhe com o resto do site */
-        grid-template-columns: auto 90vw auto;
-        padding-bottom: 50px;
-    }
-
-    .background-cinza-black>* {
-        /* Joga o texto/vídeo de volta para a coluna 2 (o meio) */
-        grid-column: 2;
-        width: 100%;
     }
 
     
@@ -578,6 +2161,7 @@ footer {
         width: 100%;
         background-color: var(--cinza-escuro);
     }
+
     .footer-section {
         width: 100%;
         height: 120px;
@@ -600,12 +2184,27 @@ footer {
 
     /* --------------- Pagina Servicos --------------- */
 
+    .background-cinza-black {
+                /* 1 / -1: Faz a section ignorar as margens e ir da borda 1 até a última borda (-1) */
+        grid-column: 1 / -1;
+        background-color: var(--cinza-escuro);
+        /* Transformamos a section em um grid interno para poder centralizar o texto novamente */
+        display: grid;
+        /* 'inherit' ou repetir o esquema original para que o conteúdo interno se alinhe com o resto do site */
+        grid-template-columns: auto 90vw auto;
+        padding-bottom: 50px;
+    }
+
+    .background-cinza-black>* {
+        /* Joga o texto/vídeo de volta para a coluna 2 (o meio) */
+        grid-column: 2;
+        width: 100%;
+    }
+
     .servicos-section {
         /* position relative: Permite que elementos filhos com 'absolute' usem esta seção como base */
         position: relative;
-
         /* Como ela faz parte do topo preto, também deve ocupar a largura total da tela */
-        grid-column: 1 / -1;
         flex-direction: column;
         width: 100%;
 
@@ -614,14 +2213,14 @@ footer {
     .header-servicos {
         display: flex;
         width: 100%;
-        padding-top: 40px;
+        padding-top: 0px;
         padding-bottom: 20px;
         align-items: center;
         justify-content: center;
     }
 
     .servicos-section img {
-        width: 90%;
+        width: 80vw;
        
     }
 
@@ -672,7 +2271,7 @@ footer {
     }
 
     .grid-servicos {
-        display: grid;
+        width: 100%;
         grid-template-columns: 1fr;
         gap: 25px;
     }
@@ -805,7 +2404,7 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
+        padding: 0px 0px;
     }
 
     .barbeiros-content span {
@@ -904,6 +2503,33 @@ footer {
         font-size: 8.2vw;
         letter-spacing: 2px;
         
+    }
+
+    .section-button-barb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-agendar-barb {
+        width: 70%;
+        font-family: Cheap Pine Sans;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 26px;
+        padding: 10px;
+        border: 2px solid var(--cor-primaria);
+        margin-top: 30px;
+    }
+
+    .btn-agendar-barb:hover {
+        background-color: var(--cor-primaria);
+        color: var(--preto);
+        transition: 0.2s;
     }
 
     /* -------------- Pagina Barbeiros --------------- */
@@ -1449,25 +3075,5 @@ footer {
 
 /* Media Query Abaixo de  (Abaixo de 350px) */
 @media (max-width: 350px) {
-    header {
-        top: 0;
-        width: 100%;
-        height: 65px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #000000;
-        border-bottom: 2px solid var(--cor-primaria);
-        z-index: 100000;
-        position: sticky;
-    }
-
-    .menu-social {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 5px;
-        width: 100%;
-        gap: 5px;
-    }
+    
 }

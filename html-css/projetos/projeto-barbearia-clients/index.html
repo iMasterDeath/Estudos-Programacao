@@ -8,39 +8,91 @@
     <title>Barbearia Portfolio</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="assets/logo-barbearia.png" alt="Logo Barbearia Portfolio">
+    <div class="wrapper-phone">
+        <div class="phone">
+            <a href="https://wa.me/5543996012345" class="phone-link">
+                <i class="fa-solid fa-phone"></i>
+                <span>(43) 99601-6666</span>
+            </a>
+            <a href="https://wa.me/5543996012345" class="phone-link">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>(43) 99601-2345</span>
+            </a>
+            <!-- 
+                <a href="https://www.instagram.com/barberportfolio666/" class="phone-link">
+                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                    <span>Instagram</span>
+                    -->
+            </a>
         </div>
-        <div class="menu-social">
-            <a href="wa.me/5543996012345"><img src="assets/icons8-whatsapp.svg" alt="Icone WhatsApp"></a>
-            <a href="https://www.instagram.com/barberportfolio666/"><img src="assets/icons8-instagram.svg"
-                    alt="Icone Instagram"></a>
+    </div>
+    <section class="background-black-header">
+        <div class="container-header">
+            <header class="header">
+                <div class="logo">
+                    <img src="assets/logo-barbearia.png" alt="Logo Barbearia Portfolio retangular"
+                        class="img-retangular">
+                    <img src="assets/logo-barbearia-old1.png" alt="Logo Barbearia Portfolio Redonda"
+                        class="img-redonda">
+                </div>
+                <div class="menu-social">
+                    <a href="wa.me/5543996012345"><img src="assets/icons8-whatsapp.svg" alt="Icone WhatsApp"></a>
+                    <a href="https://www.instagram.com/barberportfolio666/"><img src="assets/icons8-instagram.svg"
+                            alt="Icone Instagram"></a>
+                </div>
+                <nav class="menu-container">
+                    <input type="checkbox" id="menu-toggle">
+                    <label for="menu-toggle" class="hamburger">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </label>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="barbeiros.html">Barbeiros</a></li>
+                        <li><a href="trabalhos.html">Trabalhos</a></li>
+                        <li><a href="clube.html">Nosso Clube</a></li>
+                        <li><a href="contatos.html">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Nav Menu Desktop -->
+                <nav class="menu-container-desktop">
+                    <ul class="nav-menu-desktop">
+                        <li><img src="assets/icone-hexagono.png" alt="icone hexagono" class="icone-before"></li>
+                        <li><a href="index.html"><img src="assets/icone-poste-barbearia.png"
+                                    alt="Icone Poste Barbeiro">Home</a></li>
+                        <li><a href="servicos.html"><img src="assets/icone-tesoura.png" alt="Icone tesoura">Serviços</a>
+                        </li>
+                        <li><a href="barbeiros.html"><img src="assets/icone-bigode.png" alt="">Barbeiros</a></li>
+                        <li class="logo-menu">
+                            <img src="assets/logo-barbearia.png" alt="Logo Barbearia Portfolio retangular"
+                                class="img-retangular">
+                            <img src="assets/logo-barbearia-old1.png" alt="Logo Barbearia Portfolio Redonda"
+                                class="img-redonda">
+                        </li>
+                        <li><a href="trabalhos.html"><img src="assets/icone-tabalhos.png" alt="">Trabalhos</a></li>
+                        <li><a href="clube.html"><img src="assets/icone-clube.png" alt="">Nosso Clube</a></li>
+                        <li><a href="contatos.html"><img src="assets/icone-contato.png" alt="">Contato</a></li>
+                        <li><img src="assets/icone-hexagono.png" alt="icone hexagono" class="icone-before"></li>
+                    </ul>
+                </nav>
+                <!---------------------->
+            </header>
         </div>
-        <nav class="menu-container">
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </label>
-            <ul class="nav-menu">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="servicos.html">SERVIÇOS</a></li>
-                <li><a href="barbeiros.html">BARBEIROS</a></li>
-                <li><a href="trabalhos.html">TRABALHOS</a></li>
-                <li><a href="clube.html">NOSSO CLUBE</a></li>
-                <li><a href="contatos.html">CONTATO</a></li>
-            </ul>
-        </nav>
-    </header>
+    </section>
+
     <main class="container-principal">
         <section class="background-black">
             <section class="hero-section">
-                <img src="assets/background1.png" alt="Foto Barbeiro Background">
+                <img src="assets/background1.png" alt="Foto Barbeiro Background Mobile" class="hero-img">
+                <img src="assets/barbeiro-background-desktop.jpg" alt="Foto Barbeiro Background Desktop"
+                    class="hero-img-desktop">
                 <div class="hero-content">
                     <span class="tagline"><span class="line-text"></span>DESDE 2026</span>
                     <h1 class="h1-content">CUIDAMOS DA BARBA E DO CABELO DOS APUCARANENSES</h1>
@@ -62,38 +114,46 @@
                     <iframe width="480" height="854" src="https://www.youtube.com/embed/7o1lqjb3yYc" frameborder="0"
                         allowfullscreen></iframe>
                 </div>
+                <article class="widget-info">
+                    <span class="tagline">
+                        Somos a Barbearia Portfolio
+                    </span>
+                    <p>
+                        Em 2026, nos arredores de Apucarana, nasceu a barbearia Portfolio. A primeira barbearia vintage
+                        da
+                        cidade.
+                    </p>
+                    <br>
+                    <p>
+                        Nosso propósito é cuidar da autoestima dos Apucaranenses quando o assunto é cabelo, barba e
+                        bigode.
+                        A nossa ideia aqui é ir além das barbearias convencionais e ouvir nossos clientes para
+                        apresentar as
+                        melhores opções que combinam com o estilo de cada um.
+                    </p>
+                    <br>
+                    <p>
+                        Prezamos por um atendimento personalizado em um ambiente acolhedor e tranquilo. Aqui é um lugar
+                        para
+                        relaxar enquanto dá um um trato no visual, compartilhar experiências, fazer amigos e dar boas
+                        risadas
+                    </p>
+                    <br>
+                    <p>
+                        Marque seu horário e venha conhecer a gente! Todos são bem-vindos: crianças, homens, jovens,
+                        idosos
+                        e mulheres. Até!
+                    </p>
+                    <a href="wa.me/5543996012345" class="btn-agendar">AGENDAR AGORA</a>
+                </article>
             </section>
-            <article class="widget-info">
-                <span class="tagline">
-                    Somos a Barbearia Portfolio
-                </span>
-                <p>
-                    Em 2026, nos arredores de Apucarana, nasceu a barbearia Portfolio. A primeira barbearia vintage da
-                    cidade.
-                </p>
-                <br>
-                <p>
-                    Nosso propósito é cuidar da autoestima dos Apucaranenses quando o assunto é cabelo, barba e bigode.
-                    A nossa ideia aqui é ir além das barbearias convencionais e ouvir nossos clientes para apresentar as
-                    melhores opções que combinam com o estilo de cada um.
-                </p>
-                <br>
-                <p>
-                    Prezamos por um atendimento personalizado em um ambiente acolhedor e tranquilo. Aqui é um lugar para
-                    relaxar enquanto dá um um trato no visual, compartilhar experiências, fazer amigos e dar boas
-                    risadas
-                </p>
-                <br>
-                <p>
-                    Marque seu horário e venha conhecer a gente! Todos são bem-vindos: crianças, homens, jovens, idosos
-                    e mulheres. Até!
-                </p>
-                <a href="wa.me/5543996012345" class="btn-agendar">AGENDAR AGORA</a>
-            </article>
         </section>
+
         <section class="card-review">
             <div class="container-principal">
-                <script defer async src='https://cdn.trustindex.io/loader.js?c9791ca6215d4204a30663e28c2'></script>
+                <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-17a5749c-2aef-4ce5-8061-16c28fcfdea9" data-elfsight-app-lazy></div>
             </div>
         </section>
 
