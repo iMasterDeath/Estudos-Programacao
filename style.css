@@ -508,10 +508,13 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--cinza-header);
-    padding: 0px;
+    padding: 3px;
     box-shadow: 0px 0px 1px 2px var(--neon);
+    max-width: 100%;
     width: 550px;
+    max-height: 80vh;
     text-align: center;
+    overflow-y: auto;
   }
 
   .baixar-fechar {
@@ -528,9 +531,10 @@ body {
   }
 
   .curriculum-img {
-    display: flex;
-    width: 550px;
-    height: 90vh;
+    padding-top: 10px;
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 
   .close {

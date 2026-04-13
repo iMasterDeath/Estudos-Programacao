@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Apucarana Facilitada</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="hero-header">
+        <div class="container">
+            <h1><i class="fas fa-city me-2"></i>Apucarana Facilitada</h1>
+            <p>Seu portal de acesso ao Pirapó e Região</p>
+        </div>
+    </header>
+
+    <div class="container mt-4 mb-5">
+
+        <div class="alert alert-primary d-flex align-items-center shadow-sm" role="alert">
+            <i class="fas fa-info-circle me-3 display-6 text-primary"></i>
+            <div>
+                <strong>Aviso:</strong> A Farmácia da UBS Pirapó estará fechada nesta sexta para balanço.
+            </div>
+        </div>
+
+        <h2 class="mb-3 text-secondary h4"><i class="fas fa-phone-alt me-2"></i>Telefones Úteis</h2>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6">
+                <div class="card-contato bg-success text-white">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-clinic-medical icon-contato"></i>
+                        <div>
+                            <h5 class="mb-0">UBS Pirapó (Recepção)</h5>
+                            <small>Seg a Sex: 07h às 17h</small>
+                        </div>
+                    </div>
+                    <a href="tel:4334220000" class="btn btn-light btn-sm mt-2 w-100 fw-bold">Ligar Agora: (43)
+                        3422-0000</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card-contato bg-warning text-dark">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-truck icon-contato"></i>
+                        <div>
+                            <h5 class="mb-0">Coleta de Lixo / Cocap</h5>
+                            <small>Dúvidas sobre recolhimento</small>
+                        </div>
+                    </div>
+                    <a href="tel:4334230000" class="btn btn-dark btn-sm mt-2 w-100 fw-bold">Ligar Agora: (43)
+                        3423-0000</a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="mb-3 text-secondary h4"><i class="far fa-newspaper me-2"></i>Últimas Notícias</h2>
+        <div id="feed-noticias" class="row g-4">
+        </div>
+
+        <hr class="my-5">
+
+        <h2 class="mb-3 text-secondary h4"><i class="fas fa-user-md me-2"></i>Escala Médica - UBS Pirapó</h2>
+        <div class="tabela-container border-start border-5 border-primary">
+            <p class="text-muted small mb-3">Horários sujeitos a alteração sem aviso prévio. Chegue 15min antes.</p>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Especialidade</th>
+                            <th>Médico(a)</th>
+                            <th>Dias de Atendimento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Clínico Geral</strong></td>
+                            <td>Dr. João Silva</td>
+                            <td>Seg / Sex (Agendar)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dentista</strong></td>
+                            <td>Dr. Pedro Santos</td>
+                            <td>Seg a Qua (Agendar)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="alert alert-light border mt-2 text-center">
+                <small>Para agendar, ligue no numero acima ou compareça a UBS.</small>
+            </div>
+        </div>
+
+        <h2 class="mt-5 mb-3 text-secondary h4"><i class="fas fa-recycle me-2"></i>Consulta Coleta de Lixo</h2>
+        <div class="tabela-container border-start border-5 border-success">
+            <input type="text" id="buscaBairro" class="form-control mb-3"
+                placeholder="Digite seu bairro (ex: Centro)...">
+            <div class="table-responsive">
+                <table class="table table-hover" id="tabelaColeta">
+                    <thead>
+                        <tr>
+                            <th>Bairro</th>
+                            <th>Lixo Orgânico</th>
+                            <th>Reciclável</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pirapó (Centro)</td>
+                            <td>Seg / Qua / Sex</td>
+                            <td>Terça-feira</td>
+                        </tr>
+                        <tr>
+                            <td>Vila Santa Terezinha</td>
+                            <td>Ter / Qui / Sáb</td>
+                            <td>Quarta-feira</td>
+                        </tr>
+                        <tr>
+                            <td>Residencial Interlagos</td>
+                            <td>Seg / Qua / Sex</td>
+                            <td>Quinta-feira</td>
+                        </tr>
+                        <tr>
+                            <td>Barreiro</td>
+                            <td>Ter / Qui / Sáb</td>
+                            <td>Segunda-feira</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 bg-dark text-white mt-auto">
+        <div class="container">
+            <p class="mb-0">Projeto de Extensão - Engenharia de Software</p>
+            <small>Facilitando a vida no Pirapó e Apucarana</small>
+        </div>
+    </footer>
+
+    <button id="btnContraste" class="acessibilidade-btn" title="Alto Contraste"><i class="fas fa-adjust"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

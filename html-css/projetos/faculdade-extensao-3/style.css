@@ -1,0 +1,108 @@
+:root {
+    --cor-primaria: #0056b3;
+    --cor-secundaria: #28a745;
+    --fundo-suave: #f8f9fa;
+    --texto-padrao: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fundo-suave);
+    color: var(--texto-padrao);
+}
+
+.hero-header {
+    background: linear-gradient(135deg, var(--cor-primaria), #003366);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- CARTÕES DE TELEFONE (NOVO) --- */
+.card-contato {
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+.card-contato:active { transform: scale(0.98); }
+.icon-contato { font-size: 2rem; margin-right: 15px; opacity: 0.8; }
+
+/* --- CARTÕES DE NOTÍCIA (SEM FOTO) --- */
+.news-card {
+    border: 1px solid #e0e0e0; /* Borda suave para delimitar */
+    border-left: 5px solid var(--cor-primaria); /* Detalhe colorido na esquerda */
+    border-radius: 8px;
+    background: white;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-badge {
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: white;
+    display: inline-block;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.badge-prefeitura { background-color: var(--cor-primaria); }
+.badge-saude { background-color: #d63384; }
+
+.news-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.news-excerpt {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn-ler-mais {
+    align-self: flex-start; /* Botão alinhado à esquerda */
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Tabelas */
+.tabela-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Acessibilidade */
+.acessibilidade-btn {
+    position: fixed; bottom: 20px; right: 20px;
+    background-color: #222; color: white;
+    border-radius: 50%; width: 55px; height: 55px;
+    border: none; font-size: 22px; cursor: pointer; z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Alto Contraste */
+body.alto-contraste { background-color: #000 !important; color: #ffeb3b !important; }
+body.alto-contraste .news-card, 
+body.alto-contraste .tabela-container,
+body.alto-contraste .card-contato { 
+    background-color: #111 !important; 
+    border: 1px solid #ffeb3b; 
+    color: #ffeb3b !important;
+}
+body.alto-contraste h1, body.alto-contraste h2, body.alto-contraste h3, body.alto-contraste p, body.alto-contraste td { color: #ffeb3b !important; }
+body.alto-contraste .text-muted { color: #ffeb3b !important; }
