@@ -1,256 +1,623 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Eficiência Energética - Comércio Pirapó</title>
+    <title>EcoSimular Pirapó — Diagnóstico de Energia Comercial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         :root {
-            --primary: #1a568c;
-            --primary-hover: #13426d;
-            --secondary: #16a34a;
-            --bg: #f4f6f9;
-            --card-bg: #ffffff;
-            --text: #2b2b2b;
-            --border: #d0dce5;
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --primary-light: #f0f9ff;
+            --accent: #10b981;
+            --accent-dark: #047857;
+            --accent-light: #ecfdf5;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+            --radius: 16px;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
             background-color: var(--bg);
-            color: var(--text);
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color: var(--text-main);
             min-height: 100vh;
+            padding: 20px 16px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .container {
-            background: var(--card-bg);
-            max-width: 500px;
+        /* Banner Hero Superior com imagem de fundo estilizada */
+        .hero-banner {
             width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            padding: 25px;
-            border: 1px solid var(--border);
+            max-width: 1000px;
+            background: linear-gradient(135deg, rgba(2, 132, 199, 0.92), rgba(3, 105, 161, 0.95)),
+                url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: white;
+            border-radius: var(--radius);
+            padding: 32px 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 15px 30px -10px rgba(2, 132, 199, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
         }
 
-        .header {
-            text-align: center;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 15px;
-            margin-bottom: 20px;
+        .hero-title h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .header h1 {
-            font-size: 1.4rem;
-            color: var(--primary);
-            text-transform: uppercase;
-        }
-
-        .header p {
-            font-size: 0.85rem;
-            color: #666;
+        .hero-title p {
+            font-size: 0.9rem;
+            opacity: 0.9;
             margin-top: 4px;
         }
 
-        .form-group {
-            margin-bottom: 15px;
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        label {
-            display: block;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 6px;
-            color: #444;
-        }
-
-        input, select {
+        /* Layout Principal */
+        .wrapper {
             width: 100%;
-            padding: 12px;
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 850px) {
+            .wrapper {
+                grid-template-columns: 400px 1fr;
+            }
+        }
+
+        .card {
+            background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 6px;
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.2s;
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: var(--shadow);
         }
 
-        input:focus, select:focus {
-            border-color: var(--primary);
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        button {
-            width: 100%;
-            padding: 14px;
-            background-color: var(--primary);
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: bold;
+        .card-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        /* Seletor Visual de Segmento (Grade de Botões) */
+        .segment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .segment-btn {
+            background: #f8fafc;
+            border: 1.5px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 10px;
+            text-align: center;
             cursor: pointer;
-            transition: background 0.2s;
-            margin-top: 10px;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
         }
 
-        button:hover {
-            background-color: var(--primary-hover);
+        .segment-btn .icon {
+            font-size: 1.4rem;
         }
 
-        .results {
-            margin-top: 25px;
-            display: none;
-            background: #f0fdf4;
-            border: 1px solid #86efac;
-            border-radius: 8px;
-            padding: 15px;
+        .segment-btn .label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-main);
         }
 
-        .results.active {
+        .segment-btn.active {
+            background: var(--primary-light);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+        }
+
+        /* Form Inputs */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 8px;
             display: block;
         }
 
-        .results h2 {
-            font-size: 1.1rem;
-            color: var(--secondary);
-            margin-bottom: 10px;
+        .input-box {
+            position: relative;
+            display: flex;
+            align-items: center;
         }
 
-        .metric-box {
+        .prefix {
+            position: absolute;
+            left: 14px;
+            font-weight: 800;
+            color: var(--text-muted);
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px 14px 12px 42px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            outline: none;
+            background: #fafafa;
+        }
+
+        .input-field:focus {
+            border-color: var(--primary);
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.1);
+        }
+
+        .slider-header {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             margin-bottom: 8px;
-            font-size: 0.95rem;
         }
 
-        .metric-box span.val {
-            font-weight: bold;
-            color: var(--secondary);
-        }
-
-        .tips-list {
-            margin-top: 12px;
-            padding-left: 18px;
+        .slider-badge {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-weight: 800;
+            padding: 2px 10px;
+            border-radius: 12px;
             font-size: 0.85rem;
-            color: #333;
         }
 
-        .tips-list li {
-            margin-bottom: 4px;
+        .slider {
+            width: 100%;
+            accent-color: var(--primary);
+            cursor: pointer;
+        }
+
+        .btn-calc {
+            width: 100%;
+            padding: 14px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 8px 16px rgba(2, 132, 199, 0.25);
+            transition: all 0.2s ease;
+        }
+
+        .btn-calc:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        /* Cartões de Métricas do Dashboard */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .m-card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .m-card.green {
+            background: var(--accent-light);
+            border-color: #a7f3d0;
+        }
+
+        .m-icon {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .m-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .m-card.green .m-label {
+            color: var(--accent-dark);
+        }
+
+        .m-value {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        .m-card.green .m-value {
+            color: var(--accent-dark);
+        }
+
+        .m-sub {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Gráfico Visual de Barras */
+        .chart-card {
+            background: #fafafa;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .chart-header {
+            font-size: 0.85rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .bar-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .bar-label-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .bar-bg {
+            height: 14px;
+            background: #e2e8f0;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 7px;
+            transition: width 0.6s ease;
+        }
+
+        .bar-fill.red {
+            background: #ef4444;
+        }
+
+        .bar-fill.green {
+            background: var(--accent);
+        }
+
+        /* Lista de Ações */
+        .actions-box {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .actions-header {
+            font-size: 0.9rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .action-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .action-item {
+            font-size: 0.82rem;
+            background: #f8fafc;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border-left: 3.5px solid var(--primary);
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
         }
 
         .footer {
-            margin-top: 20px;
+            margin-top: 24px;
             text-align: center;
-            font-size: 0.75rem;
-            color: #888;
+            font-size: 0.78rem;
+            color: var(--text-muted);
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <div class="header">
-        <h1>Simulador de Eficiência Energética</h1>
-        <p>Projeto de Extensão Universitária | Distrito de Pirapó</p>
+    <!-- Header / Banner Topo -->
+    <div class="hero-banner">
+        <div class="hero-title">
+            <h1>⚡ EcoSimular Pirapó</h1>
+            <p>Diagnóstico Rápido de Eficiência Energética Comercial</p>
+        </div>
+        <div class="hero-badge">
+            📍 Distrito de Pirapó — PR
+        </div>
     </div>
 
-    <div class="form-group">
-        <label for="ramo">Ramo de Atuação do Estabelecimento:</label>
-        <select id="ramo">
-            <option value="mercado">Mercado / Mercearia</option>
-            <option value="lanchonete">Lanchonete / Padaria</option>
-            <option value="geral">Comércio Geral / Serviços</option>
-        </select>
-    </div>
+    <!-- Container Principal -->
+    <div class="wrapper">
 
-    <div class="form-group">
-        <label for="fatura">Valor Médio da Fatura Mensal (R$):</label>
-        <input type="number" id="fatura" placeholder="Ex: 500.00" step="0.01">
-    </div>
+        <!-- Coluna Esquerda: Formulário -->
+        <div class="card">
+            <div class="card-title">🛒 Perfil do Comércio</div>
+            <div class="card-desc">Selecione seu ramo e digite o valor da conta atual.</div>
 
-    <button onclick="calcularSimulacao()">Simular Economia Potencial</button>
+            <!-- Botões Visuais de Segmento -->
+            <label class="label">Ramo de Atuação</label>
+            <div class="segment-grid">
+                <div class="segment-btn active" onclick="selecionarSegmento('mercado', this)">
+                    <span class="icon">🛒</span>
+                    <span class="label">Mercado</span>
+                </div>
+                <div class="segment-btn" onclick="selecionarSegmento('lanchonete', this)">
+                    <span class="icon">☕</span>
+                    <span class="label">Lanchonete</span>
+                </div>
+                <div class="segment-btn" onclick="selecionarSegmento('acougue', this)">
+                    <span class="icon">🥩</span>
+                    <span class="label">Açougue</span>
+                </div>
+                <div class="segment-btn" onclick="selecionarSegmento('servicos', this)">
+                    <span class="icon">🏬</span>
+                    <span class="label">Serviços/Geral</span>
+                </div>
+            </div>
 
-    <div class="results" id="resultsBox">
-        <h2>Resultado do Diagnóstico</h2>
-        <div class="metric-box">
-            <span>Estimativa de Consumo:</span>
-            <span class="val" id="kwhEst">0 kWh</span>
+            <div class="input-group">
+                <label class="label" for="valorFatura">Valor Atual da Fatura de Luz</label>
+                <div class="input-box">
+                    <span class="prefix">R$</span>
+                    <input type="number" id="valorFatura" class="input-field" value="500" step="10" min="50">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="slider-header">
+                    <label class="label" style="margin:0;">Meta de Economia</label>
+                    <span class="slider-badge" id="percentualBadge">15%</span>
+                </div>
+                <input type="range" id="sliderMeta" class="slider" min="5" max="30" value="15"
+                    oninput="atualizarSlider(this.value)">
+            </div>
+
+            <button class="btn-calc" onclick="calcular()">📊 Calcular Economia</button>
         </div>
-        <div class="metric-box">
-            <span>Economia Estimada (15%):</span>
-            <span class="val" id="economiaVal">R$ 0,00 / mês</span>
-        </div>
-        <div class="metric-box">
-            <span>Economia Acumulada em 1 Ano:</span>
-            <span class="val" id="economiaAnual">R$ 0,00 / ano</span>
+
+        <!-- Coluna Direita: Dashboard de Resultados -->
+        <div class="card">
+            <div class="card-title">📈 Estimativa de Economia</div>
+            <div class="card-desc">Diagnóstico baseado em ações práticas sem custo de investimento.</div>
+
+            <div class="metrics-grid">
+                <div class="m-card">
+                    <span class="m-icon">⚡</span>
+                    <div class="m-label">Consumo Estimado</div>
+                    <div class="m-value" id="valKwh">588 kWh</div>
+                    <div class="m-sub">Média mensal aproximada</div>
+                </div>
+
+                <div class="m-card green">
+                    <span class="m-icon">💵</span>
+                    <div class="m-label">Economia / Mês</div>
+                    <div class="m-value" id="valEconomiaMensal">R$ 75,00</div>
+                    <div class="m-sub">Redução direta na conta</div>
+                </div>
+
+                <div class="m-card green">
+                    <span class="m-icon">💰</span>
+                    <div class="m-label">Economia / 1 Ano</div>
+                    <div class="m-value" id="valEconomiaAnual">R$ 900,00</div>
+                    <div class="m-sub">Lucro retido no seu caixa</div>
+                </div>
+
+                <div class="m-card">
+                    <span class="m-icon">🌱</span>
+                    <div class="m-label">Redução de CO₂</div>
+                    <div class="m-value" id="valCarbono">59.9 kg</div>
+                    <div class="m-sub">Impacto ambiental retido</div>
+                </div>
+            </div>
+
+            <!-- Comparativo de Barras -->
+            <div class="chart-card">
+                <div class="chart-header">Comparativo na Conta Mensal (R$)</div>
+                <div class="bar-wrap">
+                    <div>
+                        <div class="bar-label-row">
+                            <span>Conta Atual</span>
+                            <span id="barValAtual" style="color:#ef4444;">R$ 500,00</span>
+                        </div>
+                        <div class="bar-bg">
+                            <div class="bar-fill red" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bar-label-row">
+                            <span>Conta Otimizada</span>
+                            <span id="barValOtimizada" style="color:var(--accent-dark);">R$ 425,00</span>
+                        </div>
+                        <div class="bar-bg">
+                            <div class="bar-fill green" id="barFillOtimizada" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recomendações sem Custo -->
+            <div class="actions-box">
+                <div class="actions-header">💡 Ações Recomendadas (Custo Zero)</div>
+                <ul class="action-list" id="listaDicas">
+                    <!-- Preenchido dinamicamente via JS -->
+                </ul>
+            </div>
         </div>
 
-        <p style="font-weight: 600; margin-top: 12px; font-size: 0.9rem;">Ações Recomendadas (Sem Custo):</p>
-        <ul class="tips-list" id="tipsList">
-            <!-- Dicas dinâmicas via JS -->
-        </ul>
     </div>
 
     <div class="footer">
-        Desenvolvido para apoio aos comerciantes de Pirapó - PR.
+        Desenvolvido para apoio socioeconômico aos comerciantes de Pirapó — Apucarana / PR
     </div>
-</div>
 
-<script>
-    function calcularSimulacao() {
-        const faturaInput = document.getElementById('fatura').value;
-        const ramo = document.getElementById('ramo').value;
-        const resultsBox = document.getElementById('resultsBox');
-        
-        if (!faturaInput || faturaInput <= 0) {
-            alert('Por favor, digite um valor válido para a fatura de energia.');
-            return;
+    <script>
+        let segmentoAtual = 'mercado';
+
+        function selecionarSegmento(seg, elemento) {
+            segmentoAtual = seg;
+            document.querySelectorAll('.segment-btn').forEach(btn => btn.classList.remove('active'));
+            elemento.classList.add('active');
+            calcular();
         }
 
-        const faturaVal = parseFloat(faturaInput);
-        
-        // Estimativa considerando tarifa média de R$ 0.85 por kWh
-        const kwh = Math.round(faturaVal / 0.85);
-        const economiaMensal = faturaVal * 0.15;
-        const economiaAnual = economiaMensal * 12;
-
-        document.getElementById('kwhEst').innerText = kwh + ' kWh';
-        document.getElementById('economiaVal').innerText = 'R$ ' + economiaMensal.toFixed(2).replace('.', ',');
-        document.getElementById('economiaAnual').innerText = 'R$ ' + economiaAnual.toFixed(2).replace('.', ',');
-
-        const tipsList = document.getElementById('tipsList');
-        tipsList.innerHTML = '';
-
-        let dicas = [
-            'Ajuste o termostato de expositores e geladeiras para a temperatura ideal.',
-            'Verifique periodicamente a vedação das borrachas dos equipamentos de refrigeração.',
-            'Aproveite a luz natural e desligue a iluminação secundária fora dos horários de pico.'
-        ];
-
-        if (ramo === 'mercado') {
-            dicas.unshift('Evite obstruir a circulação de ar frio nos balcões refrigerados.');
-        } else if (ramo === 'lanchonete') {
-            dicas.unshift('Desligue estufas e chapas elétricas no período de menor movimento.');
+        function atualizarSlider(val) {
+            document.getElementById('percentualBadge').innerText = val + '%';
+            calcular();
         }
 
-        dicas.forEach(dica => {
-            const li = document.createElement('li');
-            li.innerText = dica;
-            tipsList.appendChild(li);
-        });
+        function formatarR$(valor) {
+            return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
 
-        resultsBox.classList.add('active');
-    }
-</script>
+        function calcular() {
+            const fatura = parseFloat(document.getElementById('valorFatura').value) || 0;
+            const meta = parseFloat(document.getElementById('sliderMeta').value) / 100;
 
+            if (fatura <= 0) return;
+
+            const tarifaKwh = 0.85;
+            const kwh = Math.round(fatura / tarifaKwh);
+            const economiaMensal = fatura * meta;
+            const economiaAnual = economiaMensal * 12;
+            const faturaOtimizada = fatura - economiaMensal;
+            const carbono = (kwh * meta * 12 * 0.085).toFixed(1);
+
+            document.getElementById('valKwh').innerText = kwh.toLocaleString('pt-BR') + ' kWh';
+            document.getElementById('valEconomiaMensal').innerText = formatarR$(economiaMensal);
+            document.getElementById('valEconomiaAnual').innerText = formatarR$(economiaAnual);
+            document.getElementById('valCarbono').innerText = carbono.replace('.', ',') + ' kg';
+
+            document.getElementById('barValAtual').innerText = formatarR$(fatura);
+            document.getElementById('barValOtimizada').innerText = formatarR$(faturaOtimizada);
+
+            const pctBarra = Math.round((faturaOtimizada / fatura) * 100);
+            document.getElementById('barFillOtimizada').style.width = pctBarra + '%';
+
+            atualizarDicas();
+        }
+
+        function atualizarDicas() {
+            const container = document.getElementById('listaDicas');
+            container.innerHTML = '';
+
+            let dicas = [];
+
+            if (segmentoAtual === 'mercado' || segmentoAtual === 'acougue') {
+                dicas = [
+                    'Ajuste os termostatos de expositores e ilhas para a temperatura exata recomendada.',
+                    'Limpe as aletas dos condensadores das geladeiras para não sobrecarregar os motores.',
+                    'Verifique mensalmente se a borracha de vedação das portas está vedando perfeitamente.'
+                ];
+            } else if (segmentoAtual === 'lanchonete') {
+                dicas = [
+                    'Desligue estufas quentes e chapas elétricas nos períodos de menor movimento.',
+                    'Organize o pré-aquecimento de fornos para evitar picos desnecessários no mesmo horário.',
+                    'Mantenha acesas apenas as lâmpadas necessárias na área de atendimento nos horários de folga.'
+                ];
+            } else {
+                dicas = [
+                    'Desligue computadores, monitores e refletores da tomada ao fechar o estabelecimento.',
+                    'Aproveite a luz natural do dia e limpe os filtros do ar-condicionado quinzenalmente.',
+                    'Ajuste o ar-condicionado em 23°C ou 24°C (temperaturas mais baixas gastam até 15% a mais).'
+                ];
+            }
+
+            dicas.forEach(dica => {
+                const li = document.createElement('li');
+                li.className = 'action-item';
+                li.innerHTML = `<span>✔</span> <span>${dica}</span>`;
+                container.appendChild(li);
+            });
+        }
+
+        // Executa cálculo inicial ao abrir
+        window.onload = function () {
+            calcular();
+        };
+    </script>
 </body>
+
 </html>
